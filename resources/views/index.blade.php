@@ -74,7 +74,7 @@
             </div>        
 
             <div class="title m-b-md">
-                <h1>PROJETO SEJA</h1> Teste
+                <h1>PROJETO SEJA</h1> 
             </div>
 
         </div>
