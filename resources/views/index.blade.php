@@ -7,7 +7,7 @@
 @section('styles')
     <style>
         html, body {
-            background-color: black ;
+            background-color: white ;
             color: #636b6f;
             font-family: 'Nunito', sans-serif;
             font-weight: 200;
@@ -55,9 +55,9 @@
         }
 
         h1{
-            color: white;
+            color: black;
         }
-
+        
         .m-b-md {
             margin-bottom: 30px;
         }
