@@ -45,7 +45,7 @@
 
         .links > a {
             /* color: #636b6f; */
-            color: white;
+            color: black;
             padding: 0 25px;
             font-size: 13px;
             font-weight: 600;
@@ -67,18 +67,17 @@
 @section('content')
     <div class="content">
         <div class="flex-center position-ref full-height">
-            <div class="top-right links">        
-                <a href="#">Início</a>
-                <a href="#">Login</a>    
-                <a href="#">Inscreva-se</a>
-            </div>        
-
+            <div class="top-right links">
+                <a href="{{route('site.home')}}">Início</a>
+                <a href="{{route('site.quemsomos')}}">Quem somos</a>
+                <a href="{{route('site.localizacao')}}">Onde estamos</a>
+                <a href="{{route('site.contatos')}}">Contatos</a>
+                <a href="{{route('site.login')}}">Login</a>
+                <a href="{{route('site.subscribe')}}">Inscreva-se</a>
+            </div>
             <div class="title m-b-md">
                 <h1>PROJETO SEJA</h1> 
             </div>
-
         </div>
-    </div>  
-    
+    </div>
 @endsection
-    
