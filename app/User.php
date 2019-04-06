@@ -36,4 +36,28 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    public function newUser($data):Array{
+
+        $user = User::where('email', $data['email'])->get()->first(); //verifica se existe o email de novo usuário no banco 
+
+        if (!$user){             //caso não, cadastre 
+            $this->name        = $data['name'];
+            $this->email       = $data['email'];
+            $this->password    = $data['password'];
+            $this->image       = $data['image'];
+
+            $updated = $this->save();
+
+            if ($updated){
+                return [
+                    $this->id
+                ];
+            }
+
+        } else{
+            return [0];
+        }
+    }
 }
