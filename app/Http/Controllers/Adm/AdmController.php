@@ -14,7 +14,7 @@ class AdmController extends Controller
      */
     public function index()
     {
-        //
+        return "Adm home";
     }
 
     /**
@@ -24,7 +24,7 @@ class AdmController extends Controller
      */
     public function create()
     {
-        //
+        return "View criar um novo ADM";
     }
 
     /**
@@ -35,7 +35,7 @@ class AdmController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        return "Salvar novo ADM no Banco";
     }
 
     /**
@@ -46,7 +46,7 @@ class AdmController extends Controller
      */
     public function show($id)
     {
-        //
+        return "Visualizando os dados de um ADM";
     }
 
     /**
@@ -57,7 +57,7 @@ class AdmController extends Controller
      */
     public function edit($id)
     {
-        //
+        return "View para Editar dados de um ADM";
     }
 
     /**
@@ -69,7 +69,7 @@ class AdmController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        return "Salva alterações de dados de ADM";
     }
 
     /**
@@ -80,6 +80,6 @@ class AdmController extends Controller
      */
     public function destroy($id)
     {
-        //
+        return "Apaga um ADM";
     }
 }
