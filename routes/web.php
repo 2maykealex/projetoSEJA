@@ -9,6 +9,15 @@ Route::group(['namespace' => 'Site', 'prefix' => '/'], function () {
     Route::get('inscreva-se', 'SiteController@subscribe')->name("site.subscribe");
 });
 
+Route::group(['namespace' => 'Adm', 'prefix' => 'adm'], function () {
+    Route::get('', 'AdmController@index')->name("adm.home");
+    Route::get('new', 'AdmController@create')->name("adm.new");
+    Route::post('new-save', 'AdmController@store')->name("adm.store");
+    Route::get('show/{id}', 'AdmController@show')->name("adm.show");
+    Route::get('edit/{id}', 'AdmController@edit')->name("adm.edit");
+    Route::post('update/{id}', 'AdmController@update')->name("adm.update");
+});
+
 // Route::get('/', function () {
 //     return view('index');
 // });
