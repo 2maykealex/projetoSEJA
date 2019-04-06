@@ -46,7 +46,6 @@ class User extends Authenticatable
             $this->name        = $data['name'];
             $this->email       = $data['email'];
             $this->password    = $data['password'];
-            $this->image       = $data['image'];
 
             $updated = $this->save();
 

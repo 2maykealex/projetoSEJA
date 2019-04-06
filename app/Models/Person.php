@@ -15,7 +15,9 @@ class Person extends Model
         
         $this->zipcode   = $dados['zipcode'];
         $this->address   = $dados['address'];
-        $this->city_id   = $dados['city1'];
+        $this->city_id   = $dados['city'];
+
+        $this->image     = $dados['image'];
 
         $update = $this->save();
 
