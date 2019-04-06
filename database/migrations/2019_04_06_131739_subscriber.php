@@ -13,7 +13,13 @@ class Subscriber extends Migration
      */
     public function up()
     {
-        //
+        Schema::create('subscriber', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('people_id')->unsigned();
+            $table->foreign('people_id')->references('id')->on('people') ;
+
+            $table->timestamps();
+        });
     }
 
     /**
