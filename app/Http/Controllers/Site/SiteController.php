@@ -24,7 +24,7 @@ class SiteController extends Controller
     }
 
     public function doLogin(){
-        return "Fazer Login";
+        return view('site.login');
     }
 
     public function subscribe(){
