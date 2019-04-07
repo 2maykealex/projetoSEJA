@@ -95,11 +95,11 @@
                     </div>
 
                     <div class="col-md-4 mt-5">
-                        <div class="row mb-5">
+                        <div class="content text-center mb-5">
                             <h2>Acesso ao sistema:</h2>
                         </div>
 
-                        <form action="{{route('site.login')}}" method="post" class="form">
+                        <form action="{{route('site.login.validate')}}" method="post" class="form">
                             {!! csrf_field()!!}
                             <div class="form-group">
                                 <label for="">E-mail:</label>
@@ -111,7 +111,7 @@
                                 <input type="password" id="password" name="password" minlength="6" placeholder="senha" onchange="validaCaracter(this)" class="form-control" required>
                             </div>
 
-                            <div class="form-group">
+                            <div class="form-group mt-5">
                                 <button type="submit" class="btn btn-success">Fazer login</button>
                                 <button type="button" class="btn btn-warning">Cancelar</button>
                             </div>

@@ -8,6 +8,7 @@ Route::group(['namespace' => 'Site', 'prefix' => '/'], function () {
     Route::get('inscreva-se', 'SiteController@subscribe')->name("site.subscribe");
 
     Route::get('login', 'SiteController@doLogin')->name("site.login");
+    Route::post('login-validate', 'SiteController@validateLogin')->name("site.login.validate");
 });
 
 Route::group(['namespace' => 'Adm', 'prefix' => 'adm'], function () {

@@ -27,6 +27,11 @@ class SiteController extends Controller
         return view('site.login');
     }
 
+    public function validateLogin(Request $request){
+        dd($request->all());
+        return view('site.login');
+    }
+
     public function subscribe(){
         return "Se inscrever";
     }
