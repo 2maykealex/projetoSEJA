@@ -95,7 +95,7 @@
                     </div>
 
                     <div class="col-md-4 mt-5">
-                        <div class="row text-center mb-5">
+                        <div class="row mb-5">
                             <h2>Acesso ao sistema:</h2>
                         </div>
 
@@ -106,18 +106,13 @@
                                 <input type="email" name="email" id="email" class="form-control" required>
                             </div>
 
-                            <div class="form-group mt-5">
+                            <div class="form-group mt-2">
                                 <label for="">Senha:</label>
                                 <input type="password" id="password" name="password" minlength="6" placeholder="senha" onchange="validaCaracter(this)" class="form-control" required>
                             </div>
 
                             <div class="form-group">
-                                <label for="confirmPassword">Confirmar senha:</label>
-                                <input type="password" id="confirmPassword" name="confirmPassword" minlength="6" placeholder="confirme a senha" onchange="ToValidPassword()" class="form-control"  required>
-                            </div>
-
-                            <div class="form-group">
-                                <button type="submit" class="btn btn-success">Salvar nova senha</button>
+                                <button type="submit" class="btn btn-success">Fazer login</button>
                                 <button type="button" class="btn btn-warning">Cancelar</button>
                             </div>
                         </form>
