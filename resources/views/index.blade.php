@@ -8,13 +8,21 @@
 
     <style>
 
-    #home {
-        background: url ('../storage/app/public/img/astro.jpg') no-repeat center center fixed;
+    #inicio {
+        /* background: url ('../storage/img/astro.jpg') no-repeat center center fixed; */
+
+        /* background-image:url({{url('storage/img/astro.jpg')}}) no-repeat center center fixed; */
+        /* background-image: url({{ url('storage/img/astro.jpg')}}) no-repeat center center fixed; */
+        /* background-image:url({{url('storage/img/astro.jpg')}}) no-repeat center center fixed; */
+
+
+        background: url("{{url('storage/img/astro.jpg')}}") no-repeat center center fixed;
         display: table;
         height: 100%;
         position: relative;
         width : 100%;
-        background-size: cover;        }
+        background-size: cover;
+        }
 
     </style>
    
@@ -45,13 +53,23 @@
                             <a class="nav-link" href="{{route('site.localizacao')}}">Localização</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="{{route('site.contatos')}}">subscribe</a>
+                            <a class="nav-link" href="{{route('site.contatos')}}">Contatos</a>
                         </li>
                     </ul>
-                    <form class="form-inline my-2 my-lg-0">
+
+                    <ul class="navbar-nav text-right">
+                            <li class="nav-item mr-5">
+                                <a class="nav-link" href="{{route('site.subscribe')}}">Inscreva-se</a>
+                            </li>
+
+                            <li class="nav-item mr-5">
+                                <a class="nav-link" href="{{route('site.login')}}">Login</a>
+                            </li>
+                    <</ul>
+                    {{-- <form class="form-inline my-2 my-lg-0">
                         <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
                         <button class="btn btn-outline-light btn-sm my-2 my-sm-0" type="submit">Pesquisar</button>
-                    </form>
+                    </form> --}}
                 </div>
             </div>
         </nav>
@@ -59,10 +77,10 @@
 
     <!--home-->
 
-    <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-dark">
-        <div class="col-md-5 p-lg-5 mx-auto my-5">
-            <h1 class="display-4 font-weight-normal text-white">Título legal</h1>
-            <p class="lead font-weight-normal text-white">E uma descrição engraçadinha, para continuar. Alavanque seus esforços em marketing com esse exemplo, baseado nas páginas de marketing da Apple.</p>
+    <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-dark" id="inicio">
+        <div class="col-md-5 p-lg-5 mx-auto my-5" >
+            <h1 class="display-4 font-weight-normal text-white">Projeto Seja</h1>
+            <p class="lead font-weight-normal text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
             <a class="btn btn-outline-light" href="{{route('site.login')}}">Entrar</a>
         </div>
         <div class="product-device shadow-sm d-none d-md-block"></div>
@@ -129,7 +147,7 @@
             
     <!-- Footer -->
     <footer class="bg-secondary text-white">
-        <div class="container-fluid border-bottom border-light">
+        {{-- <div class="container-fluid border-bottom border-light">
             <div class="row py-3 d-flex align-items-center ">
                 <div class="col-md-6 col-lg-5">
                     <h6 class="text-center">Nossas redes sociais</h6>
@@ -138,10 +156,10 @@
                     <h6 class="text-center"> redes sociais</h6>
                 </div>
             </div>
-        </div>
+        </div> --}}
 
          <!--Footer link-->
-        <div class="container-fluid text-center mt-5">
+        {{-- <div class="container-fluid text-center mt-5">
             <div class="row mt-3 ">
                 <div class="col-md-3 col-lg-3 col-xl-3 mb-4">
                     <h6><strong>SERVIÇOS</strong></h6>
@@ -203,7 +221,7 @@
                     </ul>
                 </div>
             </div>
-        </div>
+        </div> --}}
         <div class="footer-copyright text-center border-top border-light py-3">© 2018 Copyright:
             <a class="text-white" href="#"> projetoseja.com</a>
         </div>
