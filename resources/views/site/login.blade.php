@@ -113,7 +113,10 @@
 
                             <div class="form-group mt-5">
                                 <button type="submit" class="btn btn-success">Fazer login</button>
-                                <button type="button" class="btn btn-warning">Cancelar</button>
+                                
+                                <a href="{{URL::previous()}}">
+                                    <button type="button" class="btn btn-warning">Voltar</button>
+                                </a>
                             </div>
                         </form>
                     </div>
