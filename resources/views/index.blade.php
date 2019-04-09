@@ -36,7 +36,7 @@
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark border-bottom">
-            <div class="container-fluid">
+            <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -47,31 +47,25 @@
                             <a class="nav-link" href="{{route('site.home')}}">Início</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="{{route('site.quemsomos')}}">Conteudo</a>
+                            <a class="nav-link" href="#">Conteúdo</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="{{route('site.localizacao')}}">Localização</a>
+                            <a class="nav-link" href="{{route('site.quemsomos')}}">Sobre nós</a>
                         </li>
-                        <li class="nav-item mr-5">
+                        <!--<li class="nav-item mr-5">
                             <a class="nav-link" href="{{route('site.contatos')}}">Contatos</a>
-                        </li>
+                        </li>-->
                     </ul>
-                    <!--cololcar um icon de pesquisa e colocar o login a direita quando o navbar diminuir mateus--> 
-                    <ul class="navbar-nav text-right">
-                        <div class="col-4 d-flex justify-content-end align-items-center">
-                            <a class="text-muted" href="#">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
-                            </a>
-                      </div>
-                            <li class="nav-item mr-5">
-                                <a class="nav-link" href="{{route('site.login')}}">Login</a>
+                    <!--cololcar um icon de pesquisa e colocar o login a direita quando o navbar diminuir mateus-->
+                    <!--<form class="form-inline my-2 my-lg-0 mr-4">
+                        <button class="btn btn-outline-light btn-sm my-2 my-sm-0" type="submit">Pesquisar</button>
+                        <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+                    </form>-->
+                    <ul class="navbar-nav">
+                            <li class="nav-item ">
+                                <a class="nav-link" href="{{route('site.login')}}">Entrar</a>
                             </li>
                     </ul>
-
-                    {{-- <form class="form-inline my-2 my-lg-0">
-                        <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                        <button class="btn btn-outline-light btn-sm my-2 my-sm-0" type="submit">Pesquisar</button>
-                    </form> --}}
                 </div>
             </div>
         </nav>
@@ -89,15 +83,19 @@
         <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
     </div>
 
-    <!--album-->
+    <!--card-->
 
-    <div class="album py-5 bg-light">
+    <div id="" class="pricing-header container border-bottom py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-5">Conteúdo</h1>
+    </div>
+
+    <div class="album py-5">
         <div class="container">
 
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                    <div class="card mb-2 shadow-sm">
+                        <img class="card-img-top" src="{{asset('storage/img/astro.jpg')}}" alt="Card image cap">
                         <div class="card-body">
                         <p class="card-text">God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega e nórdica sendo criado originalmente por David Jaffe da Santa Monica Studio.</p>
                             <div class="d-flex justify-content-between align-items-center">
@@ -112,8 +110,8 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                    <div class="card mb-2 shadow-sm">
+                        <img class="card-img-top" src="{{asset('storage/img/astro.jpg')}}" alt="Card image cap">
                         <div class="card-body">
                         <p class="card-text">God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega e nórdica sendo criado originalmente por David Jaffe da Santa Monica Studio.</p>
                             <div class="d-flex justify-content-between align-items-center">
@@ -128,8 +126,8 @@
                 </div>
 
                 <div class="col-md-4">
-                    <div class="card mb-4 shadow-sm">
-                        <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" alt="Card image cap">
+                    <div class="card mb-2 shadow-sm">
+                        <img class="card-img-top" src="{{asset('storage/img/astro.jpg')}}" alt="Card image cap">
                         <div class="card-body">
                         <p class="card-text">God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega e nórdica sendo criado originalmente por David Jaffe da Santa Monica Studio.</p>
                             <div class="d-flex justify-content-between align-items-center">
@@ -141,15 +139,41 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="col-md-5 p-lg-5 mx-auto my-3 text-center" >
+                    <a class="btn btn-outline-danger" href="{{route('site.subscribe')}}">Mais</a>
                 </div>
             </div>
         </div>         
     </div>
 
+    <!--sobre nós -->
+
+    
+    <div class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto text-center border-top">
+    <h1 class="display-5">Sobre nós</h1>        
+    </div>
+
+    <main role="main" class="container border-top text-center">
+        <div class="row">
+            <div class="blog-main py-4">
+                <h3>Empresa</h3>
+                <div class="lead">
+                    < class="blog-post-meta">Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
+                </div>
+            </div>
+            <div class="blog-main py-1 mb-5">
+                <h3>Equipe</h3>
+                <div class="lead">
+                    <p class="blog-post-meta">Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
+                </div>
+            </div>
+        </div>                
+    </main>
             
     <!-- Footer -->
-    <footer class="bg-secondary text-white">
-        {{-- <div class="container-fluid border-bottom border-light">
+    <footer class=" text-dark mt-5">
+        <div class="container-fluid border-bottom bg-light">
             <div class="row py-3 d-flex align-items-center ">
                 <div class="col-md-6 col-lg-5">
                     <h6 class="text-center">Nossas redes sociais</h6>
@@ -158,59 +182,62 @@
                     <h6 class="text-center"> redes sociais</h6>
                 </div>
             </div>
-        </div> --}}
+        </div>
 
          <!--Footer link-->
-        {{-- <div class="container-fluid text-center mt-5">
+        <div class="container mt-5">
             <div class="row mt-3 ">
                 <div class="col-md-3 col-lg-3 col-xl-3 mb-4">
-                    <h6><strong>SERVIÇOS</strong></h6>
+                    <h6 class="border-right border-dark"><strong>EMPRESA</strong></h6>
+                    <!--<ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                    </ul>-->
+                    <p class="lead">
+                        Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+                    </p>
+                </div>
+                <div class="col-md-3 col-lg-3 col-xl-3 mb-4">
+                    <h6 class="border-right border-dark"><strong>LINKS ÚTEIS</strong></h6>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Link</a>
+                            <a class="nav-link " href="#">Termos de serviço</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Link</a>
+                            <a class="nav-link" href="#">Políticas de privacidade</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Link</a>
+                            <a class="nav-link" href="#">Políticas de uso</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Link</a>
+                            <a class="nav-link" href="#">Central ajuda</a>
                         </li>
                     </ul>
                 </div>
                 <div class="col-md-3 col-lg-3 col-xl-3 mb-4">
-                    <h6><strong>LINKS ÚTEIS</strong></h6>
+                    <h6 class="border-right border-dark"><strong>CONTATOS</strong></h6>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Link</a>
+                            <a class="nav-link" href="#">Número de telefone</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Link</a>
+                            <a class="nav-link" href="#">Número de celular</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Link</a>
+                            <a class="nav-link" href="#">E-mail</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Link</a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-3 col-lg-3 col-xl-3 mb-4">
-                    <h6><strong>CONTATOS</strong></h6>
-                    <ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-white" href="#">Link</a>
+                            <a class="nav-link" href="#">Localização</a>
                         </li>
                     </ul>
                 </div>
@@ -218,14 +245,14 @@
                     <h6><strong>CONTA</strong></h6>
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <a class="nav-link text-white" href="{{route('site.login')}}">Entrar</a>
+                            <a class="nav-link" href="{{route('site.login')}}">Entrar</a>
                         </li>
                     </ul>
                 </div>
             </div>
-        </div> --}}
-        <div class="footer-copyright text-center border-top border-light py-3">© 2018 Copyright:
-            <a class="text-white" href="#"> projetoseja.com</a>
+        </div>
+        <div class="footer-copyright text-center bg-light border-top py-3">© 2018 Copyright:
+            <a  href="#"> projetoseja.com</a>
         </div>
     </footer>
 
