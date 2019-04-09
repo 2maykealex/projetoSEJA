@@ -25,6 +25,7 @@
 
 @section('styles')
     <style>
+        
         html, body {
             background: url("{{url('storage/img/astro.jpg')}}") no-repeat center center fixed;
             font-family: 'Nunito', sans-serif;
@@ -41,12 +42,6 @@
             background-size: cover;
             background-color:rgba(0,0,0,.7)!important;
 
-
-        }
-        .card{
-            height: 370px;
-
-            width: 350px;
 
         }
         .espaco{
