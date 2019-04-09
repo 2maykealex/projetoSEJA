@@ -6,6 +6,7 @@ Route::group(['namespace' => 'Site', 'prefix' => '/'], function () {
     Route::get('quem-somos', 'SiteController@whoWeare')->name("site.quemsomos");
     Route::get('onde-estamos', 'SiteController@whereWeAre')->name("site.localizacao");
     Route::get('inscreva-se', 'SiteController@subscribe')->name("site.subscribe");
+    Route::post('subscribe/store', 'SiteController@subscribeStore')->name("site.subscribe.store");
 
     Route::get('login', 'SiteController@doLogin')->name("site.login");
     Route::post('login-validate', 'SiteController@validateLogin')->name("site.login.validate");
