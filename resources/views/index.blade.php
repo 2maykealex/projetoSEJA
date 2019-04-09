@@ -36,18 +36,18 @@
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark border-bottom">
-            <div class="container">
+            <div class="container-fluid">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand mr-5" href="#">Logotipo</a>
+                <a class="navbar-brand text-center mr-5" href="#">Logotipo</a>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="{{route('site.home')}}">Home</a>
+                            <a class="nav-link" href="{{route('site.home')}}">Início</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="{{route('site.quemsomos')}}">Quem somos?</a>
+                            <a class="nav-link" href="{{route('site.quemsomos')}}">Conteudo</a>
                         </li>
                         <li class="nav-item mr-5">
                             <a class="nav-link" href="{{route('site.localizacao')}}">Localização</a>
@@ -56,16 +56,18 @@
                             <a class="nav-link" href="{{route('site.contatos')}}">Contatos</a>
                         </li>
                     </ul>
-
+                    <!--cololcar um icon de pesquisa e colocar o login a direita quando o navbar diminuir--> 
                     <ul class="navbar-nav text-right">
-                            <li class="nav-item mr-5">
-                                <a class="nav-link" href="{{route('site.subscribe')}}">Inscreva-se</a>
-                            </li>
-
+                        <div class="col-4 d-flex justify-content-end align-items-center">
+                            <a class="text-muted" href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="mx-3"><circle cx="10.5" cy="10.5" r="7.5"></circle><line x1="21" y1="21" x2="15.8" y2="15.8"></line></svg>
+                            </a>
+                      </div>
                             <li class="nav-item mr-5">
                                 <a class="nav-link" href="{{route('site.login')}}">Login</a>
                             </li>
-                    <</ul>
+                    </ul>
+
                     {{-- <form class="form-inline my-2 my-lg-0">
                         <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
                         <button class="btn btn-outline-light btn-sm my-2 my-sm-0" type="submit">Pesquisar</button>
@@ -81,7 +83,7 @@
         <div class="col-md-5 p-lg-5 mx-auto my-5" >
             <h1 class="display-4 font-weight-normal text-white">Projeto Seja</h1>
             <p class="lead font-weight-normal text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-            <a class="btn btn-outline-light" href="{{route('site.login')}}">Entrar</a>
+            <a class="btn btn-outline-light" href="{{route('site.subscribe')}}">Conhecer nosso projeto</a>
         </div>
         <div class="product-device shadow-sm d-none d-md-block"></div>
         <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
