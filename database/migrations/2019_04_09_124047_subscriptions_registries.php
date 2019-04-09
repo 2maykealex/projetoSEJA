@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class Subscriber extends Migration
+class SubscriptionsRegistries extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class Subscriber extends Migration
      */
     public function up()
     {
-        Schema::create('subscriber', function (Blueprint $table) {
+        Schema::create('subscriptions_registries', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('people_id')->unsigned();
-            $table->foreign('people_id')->references('id')->on('people') ;
+            $table->integer('subscriber_id')->unsigned();
+            $table->foreign('subscriber_id')->references('id')->on('subscribers');
+            
+            $table->integer('subscription_plan_id')->unsigned();
+            $table->foreign('subscription_plan_id')->references('id')->on('subscriptions_plans') ;
 
             $table->timestamps();
         });
