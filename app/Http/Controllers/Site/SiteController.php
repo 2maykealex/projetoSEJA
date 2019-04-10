@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
 
 class SiteController extends Controller
 {
@@ -32,15 +33,14 @@ class SiteController extends Controller
     public function validateLogin(Request $request){
         $user = User::where('email', $request->email)->get()->first();
         if ($user){
-            if ($user->password == $request->password){
+            if(Hash::check($request->password, $user->password)) {
                 return "USUÁRIO AUTENTICADO";
-            }else{
+            } else {
                 return "SENHA INCORRETA";
             }
         }else{
             return "USUÁRIO NÃO ENCONTRADO!";
         }
-        return view('site.login');
     }
 
     public function subscribe(){
