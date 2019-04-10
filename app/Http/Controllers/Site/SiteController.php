@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class SiteController extends Controller
 {
@@ -34,6 +35,9 @@ class SiteController extends Controller
         $user = User::where('email', $request->email)->get()->first();
         if ($user){
             if(Hash::check($request->password, $user->password)) {
+                Auth::login($user, true);
+
+                // dd(auth()->user());
                 return "USUÁRIO AUTENTICADO";
             } else {
                 return "SENHA INCORRETA";
