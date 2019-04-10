@@ -105,6 +105,7 @@
                     
 
                     <form action="{{route('site.login.validate')}}" method="post" class="form-signin">
+                        @csrf
                             <h1 class="h3 mt-5 font-weight-normal text-center">Login</h1>
                         
                         
