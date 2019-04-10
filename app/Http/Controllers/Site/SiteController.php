@@ -30,22 +30,15 @@ class SiteController extends Controller
     }
 
     public function validateLogin(Request $request){
-        // dd($request->all());
-        // $user = User::all();
-
-        $user = DB::select(
-            DB::raw('SELECT * FROM users ORDER BY email ')
-        );
-        // $user = User::where('email', $request->email)->get()->first();
-        
+        $user = User::where('email', $request->email)->get()->first();
         if ($user){
             if ($user->password == $request->password){
-                dd('USUÁRIO AUTENTICADO!');
+                return "USUÁRIO AUTENTICADO";
             }else{
-                dd('SENHA INCORRETA!');
+                return "SENHA INCORRETA";
             }
         }else{
-            dd('USUÁRIO NÃO ENCONTRADO!');
+            return "USUÁRIO NÃO ENCONTRADO!";
         }
         return view('site.login');
     }
