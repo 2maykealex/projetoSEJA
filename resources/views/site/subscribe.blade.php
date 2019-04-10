@@ -6,11 +6,7 @@
 
 @section('styles')
 
-@endsection
-
-@section('content')
-	
-	<style>
+<style>
         
         html, body {
             background: url("{{url('storage/img/astro.jpg')}}") no-repeat center center fixed;
@@ -35,9 +31,11 @@
             width: 300px;
         }
     </style> 
+
 @endsection
 
 @section('content')
+	
     <div id="fundo">
         <div class="container mt-5">
             <div class="d-flex justify-content-center">

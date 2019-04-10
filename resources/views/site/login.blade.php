@@ -5,21 +5,6 @@
 @endsection
 
 @section('scripts')
-    function ToValidPassword(){ 
-
-        password        = document.getElementById('password').value;
-        confirmPassword = document.getElementById('confirmPassword').value;
-        
-        if (password != confirmPassword){
-            alert("As senhas não conferem!");
-
-            document.getElementById('password').value= "";
-            document.getElementById('confirmPassword').value = "";
-            
-            document.getElementById('password').focus();
-            return false;
-        }
-    }
     
 @endsection
 
@@ -99,68 +84,68 @@
 @endsection
 
 @section('content')
-        <div id="fundo">
-            <div class="container mt-5">
-                <div class="d-flex justify-content-center">
-                    <div class="espaco">
-    
-    <!--<div class="content">
-        
-        <div class="flex-center position-ref full-height">
-    
-            <div class="box-body">
-                <div class="row">
-                    <div class="col-md-4">
-                    </div>
+    <div id="fundo">
+        <div class="container mt-5">
+            <div class="d-flex justify-content-center">
+                <div class="espaco">
 
-                    <div class="col-md-4 mt-5">
-                        <div class="content text-center mb-5">
-                            <h2>Acesso ao sistema:</h2>
-                        </div>-->
+<!--<div class="content">
+    
+    <div class="flex-center position-ref full-height">
+
+        <div class="box-body">
+            <div class="row">
+                <div class="col-md-4">
+                </div>
+
+                <div class="col-md-4 mt-5">
+                    <div class="content text-center mb-5">
+                        <h2>Acesso ao sistema:</h2>
+                    </div>-->
+                    
+
+                    <form action="{{route('site.login.validate')}}" method="post" class="form-signin">
+                            <h1 class="h3 mt-5 font-weight-normal text-center">Login</h1>
+                        
+                        
+                            <!--<label for="">E-mail:</label>-->
+                            <input type="email" name="email" id="email" placeholder="E-mail" class="form-control mt-4" required>
                         
 
-                        <form action="{{route('site.login.validate')}}" method="post" class="form-signin">
-                                <h1 class="h3 mt-5 font-weight-normal text-center">Login</h1>
-                            {!! csrf_field()!!}
-                            
-                                <!--<label for="">E-mail:</label>-->
-                                <input type="email" name="email" id="email" placeholder="E-mail" class="form-control mt-4" required>
-                            
+                        
+                            <!--<label for="">Senha:</label>-->
+                            <input type="password" id="password" name="password" minlength="6" placeholder="Senha" onchange="validaCaracter(this)" class="form-control mt-3" required>
+                        
+                            <div class="checkbox mt-3">
+                                <label>
+                                    <input type="checkbox" value="remember-me"> Lembre-se de mim
+                                </label>
+                            </div>
 
+                        <div class="form-group mt-2">
+                            <button type="submit" class="btn btn-primary btn-block mt-3">Entrar</button>
                             
-                                <!--<label for="">Senha:</label>-->
-                                <input type="password" id="password" name="password" minlength="6" placeholder="Senha" onchange="validaCaracter(this)" class="form-control mt-3" required>
-                            
-                                <div class="checkbox mt-3">
-                                    <label>
-                                        <input type="checkbox" value="remember-me"> Lembre-se de mim
-                                    </label>
-                                </div>
-
-                            <div class="form-group mt-2">
-                                <button type="submit" class="btn btn-primary btn-block mt-3">Entrar</button>
-                                
-                                <!--<a href="{{URL::previous()}}">
-                                    <button type="button" class="btn btn-warning">Voltar</button>
-                                </a>-->
-                            </div>
-                        </form>
-                        <div class="card-footer">
-                            <div class="d-flex justify-content-center links">
-                                Não tem conta?<a href="#">Inscreva-se</a>
-                            </div>
-                            <div class="d-flex justify-content-center">
-                                <a href="#">Recuperar senha?</a>
-                            </div>
+                            <!--<a href="{{URL::previous()}}">
+                                <button type="button" class="btn btn-warning">Voltar</button>
+                            </a>-->
                         </div>
-
-                    <!--</div>-->
-
+                    </form>
+                    <div class="card-footer">
+                        <div class="d-flex justify-content-center links">
+                            Não tem conta?<a href="#">Inscreva-se</a>
+                        </div>
+                        <div class="d-flex justify-content-center">
+                            <a href="#">Recuperar senha?</a>
+                        </div>
                     </div>
 
-                </div>
-                <!--a pastir da qui-->
-            </div>
+                <!--</div>-->
 
+                </div>
+
+            </div>
+            <!--a pastir da qui-->
         </div>
+
+    </div>
 @endsection
