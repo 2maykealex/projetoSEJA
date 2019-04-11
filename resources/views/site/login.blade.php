@@ -12,11 +12,11 @@
     <style>
         
         html, body {
-            background: url("{{url('storage/img/astro.jpg')}}") no-repeat center center fixed;
+            background: url("{{url('storage/img/astro.jp')}}") no-repeat center center fixed;
             font-family: 'Nunito', sans-serif;
             height: 100%;
             margin: 0;
-            color: white;
+            color: black;
 
         }
         #fundo{
@@ -25,61 +25,14 @@
             position: relative;
             width : 100%;
             background-size: cover;
-            background-color:rgba(0,0,0,.7)!important;
+            
 
 
         }
         .espaco{
             height: 370px;
-            width: 300px;
+            width: 350px;
         }
-/* 
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: center;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .links > a {
-             color: #636b6f;
-            color: black;
-            padding: 0 25px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        h1{
-            color: black;
-        }
-        
-        .m-b-md {
-            margin-bottom: 30px;
-        } */
     </style> 
 @endsection
 
@@ -105,8 +58,7 @@
                     
 
                     <form action="{{route('site.login.validate')}}" method="post" class="form-signin">
-                        @csrf
-                            <h1 class="h3 mt-5 font-weight-normal text-center">Login</h1>
+                            <span class="d-block h3 text-primary-light text-center">Entre</span>
                         
                         
                             <!--<label for="">E-mail:</label>-->
@@ -116,12 +68,21 @@
                         
                             <!--<label for="">Senha:</label>-->
                             <input type="password" id="password" name="password" minlength="6" placeholder="Senha" onchange="validaCaracter(this)" class="form-control mt-3" required>
-                        
-                            <div class="checkbox mt-3">
-                                <label>
-                                    <input type="checkbox" value="remember-me"> Lembre-se de mim
-                                </label>
+
+                            <div class="row">
+                                <div class="checkbox mt-3 col-md-6">
+                                    <label>
+                                        <input type="checkbox" value="remember-me"> Lembre-se de mim
+                                    </label>
+                                </div>
+                                <div class="col-md-6 mt-3 text-md-right">
+                                    <a href="#">Recuperar senha?</a>
+                                </div>
                             </div>
+                            <!--<div class="d-flex justify-content-center">
+                                <a href="#">Recuperar senha?</a>
+                            </div>-->
+                            
 
                         <div class="form-group mt-2">
                             <button type="submit" class="btn btn-primary btn-block mt-3">Entrar</button>
@@ -131,21 +92,39 @@
                             </a>-->
                         </div>
                     </form>
-                    <div class="card-footer">
-                        <div class="d-flex justify-content-center links">
-                            Não tem conta?<a href="#">Inscreva-se</a>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <a href="#">Recuperar senha?</a>
-                        </div>
+
+                    <div class="divider h4 my-3 text-center">
+                        <span class="text-muted">ou</span>
                     </div>
 
-                <!--</div>-->
-
+                    <form>            
+                    <div id="socialLoginList" class="row">
+                        <div class="col-lg-6 py-1">
+                            <button class="btn btn-block btn-primary" type="submit" name="provider">
+                                <i class="mr-1"></i> Facebook
+                            </button>
+                        </div>
+                        <div class="col-lg-6 py-1">
+                            <button class="btn btn-block btn-danger" type="submit" name="provider">
+                                <i class="mr-1"></i> Google
+                            </button>
+                        </div>
+                        <div class="col-lg-6 py-1">
+                            <button class="btn btn-block btn-light" type="submit" name="provider">
+                                <i class="mr-1"></i> Instagran
+                            </button>
+                        </div>
+                        <div class="col-lg-6 py-1">
+                            <button class="btn btn-block btn-info" type="submit" name="provider">
+                                <i class="mr-1"></i> Twitter
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <div class="pt-4 text-xs-center text-center">
+                    <a class="btn btn-link mx-auto" href="{{route('site.subscribe')}}">Registrar</a>
                 </div>
-
             </div>
-            <!--a pastir da qui-->
         </div>
 
     </div>

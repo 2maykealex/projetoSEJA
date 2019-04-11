@@ -6,69 +6,100 @@
 
 @section('styles')
 
-<style>
-        
-        html, body {
-            background: url("{{url('storage/img/astro.jpg')}}") no-repeat center center fixed;
-            font-family: 'Nunito', sans-serif;
-            height: 100%;
-            margin: 0;
-            color: white;
-
-        }
-        #fundo{
-            display: table;
-            height: 100vh;
-            position: relative;
-            width : 100%;
-            background-size: cover;
-            background-color:rgba(0,0,0,.7)!important;
-
-
-        }
-        .espaco{
-            height: 370px;
-            width: 300px;
-        }
-    </style> 
-
 @endsection
 
 @section('content')
-	
-    <div id="fundo">
-        <div class="container mt-5">
-            <div class="d-flex justify-content-center">
-                <div class="espaco">
-                    <form action="{{route('site.login.validate')}}" method="post" class="form-signin">
-                            <h1 class="h3 mt-5 font-weight-normal text-center">Login</h1>
-                        {!! csrf_field()!!}                     
-                            <!--<label for="">E-mail:</label>-->
-                            <input type="email" name="email" id="email" placeholder="E-mail" class="form-control mt-4" required>     
-                            <!--<label for="">Senha:</label>-->
-                            <input type="password" id="password" name="password" minlength="6" placeholder="Senha" onchange="validaCaracter(this)" class="form-control mt-3" required>
-                            <div class="checkbox mt-3">
-                                <label>
-                                    <input type="checkbox" value="remember-me"> Lembre-se de mim
-                                </label>
-                            </div>
-                        <div class="form-group mt-2">
-                            <button type="submit" class="btn btn-primary btn-block mt-3">Entrar</button>
-                            <!--<a href="{{URL::previous()}}">
-                                <button type="button" class="btn btn-warning">Voltar</button>
-                            </a>-->
-                        </div>
-                    </form>
-                    <div class="card-footer">
-                        <div class="d-flex justify-content-center links">
-                            Não tem conta?<a href="#">Inscreva-se</a>
-                        </div>
-                        <div class="d-flex justify-content-center">
-                            <a href="#">Recuperar senha?</a>
-                        </div>
+	<div class="container">
+        <div class="d-flex justify-content-center flex-lg-center">
+           	<div class="col-lg-5 py-4">
+                <div class="text-xs-center pb-3">
+                    <span class="d-block h3 text-primary-light text-center">registre-se com:</span>
+                </div>	
+				<form>            
+					<div id="socialLoginList" class="row">
+						<div class="col-lg-6 py-1">
+							<button class="btn btn-block btn-primary" type="submit" name="provider">
+								<i class="mr-1"></i> Facebook
+							</button>
+						</div>
+						<div class="col-lg-6 py-1">
+							<button class="btn btn-block btn-danger" type="submit" name="provider">
+								<i class="mr-1"></i> Google
+							</button>
+						</div>
+						<div class="col-lg-6 py-1">
+							<button class="btn btn-block btn-light" type="submit" name="provider">
+								<i class="mr-1"></i> Instagran
+							</button>
+						</div>
+						<div class="col-lg-6 py-1">
+							<button class="btn btn-block btn-info" type="submit" name="provider">
+								<i class="mr-1"></i> Twitter
+							</button>
+						</div>
+					</div>
+				</form>
+				<div class="divider h4 my-3 text-center">
+			        <span class="text-muted">ou</span>
+			    </div>
+				<form >
+					<div class="form-group">
+					    <label>Nome</label>
+					    <input class="form-control">
+					</div>
+				  	<div class="form-row">
+				    	<div class="form-group col-md-6">
+				      		<label for="#">CPF</label>
+				      		<input class="form-control">
+				    	</div>
+				    	<div class="form-group col-md-6">
+				      		<label >Número</label>
+				      		<input class="form-control">
+				    	</div>
+				  	</div>
+				  	<div class="form-row">
+				    	<div class="form-group col-md-6">
+				      		<label >Email</label>
+				      		<input class="form-control">
+				    	</div>
+				    	<div class="form-group col-md-6">
+				      		<label >Senha</label>
+				      		<input class="form-control">
+				    	</div>
+				  	</div>
+
+				  	<div class="form-row">
+				  		<div class="form-group col-md-6">
+				    		<label >Endereço</label>
+				    		<input type="text" class="form-control" id="inputAddress1">
+				    	</div>
+				    	<div class="form-group col-md-6">
+				    		<label for="inputCEP">CEP</label>
+				      		<input type="text" class="form-control" id="inputCEP">
+				    	</div>
+				  	</div>
+				  	<div class="form-row">
+				    	<div class="form-group col-md-6">
+				      		<label for="inputCity">Cidade</label>
+				      		<input type="text" class="form-control" id="inputCity">
+				    	</div>
+				    	<div class="form-group col-md-6">
+				      		<label for="inputEstado">Estado</label>
+				      		<select id="inputEstado" class="form-control">
+				        		<option selected>Escolher...</option>
+				        		<option>...</option>
+				      		</select>
+				    	</div>
+				  	</div>
+				  <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+				</form>
+				<div class="card-footer">
+                    <div class="d-flex justify-content-center links">
+                        Já possui uma conta?<a href="{{route('site.login')}}">Entre agora!</a>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+			</div>
+		</div>
+	</div>
+        
 @endsection
