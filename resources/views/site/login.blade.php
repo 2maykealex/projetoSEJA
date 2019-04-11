@@ -12,11 +12,11 @@
     <style>
         
         html, body {
-            background: url("{{url('storage/img/astro.jp')}}") no-repeat center center fixed;
+            background: url("{{url('storage/img/astro.jpg')}}") no-repeat center center fixed;
             font-family: 'Nunito', sans-serif;
             height: 100%;
             margin: 0;
-            color: black;
+            color: white;
 
         }
         #fundo{
@@ -25,7 +25,7 @@
             position: relative;
             width : 100%;
             background-size: cover;
-            
+            background-color: rgba(3,169,244,.3) !important;
 
 
         }
@@ -76,7 +76,7 @@
                                     </label>
                                 </div>
                                 <div class="col-md-6 mt-3 text-md-right">
-                                    <a href="#">Recuperar senha?</a>
+                                    <a class="text-white" href="#">Recuperar senha?</a>
                                 </div>
                             </div>
                             <!--<div class="d-flex justify-content-center">
@@ -93,7 +93,7 @@
                         </div>
                     </form>
 
-                    <div class="divider h4 my-3 text-center">
+                    <!--<div class="divider h4 my-3 text-center">
                         <span class="text-muted">ou</span>
                     </div>
 
@@ -120,9 +120,9 @@
                             </button>
                         </div>
                     </div>
-                </form>
+                </form>-->
                 <div class="pt-4 text-xs-center text-center">
-                    <a class="btn btn-link mx-auto" href="{{route('site.subscribe')}}">Registrar</a>
+                    <a class="text-white" href="{{route('site.subscribe')}}">Registrar</a>
                 </div>
             </div>
         </div>
