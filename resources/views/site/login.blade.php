@@ -58,8 +58,9 @@
                     
 
                     <form action="{{route('site.login.validate')}}" method="post" class="form-signin">
+                    {!! csrf_field()!!}
                             <span class="d-block h3 text-primary-light text-center">Entre</span>
-                        
+                    
                         
                             <!--<label for="">E-mail:</label>-->
                             <input type="email" name="email" id="email" placeholder="E-mail" class="form-control mt-4" required>

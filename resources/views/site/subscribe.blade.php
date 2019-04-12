@@ -25,7 +25,7 @@
 
 @section('content')
 <div id="inscrever">
-	<div class="container color-background">
+	<div class="container">
         <div class="d-flex justify-content-center flex-lg-center">
            	<div class="col-lg-4 py-4 ">
                 <div class="text-xs-center pb-3">
