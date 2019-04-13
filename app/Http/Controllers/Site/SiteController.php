@@ -8,6 +8,7 @@ use App\User;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use App\Models\UserProfile;
 
 class SiteController extends Controller
 {
@@ -36,9 +37,8 @@ class SiteController extends Controller
         if ($user){
             if(Hash::check($request->password, $user->password)) {
                 Auth::login($user, true);
-
-                // dd(auth()->user());
-                return "USUÁRIO AUTENTICADO";
+                $route = $user->userProfile->profileAccess->name.'.home';
+                return redirect()->route($route);
             } else {
                 return "SENHA INCORRETA";
             }
