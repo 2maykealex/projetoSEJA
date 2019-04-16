@@ -77,7 +77,7 @@
         <div class="col-md-5 p-lg-5 mx-auto my-5" >
             <h1 class="display-4 font-weight-normal text-white">Projeto Seja</h1>
             <p class="lead font-weight-normal text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-            <a class="btn btn-outline-light" href="{{route('site.subscribe')}}">Partícipe nosso projeto</a>
+            <a class="btn btn-outline-light" href="{{route('subscribe')}}">Partícipe nosso projeto</a>
         </div>
         <div class="product-device shadow-sm d-none d-md-block"></div>
         <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
@@ -141,7 +141,7 @@
                     </div>
                 </div>
                 <div class="col-md-5 p-lg-5 mx-auto my-3 text-center" >
-                    <a class="btn btn-outline-danger" href="{{route('site.subscribe')}}">Mais</a>
+                    <a class="btn btn-outline-danger" href="{{route('subscribe')}}">Mais</a>
                 </div>
             </div>
         </div>         

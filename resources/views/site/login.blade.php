@@ -123,7 +123,7 @@
                     </div>
                 </form>-->
                 <div class="pt-4 text-xs-center text-center">
-                    <a class="text-white" href="{{route('site.subscribe')}}">Registrar</a>
+                    <a class="text-white" href="{{route('subscribe')}}">Registrar</a>
                 </div>
             </div>
         </div>
