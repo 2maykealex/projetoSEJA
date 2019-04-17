@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\UserProfile;
+use App\Models\State;
 
 class SiteController extends Controller
 {
@@ -48,6 +49,7 @@ class SiteController extends Controller
     }
 
     public function subscribe(){
-        return view('site.subscribe');
+        $states = State::orderby('initials')->get();
+        return view('site.subscribe', compact('states'));
     }
 }
