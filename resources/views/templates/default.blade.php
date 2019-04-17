@@ -8,12 +8,29 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     
-    @yield('styles')    
+    <style>
 
-    <script>
-        @yield('scripts')
-    </script>
+        @yield('styles')
 
+        #inicio {
+            background: url("{{url('storage/img/astro.jpg')}}") no-repeat center center fixed;
+            display: table;
+            height: 100%;
+            position: relative;
+            width : 100%;
+            background-size: cover;
+            }
+
+        /*class para estilizar cor de fundo o arquivo login.blade e subscribe.blade*/
+        .fundo{
+            display: table;
+            height: 100vh;
+            position: relative;
+            width : 100%;
+            background-color: rgba(0,0,0,.3) !important;
+        }
+            
+    </style>    
 
 </head>
 <body>

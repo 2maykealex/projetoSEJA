@@ -4,22 +4,6 @@
     
 @endsection
 
-@section('styles')
-
-    <style>
-    /*esse id vai permanecer*/
-    #inicio {
-        background: url("{{url('storage/img/astro.jpg')}}") no-repeat center center fixed;
-        display: table;
-        height: 100%;
-        position: relative;
-        width : 100%;
-        background-size: cover;
-        }
-    </style>
-   
-@endsection
-
 @section('content')
 
     <!--navbar-->

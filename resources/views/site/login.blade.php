@@ -1,38 +1,11 @@
-@extends('templates.default')
+@extends('templates.default_2')
 
 @section('title')
     
 @endsection
 
-@section('scripts')
-    
-@endsection
-
-@section('styles')
-    <style>
-        
-        html, body {
-            background: url("{{url('storage/img/astro.jpg')}}") no-repeat center center fixed;
-            font-family: 'Nunito', sans-serif;
-            height: 100%;
-            margin: 0;
-            color: white;
-
-        }
-        /*esse id dá para transformar em uma classe*/
-        #fundo{
-            display: table;
-            height: 100vh;
-            position: relative;
-            width : 100%;
-            background-size: cover;
-            background-color: rgba(3,169,244,.3) !important;
-        }
-    </style> 
-@endsection
-
 @section('content')
-    <div id="fundo">
+    <div class="fundo">
         <div class="container mt-5">
             <div class="d-flex justify-content-center">
                 <div class="col-md-4">
