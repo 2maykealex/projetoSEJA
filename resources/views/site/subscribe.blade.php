@@ -95,7 +95,7 @@
 				      		<select id="inputEstado" class="form-control">
 				        		<option selected>Escolher</option>
 				        		@foreach($states as $state)
-				        			<option>{{$state->name}}</option>
+				        			<option id="{{$state->id}}">{{$state->name}}</option>
 				        		@endforeach
 
 				      		</select>	
