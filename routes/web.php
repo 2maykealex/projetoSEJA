@@ -17,6 +17,7 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
     Route::post('update/{id}', 'AdmController@update')->name("adm.update");
 });
 
+Route::post('check-user/{email}', 'UserController@checkUser')->name("check.user");
 Route::post('login-validate', 'Site\SiteController@validateLogin')->name("site.login.validate");
 Route::post('subscribe/store', 'Site\SiteController@subscribeStore')->name("site.subscribe.store");
 Route::get('inscreva-se', 'Site\SiteController@subscribe')->name("subscribe")->middleware('authRoute');
