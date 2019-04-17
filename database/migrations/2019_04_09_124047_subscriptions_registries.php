@@ -17,10 +17,10 @@ class SubscriptionsRegistries extends Migration
             $table->increments('id');
             $table->integer('subscriber_id')->unsigned();
             $table->foreign('subscriber_id')->references('id')->on('subscribers');
-            
             $table->integer('subscription_plan_id')->unsigned();
-            $table->foreign('subscription_plan_id')->references('id')->on('subscriptions_plans') ;
-
+            $table->foreign('subscription_plan_id')->references('id')->on('subscriptions_plans');
+            $table->boolean('status');
+            $table->date('expires_in');
             $table->timestamps();
         });
     }
