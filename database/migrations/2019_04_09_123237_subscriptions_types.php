@@ -11,7 +11,7 @@ class SubscriptionsTypes extends Migration
      *
      * @return void
      */
-    public function up()
+    public function up()  #tipos de "planos"  Basico/intermed/avançad etc..
     {
         Schema::create('subscriptions_types', function (Blueprint $table) {
             $table->increments('id');

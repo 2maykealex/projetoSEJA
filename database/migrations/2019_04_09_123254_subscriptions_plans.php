@@ -19,7 +19,7 @@ class SubscriptionsPlans extends Migration
 
             $table->integer('subscription_type_id')->unsigned();
             $table->foreign('subscription_type_id')->references('id')->on('subscriptions_types');
-            $table->integer('collection_id')->unsigned();
+            $table->integer('collection_id')->unsigned(); # ref tb collections -> modalidade de pagamentos: mensal/trim/sem/anual
             $table->foreign('collection_id')->references('id')->on('collections');
             
             $table->float('price', 8,2);
