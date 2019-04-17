@@ -7,15 +7,8 @@
 @section('styles')
 
     <style>
-
+    /*esse id vai permanecer*/
     #inicio {
-        /* background: url ('../storage/img/astro.jpg') no-repeat center center fixed; */
-
-        /* background-image:url({{url('storage/img/astro.jpg')}}) no-repeat center center fixed; */
-        /* background-image: url({{ url('storage/img/astro.jpg')}}) no-repeat center center fixed; */
-        /* background-image:url({{url('storage/img/astro.jpg')}}) no-repeat center center fixed; */
-
-
         background: url("{{url('storage/img/astro.jpg')}}") no-repeat center center fixed;
         display: table;
         height: 100%;
@@ -23,7 +16,6 @@
         width : 100%;
         background-size: cover;
         }
-
     </style>
    
 @endsection
@@ -31,8 +23,6 @@
 @section('content')
 
     <!--navbar-->
-
-
 
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark border-bottom">
@@ -52,19 +42,11 @@
                         <li class="nav-item mr-5">
                             <a class="nav-link" href="{{route('site.quemsomos')}}">Sobre nós</a>
                         </li>
-                        <!--<li class="nav-item mr-5">
-                            <a class="nav-link" href="{{route('site.contatos')}}">Contatos</a>
-                        </li>-->
                     </ul>
-                    <!--cololcar um icon de pesquisa e colocar o login a direita quando o navbar diminuir mateus-->
-                    <!--<form class="form-inline my-2 my-lg-0 mr-4">
-                        <button class="btn btn-outline-light btn-sm my-2 my-sm-0" type="submit">Pesquisar</button>
-                        <input class="form-control form-control-sm mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
-                    </form>-->
                     <ul class="navbar-nav">
-                            <li class="nav-item ">
-                                <a class="nav-link" href="{{route('site.login')}}">Entrar</a>
-                            </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="{{route('site.login')}}">Entrar</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -140,18 +122,19 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-5 p-lg-5 mx-auto my-3 text-center" >
                     <a class="btn btn-outline-danger" href="{{route('subscribe')}}">Mais</a>
                 </div>
+
             </div>
         </div>         
     </div>
 
     <!--sobre nós -->
-
     
     <div class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto text-center border-top">
-    <h1 class="display-5">Sobre nós</h1>        
+        <h1 class="display-5">Sobre nós</h1>        
     </div>
 
     <main role="main" class="container border-top text-center">
@@ -162,6 +145,7 @@
                     < class="blog-post-meta">Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
                 </div>
             </div>
+
             <div class="blog-main py-1 mb-5">
                 <h3>Equipe</h3>
                 <div class="lead">
@@ -189,20 +173,6 @@
             <div class="row mt-3 ">
                 <div class="col-md-3 col-lg-3 col-xl-3 mb-4">
                     <h6 class="border-right border-dark"><strong>EMPRESA</strong></h6>
-                    <!--<ul class="nav flex-column">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                    </ul>-->
                     <p class="lead">
                         Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
                     </p>

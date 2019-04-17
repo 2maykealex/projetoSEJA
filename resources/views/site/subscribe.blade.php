@@ -17,6 +17,7 @@
             width : 100%;
             background-size: cover;
             background-color: rgba(3,169,244,.3) !important;
+        }
 
 	</style>
 
@@ -30,35 +31,8 @@
            	<div class="col-lg-6 py-4 ">
                 <div class="text-xs-center pb-3">
                     <span class="d-block h3 text-primary-light text-center">Novo assinante:</span>
-                </div>	
-				<!--<form>            
-					<div id="socialLoginList" class="row">
-						<div class="col-lg-6 py-1">
-							<button class="btn btn-block btn-primary" type="submit" name="provider">
-								<i class="mr-1"></i> Facebook
-							</button>
-						</div>
-						<div class="col-lg-6 py-1">
-							<button class="btn btn-block btn-danger" type="submit" name="provider">
-								<i class="mr-1"></i> Google
-							</button>
-						</div>
-						<div class="col-lg-6 py-1">
-							<button class="btn btn-block btn-light" type="submit" name="provider">
-								<i class="mr-1"></i> Instagran
-							</button>
-						</div>
-						<div class="col-lg-6 py-1">
-							<button class="btn btn-block btn-info" type="submit" name="provider">
-								<i class="mr-1"></i> Twitter
-							</button>
-						</div>
-					</div>
-				</form>
-				<div class="divider h4 my-3 text-center">
-			        <span class="text-muted">ou</span>
-			    </div>
-				<form >-->
+                </div>				
+				<form>
 					<div class="form-group row">
 					    <label class="col-md-3 col-form-label">Nome</label>
 					    <div class="col-md-9">
@@ -97,7 +71,6 @@
 				        		@foreach($states as $state)
 				        			<option id="{{$state->id}}">{{$state->name}}</option>
 				        		@endforeach
-
 				      		</select>	
 				      	</div>
 			    	</div>
@@ -110,14 +83,29 @@
 				      		</select>	
 				      	</div>
 				  	</div>
-				  <button type="submit" class="btn btn-primary btn-block">Entrar</button>
+				  	<div class="form-group row">
+			    		<label  for="inputEmail" class="col-md-3 col-form-label">E-mail</label>
+			    		<div class="col-md-9">
+			      			<input type="email" class="form-control" id="inputEmail">
+			      		</div>
+			    	</div>  	
+			    	<div class="form-group row">
+			    		<label for="inputPassword" class="col-md-3 col-form-label">Senha</label>
+			    		<div class="col-md-9">
+			      			<input type="password" class="form-control" id="inputPassword">
+			      		</div>
+			    	</div>
+			    	<div class="form-group row">
+			    		<label for="inputPassword" class="col-md-3 col-form-label">Confirmar</label>
+			    		<div class="col-md-9">
+			      			<input type="password" class="form-control" id="inputPassword">
+			      		</div>
+			    	</div>
+				  	<button type="submit" class="btn btn-primary btn-block">Registrar</button>
 				</form>
-				
                 <div class="pt-4 text-xs-center text-center">
                     Já possui uma conta?<a class="text-white" href="{{route('site.login')}}">Entre agora!</a>
-                </div>
-                
-                
+                </div>                
 			</div>
 		</div>
 	</div>
