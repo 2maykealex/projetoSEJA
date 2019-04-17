@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Subscriber extends Model
+class SubscriptionRegistry extends Model
 {
     public function newSubscriber($data):Array{
         $this->people_id = $data['people_id'];

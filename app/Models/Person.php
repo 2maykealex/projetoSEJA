@@ -6,18 +6,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Person extends Model
 {
-
     public function newPerson($dados):Array {
-
         $this->name      = $dados['name'];
-        $this->cli_doc   = $dados['cli_doc'];
+        $this->cpf       = $dados['cpf'];
         $this->telephone = $dados['telephone'];
         
         $this->zipcode   = $dados['zipcode'];
         $this->address   = $dados['address'];
         $this->city_id   = $dados['city'];
 
-        $this->image     = $dados['image'];
+        $this->image     = ""; # A imagem poderá ser add em seu perfil
 
         $update = $this->save();
 
@@ -36,12 +34,12 @@ class Person extends Model
     public function updatePerson($dados):Array {
 
         $this->name      = $dados['name'];
-        $this->cli_doc   = $dados['cli_doc'];
+        $this->cpf       = $dados['cpf'];
         $this->telephone = $dados['telephone'];
         $this->email     = $dados['email'];
         $this->zipcode   = $dados['zipcode'];
         $this->address   = $dados['address'];
-        $this->city_id   = $dados['city1'];
+        $this->city_id   = $dados['city'];
 
         $update = $this->save();
 
@@ -60,14 +58,18 @@ class Person extends Model
 
     public function deletePerson($dados):Array {
 
-        $delete = $this->destroy($dados);
+        #se fará uma marcação para identificar que o cliente foi removido.. mas será somente oculto no sistema
 
-        if ($delete){
-            return [
-                'success' => true,
-                'message' => 'Cadastro removido da base de dados com sucesso!'
-            ];
-        }
+        #
+
+        // $delete = $this->destroy($dados);
+
+        // if ($delete){
+        //     return [
+        //         'success' => true,
+        //         'message' => 'Cadastro removido da base de dados com sucesso!'
+        //     ];
+        // }
 
         return [
             'success' => false,
@@ -75,7 +77,7 @@ class Person extends Model
         ];
     }
 
-    public function city(){
+    public function city(){   #faz o relacionamento com cidades
         return $this->belongsTo(City::class);
     }
 }

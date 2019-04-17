@@ -42,26 +42,17 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-
     public function newUser($data):Array{
+        $this->name        = $data['name'];
+        $this->email       = $data['email'];
+        $this->password    = $data['password'];
 
-        $user = User::where('email', $data['email'])->get()->first(); //verifica se existe o email de novo usuário no banco 
+        $updated = $this->save();
 
-        if (!$user){             //caso não, cadastre 
-            $this->name        = $data['name'];
-            $this->email       = $data['email'];
-            $this->password    = $data['password'];
-
-            $updated = $this->save();
-
-            if ($updated){
-                return [
-                    $this->id
-                ];
-            }
-
-        } else{
-            return [0];
+        if ($updated){
+            return [
+                $this->id
+            ];
         }
     }
 }
