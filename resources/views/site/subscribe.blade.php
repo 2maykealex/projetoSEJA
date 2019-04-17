@@ -27,7 +27,7 @@
 <div id="inscrever">
 	<div class="container">
         <div class="d-flex justify-content-center flex-lg-center">
-           	<div class="col-lg-4 py-4 ">
+           	<div class="col-lg-6 py-4 ">
                 <div class="text-xs-center pb-3">
                     <span class="d-block h3 text-primary-light text-center">Novo assinante:</span>
                 </div>	
@@ -94,7 +94,10 @@
 			      		<div class="col-md-9">
 				      		<select id="inputEstado" class="form-control">
 				        		<option selected>Escolher</option>
-				        		<option>...</option>
+				        		@foreach($states as $state)
+				        			<option>{{$state->name}}</option>
+				        		@endforeach
+
 				      		</select>	
 				      	</div>
 			    	</div>
