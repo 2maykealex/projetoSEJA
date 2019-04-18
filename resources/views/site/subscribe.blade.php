@@ -46,10 +46,10 @@
 				    	<div class="form-group row">
 				      		<label for="inputEstado" class="col-md-3 col-form-label">Estado</label>
 				      		<div class="col-md-9">
-					      		<select name="state" class="form-control" id="state" required onchange="listCities(this.value, 1);" collapse>
+					      		<select name="state" class="form-control" id="state" required onchange="listCities(this.value);" collapse>
 					        		<option value="-1">Escolher</option>
 					        		@foreach($states as $state)
-					        			<option value="{{$state->id}}" <?php if (isset($client)){if($client->city->state->id == $state->id){ echo ("selected");}} ?>>{{$state->initials}}</option>
+					        			<option value="{{$state->id}}">{{$state->initials}}</option>
 					        		@endforeach
 					      		</select>	
 					      	</div>
@@ -57,7 +57,7 @@
 				    	<div class="form-group row">
 				      		<label for="inputCity" class="col-md-3 col-form-label">Cidade</label>
 				      		<div class="col-md-9">
-					      		<select id="city_id" name="city_id" class="form-control">
+					      		<select id="city" name="city" class="form-control">
 					        		<option selected>Escolher</option>
 					        		<option>...</option>
 					      		</select>	
@@ -76,9 +76,9 @@
 				      		</div>
 				    	</div>
 				    	<div class="form-group row">
-				    		<label for="inputPassword" class="col-md-3 col-form-label">Confirmar</label>
+				    		<label for="inputConfirmPassword" class="col-md-3 col-form-label">Confirmar</label>
 				    		<div class="col-md-9">
-				      			<input type="password" class="form-control" id="inputPassword">
+				      			<input type="password" class="form-control" id="inputConfirmPassword">
 				      		</div>
 				    	</div>
 					  	<button type="submit" class="btn btn-primary btn-block">Registrar</button>
