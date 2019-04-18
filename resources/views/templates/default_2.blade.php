@@ -20,6 +20,60 @@
     </style>
 
     <script type="text/javascript">
+
+        function checkMaskDocument(elemento){
+            var valor = elemento.value;
+
+            if (valor.length == 11){
+                novo = valor.substring(0,3)+"."+valor.substring(3,6)+"."+valor.substring(6,9)+"-"+valor.substring(9,11);
+            }else{
+                valor = valor.replace("-","");
+                valor = valor.replace("/","");
+                valor = valor.replace(".","");
+                valor = valor.replace(".","");
+
+                if (valor.length == 14){
+                    novo = valor.substring(0,2)+"."+valor.substring(2,5)+"."+valor.substring(5,8)+"/"+valor.substring(8,12)+"-"+valor.substring(12,14);
+                }else{
+                    novo = valor;
+                }
+            }
+            elemento.value=novo;
+        }
+
+        function checkMaskTelephone(elemento){
+            var valor = elemento.value;
+
+            valor = valor.replace("-","");
+            valor = valor.replace("(","");
+            valor = valor.replace(") ","");
+            valor = valor.replace(" ","");
+
+            if (valor.length == 11){
+                novo = "("+valor.substring(0,2)+") "+valor.substring(2,3)+""+valor.substring(3,7)+"-"+valor.substring(7,11);
+            }else if (valor.length == 10){
+                novo = "("+valor.substring(0,2)+") "+valor.substring(2,6)+"-"+valor.substring(6,10);
+            }else{
+                novo = valor;
+            }
+
+            elemento.value=novo;
+        }
+
+        function checkMaskZipCode(elemento){
+            var valor = elemento.value;
+
+            valor = valor.replace("-","");
+            valor = valor.replace(".","");
+
+            if (valor.length == 8){
+                novo = valor.substring(0,2)+"."+valor.substring(2,5)+"-"+valor.substring(5,8);
+            }else{
+                novo = valor;
+            }
+            elemento.value=novo;
+        }
+
         function listCities (idUF){
             $("#city option").remove();
             if (idUF > 0){
