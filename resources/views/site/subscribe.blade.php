@@ -46,10 +46,10 @@
 				    	<div class="form-group row">
 				      		<label for="inputEstado" class="col-md-3 col-form-label">Estado</label>
 				      		<div class="col-md-9">
-					      		<select id="inputEstado" class="form-control">
-					        		<option selected>Escolher</option>
+					      		<select name="state" class="form-control" id="state" required onchange="listCities(this.value, 1);" collapse>
+					        		<option value="-1">Escolher</option>
 					        		@foreach($states as $state)
-					        			<option id="{{$state->id}}">{{$state->name}}</option>
+					        			<option value="{{$state->id}}" <?php if (isset($client)){if($client->city->state->id == $state->id){ echo ("selected");}} ?>>{{$state->initials}}</option>
 					        		@endforeach
 					      		</select>	
 					      	</div>
