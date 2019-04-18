@@ -45,7 +45,7 @@ class User extends Authenticatable
     public function newUser($data):Array{
         $this->name        = $data['name'];
         $this->email       = $data['email'];
-        $this->password    = $data['password'];
+        $this->password    = bcrypt($data['password']);
 
         $updated = $this->save();
 
