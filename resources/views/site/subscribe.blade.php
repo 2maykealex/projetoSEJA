@@ -47,7 +47,7 @@
 				    	<div class="form-group row">
 				      		<label for="inputEstado" class="col-md-3 col-form-label">Estado</label>
 				      		<div class="col-md-9">
-					      		<select name="state" class="form-control" id="state" required onchange="listCities(this.value);" collapse>
+					      		<select class="form-control" id="state" required onchange="listCities(this.value);" collapse>
 					        		<option value="-1">Escolher</option>
 					        		@foreach($states as $state)
 					        			<option value="{{$state->id}}">{{$state->initials}}</option>
@@ -67,13 +67,13 @@
 					  	<div class="form-group row">
 				    		<label  for="email" class="col-md-3 col-form-label">E-mail</label>
 				    		<div class="col-md-9">
-				      			<input type="email" class="form-control" id="email">
+				      			<input type="email" class="form-control" id="email" name="email">
 				      		</div>
 				    	</div>  	
 				    	<div class="form-group row">
 				    		<label for="password" class="col-md-3 col-form-label">Senha</label>
 				    		<div class="col-md-9">
-				      			<input type="password" class="form-control" id="password">
+				      			<input type="password" class="form-control" id="password" name="password">
 				      		</div>
 				    	</div>
 				    	<div class="form-group row">
