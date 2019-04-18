@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\UserProfile;
 use App\Models\State;
+use App\Models\City;
 
 class SiteController extends Controller
 {
@@ -51,5 +52,10 @@ class SiteController extends Controller
     public function subscribe(){
         $states = State::orderby('initials')->get();
         return view('site.subscribe', compact('states'));
+    }
+
+    public function listCities($idUF){
+        $cities = City::where('state_id', $idUF)->orderby('name')->get();
+        return $cities;
     }
 }
