@@ -18,16 +18,16 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="{{route('site.home')}}">Início</a>
+                            <a class="nav-link" href="#inicio">Início</a>
                         </li>
                         <li class="nav-item mr-5">
                             <a class="nav-link" href="#publicacao">Públicações</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="{{route('site.quemsomos')}}">Eventos</a>
+                            <a class="nav-link" href="#eventos">Eventos</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="{{route('site.quemsomos')}}">Congressos</a>
+                            <a class="nav-link" href="#congresso">Congressos</a>
                         </li>
                         <li class="nav-item mr-5">
                             <a class="nav-link" href="#sobre">Sobre nós</a>
@@ -43,7 +43,7 @@
         </nav>
     </header>
 
-    <!--home-->
+    <!--inicio-->
 
     <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-dark" id="inicio">
         <div class="col-md-5 p-lg-5 mx-auto my-5" >
@@ -55,7 +55,7 @@
         <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
     </div>
 
-    <!--card-->
+    <!--publicações-->
 
     <div id="publicacao" class="pricing-header container border-bottom py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h1 class="display-5 mt-5">Conteúdo</h1>
@@ -121,6 +121,47 @@
         </div>         
     </div>
 
+    <!--eventos-->
+
+    <div id="eventos" class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto text-center border-bottom">
+        <h1 class="display-5 mt-5">Eventos</h1>        
+    </div>
+    <div class="container py-5">
+        <div class="mb-3">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="{{asset('storage/img/astro.jpg')}}" class="card-img" alt="...">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">beatae vitae</h5>
+                        <p class="card-text">< class="blog-post-meta">Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
+                        <p class="card-text"><small class="text-muted">minutes lorem ipsun 3 min</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!--congressos-->
+
+    <div id="congresso" class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto text-center border-top">
+        <h1 class="display-5 mt-5">Congressos</h1>        
+    </div>
+    <main role="main" class="container border-top text-center">
+        <div class="d-flex justify-content-center flex-lg-center">
+            <div class="col-md-9">
+                <div class="blog-main py-4">
+                    
+                    <div class="lead">
+                        < class="blog-post-meta">Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
+                        Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
+                    </div>
+                </div>
+            </div>
+        </div>                
+    </main>
+
     <!--sobre nós -->
     
     <div id="sobre" class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto text-center border-top">
@@ -128,18 +169,20 @@
     </div>
 
     <main role="main" class="container border-top text-center">
-        <div class="row">
-            <div class="blog-main py-4">
-                <h3>Empresa</h3>
-                <div class="lead">
-                    < class="blog-post-meta">Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
+        <div class="d-flex justify-content-center flex-lg-center">
+            <div class="col-md-9">
+                <div class="blog-main py-4">
+                    <h3>Empresa</h3>
+                    <div class="lead">
+                        < class="blog-post-meta">Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
+                    </div>
                 </div>
-            </div>
 
-            <div class="blog-main py-1 mb-5">
-                <h3>Equipe</h3>
-                <div class="lead">
-                    <p class="blog-post-meta">Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
+                <div class="blog-main py-1 mb-5">
+                    <h3>Equipe</h3>
+                    <div class="lead">
+                        <p class="blog-post-meta">Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
+                    </div>
                 </div>
             </div>
         </div>                
