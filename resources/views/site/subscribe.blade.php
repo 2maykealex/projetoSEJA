@@ -12,7 +12,7 @@
 	                <div class="text-xs-center pb-3">
 	                    <span class="d-block h3 text-primary-light text-center">Novo assinante:</span>
 	                </div>
-					<form action="{{route('subscriber.store')}}" method="POST" class="form form-">
+					<form action="{{route('subscriber.store')}}" method="POST" class="form form-" onsubmit="EnviarFormulario()">
 						@csrf
 						<div class="form-group row">
 						    <label class="col-md-3 col-form-label">Nome</label>

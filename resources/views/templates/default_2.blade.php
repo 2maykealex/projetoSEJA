@@ -91,6 +91,26 @@
                 });
             }
         }
+        function EnviarFormulario(){
+            cpf = $("#cpf").val();
+            cpf = cpf.replace("-","");
+            cpf = cpf.replace("/","");
+            cpf = cpf.replace(".","");
+            cpf = cpf.replace(".","");
+            $("#cpf").val(cpf);
+
+            telephone = $("#telephone").val();
+            telephone = telephone.replace("-","");
+            telephone = telephone.replace("(","");
+            telephone = telephone.replace(") ","");
+            telephone = telephone.replace(" ","");
+            $("#telephone").val(telephone);
+
+            zipCode = $("#zipcode").val();
+            zipCode = zipCode.replace("-","");
+            zipCode = zipCode.replace(".","");
+            $("#zipcode").val(zipCode);
+        }
     </script>
 
 </head>
