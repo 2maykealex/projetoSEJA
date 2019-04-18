@@ -18,17 +18,27 @@ class CitiesTableSeeder extends Seeder
         ]);
 
         City::create([
+            'name'     => 'CACOAL',
+            'state_id' => 1,
+        ]);
+
+        City::create([
             'name'     => 'RIO BRANCO',
             'state_id' => 2,
         ]);
 
         City::create([
-            'name'     => 'AMAZONAS',
+            'name'     => 'MANAUS',
             'state_id' => 3,
         ]);
 
         City::create([
             'name'     => 'SÃO PAULO',
+            'state_id' => 4,
+        ]);
+
+        City::create([
+            'name'     => 'DIADEMA',
             'state_id' => 4,
         ]);
     }
