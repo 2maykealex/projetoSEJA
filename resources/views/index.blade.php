@@ -21,10 +21,16 @@
                             <a class="nav-link" href="{{route('site.home')}}">Início</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="">Conteúdo</a>
+                            <a class="nav-link" href="#publicacao">Públicações</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="{{route('site.quemsomos')}}">Sobre nós</a>
+                            <a class="nav-link" href="{{route('site.quemsomos')}}">Eventos</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a class="nav-link" href="{{route('site.quemsomos')}}">Congressos</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a class="nav-link" href="#sobre">Sobre nós</a>
                         </li>
                     </ul>
                     <ul class="navbar-nav">
@@ -51,8 +57,8 @@
 
     <!--card-->
 
-    <div id="conteudo" class="pricing-header container border-bottom py-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h1 class="display-5">Conteúdo</h1>
+    <div id="publicacao" class="pricing-header container border-bottom py-3 pt-md-5 pb-md-4 mx-auto text-center">
+        <h1 class="display-5 mt-5">Conteúdo</h1>
     </div>
 
     <div class="album py-5">
@@ -117,8 +123,8 @@
 
     <!--sobre nós -->
     
-    <div class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto text-center border-top">
-        <h1 class="display-5">Sobre nós</h1>        
+    <div id="sobre" class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto text-center border-top">
+        <h1 class="display-5 mt-5">Sobre nós</h1>        
     </div>
 
     <main role="main" class="container border-top text-center">

@@ -17,6 +17,13 @@
             color: white;
             background-size: cover;
         }
+        .fundo{
+            display: table;
+            height: 100vh;
+            position: relative;
+            width : 100%;
+            background-color: rgba(0,0,0,.3) !important;
+        }
     </style>
 
     <script type="text/javascript">

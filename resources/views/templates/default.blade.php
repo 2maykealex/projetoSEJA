@@ -17,15 +17,7 @@
             width : 100%;
             background-size: cover;
             }
-
-        /*class para estilizar cor de fundo o arquivo login.blade e subscribe.blade*/
-        .fundo{
-            display: table;
-            height: 100vh;
-            position: relative;
-            width : 100%;
-            background-color: rgba(0,0,0,.3) !important;
-        }
+        
     </style>
 
 </head>
