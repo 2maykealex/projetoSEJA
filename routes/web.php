@@ -21,6 +21,7 @@ Route::post('check-user/{email}', 'UserController@checkUser')->name("check.user"
 Route::post('login-validate', 'Site\SiteController@validateLogin')->name("site.login.validate");
 Route::post('subscriber/store', 'Subscriber\SubscriberController@store')->name("subscriber.store");
 Route::get('inscreva-se', 'Site\SiteController@subscribe')->name("subscribe")->middleware('authRoute');
+Route::get('listCities/{idUF}', 'Site\SiteController@listCities')->name("listCities")->middleware('authRoute');
 Route::get('login', 'Site\SiteController@doLogin')->name("site.login");
 Route::get('logout', 'Auth\LoginController@logout');
 Route::get('/', 'Site\SiteController@index');
