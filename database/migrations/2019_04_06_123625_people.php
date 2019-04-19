@@ -26,7 +26,7 @@ class People extends Migration
             $table->integer('city_id')->unsigned();
             $table->foreign('city_id')->references('id')->on('cities');
 
-            $table->string('image', 100)->nullable;
+            $table->string('image', 100);
             $table->timestamps();
         });
     }

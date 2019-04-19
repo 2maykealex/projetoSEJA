@@ -7,22 +7,20 @@ use Illuminate\Database\Eloquent\Model;
 class Person extends Model
 {
     public function newPerson($dados):Array {
+        $this->user_id   = $dados['user_id'];
         $this->name      = $dados['name'];
         $this->cpf       = $dados['cpf'];
         $this->telephone = $dados['telephone'];
-        
         $this->zipcode   = $dados['zipcode'];
         $this->address   = $dados['address'];
-        $this->city_id   = $dados['city'];
-
-        $this->image     = ""; # A imagem poderá ser add em seu perfil
-
+        $this->city_id   = $dados['city_id'];
+        $this->image     = $dados['image'];
+        
         $update = $this->save();
 
         if ($update){
             return [
-                'success' => true,
-                'message' => 'O cadastro realizado com sucesso!'
+                $this->id
             ];
         }
 
