@@ -14,7 +14,7 @@ class AdmController extends Controller
      */
     public function index()
     {
-        return "Adm home";
+        return view('adm.index');
     }
 
     /**
