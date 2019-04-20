@@ -14,7 +14,7 @@ class AdmController extends Controller
      */
     public function index()
     {
-        return view('adm.index');
+        return view('adm.index_adm');
     }
 
     /**
