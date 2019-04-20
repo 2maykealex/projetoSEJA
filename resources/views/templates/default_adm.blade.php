@@ -29,7 +29,6 @@
 </head>
 <body>
     <div class="content">
-        teste
         @yield('content')
     </div>
 
