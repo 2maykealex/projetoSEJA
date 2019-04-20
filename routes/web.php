@@ -9,9 +9,19 @@ Route::group(['namespace' => 'Site', 'prefix' => '/site'], function () {
 });
 
 Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'prefix' => 'adm'], function () {
-    Route::get('plans', 'PlanController@index')->name("adm.plan.list");
-    Route::get('', 'AdmController@index')->name("adm.home");
+    
+    Route::group(['prefix' => 'colletions'], function () {
+        Route::get('list', 'ColletionController@index')->name("adm.colletions.list");
+        Route::get('new', 'ColletionController@create')->name("adm.colletions.new");
+        Route::get('show/{id}', 'ColletionController@show')->name("adm.colletions.show");
+        Route::get('edit/{id}', 'ColletionController@edit')->name("adm.colletions.edit");
+        Route::get('delete/{id}', 'ColletionController@destroy')->name("adm.colletions.delete");
+        Route::post('update/{id}', 'ColletionController@update')->name("adm.colletions.update");
+        Route::post('store/{id}', 'ColletionController@store')->name("adm.colletions.store");
+        // Route::get('list', 'SubscriptionPlanController@index')->name("adm.colletions.list");
+    });
 
+    Route::get('', 'AdmController@index')->name("adm.home");
     Route::get('new', 'AdmController@create')->name("adm.new");
     Route::post('new-save', 'AdmController@store')->name("adm.store");
     Route::get('show/{id}', 'AdmController@show')->name("adm.show");
