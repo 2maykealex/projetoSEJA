@@ -15,8 +15,8 @@ class CollectionController extends Controller
      */
     public function index()
     {
-        $collection = Collection::orderby('id')->get();
-        return view('adm.colletion.index', compact('collection'));
+        $collections = Collection::orderby('id')->get();
+        return view('adm.collection.index', compact('collections'));
     }
 
     /**
@@ -26,7 +26,7 @@ class CollectionController extends Controller
      */
     public function create()
     {
-        return view('adm.colletion.new');
+        return view('adm.collection.new');
     }
 
     /**
@@ -37,7 +37,17 @@ class CollectionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        
+        $collection = new Collection;
+
+        $idNewCollection = $collection->newCollection($data);
+
+        if($idNewCollection){
+            return view('adm.collection.index');
+        }
+
+        return view('adm.collection.index');
     }
 
     /**
@@ -48,7 +58,8 @@ class CollectionController extends Controller
      */
     public function show($id)
     {
-        return view('adm.colletion.show');
+        $collection = Collection::where('id', $id)->get();
+        return view('adm.collection.show', compact('collection'));
     }
 
     /**
@@ -59,7 +70,8 @@ class CollectionController extends Controller
      */
     public function edit($id)
     {
-        return view('adm.colletion.edit');
+        $collection = Collection::where('id', $id)->get();
+        return view('adm.collection.edit', compact('collection'));
     }
 
     /**
@@ -71,7 +83,17 @@ class CollectionController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        
+        $collection = new Collection;
+
+        $idNewCollection = $collection->updateCollection($data);
+
+        if($idNewCollection){
+            return view('adm.collection.index');
+        }
+
+        return view('adm.collection.index');
     }
 
     /**
@@ -82,6 +104,7 @@ class CollectionController extends Controller
      */
     public function destroy($id)
     {
-        return view('adm.colletion.delete');
+        $collection = Collection::where('id', $id)->get();
+        
     }
 }
