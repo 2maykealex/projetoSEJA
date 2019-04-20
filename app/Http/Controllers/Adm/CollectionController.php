@@ -4,8 +4,9 @@ namespace App\Http\Controllers\Adm;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Collection;
 
-class ColletionController extends Controller
+class CollectionController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +15,8 @@ class ColletionController extends Controller
      */
     public function index()
     {
-        return view('adm.colletion.index');
+        $collection = Collection::orderby('id')->get();
+        return view('adm.colletion.index', compact('collection'));
     }
 
     /**

@@ -10,15 +10,15 @@ Route::group(['namespace' => 'Site', 'prefix' => '/site'], function () {
 
 Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'prefix' => 'adm'], function () {
     
-    Route::group(['prefix' => 'colletions'], function () {
-        Route::get('list', 'ColletionController@index')->name("adm.colletions.list");
-        Route::get('new', 'ColletionController@create')->name("adm.colletions.new");
-        Route::get('show/{id}', 'ColletionController@show')->name("adm.colletions.show");
-        Route::get('edit/{id}', 'ColletionController@edit')->name("adm.colletions.edit");
-        Route::get('delete/{id}', 'ColletionController@destroy')->name("adm.colletions.delete");
-        Route::post('update/{id}', 'ColletionController@update')->name("adm.colletions.update");
-        Route::post('store/{id}', 'ColletionController@store')->name("adm.colletions.store");
-        // Route::get('list', 'SubscriptionPlanController@index')->name("adm.colletions.list");
+    Route::group(['prefix' => 'collections'], function () {
+        Route::get('list', 'CollectionController@index')->name("adm.collections.list");
+        Route::get('new', 'CollectionController@create')->name("adm.collections.new");
+        Route::get('show/{id}', 'CollectionController@show')->name("adm.collections.show");
+        Route::get('edit/{id}', 'CollectionController@edit')->name("adm.collections.edit");
+        Route::get('delete/{id}', 'CollectionController@destroy')->name("adm.collections.delete");
+        Route::post('update/{id}', 'CollectionController@update')->name("adm.collections.update");
+        Route::post('store/{id}', 'CollectionController@store')->name("adm.collections.store");
+        // Route::get('list', 'SubscriptionPlanController@index')->name("adm.collections.list");
     });
 
     Route::get('', 'AdmController@index')->name("adm.home");
