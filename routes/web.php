@@ -9,7 +9,9 @@ Route::group(['namespace' => 'Site', 'prefix' => '/site'], function () {
 });
 
 Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'prefix' => 'adm'], function () {
+    Route::get('plans', 'PlanController@index')->name("adm.plan.list");
     Route::get('', 'AdmController@index')->name("adm.home");
+
     Route::get('new', 'AdmController@create')->name("adm.new");
     Route::post('new-save', 'AdmController@store')->name("adm.store");
     Route::get('show/{id}', 'AdmController@show')->name("adm.show");
