@@ -9,12 +9,27 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
-        
+        html, body {
+            background: url("{{url('storage/img/astro.jpg')}}") no-repeat center center fixed;
+            font-family: 'Nunito', sans-serif;
+            height: 100%;
+            margin: 0;
+            color: white;
+            background-size: cover;
+        }
+        .fundo{
+            display: table;
+            height: 100vh;
+            position: relative;
+            width : 100%;
+            background-color: rgba(0,0,0,.3) !important;
+        }
     </style>
 
 </head>
 <body>
     <div class="content">
+        teste
         @yield('content')
     </div>
 
