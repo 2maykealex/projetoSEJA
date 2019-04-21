@@ -21,13 +21,13 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
     });
 
     Route::group(['prefix' => 'subscriptions-types'], function () {
-        Route::get('list', 'CollectionController@index')->name("adm.subscriptions.types.list");
-        Route::get('new', 'CollectionController@create')->name("adm.subscriptions.types.new");
-        Route::get('show/{id}', 'CollectionController@show')->name("adm.subscriptions.types.show");
-        Route::get('edit/{id}', 'CollectionController@edit')->name("adm.subscriptions.types.edit");
-        Route::get('delete/{id}', 'CollectionController@destroy')->name("adm.subscriptions.types.delete");
-        Route::post('update/{id}', 'CollectionController@update')->name("adm.subscriptions.types.update");
-        Route::post('store/{id}', 'CollectionController@store')->name("adm.subscriptions.types.store");
+        Route::get('list', 'SubscriptionTypeController@index')->name("adm.subscriptions.types.list");
+        Route::get('new', 'SubscriptionTypeController@create')->name("adm.subscriptions.types.new");
+        Route::get('show/{id}', 'SubscriptionTypeController@show')->name("adm.subscriptions.types.show");
+        Route::get('edit/{id}', 'SubscriptionTypeController@edit')->name("adm.subscriptions.types.edit");
+        Route::get('delete/{id}', 'SubscriptionTypeController@destroy')->name("adm.subscriptions.types.delete");
+        Route::post('update/{id}', 'SubscriptionTypeController@update')->name("adm.subscriptions.types.update");
+        Route::post('store/{id}', 'SubscriptionTypeController@store')->name("adm.subscriptions.types.store");
     });
 
     Route::get('', 'AdmController@index')->name("adm.home");
