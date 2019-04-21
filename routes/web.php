@@ -20,6 +20,16 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
         Route::post('store/{id}', 'CollectionController@store')->name("adm.collections.store");
     });
 
+    Route::group(['prefix' => 'subscriptions-plans'], function () {
+        Route::get('list', 'SubscriptionPlanController@index')->name("adm.subscriptions.plans.list");
+        Route::get('new', 'SubscriptionPlanController@create')->name("adm.subscriptions.plans.new");
+        Route::get('show/{id}', 'SubscriptionPlanController@show')->name("adm.subscriptions.plans.show");
+        Route::get('edit/{id}', 'SubscriptionPlanController@edit')->name("adm.subscriptions.plans.edit");
+        Route::get('delete/{id}', 'SubscriptionPlanController@destroy')->name("adm.subscriptions.plans.delete");
+        Route::post('update/{id}', 'SubscriptionPlanController@update')->name("adm.subscriptions.plans.update");
+        Route::post('store/{id}', 'SubscriptionPlanController@store')->name("adm.subscriptions.plans.store");
+    });
+
     Route::group(['prefix' => 'subscriptions-types'], function () {
         Route::get('list', 'SubscriptionTypeController@index')->name("adm.subscriptions.types.list");
         Route::get('new', 'SubscriptionTypeController@create')->name("adm.subscriptions.types.new");
