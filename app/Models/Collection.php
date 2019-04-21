@@ -8,7 +8,6 @@ class Collection extends Model
 {
     public function newCollection($dados):Array {
         $this->name      = $dados['name'];
-        
         $save = $this->save();
 
         if ($save){
@@ -23,7 +22,6 @@ class Collection extends Model
         ];
     }
     public function updateCollection($dados):Array {
-
         $this->name      = $dados['name'];
         $update = $this->save();
 
@@ -37,6 +35,27 @@ class Collection extends Model
         return [
             'success' => false,
             'message' => 'Não foi possível realizar este cadastro. Verifique!'
+        ];
+    }
+
+    public function deletePerson($dados):Array {
+
+        #se fará uma marcação para identificar que o cliente foi removido.. mas será somente oculto no sistema
+
+        #
+
+        // $delete = $this->destroy($dados);
+
+        // if ($delete){
+        //     return [
+        //         'success' => true,
+        //         'message' => 'Cadastro removido da base de dados com sucesso!'
+        //     ];
+        // }
+
+        return [
+            'success' => false,
+            'message' => 'Não foi possível remover este cadastro. Verifique!'
         ];
     }
 }
