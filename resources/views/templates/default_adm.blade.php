@@ -9,26 +9,64 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
-        html, body {
-            background: url("{{url('storage/img/astro.jpg')}}") no-repeat center center fixed;
-            font-family: 'Nunito', sans-serif;
-            height: 100%;
-            margin: 0;
-            color: white;
-            background-size: cover;
-        }
-        .fundo{
-            display: table;
-            height: 100vh;
-            position: relative;
-            width : 100%;
-            background-color: rgba(0,0,0,.3) !important;
+        .altura{
+            height: 100vh;            
         }
     </style>
 
 </head>
 <body>
     <div class="content">
+
+    <!--barra de navegação principal-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">      
+        <a class="navbar-brand col mr-0" href="#">Projeto Seja</a>  
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+               <li class="nav-item mr-5">
+                    <a class="nav-link active" href="{{route('site.home')}}">Sair</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--barra de navegação com conteudo do site-->
+    <div class="container-fluid">
+        <div class="row altura">
+            <nav class="col-md-2 d-none d-md-block border-right border-top sidebar bg-info text-dark">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item dropdown dropright">  
+                            <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Publicações</a>
+                            <div class="dropdown-menu">
+                                  <a class="dropdown-item" href="#">Inserir</a>
+                                  <a class="dropdown-item" href="#">Alterar</a>
+                                  <a class="dropdown-item" href="#">Deletar</a>
+
+                            </div>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a class="nav-link text-white" href="{{route('adm.planos')}}">Planos</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a class="nav-link text-white" href="#">Cursos</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a class="nav-link text-white" href="#">Eventos</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a class="nav-link text-white" href="#">Congressos</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a class="nav-link text-white" href="#">Perfis</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            @yield('mahoe')
+        </div>
+    </div>
+
         @yield('content')
     </div>
 

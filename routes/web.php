@@ -27,6 +27,8 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
     Route::get('show/{id}', 'AdmController@show')->name("adm.show");
     Route::get('edit/{id}', 'AdmController@edit')->name("adm.edit");
     Route::post('update/{id}', 'AdmController@update')->name("adm.update");
+    // rota para testes
+    Route::get('planos', 'AdmController@planos')->name("adm.planos");
 });
 
 Route::get('inscreva-se', 'Site\SiteController@subscribe')->name("subscribe")->middleware('authRoute');

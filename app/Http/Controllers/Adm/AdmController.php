@@ -17,6 +17,11 @@ class AdmController extends Controller
         return view('adm.index');
     }
 
+    public function planos()
+    {
+        return view('adm.collection.plans.inserir');
+    }
+
     /**
      * Show the form for creating a new resource.
      *
