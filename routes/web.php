@@ -18,7 +18,6 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
         Route::get('delete/{id}', 'CollectionController@destroy')->name("adm.collections.delete");
         Route::post('update/{id}', 'CollectionController@update')->name("adm.collections.update");
         Route::post('store/{id}', 'CollectionController@store')->name("adm.collections.store");
-        // Route::get('list', 'SubscriptionPlanController@index')->name("adm.collections.list");
     });
 
     Route::get('', 'AdmController@index')->name("adm.home");
