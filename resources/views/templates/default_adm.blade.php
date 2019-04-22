@@ -18,55 +18,28 @@
 <body>
     <div class="content">
 
-    <!--barra de navegação principal-->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">      
-        <a class="navbar-brand col mr-0" href="#">Projeto Seja</a>  
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ml-auto">
-               <li class="nav-item mr-5">
-                    <a class="nav-link active" href="{{route('site.home')}}">Sair</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
     <!--barra de navegação com conteudo do site-->
     <div class="container-fluid">
         <div class="row altura">
-            <nav class="col-md-2 d-none d-md-block border-right border-top sidebar bg-info text-dark">
+            <nav class="col-md-3 d-none d-md-block sidebar bg-info text-dark">
                 <div class="sidebar-sticky">
-                    <ul class="nav flex-column">
-                        <li class="nav-item dropdown dropright">  
-                            <a class="nav-link dropdown-toggle text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Publicações</a>
-                            <div class="dropdown-menu">
-                                  <a class="dropdown-item" href="#">Inserir</a>
-                                  <a class="dropdown-item" href="#">Alterar</a>
-                                  <a class="dropdown-item" href="#">Deletar</a>
-
-                            </div>
+                    <ul class="nav flex-column text-white">
+                        <li class="nav-item btn btn-outline-dark">
+                            <a class="nav-link text-white" href="{{route('adm.collections.list')}}">Modalidades de pagamentos</a>
                         </li>
-                        <li class="nav-item mr-5">
-                            <a class="nav-link text-white" href="{{route('adm.planos')}}">Planos</a>
+                        <li class="nav-item btn btn-outline-dark">
+                            <a class="nav-link text-white" href="{{route('adm.subscriptions.types.list')}}">Tipos de planos</a>
                         </li>
-                        <li class="nav-item mr-5">
-                            <a class="nav-link text-white" href="#">Cursos</a>
+                        <li class="nav-item btn btn-outline-dark">
+                            <a class="nav-link text-white" href="{{route('adm.subscriptions.plans.list')}}">Tipos de assinaturas</a>
                         </li>
-                        <li class="nav-item mr-5">
-                            <a class="nav-link text-white" href="#">Eventos</a>
-                        </li>
-                        <li class="nav-item mr-5">
-                            <a class="nav-link text-white" href="#">Congressos</a>
-                        </li>
-                        <li class="nav-item mr-5">
-                            <a class="nav-link text-white" href="#">Perfis</a>
+                        <li class="nav-item btn btn-outline-dark">
+                            <a class="nav-link text-white" href="{{route('site.logout')}}">Sair</a>
                         </li>
                     </ul>
                 </div>
             </nav>
-            @yield('mahoe')
         </div>
-    </div>
-
         @yield('content')
     </div>
 

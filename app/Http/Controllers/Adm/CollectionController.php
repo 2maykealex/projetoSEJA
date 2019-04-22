@@ -18,7 +18,6 @@ class CollectionController extends Controller
         $collections = Collection::orderby('id')->get();
         return view('adm.collection.index', compact('collections'));
     }
-
     /**
      * Show the form for creating a new resource.
      *
