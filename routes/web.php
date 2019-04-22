@@ -57,5 +57,5 @@ Route::get('login', 'Site\SiteController@doLogin')->name("site.login")->middlewa
 Route::post('check-user/{email}', 'UserController@checkUser')->name("check.user");
 Route::post('login-validate', 'Site\SiteController@validateLogin')->name("site.login.validate");
 Route::post('subscriber/store', 'Subscriber\SubscriberController@store')->name("subscriber.store");
-Route::get('logout', 'Auth\LoginController@logout');
+Route::get('logout', 'Auth\LoginController@logout')->name('site.logout');
 Route::get('/', 'Site\SiteController@index');
