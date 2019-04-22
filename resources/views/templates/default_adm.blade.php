@@ -21,24 +21,23 @@
     <!--barra de navegação com conteudo do site-->
     <div class="container-fluid">
         <div class="row altura">
-            <nav class="col-md-3 d-none d-md-block sidebar bg-info text-dark">
-                <div class="sidebar-sticky">
-                    <ul class="nav flex-column text-white">
-                        <li class="nav-item btn btn-outline-dark">
-                            <a class="nav-link text-white" href="{{route('adm.collections.list')}}">Modalidades de pagamentos</a>
-                        </li>
-                        <li class="nav-item btn btn-outline-dark">
-                            <a class="nav-link text-white" href="{{route('adm.subscriptions.types.list')}}">Tipos de planos</a>
-                        </li>
-                        <li class="nav-item btn btn-outline-dark">
-                            <a class="nav-link text-white" href="{{route('adm.subscriptions.plans.list')}}">Tipos de assinaturas</a>
-                        </li>
-                        <li class="nav-item btn btn-outline-dark">
-                            <a class="nav-link text-white" href="{{route('site.logout')}}">Sair</a>
-                        </li>
-                    </ul>
+            <div class="col-md-2  bg-info">
+                <div class="text-center">
+                    <h2 class="text-white py-2 border-bottom">Projeto Seja</h2>
                 </div>
-            </nav>
+                <div class="list-group mt-3">
+                    
+                    <a class="btn btn-info text-dark" href="{{route('adm.collections.list')}}">Modalidades de pagamentos</a>
+                
+                    <a class="btn btn-info text-dark" href="{{route('adm.subscriptions.types.list')}}">Tipos de planos</a>
+                
+                    <a class="btn btn-info text-dark" href="{{route('adm.subscriptions.plans.list')}}">Tipos de assinaturas</a>
+                    <p class="text-center">
+                        <a class="btn btn-info text-dark" href="{{route('site.logout')}}">Sair</a>
+                    </p>
+                        
+                </div>
+            </div>
         </div>
         @yield('content')
     </div>
