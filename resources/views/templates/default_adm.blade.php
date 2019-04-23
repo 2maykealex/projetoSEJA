@@ -16,8 +16,6 @@
 
 </head>
 <body>
-    <div class="content">
-
     <!--barra de navegação com conteudo do site-->
     <div class="container-fluid">
         <div class="row altura">
@@ -25,21 +23,22 @@
                 <div class="text-center">
                     <h2 class="text-white py-2 border-bottom">Projeto Seja</h2>
                 </div>
+                
                 <div class="list-group mt-3">
-                    
                     <a class="btn btn-info text-dark" href="{{route('adm.collections.list')}}">Modalidades de pagamentos</a>
-                
                     <a class="btn btn-info text-dark" href="{{route('adm.subscriptions.types.list')}}">Tipos de planos</a>
-                
                     <a class="btn btn-info text-dark" href="{{route('adm.subscriptions.plans.list')}}">Tipos de assinaturas</a>
                     <p class="text-center">
                         <a class="btn btn-info text-dark" href="{{route('site.logout')}}">Sair</a>
                     </p>
-                        
                 </div>
             </div>
+
+            <div class="content ml-3">
+                @yield('content')
+            </div>
         </div>
-        @yield('content')
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

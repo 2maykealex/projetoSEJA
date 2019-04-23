@@ -1,4 +1,3 @@
-
 @extends('templates.default_adm')
 
 @section('title')
