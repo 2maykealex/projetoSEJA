@@ -40,7 +40,7 @@ class CollectionController extends Controller
         
         $collection = new Collection;
 
-        $idNewCollection = $collection->newCollection($data);
+        $idNewCollection = $collection->newColl($data);
 
         if($idNewCollection){
             return view('adm.collection.index');
