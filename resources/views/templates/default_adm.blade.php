@@ -22,21 +22,17 @@
             <div class="col-md-2  bg-info">
                 <div class="text-center">
                     <h2 class="text-white py-2 border-bottom">Projeto Seja</h2>
-                </div>
-                
+                </div>     
                 <div class="list-group mt-3">
-                    <a class="btn btn-info text-dark" href="{{route('adm.collections.list')}}">Modalidades de pagamentos</a>
-                    <a class="btn btn-info text-dark" href="{{route('adm.subscriptions.types.list')}}">Tipos de planos</a>
-                    <a class="btn btn-info text-dark" href="{{route('adm.subscriptions.plans.list')}}">Tipos de assinaturas</a>
-                    <p class="text-center">
-                        <a class="btn btn-info text-dark" href="{{route('site.logout')}}">Sair</a>
-                    </p>
+                    <a class="btn btn-info text-white text-left" href="{{route('adm.collections.list')}}">Tipos de pagamentos</a>
+                    <a class="btn btn-info text-white text-left" href="{{route('adm.subscriptions.types.list')}}">Tipos de planos</a>
+                    <a class="btn btn-info text-white text-left" href="{{route('adm.subscriptions.plans.list')}}">Tipos de assinaturas</a>  
+                    <a class="btn btn-info text-white text-left" href="{{route('site.logout')}}">Sair</a>
                 </div>
             </div>
-
-            <div class="content ml-3">
+            
                 @yield('content')
-            </div>
+            
         </div>
 
     </div>
