@@ -15,8 +15,6 @@ class SubscriptionPlans extends Migration
     {
         Schema::create('subscription_plans', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('name', 90);
-
             $table->integer('subscription_type_id')->unsigned();
             $table->foreign('subscription_type_id')->references('id')->on('subscription_types');
             $table->integer('collection_id')->unsigned(); # ref tb collections -> modalidade de pagamentos: mensal/trim/sem/anual
