@@ -12,6 +12,9 @@
         .altura{
             height: 100vh;            
         }
+        .button-height{
+            width: 80px;
+        }
     </style>
 
 </head>

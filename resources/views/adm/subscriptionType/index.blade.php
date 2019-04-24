@@ -5,5 +5,38 @@
 @endsection
 
 @section('content')
-	<h1>Listar</h1>
+	<div class="col-md-10">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  	<h2>TIPOS DE PLANOS</h2>
+		  	<div class="ml-auto">
+		  		<button type="button" class="btn btn-primary btn-sm">Novo tipo</button>
+		  	</div>
+		</nav>
+      	<div class="table-responsive">
+        	<table class="table table-bordered">
+          		<thead>
+            		<tr>
+              			<th>Número</th>
+              			<th>Descrição</th>
+              			<th>Nome</th>
+              			<th>Data</th>
+              			<th>Ações</th>
+            		</tr>
+          		</thead>
+          		<tbody>
+	                <tr>
+		                <td>1,001</td>
+		                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
+		                <td>ipsum</td>
+		                <td>10/10/2010</td>
+		                <td class="actions">
+	                        <a class="btn btn-success btn-sm button-height" href="view.html">Visualizar</a>
+	                        <a class="btn btn-warning btn-sm button-height" href="edit.html">Editar</a>
+	                        <!--<a class="btn btn-danger btn-sm"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>-->
+		                 </td>
+	                </tr>
+          		</tbody>
+        	</table>
+      	</div>
+	</div>
 @endsection
