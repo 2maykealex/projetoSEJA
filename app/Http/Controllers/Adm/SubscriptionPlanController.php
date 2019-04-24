@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Adm;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\SubscriptionPlan;
 
 class SubscriptionPlanController extends Controller
 {
@@ -14,7 +15,8 @@ class SubscriptionPlanController extends Controller
      */
     public function index()
     {
-        //
+        $subscriptionPlans = SubscriptionPlan::orderby('id')->get();
+        return view('adm.subscriptionPlan.index', compact('subscriptionPlans'));
     }
 
     /**
@@ -24,7 +26,7 @@ class SubscriptionPlanController extends Controller
      */
     public function create()
     {
-        //
+        return view('adm.subscriptionPlan.new');
     }
 
     /**
@@ -35,7 +37,15 @@ class SubscriptionPlanController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $subscriptionPlan = new SubscriptionPlan;
+        $idNewSubscriptionPlan = $subscriptionPlan->newSubscriptionPlan($data);
+
+        if($idNewSubscriptionPlan){
+            return view('adm.subscriptionPlan.index');
+        }
+
+        return view('adm.subscriptionPlan.index');
     }
 
     /**
@@ -46,7 +56,8 @@ class SubscriptionPlanController extends Controller
      */
     public function show($id)
     {
-        //
+        $subscriptionPlan = SubscriptionPlan::where('id', $id)->orderby('id')->get();
+        return view('adm.subscriptionPlan.show', compact('subscriptionPlan'));
     }
 
     /**
@@ -57,7 +68,8 @@ class SubscriptionPlanController extends Controller
      */
     public function edit($id)
     {
-        //
+        $subscriptionPlan = SubscriptionPlan::where('id', $id)->orderby('id')->get();
+        return view('adm.subscriptionPlan.edit', compact('subscriptionPlan'));
     }
 
     /**
@@ -69,7 +81,15 @@ class SubscriptionPlanController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = $request->all();
+        $subscriptionPlan = new SubscriptionPlan;
+        $idNewSubscriptionPlan = $subscriptionPlan->updateSubscriptionPlan($data);
+
+        if($idNewSubscriptionPlan){
+            return view('adm.SubscriptionPlan.index');
+        }
+
+        return view('adm.SubscriptionPlan.index');
     }
 
     /**
