@@ -16,18 +16,19 @@
         	<table class="table table-bordered">
           		<thead>
             		<tr>
-              			<th>Número</th>
-              			<th>Descrição</th>
-              			<th>Nome</th>
-              			<th>Data</th>
-              			<th>Ações</th>
+              			<th>ID</th>
+              			<th>DESCRIÇÃO</th>
+              			<th>NOME</th>
+              			<th>DATA</th>
+              			<th>AÇÕES</th>
             		</tr>
           		</thead>
           		<tbody>
+          			@foreach ($collections as $collection)
 	                <tr>
-		                <td>1,001</td>
+		                <td>{{$collection->id}}</td>
 		                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
-		                <td>ipsum</td>
+		                <td>{{$collection->name}}</td>
 		                <td>10/10/2010</td>
 		                <td class="actions">
 	                        {{--<a class="btn btn-success btn-sm button-height" href="{{route('adm.collections.show')}}">Visualizar</a>
@@ -38,6 +39,7 @@
 	                        <a class="btn btn-warning btn-sm button-height" href="#">Editar</a>
 		                 </td>
 	                </tr>
+	                @endforeach
           		</tbody>
         	</table>
       	</div>
