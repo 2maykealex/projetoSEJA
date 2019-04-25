@@ -19,7 +19,8 @@
 	            		<tr>
 	              			<th>#</th>
 	              			<th>DESCRIÇÃO</th>
-	              			<th>AÇÕES</th>
+	              			<th>VIZUALIZAR</th>
+	              			<th>EDITAR</th>
 	            		</tr>
 	          		</thead>
 	          		<tbody>
@@ -27,11 +28,11 @@
 		                <tr>
 			                <td>{{$collection->id}}</td>
 			                <td>{{$collection->name}}</td>
-			                <td class="actions">
-		                        <div class="text-center">
-			                		<a class="btn btn-success btn-sm button-width" href="{{route('adm.collections.show', [$collection->id])}}">Visualizar</a>
-		                        	<a class="btn btn-warning btn-sm button-width" href="{{route('adm.collections.edit', [$collection->id])}}">Editar</a>
-				                </div>
+			                <td class="actions">	                        
+		                		<a class="btn btn-success btn-sm button-width" href="{{route('adm.collections.show', [$collection->id])}}">Visualizar</a>
+		                	</td>
+		                	<td class="actions">
+	                        	<a class="btn btn-warning btn-sm button-width" href="{{route('adm.collections.edit', [$collection->id])}}">Editar</a>                
 			                 </td>
 		                </tr>
 		                @endforeach

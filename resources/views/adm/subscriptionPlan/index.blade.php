@@ -22,11 +22,12 @@
 	              			<th>AÇÕES</th>
 	            		</tr>
 	          		</thead>
+
 	          		<tbody>
 	          			@foreach ($subscriptionPlans as $subscriptionPlan)
 		                <tr>
 			                <td>{{$subscriptionPlan->id}}</td>
-			                <td>{{$subscriptionPlan->name}}</td>
+			                <td>{{$subscriptionPlan->type->name}} - {{$subscriptionPlan->collection->name}}</td>
 			                <td class="actions">
 			                	<div class="text-center">
 			                		<a class="btn btn-success btn-sm button-width" href="{{route('adm.subscriptions.plans.show', [$subscriptionPlan->id])}}">Visualizar</a>
