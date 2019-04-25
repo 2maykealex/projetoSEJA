@@ -41,13 +41,13 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
     });
     
     Route::group(['prefix' => 'congresses-types'], function () {
-        Route::get('list', 'CongressesTypeController@index')->name("adm.congresses.types.list");
-        Route::get('new', 'CongressesTypeController@create')->name("adm.congresses.types.new");
-        Route::get('show/{id}', 'CongressesTypeController@show')->name("adm.congresses.types.show");
-        Route::get('edit/{id}', 'CongressesTypeController@edit')->name("adm.congresses.types.edit");
-        Route::get('delete/{id}', 'CongressesTypeController@destroy')->name("adm.congresses.types.delete");
-        Route::post('update/{id}', 'CongressesTypeController@update')->name("adm.congresses.types.update");
-        Route::post('store/{id}', 'CongressesTypeController@store')->name("adm.congresses.types.store");
+        Route::get('list', 'CongressTypeController@index')->name("adm.congresses.types.list");
+        Route::get('new', 'CongressTypeController@create')->name("adm.congresses.types.new");
+        Route::get('show/{id}', 'CongressTypeController@show')->name("adm.congresses.types.show");
+        Route::get('edit/{id}', 'CongressTypeController@edit')->name("adm.congresses.types.edit");
+        Route::get('delete/{id}', 'CongressTypeController@destroy')->name("adm.congresses.types.delete");
+        Route::post('update/{id}', 'CongressTypeController@update')->name("adm.congresses.types.update");
+        Route::post('store/{id}', 'CongressTypeController@store')->name("adm.congresses.types.store");
     });
 
     Route::get('', 'AdmController@index')->name("adm.home");
