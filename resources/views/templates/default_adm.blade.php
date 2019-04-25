@@ -12,8 +12,8 @@
         .altura{
             height: 100vh;            
         }
-        .button-height{
-            width: 80px;
+        .button-width{
+            width: 100px;
         }
     </style>
 
@@ -33,9 +33,9 @@
                     <a class="btn btn-info text-white text-left" href="{{route('site.logout')}}">Sair</a>
                 </div>
             </div>
-            
+            <div class="content col-md-10">
                 @yield('content')
-            
+            </div>
         </div>
 
     </div>

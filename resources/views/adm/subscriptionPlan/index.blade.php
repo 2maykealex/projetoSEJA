@@ -5,38 +5,40 @@
 @endsection
 
 @section('content')
-	<div class="col-md-10">
-		<nav class="navbar navbar-expand-lg navbar-light bg-light">
-		  	<h2>TIPOS DE ASSINATURAS</h2>
-		  	<div class="ml-auto">
-		  		<a class="btn btn-primary btn-sm" href="#">Novo tipo</a>
-		  	</div>
-		</nav>
-      	<div class="table-responsive">
-        	<table class="table table-bordered">
-          		<thead>
-            		<tr>
-              			<th>Número</th>
-              			<th>Descrição</th>
-              			<th>Nome</th>
-              			<th>Data</th>
-              			<th>Ações</th>
-            		</tr>
-          		</thead>
-          		<tbody>
-	                <tr>
-		                <td>1,001</td>
-		                <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit</td>
-		                <td>ipsum</td>
-		                <td>10/10/2010</td>
-		                <td class="actions">
-	                        <a class="btn btn-success btn-sm button-height" href="view.html">Visualizar</a>
-	                        <a class="btn btn-warning btn-sm button-height" href="edit.html">Editar</a>
-	                        <!--<a class="btn btn-danger btn-sm"  href="#" data-toggle="modal" data-target="#delete-modal">Excluir</a>-->
-		                 </td>
-	                </tr>
-          		</tbody>
-        	</table>
-      	</div>
-	</div>
+	<div class="d-flex justify-content-center flex-lg-center">
+		<div class="col-md-8">
+			<nav class="navbar navbar-expand-lg navbar-light bg-light">
+			  	<h2>TIPOS DE ASSINATURAS</h2>
+			  	<div class="ml-auto">
+			  		<a class="btn btn-primary btn-sm" href="#">Novo tipo</a>
+			  	</div>
+			</nav>
+	      	<div class="table-responsive">
+	        	<table class="table table-bordered">
+	          		<thead>
+	            		<tr>
+	              			<th>#</th>
+	              			<th>DESCRIÇÃO</th>
+	              			<th>AÇÕES</th>
+	            		</tr>
+	          		</thead>
+	          		<tbody>
+	          			@foreach ($subscriptionPlans as $subscriptionPlan)
+		                <tr>
+			                <td>{{$subscriptionPlan->id}}</td>
+			                <td>{{$subscriptionPlan->name}}</td>
+			                <td class="actions">
+			                	<div class="text-center">
+			                		<a class="btn btn-success btn-sm button-width" href="{{route('adm.subscriptions.plans.show', [$subscriptionPlan->id])}}">Visualizar</a>
+		                        	<a class="btn btn-warning btn-sm button-width" href="{{route('adm.subscriptions.plans.edit', [$subscriptionPlan->id])}}">Editar</a>
+			                	</div>
+			                </td>
+		                </tr>
+		                @endforeach
+	          		</tbody>
+	        	</table>
+	      	</div>
+	    </div>
+    </div>
+	
 @endsection
