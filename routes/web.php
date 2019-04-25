@@ -39,6 +39,16 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
         Route::post('update/{id}', 'SubscriptionTypeController@update')->name("adm.subscriptions.types.update");
         Route::post('store/{id}', 'SubscriptionTypeController@store')->name("adm.subscriptions.types.store");
     });
+    
+    Route::group(['prefix' => 'congresses-types'], function () {
+        Route::get('list', 'CongressesTypeController@index')->name("adm.congresses.types.list");
+        Route::get('new', 'CongressesTypeController@create')->name("adm.congresses.types.new");
+        Route::get('show/{id}', 'CongressesTypeController@show')->name("adm.congresses.types.show");
+        Route::get('edit/{id}', 'CongressesTypeController@edit')->name("adm.congresses.types.edit");
+        Route::get('delete/{id}', 'CongressesTypeController@destroy')->name("adm.congresses.types.delete");
+        Route::post('update/{id}', 'CongressesTypeController@update')->name("adm.congresses.types.update");
+        Route::post('store/{id}', 'CongressesTypeController@store')->name("adm.congresses.types.store");
+    });
 
     Route::get('', 'AdmController@index')->name("adm.home");
     Route::get('new', 'AdmController@create')->name("adm.new");
