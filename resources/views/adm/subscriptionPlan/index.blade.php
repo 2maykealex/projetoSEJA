@@ -10,7 +10,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			  	<h2>TIPOS DE ASSINATURAS</h2>
 			  	<div class="ml-auto">
-			  		<a class="btn btn-primary btn-sm" href="#">Novo tipo</a>
+			  		<a class="btn btn-primary btn-sm" href="{{route('adm.subscriptions.plans.new')}}">Novo tipo</a>
 			  	</div>
 			</nav>
 	      	<div class="table-responsive">
@@ -22,7 +22,6 @@
 	              			<th>AÇÕES</th>
 	            		</tr>
 	          		</thead>
-
 	          		<tbody>
 	          			@foreach ($subscriptionPlans as $subscriptionPlan)
 		                <tr>

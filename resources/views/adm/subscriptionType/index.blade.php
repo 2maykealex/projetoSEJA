@@ -10,7 +10,7 @@
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			  	<h2>TIPOS DE PLANOS</h2>
 			  	<div class="ml-auto">
-			  		<button type="button" class="btn btn-primary btn-sm">Novo tipo</button>
+			  		<a class="btn btn-primary btn-sm" href="{{route('adm.subscriptions.types.new')}}">Novo tipo</a>
 			  	</div>
 			</nav>
 	      	<div class="table-responsive">

@@ -22,9 +22,17 @@
 	          		<tbody>
 		                <tr>
 			                <td></td>
-			                <td></td>
+			                <td>
+			                	<form method="post" action="#">
+					            @csrf
+					                <div class="row">
+					                    <div class="col">
+					                        <input type="text" class="form-control" placeholder="Descrição" id="name" name="name">
+					                    </div>
+					                </div>
+					            </form>
 			                <td class="actions text-center">
-			                	<a class="btn btn-primary btn-sm button-width " href="#">Confirmar</a> 
+			                	<a class="btn btn-primary btn-sm button-width " href="#">Criar</a> 
 			                </td>
 		                </tr>
 	          		</tbody>

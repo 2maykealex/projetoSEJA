@@ -8,7 +8,7 @@
 	<div class="d-flex justify-content-center flex-lg-center">
 		<div class="col-md-8">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			  	<h2>VIZUALIZAR PAGAMENTO</h2>
+			  	<h2>VISUALIZAR PAGAMENTO</h2>
 			</nav>
 	      	<div class="table-responsive">
 	        	<table class="table table-bordered">

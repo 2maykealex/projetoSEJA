@@ -27,14 +27,26 @@
 			                <td>{{$collectionEdit->name}}</td>
 			                <td>{{$collectionEdit->created_at}}</td>
 			                <td class="actions text-center">		                       
-	                        	<a class="btn btn-primary btn-sm button-width mr-3" href="#">Confirmar</a>
-		                		<a class="btn btn-danger btn-sm button-width" href="#">Deletar</a>               
+		                		<a class="btn btn-warning btn-sm button-width" href="javascript:void(0)" id="addInput">Alterar</a> 
+		                		<a class="btn btn-danger btn-sm button-width" href="#">Deletar</a>              
 			                </td>
 		                </tr>
 		                @endforeach
 	          		</tbody>
 	        	</table>
 	      	</div>
+	      	<div>
+	      		<h4>Alterar descrição</h4>
+	      	</div>
+	      	<form method="post" action="#">
+            @csrf
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="Descrição" id="name" name="name">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Confirmar</button>
+                </div>
+            </form>
 	      	<div class="text-center mt-4">
 				<a class="btn btn-secondary btn-sm" href="{{route('adm.collections.list')}}">Voltar</a>
 			</div>
