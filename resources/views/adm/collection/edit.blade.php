@@ -8,7 +8,7 @@
 	<div class="d-flex justify-content-center flex-lg-center">
 		<div class="col-md-8">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			  	<h2>MODIFICAR PAGAMENTO</h2>
+			  	<h2>EDITAR PAGAMENTO</h2>
 			</nav>
 	      	<div class="table-responsive">
 	        	<table class="table table-bordered">
@@ -17,22 +17,21 @@
 	              			<th>#</th>
 	              			<th>DESCRIÇÃO</th>
 	              			<th>DATA</th>
-	              			<th>CONFIRMAR</th>
-	              			<th>DELETAR</th>
+	              			<th class="text-center">AÇÕES</th>
 	            		</tr>
 	          		</thead>
-	          		<tbody>	          			
+	          		<tbody>
+	          			@foreach ($collection as $collectionEdit)	          			
 		                <tr>
-			                <td>01</td>
-			                <td>loremipsum</td>
-			                <td>10/10/2010</td>
-			                <td class="actions">		                       
-		                        	<a class="btn btn-primary btn-sm button-width" href="#">Confirmar</a>
-		                    </td>
-		                    <td class="actions">
-			                		<a class="btn btn-danger btn-sm button-width " href="#">Deletar</a>                
-			                 </td>
+			                <td>{{$collectionEdit->id}}</td>
+			                <td>{{$collectionEdit->name}}</td>
+			                <td>{{$collectionEdit->created_at}}</td>
+			                <td class="actions text-center">		                       
+	                        	<a class="btn btn-primary btn-sm button-width mr-3" href="#">Confirmar</a>
+		                		<a class="btn btn-danger btn-sm button-width" href="#">Deletar</a>               
+			                </td>
 		                </tr>
+		                @endforeach
 	          		</tbody>
 	        	</table>
 	      	</div>

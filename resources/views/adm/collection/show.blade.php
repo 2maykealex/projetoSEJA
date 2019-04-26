@@ -20,12 +20,14 @@
 	            		</tr>
 	          		</thead>
 	          		<tbody>
-		                <tr>
-			                <td>01</td>
-			                <td>LOREMIPSUM</td>
-			                <td>10/10/2010</td>
-		                </tr>
-	          		</tbody>
+		          		@foreach ($collection as $collectionShow)	          			
+			                <tr>
+				                <td>{{$collectionShow->id}}</td>
+				                <td>{{$collectionShow->name}}</td>
+				                <td>{{$collectionShow->created_at}}</td>
+			                </tr>
+			            @endforeach
+			        </tbody>
 	        	</table>
 	      	</div>
 	      	<div class="text-center mt-4">

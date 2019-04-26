@@ -16,14 +16,14 @@
 	            		<tr>
 	              			<th>#</th>
 	              			<th>DESCRIÇÃO</th>
-	              			<th>CONFIRMAR</th>
+	              			<th class="text-center">AÇÕES</th>
 	            		</tr>
 	          		</thead>
 	          		<tbody>
 		                <tr>
 			                <td></td>
 			                <td></td>
-			                <td class="actions">
+			                <td class="actions text-center">
 			                	<a class="btn btn-primary btn-sm button-width " href="#">Confirmar</a> 
 			                </td>
 		                </tr>

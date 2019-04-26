@@ -19,8 +19,7 @@
 	            		<tr>
 	              			<th>#</th>
 	              			<th>DESCRIÇÃO</th>
-	              			<th>VIZUALIZAR</th>
-	              			<th>EDITAR</th>
+	              			<th class="text-center">AÇÕES</th>
 	            		</tr>
 	          		</thead>
 	          		<tbody>
@@ -28,10 +27,8 @@
 		                <tr>
 			                <td>{{$collection->id}}</td>
 			                <td>{{$collection->name}}</td>
-			                <td class="actions">	                        
-		                		<a class="btn btn-success btn-sm button-width" href="{{route('adm.collections.show', [$collection->id])}}">Visualizar</a>
-		                	</td>
-		                	<td class="actions">
+			                <td class="actions text-center">	                        
+		                		<a class="btn btn-success btn-sm button-width mr-3" href="{{route('adm.collections.show', [$collection->id])}}">Visualizar</a>
 	                        	<a class="btn btn-warning btn-sm button-width" href="{{route('adm.collections.edit', [$collection->id])}}">Editar</a>                
 			                 </td>
 		                </tr>
