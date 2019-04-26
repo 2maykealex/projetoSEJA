@@ -66,9 +66,10 @@ class CongressTypeController extends Controller
      * @param  \App\Models\CongressType  $congressType
      * @return \Illuminate\Http\Response
      */
-    public function edit(CongressType $congressType)
+    public function edit($id)
     {
-        //
+        $congressType = CongressType::where('id', $id)->orderby('id')->get();
+        return view('adm.congressType.edit', compact('congressType'));
     }
 
     /**
@@ -80,7 +81,13 @@ class CongressTypeController extends Controller
      */
     public function update(Request $request, CongressType $congressType)
     {
-        //
+        $data = $request->all();
+        $congressType = new CongressType;
+        $idNewCongressType = $congressType->updateCongressType($data);
+        if($idNewCongressType){
+            return view('adm.congressType.index');
+        }
+        return view('adm.congressType.index');
     }
 
     /**
