@@ -27,7 +27,7 @@
 			                <td>{{$collectionEdit->name}}</td>
 			                <td>{{$collectionEdit->created_at}}</td>
 			                <td class="actions text-center">		                       
-		                		<a class="btn btn-warning btn-sm button-width" href="javascript:void(0)" id="addInput">Alterar</a> 
+		                		<a class="btn btn-warning btn-sm button-width" href="#">Alterar</a> 
 		                		<a class="btn btn-danger btn-sm button-width" href="#">Deletar</a>              
 			                </td>
 		                </tr>
