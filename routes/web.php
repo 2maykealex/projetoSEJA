@@ -9,7 +9,7 @@ Route::group(['namespace' => 'Site', 'prefix' => '/site'], function () {
 });
 
 Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'prefix' => 'adm'], function () {
-    
+
     Route::group(['prefix' => 'collections'], function () {
         Route::get('list', 'CollectionController@index')->name("adm.collections.list");
         Route::get('new', 'CollectionController@create')->name("adm.collections.new");
@@ -39,7 +39,7 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
         Route::post('update/{id}', 'SubscriptionTypeController@update')->name("adm.subscriptions.types.update");
         Route::post('store/{id}', 'SubscriptionTypeController@store')->name("adm.subscriptions.types.store");
     });
-    
+
     Route::group(['prefix' => 'congresses-types'], function () {
         Route::get('list', 'CongressTypeController@index')->name("adm.congresses.types.list");
         Route::get('new', 'CongressTypeController@create')->name("adm.congresses.types.new");
@@ -58,6 +58,18 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
         Route::get('delete/{id}', 'EventTypeController@destroy')->name("adm.events.types.delete");
         Route::post('update/{id}', 'EventTypeController@update')->name("adm.events.types.update");
         Route::post('store/{id}', 'EventTypeController@store')->name("adm.events.types.store");
+    });
+
+    Route::group(['namespace' => 'Security', 'prefix' => 'security'], function () {
+        Route::group(['prefix' => 'profiles-accesses'], function () {
+            Route::get('list', 'ProfileAccessController@index')->name("adm.security.profile.list");
+            Route::get('new', 'ProfileAccessController@create')->name("adm.security.profile.new");
+            Route::get('show/{id}', 'ProfileAccessController@show')->name("adm.security.profile.show");
+            Route::get('edit/{id}', 'ProfileAccessController@edit')->name("adm.security.profile.edit");
+            Route::get('delete/{id}', 'ProfileAccessController@destroy')->name("adm.security.profile.delete");
+            Route::post('update/{id}', 'ProfileAccessController@update')->name("adm.security.profile.update");
+            Route::post('store/{id}', 'ProfileAccessController@store')->name("adm.security.profile.store");
+        });
     });
 
     Route::get('', 'AdmController@index')->name("adm.home");
