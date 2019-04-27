@@ -56,7 +56,7 @@ class EventTypeController extends Controller
      */
     public function show($id)
     {
-        $eventType = EventType::where('id', $id)->orderby('id')->get();
+        $eventType = EventType::where('id', $id)->get()->first();
         return view('adm.eventType.show', compact('eventType'));
     }
 
@@ -68,7 +68,7 @@ class EventTypeController extends Controller
      */
     public function edit($id)
     {
-        $eventType = EventType::where('id', $id)->orderby('id')->get();
+        $eventType = EventType::where('id', $id)->get()->first();
         return view('adm.eventType.edit', compact('eventType'));
     }
 
