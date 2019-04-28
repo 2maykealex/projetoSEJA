@@ -56,7 +56,7 @@ class SubscriptionTypeController extends Controller
      */
     public function show($id)
     {
-        $subscriptionType = SubscriptionType::where('id', $id)->get()->first();
+        $subscriptionType = SubscriptionType::where('id', $id)->get();
         return view('adm.subscriptionType.show', compact('subscriptionType'));
     }
 
@@ -68,7 +68,7 @@ class SubscriptionTypeController extends Controller
      */
     public function edit($id)
     {
-        $subscriptionType = SubscriptionType::where('id', $id)->get()->first();
+        $subscriptionType = SubscriptionType::where('id', $id)->get();
         return view('adm.subscriptionType.edit', compact('subscriptionType'));
     }
 
