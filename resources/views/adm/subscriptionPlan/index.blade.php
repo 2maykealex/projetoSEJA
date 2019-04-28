@@ -19,6 +19,7 @@
 	            		<tr>
 	              			<th>#</th>
 	              			<th>DESCRIÇÃO</th>
+	              			<th>PREÇO</th>
 	              			<th>AÇÕES</th>
 	            		</tr>
 	          		</thead>
@@ -27,6 +28,7 @@
 		                <tr>
 			                <td>{{$subscriptionPlan->id}}</td>
 			                <td>{{$subscriptionPlan->type->name}} - {{$subscriptionPlan->collection->name}}</td>
+			                <td>R${{$subscriptionPlan->price}}</td>
 			                <td class="actions">
 			                	<div class="text-center">
 			                		<a class="btn btn-success btn-sm button-width" href="{{route('adm.subscriptions.plans.show', [$subscriptionPlan->id])}}">Visualizar</a>

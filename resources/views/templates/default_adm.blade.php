@@ -31,7 +31,8 @@
                     <a class="btn btn-info text-white text-left" href="{{route('adm.subscriptions.types.list')}}">Tipos de planos</a>
                     <a class="btn btn-info text-white text-left" href="{{route('adm.subscriptions.plans.list')}}">Tipos de assinaturas</a>
                     <a class="btn btn-info text-white text-left" href="{{route('adm.congresses.types.list')}}">Tipos de congressos</a>
-                    <a class="btn btn-info text-white text-left" href="{{route('adm.events.types.list')}}">Tipos de eventos</a>  
+                    <a class="btn btn-info text-white text-left" href="{{route('adm.events.types.list')}}">Tipos de eventos</a> 
+                     <a class="btn btn-info text-white text-left" href="{{route('adm.security.profile.list')}}">Tipos de acessos</a>
 
                     <a class="btn btn-info text-white text-left" href="{{route('site.logout')}}">Sair</a>
                 </div>

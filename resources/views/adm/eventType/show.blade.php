@@ -23,8 +23,8 @@
 		          		@foreach ($eventType as $eventShow)	          			
 			                <tr>
 				                <td>{{$eventShow>id}}</td>
-				                <td>{{$$eventShow->name}}</td>
-				                <td>{{$$eventShow->created_at}}</td>
+				                <td>{{$eventShow->name}}</td>
+				                <td>{{$eventShow->created_at}}</td>
 			                </tr>
 			            @endforeach
 			        </tbody>
