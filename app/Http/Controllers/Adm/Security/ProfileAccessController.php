@@ -58,7 +58,7 @@ class ProfileAccessController extends Controller
      */
     public function show($id)
     {
-        $profilesAccess = ProfileAccess::where('id', $id)->get()->first();
+        $profilesAccess = ProfileAccess::where('id', $id)->get();
         return view('adm.security.profileAccess.show', $profilesAccess);
     }
 
@@ -70,7 +70,7 @@ class ProfileAccessController extends Controller
      */
     public function edit($id)
     {
-        $profilesAccess = ProfileAccess::where('id', $id)->get()->first();
+        $profilesAccess = ProfileAccess::where('id', $id)->get();
         return view('adm.security.profileAccess.edit', $profilesAccess);
     }
 
