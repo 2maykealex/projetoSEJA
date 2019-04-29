@@ -13,20 +13,14 @@
 			<form action="#" method="POST" class="pb-3 pt-3 bg-white px-3">
 				@csrf
 
-				@foreach ($profilesAccess as $profilesAcces)
-				<div class="form-row">
-					<div class="form-group col-md-6">
-					    <label>ID</label>							    
-					    <input type="text" class="form-control" id="id" name="id" placeholder="{{$profilesAcces->id}}">							    
-					</div>
-					<div class="form-group col-md-6">
-					    <label>DATA DE CRIAÇÃO</label> 
-					    <input type="text" class="form-control" id="created_at" name="created_at" placeholder="{{$profilesAcces->created_at}}">
-					</div>
+				@foreach ($profilesAccess as $profilesAccessEdit)
+				<div class="form-group">
+				    <label for="disabledTextInput">ID</label>							    
+				    <input type="text" class="form-control" id="disabledTextInput" placeholder="{{$profilesAccessEdit->id}}" disabled>
 				</div>
 				<div class="form-group">
 				    <label>DESCRIÇÃO</label>   
-				    <input type="text" class="form-control" id="name" name="name" placeholder="{{$profilesAcces->name}}">
+				    <input type="text" class="form-control" id="name" name="name" placeholder="{{$profilesAccessEdit->name}}">
 				</div>
 				@endforeach
 		    	<div class="clearfix">
@@ -34,7 +28,7 @@
 				</div>
 			</form>  
 			<div class="text-center mt-4 ">
-				<a class="btn btn-secondary btn-sm" href="{{route('adm.security.profile.list')}}">Voltar</a>
+				<a class="btn btn-secondary btn-sm" href="javascript:history.go(-1)">Voltar</a>
 			</div>
 		</div>              
 	</div>

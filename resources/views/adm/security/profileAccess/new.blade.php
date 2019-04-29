@@ -14,12 +14,12 @@
 				@csrf
 				<div class="form-row">
 					<div class="form-group col-md-6">
-					    <label>ID</label>							    
-					    <input type="text" class="form-control" id="id" name="id">							    
+					    <label for="disabledTextInput">ID</label>							    
+					    <input type="text" class="form-control" id="disabledTextInput" placeholder="campo preenchido automaticamente" disabled>							    
 					</div>
 					<div class="form-group col-md-6">
-					    <label>DATA DE CRIAÇÃO</label> 
-					    <input type="text" class="form-control" id="created_at" name="created_at">
+					    <label for="disabledTextInput">DATA DE CRIAÇÃO</label> 
+					    <input type="text" class="form-control" id="disabledTextInput" placeholder="campo preenchido automaticamente" disabled>
 					</div>
 				</div>
 				<div class="form-group">
@@ -27,11 +27,11 @@
 				    <input type="text" class="form-control" id="name" name="name">
 				</div>
 		    	<div class="clearfix">
-				  	<button type="button" class="btn btn-primary float-left">Criar</button>
+				  	<button type="button" class="btn btn-primary">Criar</button>
 				</div>
 			</form>  
 			<div class="text-center mt-4 ">
-				<a class="btn btn-secondary btn-sm" href="{{route('adm.security.profile.list')}}">Voltar</a>
+				<a class="btn btn-secondary btn-sm" href="javascript:history.go(-1)">Voltar</a>
 			</div>
 		</div>              
 	</div>

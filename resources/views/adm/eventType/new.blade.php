@@ -6,41 +6,33 @@
 
 @section('content')
 	<div class="d-flex justify-content-center flex-lg-center">
-		<div class="col-md-8">
-			<nav class="navbar navbar-expand-lg navbar-light bg-light">
-			  	<h2>CRIAR EVENTO</h2>
+    	<div class="col-md-8 bg-light py-3">
+	       	<nav class="navbar navbar-expand-lg">
+		  		<h2>CRIAR EVENTO</h2>
 			</nav>
-	      	<div class="table-responsive">
-	        	<table class="table table-bordered">
-	          		<thead>
-	            		<tr>
-	              			<th>#</th>
-	              			<th>DESCRIÇÃO</th>
-	              			<th class="text-center">AÇÕES</th>
-	            		</tr>
-	          		</thead>
-	          		<tbody>
-		                <tr>
-			                <td></td>
-			                <td>
-			                	<form method="post" action="#">
-					            @csrf
-					                <div class="row">
-					                    <div class="col">
-					                        <input type="text" class="form-control" placeholder="Descrição" id="name" name="name">
-					                    </div>
-					                </div>
-					            </form>
-			                <td class="actions text-center">
-			                	<a class="btn btn-primary btn-sm button-width " href="#">Criar</a> 
-			                </td>
-		                </tr>
-	          		</tbody>
-	        	</table>
-	      	</div>
-	      	<div class="text-center mt-4">
-				<a class="btn btn-secondary btn-sm" href="{{route('adm.events.types.list')}}">Voltar</a>
+			<form action="#" method="POST" class="pb-3 pt-3 bg-white px-3">
+				@csrf
+				<div class="form-row">
+					<div class="form-group col-md-6">
+					    <label for="disabledTextInput">ID</label>							    
+					    <input type="text" class="form-control" id="disabledTextInput" placeholder="campo preenchido automaticamente" disabled>							    
+					</div>
+					<div class="form-group col-md-6">
+					    <label for="disabledTextInput">DATA DE CRIAÇÃO</label> 
+					    <input type="text" class="form-control" id="disabledTextInput" placeholder="campo preenchido automaticamente" disabled>
+					</div>
+				</div>
+				<div class="form-group">
+				    <label>DESCRIÇÃO</label>   
+				    <input type="text" class="form-control" id="name" name="name">
+				</div>
+		    	<div class="clearfix">
+				  	<button type="button" class="btn btn-primary">Criar</button>
+				</div>
+			</form>  
+			<div class="text-center mt-4 ">
+				<a class="btn btn-secondary btn-sm" href="javascript:history.go(-1)">Voltar</a>
 			</div>
-	    </div>
+		</div>              
 	</div>
 @endsection
