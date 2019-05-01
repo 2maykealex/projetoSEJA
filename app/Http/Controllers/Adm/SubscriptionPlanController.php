@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Adm;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\SubscriptionPlan;
+use App\Models\Collection;
+use App\Models\SubscriptionType;
 
 class SubscriptionPlanController extends Controller
 {
@@ -68,8 +70,11 @@ class SubscriptionPlanController extends Controller
      */
     public function edit($id)
     {
-        $subscriptionPlan = SubscriptionPlan::where('id', $id)->get();
-        return view('adm.subscriptionPlan.edit', compact('subscriptionPlan'));
+        $collections = Collection::orderby('id')->get();
+        $subscriptionTypes = SubscriptionType::orderby('id')->get();
+        $subscriptionPlans = SubscriptionPlan::find($id);
+        return view('adm.subscriptionPlan.edit', compact('collections', 'subscriptionTypes', 'subscriptionPlans'));
+        
     }
 
     /**
