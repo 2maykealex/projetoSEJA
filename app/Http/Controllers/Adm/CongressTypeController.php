@@ -56,7 +56,7 @@ class CongressTypeController extends Controller
      */
     public function show($id)
     {
-        $congressType = CongressType::where('id', $id)->orderby('id')->get();
+        $congressType = CongressType::where('id', $id)->orderby('id')->get()->first();
         return view('adm.congressType.show', compact('congressType'));
     }
 
@@ -68,7 +68,7 @@ class CongressTypeController extends Controller
      */
     public function edit($id)
     {
-        $congressType = CongressType::where('id', $id)->get();
+        $congressType = CongressType::where('id', $id)->get()->first();
         return view('adm.congressType.edit', compact('congressType'));
     }
 

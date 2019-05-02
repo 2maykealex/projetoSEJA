@@ -57,7 +57,7 @@ class CollectionController extends Controller
      */
     public function show($id)
     {
-        $collection = Collection::where('id', $id)->get();
+        $collection = Collection::where('id', $id)->get()->first();
         return view('adm.collection.show', compact('collection'));
     }
 
@@ -69,7 +69,7 @@ class CollectionController extends Controller
      */
     public function edit($id)
     {
-        $collection = Collection::where('id', $id)->get();
+        $collection = Collection::where('id', $id)->get()->first();
         return view('adm.collection.edit', compact('collection'));
     }
 
@@ -85,7 +85,8 @@ class CollectionController extends Controller
         $data = $request->all();
         $collection = Collection::where('id', $data['id'])->get()->first();
         $updated = $collection->updateCollection($data);
-        return view('adm.collection.index', compact('updated'));
+        $collections = Collection::orderby('id')->get();
+        return view('adm.collection.index', compact('updated', 'collections'));
     }
 
     /**

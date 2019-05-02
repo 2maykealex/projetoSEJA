@@ -58,7 +58,7 @@ class SubscriptionPlanController extends Controller
      */
     public function show($id)
     {
-        $subscriptionPlan = SubscriptionPlan::where('id', $id)->get();
+        $subscriptionPlan = SubscriptionPlan::where('id', $id)->get()->first();
         return view('adm.subscriptionPlan.show', compact('subscriptionPlan'));
     }
 
@@ -72,8 +72,8 @@ class SubscriptionPlanController extends Controller
     {
         $collections = Collection::orderby('id')->get();
         $subscriptionTypes = SubscriptionType::orderby('id')->get();
-        $subscriptionPlans = SubscriptionPlan::find($id);
-        return view('adm.subscriptionPlan.edit', compact('collections', 'subscriptionTypes', 'subscriptionPlans'));
+        $subscriptionPlan = SubscriptionPlan::where('id', $id)->get()->first();
+        return view('adm.subscriptionPlan.edit', compact('collections', 'subscriptionTypes', 'subscriptionPlan'));
         
     }
 
