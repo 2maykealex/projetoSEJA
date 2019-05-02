@@ -10,23 +10,22 @@
 	       	<nav class="navbar navbar-expand-lg">
 		  		<h2>EDITAR PERFIL</h2>
 			</nav>
-			<form action="#" method="POST" class="pb-3 pt-3 bg-white px-3">
+			@foreach ($profilesAccess as $profilesAccessEdit)
+			<form action="{{route('adm.security.profile.update', $profilesAccessEdit->id)}}" method="POST" class="pb-3 pt-3 bg-white px-3">
 				@csrf
-
-				@foreach ($profilesAccess as $profilesAccessEdit)
 				<div class="form-group">
-				    <label for="disabledTextInput">ID</label>							    
-				    <input type="text" class="form-control" id="disabledTextInput" placeholder="{{$profilesAccessEdit->id}}" disabled>
+				    <label for="id">ID</label>							    
+				    <input type="text" class="form-control" id="id" name="id" value="{{$profilesAccessEdit->id}}" disabled>
 				</div>
 				<div class="form-group">
-				    <label>DESCRIÇÃO</label>   
-				    <input type="text" class="form-control" id="name" name="name" placeholder="{{$profilesAccessEdit->name}}">
+				    <label for="name">DESCRIÇÃO</label>   
+				    <input type="text" class="form-control" id="name" name="name" value="{{$profilesAccessEdit->name}}">
 				</div>
-				@endforeach
 		    	<div class="clearfix">
-				  	<button type="button" class="btn btn-warning float-left">Confirmar</button>
+				  	<button type="submit" class="btn btn-warning float-left">Confirmar</button>
 				</div>
-			</form>  
+			</form> 
+			@endforeach 
 			<div class="text-center mt-4 ">
 				<a class="btn btn-secondary btn-sm" href="javascript:history.go(-1)">Voltar</a>
 			</div>

@@ -10,7 +10,7 @@
 	       	<nav class="navbar navbar-expand-lg">
 		  		<h2>EDITAR ASSINATURA</h2>
 			</nav>
-			<form action="{{route('adm.subscriptions.plans.update', [$subscriptionPlans->id])}}" method="post" class="pb-3 pt-3 bg-white px-3">	
+			<form action="{{route('adm.subscriptions.plans.update', $subscriptionPlans->id)}}" method="post" class="pb-3 pt-3 bg-white px-3">	
 				{!! csrf_field()!!}	
 				<div class="form-group">
 				    <label for="id">ID</label>							    

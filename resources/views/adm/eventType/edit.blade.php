@@ -10,23 +10,22 @@
 	       	<nav class="navbar navbar-expand-lg">
 		  		<h2>EDITAR EVENTO</h2>
 			</nav>
-			<form action="#" method="POST" class="pb-3 pt-3 bg-white px-3">
+			@foreach ($eventType as $eventEdit)
+			<form action="{{route('adm.events.types.update', $eventEdit->id)}}" method="POST" class="pb-3 pt-3 bg-white px-3">
 				@csrf
-
-				@foreach ($eventType as $eventEdit)
 				<div class="form-group">
-				    <label for="disabledTextInput">ID</label>							    
-				    <input type="text" class="form-control" id="disabledTextInput" placeholder="{{$eventEdit->id}}" disabled>
+				    <label for="id">ID</label>							    
+				    <input type="text" class="form-control" id="id" name="id" value="{{$eventEdit->id}}" disabled>
 				</div>
 				<div class="form-group">
-				    <label>DESCRIÇÃO</label>   
-				    <input type="text" class="form-control" id="name" name="name" placeholder="{{$eventEdit->name}}">
+				    <label for="name">DESCRIÇÃO</label>   
+				    <input type="text" class="form-control" id="name" name="name" value="{{$eventEdit->name}}">
 				</div>
-				@endforeach
 		    	<div class="clearfix">
-				  	<button type="button" class="btn btn-warning float-left">Confirmar</button>
+				  	<button type="submit" class="btn btn-warning float-left">Confirmar</button>
 				</div>
 			</form>  
+			@endforeach
 			<div class="text-center mt-4 ">
 				<a class="btn btn-secondary btn-sm" href="javascript:history.go(-1)">Voltar</a>
 			</div>
