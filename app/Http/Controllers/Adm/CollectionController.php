@@ -83,16 +83,9 @@ class CollectionController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->all();
-        
-        $collection = new Collection;
-
-        $idNewCollection = $collection->updateCollection($data);
-
-        if($idNewCollection){
-            return view('adm.collection.index');
-        }
-
-        return view('adm.collection.index');
+        $collection = Collection::where('id', $data['id'])->get()->first();
+        $updated = $collection->updateCollection($data);
+        return view('adm.collection.index', compact('updated'));
     }
 
     /**

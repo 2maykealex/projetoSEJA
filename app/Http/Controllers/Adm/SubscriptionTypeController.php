@@ -82,14 +82,9 @@ class SubscriptionTypeController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->all();
-        $SubscriptionType = new SubscriptionType;
-        $idNewSubscriptionType = $SubscriptionType->updateSubscriptionType($data);
-        
-        if($idNewSubscriptionType){
-            return view('adm.SubscriptionType.index');
-        }
-
-        return view('adm.SubscriptionType.index');
+        $subscriptionType = SubscriptionType::where('id', $data['id'])->get()->first();
+        $updated = $subscriptionType->updateSubscriptionType($data);
+        return view('adm.subscriptionType.index', compact('updated'));
     }
 
     /**

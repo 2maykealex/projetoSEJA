@@ -87,14 +87,9 @@ class SubscriptionPlanController extends Controller
     public function update(Request $request, $id)
     {
         $data = $request->all();
-        $subscriptionPlan = new SubscriptionPlan;
-        $idNewSubscriptionPlan = $subscriptionPlan->updateSubscriptionPlan($data);
-
-        if($idNewSubscriptionPlan){
-            return view('adm.SubscriptionPlan.index');
-        }
-
-        return view('adm.SubscriptionPlan.index');
+        $subscriptionPlan = SubscriptionPlan::where('id', $data['id'])->get()->first();
+        $updated = $subscriptionPlan->updateSubscriptionPlan($data);
+        return view('adm.subscriptionPlan.index', compact('updated'));
     }
 
     /**

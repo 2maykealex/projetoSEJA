@@ -82,12 +82,9 @@ class EventTypeController extends Controller
     public function update(Request $request, EventType $eventType)
     {
         $data = $request->all();
-        $eventType = new EventType;
-        $idNewEventType = $eventType->updateEventType($data);
-        if($idNewEventType){
-            return view('adm.eventType.index');
-        }
-        return view('adm.eventType.index');
+        $eventType = EventType::where('id', $data['id'])->get()->first();
+        $updated = $eventType->updateEventType($data);
+        return view('adm.eventType.index', compact('updated'));
     }
 
     /**
