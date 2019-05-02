@@ -47,7 +47,7 @@
 
     <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-dark" id="inicio">
         <div class="col-md-5 p-lg-5 mx-auto my-5" >
-            <h1 class="display-4 font-weight-normal text-white">Projeto Seja</h1>
+            <h1 class="display-4 font-weight-normal text-white">ALMA</h1>
             <p class="lead font-weight-normal text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
             <a class="btn btn-outline-light" href="{{route('subscribe')}}">Partícipe nosso projeto</a>
         </div>
@@ -255,7 +255,7 @@
             </div>
         </div>
         <div class="footer-copyright text-center bg-light border-top py-3">© 2018 Copyright:
-            <a  href="#"> projetoseja.com</a>
+            <a  href="#"> alma.com</a>
         </div>
     </footer>
 
