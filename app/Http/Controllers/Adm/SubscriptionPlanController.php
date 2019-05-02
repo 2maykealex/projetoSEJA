@@ -89,7 +89,9 @@ class SubscriptionPlanController extends Controller
         $data = $request->all();
         $subscriptionPlan = SubscriptionPlan::where('id', $data['id'])->get()->first();
         $updated = $subscriptionPlan->updateSubscriptionPlan($data);
-        return view('adm.subscriptionPlan.index', compact('updated'));
+        $subscriptionPlans = SubscriptionPlan::orderby('id')->get();
+
+        return view('adm.subscriptionPlan.index', compact('updated', 'subscriptionPlans'));
     }
 
     /**

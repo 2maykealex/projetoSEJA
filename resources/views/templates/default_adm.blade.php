@@ -26,21 +26,26 @@
                 <div class="text-center">
                     <h2 class="text-white py-2 border-bottom">ALMA</h2>
                 </div>     
-                <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Configurar tipos de:
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-                        <a class="dropdown-item" href="{{route('adm.collections.list')}}">Tipos de pagamentos</a>
-                        <a class="dropdown-item" href="{{route('adm.subscriptions.types.list')}}">Tipos de planos</a>
-                        <a class="dropdown-item" href="{{route('adm.subscriptions.plans.list')}}">Tipos de assinaturas</a>
-                        <a class="dropdown-item" href="{{route('adm.congresses.types.list')}}">Tipos de congressos</a>
-                        <a class="dropdown-item" href="{{route('adm.events.types.list')}}">Tipos de eventos</a> 
-                        <a class="dropdown-item" href="{{route('adm.security.profile.list')}}">Perfis de acessos</a>
-                    </div>
+                <button class="btn btn-light col-md-12 text-left" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Alterna navegação">
+                  Configurar tipos de:
+                </button>             
+                <div class="collapse mt-2" id="navbarToggleExternalContent">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link text-white" href="{{route('adm.collections.list')}}" >Tipos de pagamentos</a>
+
+                        <a class="nav-link text-white" href="{{route('adm.subscriptions.types.list')}}">Tipos de planos</a>
+                   
+                        <a class="nav-link text-white" href="{{route('adm.subscriptions.plans.list')}}">Tipos de assinaturas</a>
+                    
+                        <a class="nav-link text-white" href="{{route('adm.congresses.types.list')}}">Tipos de congressos</a>
+                    
+                        <a class="nav-link text-white" href="{{route('adm.events.types.list')}}">Tipos de eventos</a>
+                    
+                        <a class="nav-link text-white" href="{{route('adm.security.profile.list')}}">Perfis de acesso</a>
+                    </div>                       
                 </div>
-                <a class="btn btn-warning fixed-bottom col-md-2 text-white" href="{{route('site.logout')}}">Sair</a>
             </div>
+            <a class="btn btn-warning fixed-bottom col-md-2 text-white" href="{{route('site.logout')}}">Sair</a>
             <div class="content col-md-10">
                 @yield('content')
             </div>

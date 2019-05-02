@@ -10,22 +10,19 @@
 	       	<nav class="navbar navbar-expand-lg">
 		  		<h2>EDITAR PLANO</h2>
 			</nav>
-			@foreach ($subscriptionType as $subscriptionEdit)
-			<form action="{{route('adm.subscriptions.types.update', $subscriptionEdit->id)}}" method="post" class="pb-3 pt-3 bg-white px-3">
+			<form action="{{route('adm.subscriptions.types.update', $subscriptionType->id)}}" method="post" class="pb-3 pt-3 bg-white px-3">
 				@csrf
-				<div class="form-group">
-				    <label for="id">ID</label>							    
-				    <input type="text" class="form-control" id="id" name="id" value="{{$subscriptionEdit->id}}" disabled>
+				<div class="form-group">						    
+				    <input type="hidden" class="form-control" id="id" name="id" value="{{$subscriptionType->id}}">
 				</div>
 				<div class="form-group">
 				    <label for="name">DESCRIÇÃO</label>   
-				    <input type="text" class="form-control" id="name" name="name" value="{{$subscriptionEdit->name}}">
+				    <input type="text" class="form-control" id="name" name="name" value="{{$subscriptionType->name}}">
 				</div>
 		    	<div class="clearfix">
 				  	<button type="submit" class="btn btn-warning float-left">Confirmar</button>
 				</div>
 			</form>
-			@endforeach  
 			<div class="text-center mt-4 ">
 				<a class="btn btn-secondary btn-sm" href="javascript:history.go(-1)">Voltar</a>
 			</div>

@@ -84,7 +84,8 @@ class CongressTypeController extends Controller
         $data = $request->all();
         $congressType = CongressType::where('id', $data['id'])->get()->first();
         $updated = $congressType->updateCongressType($data);
-        return view('adm.congressType.index', compact('updated'));
+        $congressTypes = CongressType::orderby('id')->get();
+        return view('adm.congressType.index', compact('updated', 'congressTypes'));
     }
 
     /**
