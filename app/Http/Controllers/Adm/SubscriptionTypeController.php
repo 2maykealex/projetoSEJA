@@ -79,7 +79,8 @@ class SubscriptionTypeController extends Controller
         $data = $request->all();
         $subscriptionType = SubscriptionType::where('id', $data['id'])->get()->first();
         $message = $subscriptionType->updateSubscriptionType($data);
-        return view('adm.subscriptionType.index', compact('message'));
+        $subscriptionTypes = SubscriptionType::orderby('id')->get();
+        return view('adm.subscriptionType.index', compact('message', 'subscriptionTypes'));
     }
 
     /**

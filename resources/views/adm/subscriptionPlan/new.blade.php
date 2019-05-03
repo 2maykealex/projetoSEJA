@@ -32,7 +32,7 @@
 		    	</div>
 				<div class="form-group">
 				    <label for="price">PREÇO</label>   
-				    <input type="text" class="form-control" id="price" name="price">
+				    <input type="number" class="form-control" id="price" name="price">
 				</div>
 		    	<div class="clearfix">
 				  	<button type="submit" class="btn btn-primary">Criar</button>

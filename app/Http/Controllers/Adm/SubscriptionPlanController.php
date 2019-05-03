@@ -28,7 +28,10 @@ class SubscriptionPlanController extends Controller
      */
     public function create()
     {
-        return view('adm.subscriptionPlan.new');
+        $collections = Collection::orderby('id')->get();
+        $subscriptionTypes = SubscriptionType::orderby('id')->get();
+
+        return view('adm.subscriptionPlan.new', compact('collections', 'subscriptionTypes'));
     }
 
     /**
@@ -84,7 +87,9 @@ class SubscriptionPlanController extends Controller
         $data = $request->all();
         $subscriptionPlan = SubscriptionPlan::where('id', $data['id'])->get()->first();
         $updated = $subscriptionPlan->updateSubscriptionPlan($data);
-        return view('adm.subscriptionPlan.index', compact('updated'));
+        $subscriptionPlans = SubscriptionPlan::orderby('id')->get();
+
+        return view('adm.subscriptionPlan.index', compact('updated', 'subscriptionPlans'));
     }
 
     /**
