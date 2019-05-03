@@ -13,20 +13,20 @@
 			<form action="{{route('adm.subscriptions.plans.store')}}" method="post" class="pb-3 pt-3 bg-white px-3">
 				@csrf
 				<div class="form-group">
-		    		<label for="name">TIPO DE PLANO</label>	    		
-		      		<select class="form-control" id="name" name="name" collapse>
+		    		<label for="subscription_type_id">TIPO DE PLANO</label>	    		
+		      		<select class="form-control" id="subscription_type_id" name="subscription_type_id" collapse>
 		        		<option>Escolher</option>
 		        		@foreach ($subscriptionTypes as $subscriptionType)
-		        			<option>{{$subscriptionType->name}}</option>
+		        			<option value="{{$subscriptionType->id}}">{{$subscriptionType->name}}</option>
 		        		@endforeach	        		
 		      		</select>	
 		    	</div>
 		    	<div class="form-group">
-		    		<label for="name">TIPO DE PAGAMENTO</label>
-		      		<select class="form-control" id="name" name="name" collapse>
+		    		<label for="collection_id">TIPO DE PAGAMENTO</label>
+		      		<select class="form-control" id="collection_id" name="collection_id" collapse>
 		        		<option>Escolher</option>
 		        		@foreach ($collections as $collection)
-		        			<option>{{$collection->name}}</option>
+		        			<option value="{{$collection->id}}">{{$collection->name}}</option>
 		        		@endforeach
 		      		</select>	
 		    	</div>

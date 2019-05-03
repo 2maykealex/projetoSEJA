@@ -16,22 +16,22 @@
 				    <input type="hidden" class="form-control" id="id" name="id" value="{{$subscriptionPlan->id}}">
 				</div>
 		    	<div class="form-group">
-		    		<label for="name">DESCRIÇÃO PLANO</label>	    		
-		      		<select class="form-control" id="name" name="name" collapse>
-		        		<option value="">Escolher</option>
+		    		<label for="subscription_type_id">DESCRIÇÃO PLANO</label>	    		
+		      		<select class="form-control" id="subscription_type_id" name="subscription_type_id" collapse>
+		        		<option>Escolher</option>
 		        		@foreach ($subscriptionTypes as $subscriptionType)
-		        			<option value="{{$subscriptionType->name}}" 
-		        			@if ( isset($subscriptionPlan) && $subscriptionPlan->type->name == $subscriptionType->name ) selected @endif>{{$subscriptionType->name}}</option>
+		        			<option value="{{$subscriptionType->id}}" 
+		        			@if ( isset($subscriptionPlan) && $subscriptionPlan->type->id == $subscriptionType->id ) selected @endif>{{$subscriptionType->name}}</option>
 		        		@endforeach	        		
 		      		</select>	
 		    	</div>
 		    	<div class="form-group">
-		    		<label for="name">DESCRIÇÃO PAGAMENTO</label>
-		      		<select class="form-control" id="name" name="name" collapse>
-		        		<option value="">Escolher</option>
+		    		<label for="collection_id">DESCRIÇÃO PAGAMENTO</label>
+		      		<select class="form-control" id="collection_id" name="collection_id" collapse>
+		        		<option>Escolher</option>
 		        		@foreach ($collections as $collection)
-		        			<option value="{{$collection->name}}" 
-		        			@if ( isset($subscriptionPlan) && $subscriptionPlan->collection->name == $collection->name) selected @endif>{{$collection->name}}</option>
+		        			<option value="{{$collection->id}}" 
+		        			@if ( isset($subscriptionPlan) && $subscriptionPlan->collection->id == $collection->id) selected @endif>{{$collection->name}}</option>
 		        		@endforeach
 		      		</select>	
 		    	</div>

@@ -31,10 +31,6 @@
 				    <label for="name">DESCRIÇÃO</label>   
 				    <input type="text" class="form-control" placeholder="{{$profilesAccess->name}}" disabled>
 				</div>
-		    	<div class="clearfix">
-				  	<a class="btn btn-warning float-left" href="{{route('adm.security.profile.edit', [$profilesAccess->id])}}" >Alterar</a>
-				  	<a class="btn btn-danger float-right" href="{{route('adm.security.profile.delete', [$profilesAccess->id])}}">Deletar</a>
-				</div>
 			</form>  
 			<div class="text-center mt-4 ">
 				<a class="btn btn-secondary btn-sm" href="javascript:history.go(-1)">Voltar</a>
