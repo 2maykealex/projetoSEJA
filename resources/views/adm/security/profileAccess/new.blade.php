@@ -10,24 +10,14 @@
 	       	<nav class="navbar navbar-expand-lg">
 		  		<h2>CRIAR PERFIL</h2>
 			</nav>
-			<form action="#" method="POST" class="pb-3 pt-3 bg-white px-3">
+			<form action="{{route('adm.security.profile.store')}}" method="post" class="pb-3 pt-3 bg-white px-3">
 				@csrf
-				<div class="form-row">
-					<div class="form-group col-md-6">
-					    <label for="disabledTextInput">ID</label>							    
-					    <input type="text" class="form-control" id="disabledTextInput" placeholder="campo preenchido automaticamente" disabled>							    
-					</div>
-					<div class="form-group col-md-6">
-					    <label for="disabledTextInput">DATA DE CRIAÇÃO</label> 
-					    <input type="text" class="form-control" id="disabledTextInput" placeholder="campo preenchido automaticamente" disabled>
-					</div>
-				</div>
 				<div class="form-group">
-				    <label>DESCRIÇÃO</label>   
+				    <label for="name">DESCRIÇÃO</label>   
 				    <input type="text" class="form-control" id="name" name="name">
 				</div>
 		    	<div class="clearfix">
-				  	<button type="button" class="btn btn-primary">Criar</button>
+				  	<button type="submit" class="btn btn-primary">Criar</button>
 				</div>
 			</form>  
 			<div class="text-center mt-4 ">

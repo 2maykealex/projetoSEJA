@@ -31,15 +31,15 @@
                 </button>             
                 <div class="collapse mt-2" id="navbarToggleExternalContent">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <a class="nav-link text-white" href="{{route('adm.collections.list')}}" >Tipos de pagamentos</a>
+                        <a class="nav-link text-white" href="{{route('adm.collections.list')}}" >Pagamentos</a>
 
-                        <a class="nav-link text-white" href="{{route('adm.subscriptions.types.list')}}">Tipos de planos</a>
+                        <a class="nav-link text-white" href="{{route('adm.subscriptions.types.list')}}">Planos</a>
                    
-                        <a class="nav-link text-white" href="{{route('adm.subscriptions.plans.list')}}">Tipos de assinaturas</a>
+                        <a class="nav-link text-white" href="{{route('adm.subscriptions.plans.list')}}">Assinaturas</a>
                     
-                        <a class="nav-link text-white" href="{{route('adm.congresses.types.list')}}">Tipos de congressos</a>
+                        <a class="nav-link text-white" href="{{route('adm.congresses.types.list')}}">Congressos</a>
                     
-                        <a class="nav-link text-white" href="{{route('adm.events.types.list')}}">Tipos de eventos</a>
+                        <a class="nav-link text-white" href="{{route('adm.events.types.list')}}">Eventos</a>
                     
                         <a class="nav-link text-white" href="{{route('adm.security.profile.list')}}">Perfis de acesso</a>
                     </div>                       

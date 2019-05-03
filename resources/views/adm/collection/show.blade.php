@@ -10,29 +10,33 @@
 	       	<nav class="navbar navbar-expand-lg">
 		  		<h2>VISUALIZAR PAGAMENTO</h2>
 			</nav>
-			<form action="#" method="post" class="pb-3 pt-3 bg-white px-3">
+			<form class="pb-3 pt-3 bg-white px-3">
 				@csrf
 				<div class="form-row">
 					<div class="form-group col-md-2">
-					    <label for="disabledTextInput">ID</label>							    
-					    <input type="text" class="form-control" id="disabledTextInput" placeholder="{{$collection->id}}" disabled>							    
+					    <label>ID</label>							    
+					    <input type="text" class="form-control" placeholder="{{$collection->id}}" disabled>							    
 					</div>
 					<div class="form-group col-md-5">
-					    <label for="disabledTextInput">DATA CRIAÇÃO</label> 
-					    <input type="text" class="form-control" id="disabledTextInput" placeholder="{{$collection->created_at}}" disabled>
+					    <label>DATA CRIAÇÃO</label> 
+					    <input type="text" class="form-control" placeholder="{{$collection->created_at}}" disabled>
 					</div>
 					<div class="form-group col-md-5">
-					    <label for="disabledTextInput">DATA ALTERAÇÃO</label> 
-					    <input type="text" class="form-control" id="disabledTextInput" placeholder="{{$collection->updated_at}}" disabled>
+					    <label>DATA ALTERAÇÃO</label> 
+					    <input type="text" class="form-control" placeholder="{{$collection->updated_at}}" disabled>
 					</div>
 				</div>
 				<div class="form-group">
-				    <label for="disabledTextInput">DESCRIÇÃO</label>   
-				    <input type="text" class="form-control" id="disabledTextInput" placeholder="{{$collection->name}}" disabled>
+				    <label>DESCRIÇÃO</label>   
+				    <input type="text" class="form-control" placeholder="{{$collection->name}}" disabled>
 				</div>
 		    	<div class="clearfix">
 				  	<a class="btn btn-warning float-left" href="{{route('adm.collections.edit', [$collection->id])}}" >Alterar</a>
-				  	<button type="button" class="btn btn-danger float-right">Deletar</button>
+				  	<form action="{{ route('adm.collections.delete', $collection->id)}}" method="post">
+	                  	@csrf
+	                  	@method('DELETE')
+	                  	<button class="btn btn-danger float-right" type="submit">Delete</button>
+	                </form>
 				</div>
 			</form>  
 			<div class="text-center mt-4 ">
