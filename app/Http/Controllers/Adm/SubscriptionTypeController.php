@@ -74,14 +74,12 @@ class SubscriptionTypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         $data = $request->all();
         $subscriptionType = SubscriptionType::where('id', $data['id'])->get()->first();
-        $updated = $subscriptionType->updateSubscriptionType($data);
-
-        $subscriptionTypes = SubscriptionType::orderby('id')->get();
-        return view('adm.subscriptionType.index', compact('updated', 'subscriptionTypes'));
+        $message = $subscriptionType->updateSubscriptionType($data);
+        return view('adm.subscriptionType.index', compact('message'));
     }
 
     /**
