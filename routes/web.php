@@ -63,12 +63,7 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
     Route::group(['namespace' => 'Security', 'prefix' => 'security'], function () {
         Route::group(['prefix' => 'profiles-accesses'], function () {
             Route::get('list', 'ProfileAccessController@index')->name("adm.security.profile.list");
-            Route::get('new', 'ProfileAccessController@create')->name("adm.security.profile.new");
             Route::get('show/{id}', 'ProfileAccessController@show')->name("adm.security.profile.show");
-            Route::get('edit/{id}', 'ProfileAccessController@edit')->name("adm.security.profile.edit");
-            Route::get('delete/{id}', 'ProfileAccessController@destroy')->name("adm.security.profile.delete");
-            Route::post('update/{id}', 'ProfileAccessController@update')->name("adm.security.profile.update");
-            Route::post('store', 'ProfileAccessController@store')->name("adm.security.profile.store");
         });
     });
 
