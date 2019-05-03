@@ -26,22 +26,32 @@
                 <div class="text-center">
                     <h2 class="text-white py-2 border-bottom">ALMA</h2>
                 </div>     
+
+                <!--botão para Configurar tipos-->
                 <button class="btn btn-light col-md-12 text-left" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Alterna navegação">
                   Configurar tipos de:
                 </button>             
                 <div class="collapse mt-2" id="navbarToggleExternalContent">
                     <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                         <a class="nav-link text-white" href="{{route('adm.collections.list')}}" >Pagamentos</a>
-
                         <a class="nav-link text-white" href="{{route('adm.subscriptions.types.list')}}">Planos</a>
-                   
                         <a class="nav-link text-white" href="{{route('adm.subscriptions.plans.list')}}">Assinaturas</a>
-                    
                         <a class="nav-link text-white" href="{{route('adm.congresses.types.list')}}">Congressos</a>
-                    
                         <a class="nav-link text-white" href="{{route('adm.events.types.list')}}">Eventos</a>
-                    
                         <a class="nav-link text-white" href="{{route('adm.security.profile.list')}}">Perfis de acesso</a>
+                    </div>                       
+                </div>
+
+                <!--botão para Editar tipos-->
+                <button class="btn btn-light col-md-12 text-left mt-2" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent1" aria-controls="navbarToggleExternalContent1" aria-expanded="false" aria-label="Alterna navegação">
+                  Editar tipos de:
+                </button>             
+                <div class="collapse mt-2" id="navbarToggleExternalContent1">
+                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link text-white" href="{{route('publisher.congresses.list')}}" >Congressos</a>
+                        <a class="nav-link text-white" href="{{route('publisher.events.list')}}">Eventos</a>
+                        <a class="nav-link text-white" href="{{route('publisher.home')}}">Início</a>
+                        <a class="nav-link text-white" href="{{route('publisher.posts.list')}}">Postagens</a>
                     </div>                       
                 </div>
             </div>
