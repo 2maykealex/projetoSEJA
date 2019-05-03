@@ -17,7 +17,7 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
         Route::get('edit/{id}', 'CollectionController@edit')->name("adm.collections.edit");
         Route::get('delete/{id}', 'CollectionController@destroy')->name("adm.collections.delete");
         Route::post('update/{id}', 'CollectionController@update')->name("adm.collections.update");
-        Route::post('store/{id}', 'CollectionController@store')->name("adm.collections.store");
+        Route::post('store', 'CollectionController@store')->name("adm.collections.store");
     });
 
     Route::group(['prefix' => 'subscriptions-plans'], function () {
@@ -27,7 +27,7 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
         Route::get('edit/{id}', 'SubscriptionPlanController@edit')->name("adm.subscriptions.plans.edit");
         Route::get('delete/{id}', 'SubscriptionPlanController@destroy')->name("adm.subscriptions.plans.delete");
         Route::post('update/{id}', 'SubscriptionPlanController@update')->name("adm.subscriptions.plans.update");
-        Route::post('store/{id}', 'SubscriptionPlanController@store')->name("adm.subscriptions.plans.store");
+        Route::post('store', 'SubscriptionPlanController@store')->name("adm.subscriptions.plans.store");
     });
 
     Route::group(['prefix' => 'subscriptions-types'], function () {
@@ -37,7 +37,7 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
         Route::get('edit/{id}', 'SubscriptionTypeController@edit')->name("adm.subscriptions.types.edit");
         Route::get('delete/{id}', 'SubscriptionTypeController@destroy')->name("adm.subscriptions.types.delete");
         Route::post('update/{id}', 'SubscriptionTypeController@update')->name("adm.subscriptions.types.update");
-        Route::post('store/{id}', 'SubscriptionTypeController@store')->name("adm.subscriptions.types.store");
+        Route::post('store', 'SubscriptionTypeController@store')->name("adm.subscriptions.types.store");
     });
 
     Route::group(['prefix' => 'congresses-types'], function () {
@@ -47,7 +47,7 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
         Route::get('edit/{id}', 'CongressTypeController@edit')->name("adm.congresses.types.edit");
         Route::get('delete/{id}', 'CongressTypeController@destroy')->name("adm.congresses.types.delete");
         Route::post('update/{id}', 'CongressTypeController@update')->name("adm.congresses.types.update");
-        Route::post('store/{id}', 'CongressTypeController@store')->name("adm.congresses.types.store");
+        Route::post('store', 'CongressTypeController@store')->name("adm.congresses.types.store");
     });
 
     Route::group(['prefix' => 'events-types'], function () {
@@ -57,7 +57,7 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
         Route::get('edit/{id}', 'EventTypeController@edit')->name("adm.events.types.edit");
         Route::get('delete/{id}', 'EventTypeController@destroy')->name("adm.events.types.delete");
         Route::post('update/{id}', 'EventTypeController@update')->name("adm.events.types.update");
-        Route::post('store/{id}', 'EventTypeController@store')->name("adm.events.types.store");
+        Route::post('store', 'EventTypeController@store')->name("adm.events.types.store");
     });
 
     Route::group(['namespace' => 'Security', 'prefix' => 'security'], function () {
@@ -68,7 +68,7 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
             Route::get('edit/{id}', 'ProfileAccessController@edit')->name("adm.security.profile.edit");
             Route::get('delete/{id}', 'ProfileAccessController@destroy')->name("adm.security.profile.delete");
             Route::post('update/{id}', 'ProfileAccessController@update')->name("adm.security.profile.update");
-            Route::post('store/{id}', 'ProfileAccessController@store')->name("adm.security.profile.store");
+            Route::post('store', 'ProfileAccessController@store')->name("adm.security.profile.store");
         });
     });
 
@@ -89,7 +89,7 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Publisher',
         Route::get('edit/{id}', 'CongressController@edit')->name("publisher.congresses.edit");
         Route::get('delete/{id}', 'CongressController@destroy')->name("publisher.congresses.delete");
         Route::post('update/{id}', 'CongressController@update')->name("publisher.congresses.update");
-        Route::post('store/{id}', 'CongressController@store')->name("publisher.congresses.store");
+        Route::post('store', 'CongressController@store')->name("publisher.congresses.store");
     });
 
     Route::group(['prefix' => 'events'], function () {
@@ -99,7 +99,7 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Publisher',
         Route::get('edit/{id}', 'EventController@edit')->name("publisher.events.edit");
         Route::get('delete/{id}', 'EventController@destroy')->name("publisher.events.delete");
         Route::post('update/{id}', 'EventController@update')->name("publisher.events.update");
-        Route::post('store/{id}', 'EventController@store')->name("publisher.events.store");
+        Route::post('store', 'EventController@store')->name("publisher.events.store");
     });
 
     Route::group(['prefix' => 'posts'], function () {
@@ -109,7 +109,7 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Publisher',
         Route::get('edit/{id}', 'PostController@edit')->name("publisher.posts.edit");
         Route::get('delete/{id}', 'PostController@destroy')->name("publisher.posts.delete");
         Route::post('update/{id}', 'PostController@update')->name("publisher.posts.update");
-        Route::post('store/{id}', 'PostController@store')->name("publisher.posts.store");
+        Route::post('store', 'PostController@store')->name("publisher.posts.store");
     });
 
     Route::get('', 'PublisherController@index')->name("publisher.home");
