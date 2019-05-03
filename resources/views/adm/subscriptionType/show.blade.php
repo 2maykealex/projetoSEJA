@@ -10,29 +10,30 @@
 	       	<nav class="navbar navbar-expand-lg">
 		  		<h2>TIPO DE PLANO</h2>
 			</nav>
-			<form action="#" method="POST" class="pb-3 pt-3 bg-white px-3">
+			<form class="pb-3 pt-3 bg-white px-3">
 				@csrf
-
-				@foreach ($subscriptionType as $subscriptionShow)
 				<div class="form-row">
-					<div class="form-group col-md-6">
-					    <label for="disabledTextInput">ID</label>							    
-					    <input type="text" class="form-control" id="disabledTextInput" placeholder="{{$subscriptionShow->id}}" disabled>							    
+					<div class="form-group col-md-2">
+					    <label for="id">ID</label>							    
+					    <input type="text" class="form-control"  placeholder="{{$subscriptionType->id}}" disabled>			    
 					</div>
-					<div class="form-group col-md-6">
-					    <label for="disabledTextInput">DATA</label> 
-					    <input type="text" class="form-control" id="disabledTextInput" placeholder="{{$subscriptionShow->created_at}}" disabled>
+					<div class="form-group col-md-5">
+					    <label for="created_at">DATA DE CRIAÇÃO</label> 
+					    <input type="text" class="form-control" placeholder="{{$subscriptionType->created_at}}" disabled>
+					</div>
+					<div class="form-group col-md-5">
+					    <label for="updated_at">DATA DE ALTERAÇÃO</label> 
+					    <input type="text" class="form-control" placeholder="{{$subscriptionType->updated_at}}" disabled>
 					</div>
 				</div>
 				<div class="form-group">
-				    <label for="disabledTextInput">DESCRIÇÃO</label>   
-				    <input type="text" class="form-control" id="disabledTextInput" placeholder="{{$subscriptionShow->name}}" disabled>
+				    <label for="name">DESCRIÇÃO</label>   
+				    <input type="text" class="form-control" placeholder="{{$subscriptionType->name}}" disabled>
 				</div>
 		    	<div class="clearfix">
-				  	<a class="btn btn-warning float-left" href="{{route('adm.subscriptions.types.edit', [$subscriptionShow->id])}}" >Alterar</a>
-				  	<button type="button" class="btn btn-danger float-right">Deletar</button>
+				  	<a class="btn btn-warning float-left" href="{{route('adm.subscriptions.types.edit', [$subscriptionType->id])}}" >Alterar</a>
+				  	<a class="btn btn-danger float-right" href="{{route('adm.subscriptions.types.delete', [$subscriptionType->id])}}">Deletar</a>
 				</div>
-				@endforeach
 			</form>  
 			<div class="text-center mt-4 ">
 				<a class="btn btn-secondary btn-sm" href="javascript:history.go(-1)">Voltar</a>
