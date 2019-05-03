@@ -41,13 +41,8 @@ class SubscriptionPlanController extends Controller
     {
         $data = $request->all();
         $subscriptionPlan = new SubscriptionPlan;
-        $idNewSubscriptionPlan = $subscriptionPlan->newSubscriptionPlan($data);
-
-        if($idNewSubscriptionPlan){
-            return view('adm.subscriptionPlan.index');
-        }
-
-        return view('adm.subscriptionPlan.index');
+        $message = $subscriptionPlan->newSubscriptionPlan($data);
+        return view('adm.subscriptionPlan.index', compact('message'));
     }
 
     /**
@@ -84,14 +79,12 @@ class SubscriptionPlanController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
         $data = $request->all();
         $subscriptionPlan = SubscriptionPlan::where('id', $data['id'])->get()->first();
         $updated = $subscriptionPlan->updateSubscriptionPlan($data);
-        $subscriptionPlans = SubscriptionPlan::orderby('id')->get();
-
-        return view('adm.subscriptionPlan.index', compact('updated', 'subscriptionPlans'));
+        return view('adm.subscriptionPlan.index', compact('updated'));
     }
 
     /**
