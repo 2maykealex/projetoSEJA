@@ -38,14 +38,9 @@ class SubscriptionTypeController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        $SubscriptionType = new SubscriptionType;
-        $idNewSubscriptionType = $SubscriptionType->newSubscriptionType($data);
-
-        if($idNewSubscriptionType){
-            return view('adm.SubscriptionType.index');
-        }
-
-        return view('adm.SubscriptionType.index');
+        $subscriptionType = new SubscriptionType;
+        $message = $subscriptionType->newSubscriptionType($data);
+        return view('adm.SubscriptionType.index', compact('message'));
     }
 
     /**
