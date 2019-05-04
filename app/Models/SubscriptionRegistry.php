@@ -8,15 +8,17 @@ class SubscriptionRegistry extends Model
 {
     public function newSubscriber($data):Array{
         $this->people_id = $data['people_id'];
-
-        $updated = $this->save();
-
-        if ($updated){
+        $save = $this->save();
+        if ($save){
             return [
-                $this->id
+                'success' => true,
+                'message' => 'O cadastro realizado com sucesso!'
             ];
-        } else{
-            return [0];
         }
+
+        return [
+            'success' => false,
+            'message' => 'Não foi possível realizar este cadastro. Verifique!'
+        ];
     }
 }

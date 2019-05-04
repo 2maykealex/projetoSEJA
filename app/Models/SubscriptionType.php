@@ -9,7 +9,6 @@ class SubscriptionType extends Model
     public function newSubscriptionType($dados):Array {
         $this->name = $dados['name'];
         $save = $this->save();
-        
         if ($save){
             return [
                 'success' => true,
