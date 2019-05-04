@@ -7,19 +7,29 @@ use Illuminate\Database\Eloquent\Model;
 class Collection extends Model
 {
     public function newColl($dados):Array {
-        $this->name      = $dados['name'];
-        $save = $this->save();
-
-        if ($save){
+        $collection = Collection::where('name', $dados['name'])->get()->first();
+        
+        if (!$collection){
+            $this->name      = $dados['name'];
+            $save = $this->save();
+            
+            if($save){
+                return [
+                    'success' => true,
+                    'message' => 'O cadastro realizado com sucesso!'
+                ];
+            } else{
+                return [
+                    'success' => false,
+                    'message' => 'Não foi possível realizar este cadastro. Verifique!'
+                ];
+            }
+        } else {
             return [
-                $this->id
+                'success' => false,
+                'message' => 'Já existe um cadastro com essa descrição! Verifique!'
             ];
         }
-
-        return [
-            'success' => false,
-            'message' => 'Não foi possível realizar este cadastro. Verifique!'
-        ];
     }
     public function updateCollection($dados):Array {
         $this->name      = $dados['name'];
