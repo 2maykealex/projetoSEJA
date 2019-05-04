@@ -37,16 +37,14 @@ class CollectionController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
-        
         $collection = new Collection;
+        
+        $message = $collection->newColl($data);
 
-        $idNewCollection = $collection->newColl($data);
-
-        if($idNewCollection){
-            return view('adm.collection.index');
-        }
-
-        return view('adm.collection.index');
+        // if ($message['success'] == True){
+        return redirect()->back()->with($message);
+        // }
+        // return redirect()->back()->withErrors($this->getValidatorErrors());
     }
 
     /**
