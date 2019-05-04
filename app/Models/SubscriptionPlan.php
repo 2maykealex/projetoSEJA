@@ -17,7 +17,10 @@ class SubscriptionPlan extends Model
     public function newSubscriptionPlan($dados):Array {
         $this->collection_id = $dados['collection_id'];
         $this->subscription_type_id = $dados['subscription_type_id'];
+<<<<<<< HEAD
         $this->price = $dados['price'];
+=======
+>>>>>>> b36f2d9b29be07c5e4fc6c3627f8c4a56e7d3a23
         $save = $this->save();
         
         if ($save){
