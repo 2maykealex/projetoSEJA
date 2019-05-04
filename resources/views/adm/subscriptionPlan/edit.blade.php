@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+	@include('includes.alerts')
 	<div class="d-flex justify-content-center flex-lg-center">
     	<div class="col-md-8 bg-light py-3">
 	       	<nav class="navbar navbar-expand-lg">
@@ -16,8 +17,8 @@
 				    <input type="hidden" class="form-control" id="id" name="id" value="{{$subscriptionPlan->id}}">
 				</div>
 		    	<div class="form-group">
-		    		<label for="subscriptionType_id">DESCRIÇÃO PLANO</label>	    		
-		      		<select class="form-control" id="subscriptionType_id" name="subscriptionType_id" collapse>
+		    		<label for="subscription_type_id">DESCRIÇÃO PLANO</label>	    		
+		      		<select class="form-control" id="subscription_type_id" name="subscription_type_id" collapse>
 		        		<option>Escolher</option>
 		        		@foreach ($subscriptionTypes as $subscriptionType)
 		        			<option value="{{$subscriptionType->id}}" 
@@ -44,7 +45,7 @@
 				</div>
 			</form>  
 			<div class="text-center mt-4 ">
-				<a class="btn btn-secondary btn-sm" href="javascript:history.go(-1)">Voltar</a>
+				<a class="btn btn-secondary btn-sm" href="{{route('adm.subscriptions.plans.list')}}">Voltar</a>
 			</div>
 		</div>              
 	</div>

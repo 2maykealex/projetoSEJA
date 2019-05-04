@@ -41,19 +41,6 @@
                         <a class="nav-link text-white" href="{{route('adm.security.profile.list')}}">Perfis de acesso</a>
                     </div>                       
                 </div>
-
-                <!--botão para Editar tipos-->
-                <button class="btn btn-light col-md-12 text-left mt-2" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent1" aria-controls="navbarToggleExternalContent1" aria-expanded="false" aria-label="Alterna navegação">
-                  Editar tipos de:
-                </button>             
-                <div class="collapse mt-2" id="navbarToggleExternalContent1">
-                    <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                        <a class="nav-link text-white" href="{{route('publisher.congresses.list')}}" >Congressos</a>
-                        <a class="nav-link text-white" href="{{route('publisher.events.list')}}">Eventos</a>
-                        <a class="nav-link text-white" href="{{route('publisher.home')}}">Início</a>
-                        <a class="nav-link text-white" href="{{route('publisher.posts.list')}}">Postagens</a>
-                    </div>                       
-                </div>
             </div>
             <a class="btn btn-warning fixed-bottom col-md-2 text-white" href="{{route('site.logout')}}">Sair</a>
             <div class="content col-md-10">

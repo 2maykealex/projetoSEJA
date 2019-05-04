@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+	@include('includes.alerts')
 	<div class="d-flex justify-content-center flex-lg-center">
     	<div class="col-md-8 bg-light py-3">
 	       	<nav class="navbar navbar-expand-lg">
@@ -39,7 +40,7 @@
 				</div>
 			</form>  
 			<div class="text-center mt-4 ">
-				<a class="btn btn-secondary btn-sm" href="javascript:history.go(-1)">Voltar</a>
+				<a class="btn btn-secondary btn-sm" href="{{route('adm.subscriptions.plans.list')}}">Voltar</a>
 			</div>
 		</div>              
 	</div>
