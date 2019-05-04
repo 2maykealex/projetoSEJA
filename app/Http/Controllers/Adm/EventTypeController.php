@@ -39,13 +39,8 @@ class EventTypeController extends Controller
     {
         $data = $request->all();
         $eventType = new EventType;
-        $idNewEventType = $eventType->newEventType($data);
-
-        if($idNewEventType){
-            return view('adm.eventType.index');
-        }
-
-        return view('adm.eventType.index');
+        $message = $eventType->newEventType($data);
+        return redirect()->back()->with(compact('message'));
     }
 
     /**
@@ -83,9 +78,8 @@ class EventTypeController extends Controller
     {
         $data = $request->all();
         $eventType = EventType::where('id', $data['id'])->get()->first();
-        $updated = $eventType->updateEventType($data);
-        $eventsTypes = EventType::orderby('id')->get();
-        return view('adm.eventType.index', compact('updated', 'eventsTypes'));
+        $message = $eventType->updateEventType($data);
+        return redirect()->back()->with($message);
     }
 
     /**

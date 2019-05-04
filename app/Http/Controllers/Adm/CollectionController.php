@@ -38,13 +38,8 @@ class CollectionController extends Controller
     {
         $data = $request->all();
         $collection = new Collection;
-        
         $message = $collection->newColl($data);
-
-        // if ($message['success'] == True){
         return redirect()->back()->with($message);
-        // }
-        // return redirect()->back()->withErrors($this->getValidatorErrors());
     }
 
     /**
@@ -82,9 +77,8 @@ class CollectionController extends Controller
     {
         $data = $request->all();
         $collection = Collection::where('id', $data['id'])->get()->first();
-        $updated = $collection->updateCollection($data);
-        $collections = Collection::orderby('id')->get();
-        return view('adm.collection.index', compact('updated', 'collections'));
+        $message = $collection->updateCollection($data);
+        return redirect()->back()->with($message);
     }
 
     /**

@@ -39,13 +39,8 @@ class CongressTypeController extends Controller
     {
         $data = $request->all();
         $congressType = new CongressType;
-        $idNewCongressType = $congressType->newCongressType($data);
-
-        if($idNewCongressType){
-            return view('adm.congressType.index');
-        }
-
-        return view('adm.congressType.index');
+        $message = $congressType->newCongressType($data);
+        return redirect()->back()->with($message);
     }
 
     /**
@@ -83,9 +78,8 @@ class CongressTypeController extends Controller
     {
         $data = $request->all();
         $congressType = CongressType::where('id', $data['id'])->get()->first();
-        $updated = $congressType->updateCongressType($data);
-        $congressTypes = CongressType::orderby('id')->get();
-        return view('adm.congressType.index', compact('updated', 'congressTypes'));
+        $message = $congressType->updateCongressType($data);
+        return redirect()->back()->with($message);
     }
 
     /**

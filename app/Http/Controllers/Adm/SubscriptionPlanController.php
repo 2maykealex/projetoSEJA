@@ -45,8 +45,7 @@ class SubscriptionPlanController extends Controller
         $data = $request->all();
         $subscriptionPlan = new SubscriptionPlan;
         $message = $subscriptionPlan->newSubscriptionPlan($data);
-        $subscriptionPlans = SubscriptionPlan::orderby('id')->get();
-        return view('adm.subscriptionPlan.index', compact('message', 'subscriptionPlans'));
+        return redirect()->back()->with($message);
     }
 
     /**
@@ -88,9 +87,7 @@ class SubscriptionPlanController extends Controller
         $data = $request->all();
         $subscriptionPlan = SubscriptionPlan::where('id', $data['id'])->get()->first();
         $message = $subscriptionPlan->updateSubscriptionPlan($data);
-        // $subscriptionPlans = SubscriptionPlan::orderby('id')->get();
-        return redirect()->action('Adm\SubscriptionPlanController@index', compact('message'));
-        // return view('adm.subscriptionPlan.index', compact('updated'));
+        return redirect()->back()->with($message);
     }
 
     /**
