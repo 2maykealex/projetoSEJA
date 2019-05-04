@@ -40,7 +40,8 @@ class SubscriptionTypeController extends Controller
         $data = $request->all();
         $subscriptionType = new SubscriptionType;
         $message = $subscriptionType->newSubscriptionType($data);
-        return view('adm.SubscriptionType.index', compact('message'));
+        $subscriptionTypes = SubscriptionType::orderby('id')->get();
+        return view('adm.SubscriptionType.index', compact('message', 'subscriptionTypes'));
     }
 
     /**

@@ -16,7 +16,8 @@ class SubscriptionPlan extends Model
 
     public function newSubscriptionPlan($dados):Array {
         $this->collection_id = $dados['collection_id'];
-        $this->subscriptionType_id = $dados['subscriptionType_id'];
+        $this->subscription_type_id = $dados['subscription_type_id'];
+        $this->price = $dados['price'];
         $save = $this->save();
         
         if ($save){
@@ -36,6 +37,7 @@ class SubscriptionPlan extends Model
         // dd($dados);
         $this->collection_id = $dados['collection_id'];
         $this->subscription_type_id = $dados['subscription_type_id'];
+        $this->price = $dados['price'];
         $save = $this->save();
 
         if ($save){

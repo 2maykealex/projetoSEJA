@@ -45,7 +45,8 @@ class SubscriptionPlanController extends Controller
         $data = $request->all();
         $subscriptionPlan = new SubscriptionPlan;
         $message = $subscriptionPlan->newSubscriptionPlan($data);
-        return view('adm.subscriptionPlan.index', compact('message'));
+        $subscriptionPlans = SubscriptionPlan::orderby('id')->get();
+        return view('adm.subscriptionPlan.index', compact('message', 'subscriptionPlans'));
     }
 
     /**
