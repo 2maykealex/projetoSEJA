@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-	<div class="d-flex justify-content-center flex-lg-center" id="collection">
+	<div class="d-flex justify-content-center flex-lg-center">
 		<div class="col-md-8">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			  	<h2>TIPOS DE PAGAMENTOS</h2>

@@ -33,8 +33,8 @@
                 </button>             
                 <div class="collapse mt-2 border bg-secondary" id="navbarToggleExternalContent">
                     <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="#collection" >Pagamentos</a>
-                        <a class="nav-link text-white btn-outline-dark" href="#substype">Planos</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('adm.collections.list')}}" >Pagamentos</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('adm.subscriptions.types.list')}}">Planos</a>
                         <a class="nav-link text-white btn-outline-dark" href="{{route('adm.subscriptions.plans.list')}}">Assinaturas</a>
                         <a class="nav-link text-white btn-outline-dark" href="{{route('adm.congresses.types.list')}}">Congressos</a>
                         <a class="nav-link text-white btn-outline-dark" href="{{route('adm.events.types.list')}}">Eventos</a>
