@@ -15,7 +15,7 @@
 				@csrf
 				<div class="form-group">
 				    <label for="name">DESCRIÇÃO</label>   
-				    <input type="text" class="form-control" id="name" name="name">
+				    <input type="text" class="form-control" id="name" name="name" autofocus>
 				</div>
 		    	<div class="clearfix">
 				  	<button type="submit" class="btn btn-primary">Criar</button>
