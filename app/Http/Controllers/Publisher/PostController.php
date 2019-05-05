@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Publisher;
 use App\Models\Post;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Publisher;
 
 class PostController extends Controller
 {
@@ -15,7 +16,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        return view('publisher.post.index');
     }
 
     /**
@@ -25,7 +26,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('publisher.post.new');
     }
 
     /**
@@ -45,9 +46,10 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show(Post $post)
+    public function show($id)
     {
-        //
+        $publish = Publisher::where('id', $id)->get()->first();
+        return view('publisher.post.show', compact('publish'));
     }
 
     /**
@@ -56,9 +58,10 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit(Post $post)
+    public function edit($id)
     {
-        //
+        $publish = Publisher::where('id', $id)->get()->first();
+        return view('publisher.post.edit', compact('publish'));
     }
 
     /**
