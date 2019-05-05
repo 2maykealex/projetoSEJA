@@ -22,6 +22,8 @@
 
 </head>
 <body>
+    @include('includes.alerts')
+
     <div class="content">
         @yield('content')
     </div>

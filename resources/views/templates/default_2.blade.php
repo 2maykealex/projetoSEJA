@@ -124,6 +124,7 @@
 
 <body>
     <div class="content">
+        @include('includes.alerts')
         @yield('content')
     </div>
 
