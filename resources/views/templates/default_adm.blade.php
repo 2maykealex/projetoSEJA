@@ -28,18 +28,27 @@
                 </div>     
 
                 <!--botão para Configurar tipos-->
-                <button class="btn btn-light col-md-12 text-left" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Alterna navegação">
-                  Configurar tipos de:
-                </button>             
-                <div class="collapse mt-2 border bg-secondary" id="navbarToggleExternalContent">
+                <button class="btn btn-light col-md-12 text-left" type="button" data-toggle="collapse" data-target="#menuTipos" aria-controls="menuTipos" aria-expanded="false" aria-label="Alterna navegação">
+                  Configurar tipos de ...
+                </button>
+                <div class="collapse mt-2 border bg-secondary" id="menuTipos">
                     <div class="nav flex-column">
                         <a class="nav-link text-white btn-outline-dark" href="{{route('adm.collections.list')}}" >Pagamentos</a>
                         <a class="nav-link text-white btn-outline-dark" href="{{route('adm.subscriptions.types.list')}}">Planos</a>
                         <a class="nav-link text-white btn-outline-dark" href="{{route('adm.subscriptions.plans.list')}}">Assinaturas</a>
                         <a class="nav-link text-white btn-outline-dark" href="{{route('adm.congresses.types.list')}}">Congressos</a>
                         <a class="nav-link text-white btn-outline-dark" href="{{route('adm.events.types.list')}}">Eventos</a>
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('adm.security.profile.list')}}">Perfis de acesso</a>
-                    </div>                       
+                    </div>
+                </div>
+
+                <!--botão para Configurar tipos-->
+                <button class="btn btn-light col-md-12 text-left mt-3" type="button" data-toggle="collapse" data-target="#menuSeguranca" aria-controls="menuSeguranca" aria-expanded="false" aria-label="Alterna navegação">
+                  Segurança
+                </button>
+                <div class="collapse mt-2 border bg-secondary" id="menuSeguranca">
+                    <div class="nav flex-column">
+                            <a class="nav-link text-white btn-outline-dark" href="{{route('adm.security.profile.list')}}">Perfis de acesso</a>
+                    </div>
                 </div>
             </div>
             <a class="btn btn-warning fixed-bottom col-md-2 text-white" href="{{route('site.logout')}}">Sair</a>
