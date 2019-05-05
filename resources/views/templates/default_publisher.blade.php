@@ -28,7 +28,7 @@
                 </div>     
 
                 <!--botão para Configurar tipos-->
-                <button class="btn btn-light col-md-12 text-left" type="button" data-toggle="collapse" data-target="#menuPublicacao" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Alterna navegação">
+                <button class="btn btn-light col-md-12 text-left" type="button" data-toggle="collapse" data-target="#menuPublicacao" aria-controls="menuPublicacao" aria-expanded="false" aria-label="Alterna navegação">
                   Publicações
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuPublicacao">
@@ -39,7 +39,7 @@
                 </div>
 
                 <!--botão para Configurar tipos-->
-                <button class="btn btn-light col-md-12 text-left mt-3" type="button" data-toggle="collapse" data-target="#menuEventos" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Alterna navegação">
+                <button class="btn btn-light col-md-12 text-left mt-3" type="button" data-toggle="collapse" data-target="#menuEventos" aria-controls="menuEventos" aria-expanded="false" aria-label="Alterna navegação">
                   Eventos
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuEventos">
@@ -50,7 +50,7 @@
                 </div>
 
                 <!--botão para Configurar tipos-->
-                <button class="btn btn-light col-md-12 text-left mt-3" type="button" data-toggle="collapse" data-target="#menuCongressos" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Alterna navegação">
+                <button class="btn btn-light col-md-12 text-left mt-3" type="button" data-toggle="collapse" data-target="#menuCongressos" aria-controls="menuCongressos" aria-expanded="false" aria-label="Alterna navegação">
                   Congressos
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuCongressos">
