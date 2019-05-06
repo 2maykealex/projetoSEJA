@@ -15,6 +15,9 @@
         .button-width{
             width: 100px;
         }
+        .bg-escuro{
+            background-color: rgba(0,0,0,.3) !important;
+        }
     </style>
 
 </head>
@@ -28,18 +31,29 @@
                 </div>     
 
                 <!--botão para Configurar tipos-->
-                <button class="btn btn-light col-md-12 text-left" type="button" data-toggle="collapse" data-target="#menuPublicacao" aria-controls="menuPublicacao" aria-expanded="false" aria-label="Alterna navegação">
+                <button class="btn btn-light col-md-12 text-left" type="button" data-toggle="collapse" data-target="#menuInicio" aria-controls="menuInicio" aria-expanded="false" aria-label="Alterna navegação">
+                    Início
+                </button>
+                <div class="collapse mt-2 border bg-secondary" id="menuInicio">
+                    <div class="nav flex-column">
+                        <a class="nav-link text-white btn-outline-dark" href="#" >Nova</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.home')}}">Listas</a>
+                    </div>
+                </div>
+
+                <!--botão para Configurar tipos-->
+                <button class="btn btn-light col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuPublicacao" aria-controls="menuPublicacao" aria-expanded="false" aria-label="Alterna navegação">
                   Publicações
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuPublicacao">
                     <div class="nav flex-column">
                         <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.new')}}" >Nova</a>
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.list')}}">Publicações</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.list')}}">Listas</a>
                     </div>
                 </div>
 
                 <!--botão para Configurar tipos-->
-                <button class="btn btn-light col-md-12 text-left mt-3" type="button" data-toggle="collapse" data-target="#menuEventos" aria-controls="menuEventos" aria-expanded="false" aria-label="Alterna navegação">
+                <button class="btn btn-light col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuEventos" aria-controls="menuEventos" aria-expanded="false" aria-label="Alterna navegação">
                   Eventos
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuEventos">
@@ -50,7 +64,7 @@
                 </div>
 
                 <!--botão para Configurar tipos-->
-                <button class="btn btn-light col-md-12 text-left mt-3" type="button" data-toggle="collapse" data-target="#menuCongressos" aria-controls="menuCongressos" aria-expanded="false" aria-label="Alterna navegação">
+                <button class="btn btn-light col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuCongressos" aria-controls="menuCongressos" aria-expanded="false" aria-label="Alterna navegação">
                   Congressos
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuCongressos">
@@ -61,7 +75,7 @@
                 </div>
             </div>
             <a class="btn btn-warning fixed-bottom col-md-2 text-white" href="{{route('site.logout')}}">Sair</a>
-            <div class="content col-md-10">
+            <div class="content col-md-10 bg-escuro">
                 @include('includes.alerts')
                 @yield('content')
             </div>

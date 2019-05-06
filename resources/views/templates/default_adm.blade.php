@@ -15,6 +15,9 @@
         .button-width{
             width: 100px;
         }
+        .bg-escuro{
+            background-color: rgba(0,0,0,.3) !important;
+        }
     </style>
 
 </head>
@@ -52,7 +55,7 @@
                 </div>
             </div>
             <a class="btn btn-warning fixed-bottom col-md-2 text-white" href="{{route('site.logout')}}">Sair</a>
-            <div class="content col-md-10">
+            <div class="content col-md-10 bg-escuro">
                 @include('includes.alerts')
                 @yield('content')
             </div>
