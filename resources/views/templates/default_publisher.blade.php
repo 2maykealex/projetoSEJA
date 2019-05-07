@@ -36,8 +36,7 @@
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuInicio">
                     <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="#" >Nova</a>
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.home')}}">Listas</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.list')}}">Ver tudo</a>
                     </div>
                 </div>
 
@@ -47,8 +46,8 @@
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuPublicacao">
                     <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.new')}}" >Nova</a>
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.list')}}">Listas</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.new')}}" >Criar</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.list')}}">Ver tudo</a>
                     </div>
                 </div>
 
@@ -58,8 +57,8 @@
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuEventos">
                     <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.new')}}" >Novo</a>
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.list')}}">Eventos</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.new')}}" >Criar</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.list')}}">Ver tudo</a>
                     </div>
                 </div>
 
@@ -69,8 +68,8 @@
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuCongressos">
                     <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.new')}}" >Novo</a>
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.list')}}">Eventos</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.new')}}" >Criar</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.list')}}">Ver tudo</a>
                     </div>
                 </div>
             </div>
