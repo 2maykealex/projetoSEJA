@@ -15,7 +15,7 @@ class EventController extends Controller
      */
     public function index()
     {
-        //
+        return view('publisher.event.index');
     }
 
     /**
@@ -25,7 +25,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('publisher.event.new');
     }
 
     /**
@@ -47,7 +47,7 @@ class EventController extends Controller
      */
     public function show(Event $event)
     {
-        //
+        return view('publisher.event.show');
     }
 
     /**
@@ -58,7 +58,7 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
-        //
+        return view('publisher.event.edit');
     }
 
     /**

@@ -15,7 +15,7 @@ class CongressController extends Controller
      */
     public function index()
     {
-        //
+        return view('publisher.congress.index');
     }
 
     /**
@@ -25,7 +25,7 @@ class CongressController extends Controller
      */
     public function create()
     {
-        //
+        return view('publisher.congress.new');
     }
 
     /**
@@ -47,7 +47,7 @@ class CongressController extends Controller
      */
     public function show(Congress $congress)
     {
-        //
+        return view('publisher.congress.show');
     }
 
     /**
@@ -58,7 +58,7 @@ class CongressController extends Controller
      */
     public function edit(Congress $congress)
     {
-        //
+        return view('publisher.congress.edit');
     }
 
     /**
