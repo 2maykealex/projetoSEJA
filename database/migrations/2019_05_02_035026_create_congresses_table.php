@@ -14,7 +14,7 @@ class CreateCongressesTable extends Migration
     public function up()
     {
         Schema::create('congresses', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->timestamps();
         });
     }
