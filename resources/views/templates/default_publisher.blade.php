@@ -29,25 +29,14 @@
                 <div class="text-center">
                     <h2 class="text-white py-2 border-bottom">ALMA</h2>
                 </div>     
-
-                <!--botão para Configurar tipos-->
-                <button class="btn btn-light col-md-12 text-left" type="button" data-toggle="collapse" data-target="#menuInicio" aria-controls="menuInicio" aria-expanded="false" aria-label="Alterna navegação">
-                    Início
-                </button>
-                <div class="collapse mt-2 border bg-secondary" id="menuInicio">
-                    <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.list')}}">Ver tudo</a>
-                    </div>
-                </div>
-
                 <!--botão para Configurar tipos-->
                 <button class="btn btn-light col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuPublicacao" aria-controls="menuPublicacao" aria-expanded="false" aria-label="Alterna navegação">
                   Publicações
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuPublicacao">
                     <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.new')}}" >Criar</a>
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.list')}}">Ver tudo</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.new')}}" >Novo/Nova</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.list')}}">Listagem</a>
                     </div>
                 </div>
 
@@ -57,8 +46,8 @@
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuEventos">
                     <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.new')}}" >Criar</a>
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.list')}}">Ver tudo</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.new')}}" >Novo/Nova</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.list')}}">Listagem</a>
                     </div>
                 </div>
 
@@ -68,8 +57,8 @@
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuCongressos">
                     <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.new')}}" >Criar</a>
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.list')}}">Ver tudo</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.new')}}" >Novo/Nova</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.list')}}">Listagem</a>
                     </div>
                 </div>
             </div>
