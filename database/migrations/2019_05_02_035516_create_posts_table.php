@@ -15,10 +15,14 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('subscription_plans_id')->unsigned();
+            $table->foreign('subscription_plans_id')->references('id')->on('subscription_plans');
+
             $table->string('title', 80);
-            $table->string('resume', 80);
-            $table->string('text', 80);
-            $table->string('image', 80);
+            $table->string('summary', 80);
+            $table->string('text');
+            $table->string('image');
             $table->timestamps();
         });
     }
