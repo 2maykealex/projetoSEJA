@@ -34,7 +34,7 @@
     <!--barra de navegação com conteudo do site-->
     <div class="container-fluid">
         <div class="row altura">
-            <div class="col-md-2  bg-dark">
+            <div class="col-md-2 bg-dark d-none d-md-block fixed-left sidebar">
                 <div class="text-center">
                     <h2 class="text-white py-2 border-bottom">ALMA</h2>
                 </div>     
@@ -44,7 +44,7 @@
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuPublicacao">
                     <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.new')}}" >Novo/Nova</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.new')}}" >Nova</a>
                         <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.list')}}">Listagem</a>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuEventos">
                     <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.new')}}" >Novo/Nova</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.new')}}" >Novo</a>
                         <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.list')}}">Listagem</a>
                     </div>
                 </div>
@@ -66,16 +66,16 @@
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuCongressos">
                     <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.new')}}" >Novo/Nova</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.new')}}" >Novo</a>
                         <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.list')}}">Listagem</a>
                     </div>
                 </div>
             </div>
             <a class="btn btn-warning fixed-bottom col-md-2 text-white" href="{{route('site.logout')}}">Sair</a>
-            <div class="content col-md-10 bg-escuro">
+            <main role="main" class="col-md-10 bg-escuro">
                 @include('includes.alerts')
                 @yield('content')
-            </div>
+            </main>
         </div>
 
     </div>

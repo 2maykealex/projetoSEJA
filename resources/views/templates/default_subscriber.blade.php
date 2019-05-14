@@ -61,10 +61,10 @@
                 </div>
             </div>
             <a class="btn btn-warning fixed-bottom col-md-2 text-white" href="{{route('site.logout')}}">Sair</a>
-            <div class="content col-md-10">
+            <main role="main" class="col-md-10 bg-escuro">
                 @include('includes.alerts')
                 @yield('content')
-            </div>
+            </main>
         </div>
 
     </div>

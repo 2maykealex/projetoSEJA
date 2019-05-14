@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers\Publisher;
 
-use App\Models\Post;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Post;
 use App\Models\Publisher;
+use App\Models\SubscriptionType;
 
 class PostController extends Controller
 {
@@ -50,7 +51,8 @@ class PostController extends Controller
     public function show($id)
     {
         $post = Post::where('id', $id)->get()->first();
-        return view('publisher.post.show', compact('publish'));
+        $subscriptionType = SubscriptionType::orderby('id', $id)->get()->first();
+        return view('publisher.post.show', compact('post', 'subscriptionType'));
     }
 
     /**
@@ -62,7 +64,7 @@ class PostController extends Controller
     public function edit($id)
     {
         $post = Post::where('id', $id)->get()->first();
-        return view('publisher.post.edit', compact('publish'));
+        return view('publisher.post.edit', compact('post'));
     }
 
     /**
