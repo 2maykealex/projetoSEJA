@@ -8,7 +8,7 @@
 	<div class="d-flex justify-content-center flex-lg-center">
     	<div class="col-md-8 bg-light py-3">
 	       	<nav class="navbar navbar-expand-lg">
-		  		<h2>EDITAR PERFIL</h2>
+		  		<h2>EDITAR</h2>
 			</nav>
 			<form action="{{route('adm.security.profile.update', $profilesAccess->id)}}" method="POST" class="pb-3 pt-3 bg-white px-3">
 				@csrf

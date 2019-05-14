@@ -6,11 +6,11 @@
 
 @section('content')
 	<div class="d-flex justify-content-center flex-lg-center">
-		<div class="col-md-8">
+		<div class="col-md-8 bg-light py-3">
 			<nav class="navbar navbar-expand-lg navbar-light bg-light">
 			  	<h2>PERFIS DE ACESSO</h2>
 			</nav>
-	      	<div class="table-responsive">
+	      	<div class="table-responsive pb-3 pt-3 bg-white px-3">
 	        	<table class="table table-bordered">
 	          		<thead>
 	            		<tr>

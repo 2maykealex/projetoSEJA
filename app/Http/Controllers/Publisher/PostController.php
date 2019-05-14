@@ -49,7 +49,7 @@ class PostController extends Controller
      */
     public function show($id)
     {
-        $publish = Publisher::where('id', $id)->get()->first();
+        $post = Post::where('id', $id)->get()->first();
         return view('publisher.post.show', compact('publish'));
     }
 
@@ -61,7 +61,7 @@ class PostController extends Controller
      */
     public function edit($id)
     {
-        $publish = Publisher::where('id', $id)->get()->first();
+        $post = Post::where('id', $id)->get()->first();
         return view('publisher.post.edit', compact('publish'));
     }
 
