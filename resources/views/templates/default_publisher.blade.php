@@ -18,6 +18,15 @@
         .bg-escuro{
             background-color: rgba(0,0,0,.3) !important;
         }
+        .altura{
+            height: 100vh;            
+        }
+        .button-height{
+            width: 80px;
+        }
+        .heigt-test{
+            height: 400px;
+        }
     </style>
 
 </head>

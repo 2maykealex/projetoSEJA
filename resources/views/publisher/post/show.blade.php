@@ -5,36 +5,55 @@
 @endsection
 
 @section('content')
-	<div class="d-flex justify-content-center flex-lg-center">
+<div class="d-flex justify-content-center flex-lg-center">
     	<div class="col-md-8 bg-light py-3">
 	       	<nav class="navbar navbar-expand-lg">
-		  		<h2>VISUALIZAR EVENTO</h2>
+		  		<h2>VISUALIZAR PAGAMENTO</h2>
 			</nav>
-			<form action="#" method="POST" class="pb-3 pt-3 bg-white px-3">
+			<form class="pb-3 pt-3 bg-white px-3">
 				@csrf
 				<div class="form-row">
-					<div class="form-group col-md-6">
-					    <label for="disabledTextInput">ID</label>							    
-					    <input type="text" class="form-control" id="disabledTextInput" placeholder="01" disabled>							    
+					<div class="form-group col-md-2">
+					    <label>ID</label>							    
+					    <input type="text" class="form-control" placeholder="{{$collection->id}}" disabled>							    
 					</div>
-					<div class="form-group col-md-6">
-					    <label for="disabledTextInput">DATA</label> 
-					    <input type="text" class="form-control" id="disabledTextInput" placeholder="10/10/2010" disabled>
+					<div class="form-group col-md-5">
+					    <label>DATA CRIAÇÃO</label> 
+					    <input type="text" class="form-control" placeholder="{{$collection->created_at}}" disabled>
+					</div>
+					<div class="form-group col-md-5">
+					    <label>DATA ALTERAÇÃO</label> 
+					    <input type="text" class="form-control" placeholder="{{$collection->updated_at}}" disabled>
 					</div>
 				</div>
 				<div class="form-group">
-				    <label for="disabledTextInput">DESCRIÇÃO</label>   
-				    <input type="text" class="form-control" id="disabledTextInput" placeholder="dolor sit amet, consectetur adipiscing elit, sed do eiusmod" disabled>
+				    <label>AUTOR</label>   
+				    <input type="text" class="form-control" placeholder="{{$collection->name}}" disabled>
+				</div>
+				<div class="form-group">
+				    <label>TÍTULO</label>   
+				    <input type="text" class="form-control" placeholder="{{$collection->name}}" disabled>
+				</div>
+				<div class="form-group">
+				    <label>RESUMO</label>   
+				    <input type="text" class="form-control" placeholder="{{$collection->name}}" disabled>
+				</div>
+				<div class="form-group">
+				    <label>TEXTO</label>   
+				    <input type="text" class="form-control" placeholder="{{$collection->name}}" disabled>
+				</div>
+				<div class="form-group">
+				    <label>ANEXOS</label>   
+				    <input type="text" class="form-control" placeholder="{{$collection->name}}" disabled>
 				</div>
 		    	<div class="clearfix">
-				  	<a class="btn btn-warning float-left" href="#" >Alterar</a>
-				  	<a class="btn btn-danger float-right" href="#">Deletar</a>
+				  	<a class="btn btn-warning float-left" href="{{route('adm.collections.edit', [$collection->id])}}" >Alterar</a>
+				  	<a class="btn btn-warning float-left" href="{{route('adm.collections.edit', [$collection->id])}}" >Deletar</a>
 				</div>
-				@endforeach
 			</form>  
 			<div class="text-center mt-4 ">
-				<a class="btn btn-secondary btn-sm" href="{{route('publisher.posts.list')}}">Voltar</a>
+				<a class="btn btn-secondary btn-sm" href="{{route('adm.collections.list')}}">Voltar</a>
 			</div> 
 		</div>             
-	</div>	      
+	</div>
 @endsection
