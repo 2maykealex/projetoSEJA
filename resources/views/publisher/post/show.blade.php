@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-	<div class="d-flex justify-content-center flex-lg-center">
+	<div class="d-flex justify-content-center flex-lg-center pb-5">
     	<div class="col-md-8 bg-light py-3">
 	       	<nav class="navbar navbar-expand-lg">
 		  		<h2>VISUALIZAR</h2>
@@ -40,11 +40,11 @@
 				</div>
 				<div class="form-group">
 				    <label>RESUMO</label>   
-				    <input type="text" class="form-control" value="{{$post->summary}}" disabled>
+				    <textarea class="form-control" rows="4" disabled>{{$post->summary}}</textarea>
 				</div>
 				<div class="form-group">
 				    <label>TEXTO</label>   
-				    <input type="text" class="form-control" value="{{$post->text}}" disabled>
+				    <textarea class="form-control" rows="8" disabled>{{$post->text}}</textarea>
 				</div>
 				<div class="form-group">
 				    <label>ANEXOS</label>   
