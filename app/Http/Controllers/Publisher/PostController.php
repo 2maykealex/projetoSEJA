@@ -51,7 +51,7 @@ class PostController extends Controller
     public function show($id)
     {
         $post = Post::where('id', $id)->get()->first();
-        $subscriptionType = SubscriptionType::orderby('id', $id)->get()->first();
+        $subscriptionType = SubscriptionType::orderby('id')->get()->first();
         return view('publisher.post.show', compact('post', 'subscriptionType'));
     }
 
