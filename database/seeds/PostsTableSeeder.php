@@ -17,7 +17,7 @@ class PostsTableSeeder extends Seeder
             'title'     => 'Uma linda Mulher',
             'summary' => 'Durante uma viagem de negócios a Los Angeles, Edward...',
             'text' => 'Sempre haverá aqueles filmes que, sempre que você assistir, você vai sentir uma sensação estranhamente mágica...',
-            'image' => 'null',
+            'image' => 'post_001',
         ]);
 
         Post::create([
@@ -25,7 +25,7 @@ class PostsTableSeeder extends Seeder
             'title'     => 'Os Vingadores - O Ultimato',
             'summary' => 'Após Thanos eliminar metade das criaturas vivas...',
             'text' => 'Mais do que qualquer filme precedente do Universo Cinematográfico Marvel...',
-            'image' => 'null',
+            'image' => 'post_002',
         ]);
     }
 }
