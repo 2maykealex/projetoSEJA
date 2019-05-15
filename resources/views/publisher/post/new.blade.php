@@ -12,37 +12,44 @@
 			</nav>
 			<form action="{{route('publisher.posts.store')}}" method="post" class="pb-3 pt-3 bg-white px-3">
 				@csrf
-
-				<div class="form-group">
-				    <label>Título</label>   
-				    <input type="text" class="form-control" id="name" name="name" autofocus>
+				<div class="form-group"> 
+				    <input type="hidden" class="form-control" id="id" name="id">
 				</div>
 				<div class="form-group">
-				    <label>Resumo</label>   
-				    <input type="text" class="form-control" id="name" name="name" autofocus>
+				    <label for="image">IMAGEM</label>   
+				    <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
 				</div>
 				<div class="form-group">
-		    		<label>Tipo de público</label>	    		
-		      		<select class="form-control"collapse>
-		        		<option>Escolher</option>		        		
-		        			<option></option>		        			        		
+		    		<label for="subscription_plans_id">TIPO DE PÚBLICO</label>	    		
+		      		<select class="form-control" id="subscription_plans_id" name="subscription_plans_id" collapse>
+		        		<option>Escolher</option>
+		        		@foreach ($subscriptionTypes as $subscriptionType)
+		        			<option value="{{$subscriptionType->id}}">{{$subscriptionType->name}}</option>
+		        		@endforeach	        		
 		      		</select>	
 		    	</div>
 				<div class="form-group">
-				    <label>Mensagem</label>   
-				    <input type="text" class="form-control" id="name" name="name" autofocus>
+				    <label for="title">TÍTULO</label>   
+				    <input type="text" class="form-control" id="title" name="title" autofocus>
 				</div>
 				<div class="form-group">
-				    <label>Links</label>   
-				    <input type="text" class="form-control" id="name" name="name" autofocus>
+				    <label for="summary">RESUMO</label>   
+				    <textarea class="form-control" id="summary" name="summary" rows="4"></textarea>
 				</div>
-
+				<div class="form-group">
+				    <label for="text">TEXTO</label>   
+				    <textarea class="form-control" id="text" name="text" rows="8"></textarea>
+				</div>
+				<div class="form-group">
+				    <label>ANEXOS</label>   
+				    <input type="text" class="form-control" placeholder="#" >
+				</div>
 		    	<div class="clearfix">
-				  	<button type="submit" class="btn btn-primary">Criar</button>
+				  	<button type="submit" class="btn btn-primary float-left">Criar</button>
 				</div>
 			</form>  
 			<div class="text-center mt-4 ">
-				<a class="btn btn-secondary btn-sm" href="{{route('adm.collections.list')}}">Voltar</a>
+				<a class="btn btn-secondary btn-sm" href="{{route('publisher.posts.list')}}">Voltar</a>
 			</div>
 		</div>              
 	</div>

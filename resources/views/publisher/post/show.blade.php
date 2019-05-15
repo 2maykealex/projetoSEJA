@@ -15,40 +15,40 @@
 				<div class="form-row">
 					<div class="form-group col-md-2">
 					    <label>ID</label>							    
-					    <input type="text" class="form-control" placeholder="{{$post->id}}" disabled>							    
+					    <input type="text" class="form-control" value="{{$post->id}}" disabled>							    
 					</div>
 					<div class="form-group col-md-5">
 					    <label>DATA CRIAÇÃO</label> 
-					    <input type="text" class="form-control" placeholder="{{$post->created_at}}" disabled>
+					    <input type="text" class="form-control" value="{{$post->created_at}}" disabled>
 					</div>
 					<div class="form-group col-md-5">
 					    <label>DATA ALTERAÇÃO</label> 
-					    <input type="text" class="form-control" placeholder="{{$post->updated_at}}" disabled>
+					    <input type="text" class="form-control" value="{{$post->updated_at}}" disabled>
 					</div>
 				</div>
 				<div class="form-group">
 				    <label>IMAGEM</label>   
-				    <input type="text" class="form-control" placeholder="#" disabled>
+				    <input type="text" class="form-control" value="{{$post->image}}" disabled>
 				</div>
 				<div class="form-group">
 				    <label>TIPO DE PÚBLICO</label>   
-				    <input type="text" class="form-control" placeholder="{{$subscriptionType->name}}" disabled>
+				    <input type="text" class="form-control" value="{{$subscriptionType->name}}" disabled>
 				</div>
 				<div class="form-group">
 				    <label>TÍTULO</label>   
-				    <input type="text" class="form-control" placeholder="{{$post->title}}" disabled>
+				    <input type="text" class="form-control" value="{{$post->title}}" disabled>
 				</div>
 				<div class="form-group">
 				    <label>RESUMO</label>   
-				    <input type="text" class="form-control" placeholder="{{$post->summary}}" disabled>
+				    <input type="text" class="form-control" value="{{$post->summary}}" disabled>
 				</div>
 				<div class="form-group">
 				    <label>TEXTO</label>   
-				    <input type="text" class="form-control" placeholder="{{$post->text}}" disabled>
+				    <input type="text" class="form-control" value="{{$post->text}}" disabled>
 				</div>
 				<div class="form-group">
 				    <label>ANEXOS</label>   
-				    <input type="text" class="form-control" placeholder="#" disabled>
+				    <input type="text" class="form-control" value="#" disabled>
 				</div>
 		    	<div class="clearfix">
 				  	<a class="btn btn-warning float-left" href="{{route('publisher.posts.edit', [$post->id])}}" >Alterar</a>

@@ -17,29 +17,29 @@
 				</div>
 				<div class="form-group">
 				    <label for="image">IMAGEM</label>   
-				    <input type="text" class="form-control" id="image" name="image" value="#">
+				    <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
 				</div>
-				{{--<div class="form-group">
+				<div class="form-group">
 		    		<label for="subscription_plans_id">TIPO DE PÚBLICO</label>	    		
 		      		<select class="form-control" id="subscription_plans_id" name="subscription_plans_id" collapse>
 		        		<option>Escolher</option>
 		        		@foreach ($subscriptionTypes as $subscriptionType)
 		        			<option value="{{$subscriptionType->id}}" 
-		        			@if ( isset($subscriptionPlan) && $subscriptionPlan->type->id == $subscriptionType->id ) selected @endif>{{$subscriptionType->name}}</option>
+		        			@if ( isset($post) && $post->id == $subscriptionType->id ) selected @endif>{{$subscriptionType->name}}</option>
 		        		@endforeach	        		
 		      		</select>	
-		    	</div>--}}
+		    	</div>
 				<div class="form-group">
 				    <label for="title">TÍTULO</label>   
 				    <input type="text" class="form-control" id="title" name="title" value="{{$post->title}}" autofocus>
 				</div>
 				<div class="form-group">
 				    <label for="summary">RESUMO</label>   
-				    <input type="text" class="form-control" id="summary" name="summary" value="{{$post->summary}}">
+				    <textarea class="form-control" id="summary" name="summary" rows="4">{{$post->summary}}</textarea>
 				</div>
 				<div class="form-group">
 				    <label for="text">TEXTO</label>   
-				    <input type="text" class="form-control" id="text" name="text" placeholder="{{$post->text}}">
+				    <textarea class="form-control" id="text" name="text" rows="8">{{$post->text}}</textarea>
 				</div>
 				<div class="form-group">
 				    <label>ANEXOS</label>   
