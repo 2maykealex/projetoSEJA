@@ -40,7 +40,10 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->all();
+        $post = new Post;
+        $message = $post->newPost($data);
+        return redirect()->back()->with($message);
     }
 
     /**
@@ -53,7 +56,6 @@ class PostController extends Controller
     {
         $post = Post::where('id', $id)->get()->first();
         $subscriptionType = SubscriptionType::orderby('id')->get()->first();
-        dd($subscriptionType);
         return view('publisher.post.show', compact('post', 'subscriptionType'));
     }
 
@@ -77,9 +79,12 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Post $post)
+    public function update(Request $request)
     {
-        //
+        $data = $request->all();
+        $post = Post::where('id', $data['id'])->get()->first();
+        $message = $post->updatePost($data);
+        return redirect()->back()->with($message);
     }
 
     /**

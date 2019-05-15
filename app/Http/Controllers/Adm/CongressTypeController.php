@@ -74,7 +74,7 @@ class CongressTypeController extends Controller
      * @param  \App\Models\CongressType  $congressType
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, CongressType $congressType)
+    public function update(Request $request)
     {
         $data = $request->all();
         $congressType = CongressType::where('id', $data['id'])->get()->first();
