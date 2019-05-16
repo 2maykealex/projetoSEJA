@@ -8,7 +8,7 @@
 	<div class="d-flex justify-content-center flex-lg-center">
     	<div class="col-md-8 bg-light py-3">
 	       	<nav class="navbar navbar-expand-lg">
-		  		<h2>EDITAR</h2>
+		  		<h2>EDITAR CONGRESSO</h2>
 			</nav>
 			<form action="{{route('adm.congresses.types.update', $congressType->id)}}" method="post" class="pb-3 pt-3 bg-white px-3">
 				@csrf
