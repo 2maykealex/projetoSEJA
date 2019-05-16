@@ -10,7 +10,7 @@
 	       	<nav class="navbar navbar-expand-lg">
 		  		<h2>EDITAR</h2>
 			</nav>
-			<form action="{{route('publisher.posts.update', $post->id)}}" method="post" class="pb-3 pt-3 bg-white px-3">
+			<form action="{{route('publisher.posts.update', $post->id)}}" method="post" class="pb-3 pt-3 bg-white px-3" enctype="multipart/form-data">
 				@csrf
 				<div class="form-group"> 
 				    <input type="hidden" class="form-control" id="id" name="id" value="{{$post->id}}">
@@ -42,7 +42,10 @@
 		      		</select>	
 		    	</div>
 		    	<div class="form-group">
-				    <label for="image">IMAGEM</label>   
+				    <label for="image">IMAGEM</label>
+				    <div class="col-md-1 py-3"> 
+				    	<img src="{{url('storage/img/posts/'.$post->image)}}" width="30px" class="img-fluid rounded"> 
+				    </div> 
 				    <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
 				</div>
 		    	<div class="clearfix">
