@@ -39,16 +39,18 @@
 				    <textarea class="form-control" rows="8" disabled>{{$post->text}}</textarea>
 				</div>
 				<div class="form-group">
-				    <label>ANEXOS</label>   
-				    <input type="text" class="form-control" placeholder="#" disabled>
-				</div>
-				<div class="form-group">
 				    <label>TIPO DE PÚBLICO</label>   
 				    <input type="text" class="form-control" placeholder="{{$subscriptionType->name}}" disabled>
 				</div>
 				<div class="form-group">
 				    <label>IMAGEM</label>   
-				    <input type="text" class="form-control" placeholder="{{$post->image}}" disabled>
+				    <div class="col-md-8 py-3"> 
+				    	<img src="{{ asset('storage/img/posts/' . $post->image) }}" width="100%" class="img-fluid "> 
+				    </div>
+				</div>
+				<div class="form-group">
+				    <label>ANEXOS</label>   
+				    <input type="text" class="form-control" placeholder="#" disabled>
 				</div>
 		    	<div class="clearfix">
 				  	<a class="btn btn-warning float-left" href="{{route('publisher.posts.edit', [$post->id])}}" >Alterar</a>

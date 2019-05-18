@@ -28,10 +28,6 @@
 				    <textarea class="form-control" id="text" name="text" rows="8"></textarea>
 				</div>
 				<div class="form-group">
-				    <label>ANEXOS</label>   
-				    <input type="text" class="form-control" placeholder="#" >
-				</div>
-				<div class="form-group">
 		    		<label for="subscription_plans_id">TIPO DE PÚBLICO</label>	    		
 		      		<select class="form-control" id="subscription_plans_id" name="subscription_plans_id" collapse>
 		        		<option>Escolher</option>
@@ -43,6 +39,10 @@
 		    	<div class="form-group">
 				    <label for="image">IMAGEM</label>   
 				    <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
+				</div>
+				<div class="form-group">
+				    <label>ANEXOS</label>   
+				    <input type="text" class="form-control" placeholder="#" >
 				</div>
 		    	<div class="clearfix">
 				  	<button type="submit" class="btn btn-primary float-left">Criar</button>

@@ -28,10 +28,6 @@
 				    <textarea class="form-control" id="text" name="text" rows="8">{{$post->text}}</textarea>
 				</div>
 				<div class="form-group">
-				    <label>ANEXOS</label>   
-				    <input type="text" class="form-control" placeholder="#" >
-				</div>
-				<div class="form-group">
 		    		<label for="subscription_plans_id">TIPO DE PÚBLICO</label>	    		
 		      		<select class="form-control" id="subscription_plans_id" name="subscription_plans_id" collapse>
 		        		<option>Escolher</option>
@@ -43,10 +39,14 @@
 		    	</div>
 		    	<div class="form-group">
 				    <label for="image">IMAGEM</label>
-				    <div class="col-md-1 py-3"> 
-				    	<img src="{{url('storage/img/posts/'.$post->image)}}" width="30px" class="img-fluid rounded"> 
+				    <div class="col-md-8 py-3"> 
+				    	<img src="{{ asset('storage/img/posts/' . $post->image) }}" width="100%" class="img-fluid "> 
 				    </div> 
 				    <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
+				</div>
+				<div class="form-group">
+				    <label>ANEXOS</label>   
+				    <input type="text" class="form-control" placeholder="#" >
 				</div>
 		    	<div class="clearfix">
 				  	<button type="submit" class="btn btn-warning float-left">Confirmar</button>
