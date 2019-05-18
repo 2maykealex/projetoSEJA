@@ -45,7 +45,7 @@
                 </div>
 
                 <!--botão para Configurar tipos-->
-                <button class="btn btn-light col-md-12 text-left mt-3" type="button" data-toggle="collapse" data-target="#menuSeguranca" aria-controls="menuSeguranca" aria-expanded="false" aria-label="Alterna navegação">
+                <button class="btn btn-light col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuSeguranca" aria-controls="menuSeguranca" aria-expanded="false" aria-label="Alterna navegação">
                   Segurança
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuSeguranca">
