@@ -15,6 +15,10 @@ class CreatePublishersTable extends Migration
     {
         Schema::create('publishers', function (Blueprint $table) {
             $table->increments('id');
+
+            $table->integer('person_id')->unsigned();
+            $table->foreign('person_id')->references('id')->on('people');
+            
             $table->timestamps();
         });
     }
