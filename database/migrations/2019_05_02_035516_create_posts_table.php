@@ -16,13 +16,17 @@ class CreatePostsTable extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
 
-            $table->integer('subscription_plans_id')->unsigned();
-            $table->foreign('subscription_plans_id')->references('id')->on('subscription_plans');
+            $table->integer('subscription_type_id')->unsigned();
+            $table->foreign('subscription_type_id')->references('id')->on('subscription_types');
+
+            $table->integer('publisher_id')->unsigned();
+            $table->foreign('publisher_id')->references('id')->on('publishers');
 
             $table->string('title', 80);
             $table->string('summary', 80);
             $table->string('text');
             $table->string('image');
+            
             $table->timestamps();
         });
     }
