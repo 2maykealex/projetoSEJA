@@ -5,38 +5,61 @@
 @endsection
 
 @section('content')
-	<div class="d-flex justify-content-center flex-lg-center">
+	<div class="d-flex justify-content-center flex-lg-center pb-5">
     	<div class="col-md-8 bg-light py-3">
 	       	<nav class="navbar navbar-expand-lg">
-		  		<h2>VISUALIZAR EVENTO</h2>
+		  		<h2>VISUALIZAR EVENTOS</h2>
 			</nav>
-			<form action="#" method="POST" class="pb-3 pt-3 bg-white px-3">
+			<form class="pb-3 pt-3 bg-white px-3">
 				@csrf
-
-				@foreach ($eventType as $eventShow)
 				<div class="form-row">
-					<div class="form-group col-md-6">
-					    <label for="disabledTextInput">ID</label>							    
-					    <input type="text" class="form-control" id="disabledTextInput" placeholder="{{$eventShow->id}}" disabled>							    
+					<div class="form-group col-md-2">
+					    <label>ID</label>							    
+					    <input type="text" class="form-control" placeholder="{{$->id}}" disabled>							    
 					</div>
-					<div class="form-group col-md-6">
-					    <label for="disabledTextInput">DATA</label> 
-					    <input type="text" class="form-control" id="disabledTextInput" placeholder="{{$eventShow->created_at}}" disabled>
+					<div class="form-group col-md-5">
+					    <label>DATA CRIAÇÃO</label> 
+					    <input type="text" class="form-control" placeholder="{{$->created_at}}" disabled>
+					</div>
+					<div class="form-group col-md-5">
+					    <label>DATA ALTERAÇÃO</label> 
+					    <input type="text" class="form-control" placeholder="{{$->updated_at}}" disabled>
 					</div>
 				</div>
 				<div class="form-group">
-				    <label for="disabledTextInput">DESCRIÇÃO</label>   
-				    <input type="text" class="form-control" id="disabledTextInput" placeholder="{{$eventShow->name}}" disabled>
+				    <label>TÍTULO</label>   
+				    <input type="text" class="form-control" placeholder="{{$->title}}" disabled>
+				</div>
+				<div class="form-group">
+				    <label>RESUMO</label>   
+				    <textarea class="form-control" rows="4" disabled>{{$->summary}}</textarea>
+				</div>
+				<div class="form-group">
+				    <label>TEXTO</label>   
+				    <textarea class="form-control" rows="8" disabled>{{$->text}}</textarea>
+				</div>
+				<div class="form-group">
+				    <label>TIPO DE PÚBLICO</label>   
+				    <input type="text" class="form-control" placeholder="{{$->name}}" disabled>
+				</div>
+				<div class="form-group">
+				    <label>IMAGEM</label>   
+				    <div class="col-md-8 py-3"> 
+				    	<img src="{{ asset('storage/img/posts/' . $->image) }}" width="100%" class="img-fluid "> 
+				    </div>
+				</div>
+				<div class="form-group">
+				    <label>ANEXOS</label>   
+				    <input type="text" class="form-control" placeholder="#" disabled>
 				</div>
 		    	<div class="clearfix">
-				  	<a class="btn btn-warning float-left" href="{{route('adm.events.types.edit', [$eventShow->id])}}" >Alterar</a>
-				  	<button type="button" class="btn btn-danger float-right">Deletar</button>
+				  	<a class="btn btn-warning float-left" href="{{route('publisher.events.edit', [$->id])}}" >Alterar</a>
+				  	<a class="btn btn-danger float-right" href="{{route('publisher.events.edit', [$->id])}}" >Deletar</a>
 				</div>
-				@endforeach
 			</form>  
 			<div class="text-center mt-4 ">
-				<a class="btn btn-secondary btn-sm" href="javascript:history.go(-1)">Voltar</a>
+				<a class="btn btn-secondary btn-sm" href="{{route('publisher.events.list')}}">Voltar</a>
 			</div> 
 		</div>             
-	</div>	      
+	</div>
 @endsection

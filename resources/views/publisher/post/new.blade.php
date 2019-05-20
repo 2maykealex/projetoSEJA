@@ -28,8 +28,8 @@
 				    <textarea class="form-control" id="text" name="text" rows="8"></textarea>
 				</div>
 				<div class="form-group">
-		    		<label for="subscription_plans_id">TIPO DE PÚBLICO</label>	    		
-		      		<select class="form-control" id="subscription_plans_id" name="subscription_plans_id" collapse>
+		    		<label for="subscription_type_id">TIPO DE PÚBLICO</label>	    		
+		      		<select class="form-control" id="subscription_type_id" name="subscription_type_id" collapse>
 		        		<option>Escolher</option>
 		        		@foreach ($subscriptionTypes as $subscriptionType)
 		        			<option value="{{$subscriptionType->id}}">{{$subscriptionType->name}}</option>
