@@ -12,9 +12,6 @@
 			</nav>
 			<form action="{{route('publisher.congresses.store')}}" method="post" class="pb-3 pt-3 bg-white px-3" enctype="multipart/form-data">
 				@csrf
-				<div class="form-group"> 
-				    <input type="hidden" class="form-control" id="id" name="id">
-				</div>
 				<div class="form-group">
 				    <label for="title">TÍTULO</label>   
 				    <input type="text" class="form-control" id="title" name="title" autofocus>
