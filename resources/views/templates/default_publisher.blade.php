@@ -33,45 +33,72 @@
 <body>
     <!--barra de navegação com conteudo do site-->
     <div class="container-fluid">
-        <div class="row altura">
-            <div class="col-md-2 bg-dark d-none d-md-block fixed-left sidebar">
-                <div class="text-center">
-                    <h2 class="text-white py-2 border-bottom">ALMA</h2>
-                </div>     
-                <!--botão para Configurar tipos-->
-                <button class="btn btn-light col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuPublicacao" aria-controls="menuPublicacao" aria-expanded="false" aria-label="Alterna navegação">
-                  Publicações
-                </button>
-                <div class="collapse mt-2 border bg-secondary" id="menuPublicacao">
-                    <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.new')}}" >Nova</a>
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.list')}}">Listagem</a>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col-md-2">
+                <nav class="col-md-2 navbar-expand-lg d-none d-md-block bg-secondary sidebar fixed-top altura">
 
-                <!--botão para Configurar tipos-->
-                <button class="btn btn-light col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuEventos" aria-controls="menuEventos" aria-expanded="false" aria-label="Alterna navegação">
-                  Eventos
-                </button>
-                <div class="collapse mt-2 border bg-secondary" id="menuEventos">
-                    <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.new')}}" >Novo</a>
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.list')}}">Listagem</a>
-                    </div>
-                </div>
+                    <div class="sidebar-sticky">
+                        <div class="text-center">
+                            <h2 class="text-white py-2 border-bottom">ALMA</h2>
+                        </div>     
+                        <!--botão para Configurar tipos-->
+                        <button class="btn btn-light col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuPublicacao" aria-controls="menuPublicacao" aria-expanded="false" aria-label="Alterna navegação">
+                            <div  class="clearfix">
+                                <div  class="float-left">
+                                    Publicações
+                                </div>
+                                <div class="float-right" >
+                                    <span data-feather="plus-circle" class="text-right"></span>
+                                </div>
+                            </div>  
+                        </button>
+                        <div class="collapse mt-1 border bg-secondary" id="menuPublicacao">
+                            <div class="nav flex-column">
+                                <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.new')}}" >Nova</a>
+                                <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.list')}}">Listagem</a>
+                            </div>
+                        </div>
 
-                <!--botão para Configurar tipos-->
-                <button class="btn btn-light col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuCongressos" aria-controls="menuCongressos" aria-expanded="false" aria-label="Alterna navegação">
-                  Congressos
-                </button>
-                <div class="collapse mt-2 border bg-secondary" id="menuCongressos">
-                    <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.new')}}" >Novo</a>
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.list')}}">Listagem</a>
+                        <!--botão para Configurar tipos-->
+                        <button class="btn btn-light col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuEventos" aria-controls="menuEventos" aria-expanded="false" aria-label="Alterna navegação">
+                            <div  class="clearfix">
+                                <div  class="float-left">
+                                     Eventos  
+                                </div>
+                                <div class="float-right" >
+                                    <span data-feather="plus-circle" class="text-right"></span>
+                                </div>
+                            </div> 
+                        </button>
+                        <div class="collapse mt-1 border bg-secondary" id="menuEventos">
+                            <div class="nav flex-column">
+                                <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.new')}}" >Novo</a>
+                                <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.list')}}">Listagem</a>
+                            </div>
+                        </div>
+
+                        <!--botão para Configurar tipos-->
+                        <button class="btn btn-light col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuCongressos" aria-controls="menuCongressos" aria-expanded="false" aria-label="Alterna navegação">
+                            <div  class="clearfix">
+                                <div  class="float-left">
+                                     Congressos  
+                                </div>
+                                <div class="float-right" >
+                                    <span data-feather="plus-circle" class="text-right"></span>
+                                </div>
+                            </div> 
+                        </button>
+                        <div class="collapse mt-1 border bg-secondary" id="menuCongressos">
+                            <div class="nav flex-column">
+                                <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.new')}}" >Novo</a>
+                                <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.list')}}">Listagem</a>
+                            </div>
+                        </div>
+                        <a class="btn btn-warning btn-block text-white fixed-bottom col-md-2" href="{{route('site.logout')}}">Sair</a>
                     </div>
-                </div>
+                </nav>           
             </div>
-            <a class="btn btn-warning fixed-bottom col-md-2 text-white" href="{{route('site.logout')}}">Sair</a>
+
             <main role="main" class="col-md-10 bg-escuro">
                 @include('includes.alerts')
                 @yield('content')
@@ -79,7 +106,10 @@
         </div>
 
     </div>
-
+    <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
+    <script>
+      feather.replace()
+    </script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
