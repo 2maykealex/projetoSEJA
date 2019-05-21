@@ -41,6 +41,7 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $data = $request->all();
+        $data['image'] = $request->image->getClientOriginalName();
         $post = new Post;
         $message = $post->newPost($data);
         return redirect()->back()->with($message);
