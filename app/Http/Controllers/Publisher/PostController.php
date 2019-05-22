@@ -42,6 +42,21 @@ class PostController extends Controller
     {
         $data = $request->all();
         $data['image'] = $request->image->getClientOriginalName();
+        
+        if($request->hasFile('image') && $request->file('image')->isValid() ){
+            
+            $date = date('Y-m-d-H-i');
+            $name = kebab_case($date).'-'.$request->image->hashName();
+            $extension = $request->image->extension();
+            $nameFile  = "{$name}.{$extension}";
+
+            $data['image'] = $nameFile;
+            $upload = $request->image->storeAs('img/posts', $nameFile);
+
+            if(!$upload)
+                return redirect()->back()->with('error', 'Falha ao enviar a imagem');
+        }   
+        
         $post = new Post;
         $message = $post->newPost($data);
         return redirect()->back()->with($message);
