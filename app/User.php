@@ -6,6 +6,7 @@ use App\Models\UserProfile;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Models\Person;
 
 class User extends Authenticatable
 {
@@ -13,6 +14,10 @@ class User extends Authenticatable
 
     public function userProfile(){
         return $this->hasOne(UserProfile::class)->with('profileAccess');
+    }
+    
+    public function person(){
+        return $this->hasOne(Person::class);
     }
 
     /**

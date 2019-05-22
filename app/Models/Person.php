@@ -78,4 +78,10 @@ class Person extends Model
     public function city(){   #faz o relacionamento com cidades
         return $this->belongsTo(City::class);
     }
+
+    public function publisher(){
+        return $this->hasOne(Publisher::class);
+    }
+
+
 }
