@@ -6,7 +6,7 @@
 
 @section('content')
 	<div class="d-flex justify-content-center flex-lg-center pb-5">
-    	<div class="col-md-8 bg-light py-3">
+    	<div class="col-md108 bg-light py-3">
 	       	<nav class="navbar navbar-expand-lg">
 		  		<h2>VISUALIZAR CONGRESSO</h2>
 			</nav>
@@ -19,11 +19,11 @@
 					</div>
 					<div class="form-group col-md-5">
 					    <label>DATA CRIAÇÃO</label> 
-					    <input type="text" class="form-control" placeholder="{{$->created_at}}" disabled>
+					    <input type="text" class="form-control" placeholder="{{date('d/m/Y', strtotime($post->created_at))}}" disabled>
 					</div>
 					<div class="form-group col-md-5">
 					    <label>DATA ALTERAÇÃO</label> 
-					    <input type="text" class="form-control" placeholder="{{$->updated_at}}" disabled>
+					    <input type="text" class="form-control" placeholder="{{date('d/m/Y', strtotime($post->updated_at))}}" disabled>
 					</div>
 				</div>
 				<div class="form-group">

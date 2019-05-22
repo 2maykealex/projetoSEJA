@@ -22,7 +22,7 @@
 	          		<tbody>
 	          		@foreach($posts as $post)
 		                <tr>
-			                <td>{{$post->created_at}}</td>
+			                <td>{{date('d/m/Y', strtotime($post->created_at))}}</td>
 			                <td>{{$post->title}}</td>
 			                <td class="actions text-center">	                        
 		                		<a class="btn btn-success btn-sm button-width" href="{{route('publisher.posts.show', $post->id)}}">Visualizar</a>

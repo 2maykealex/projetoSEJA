@@ -6,7 +6,7 @@
 
 @section('content')
 	<div class="d-flex justify-content-center flex-lg-center pb-5">
-    	<div class="col-md-8 bg-light py-3">
+    	<div class="col-md-10 bg-light py-3">
 	       	<nav class="navbar navbar-expand-lg">
 		  		<h2>EDITAR PUBLICAÇÕES</h2>
 			</nav>
@@ -21,11 +21,11 @@
 				</div>
 				<div class="form-group">
 				    <label for="summary">RESUMO</label>   
-				    <textarea class="form-control" id="summary" name="summary" rows="4">{{$post->summary}}</textarea>
+				    <textarea class="form-control" id="summary" name="summary" rows="3">{{$post->summary}}</textarea>
 				</div>
 				<div class="form-group">
 				    <label for="text">TEXTO</label>   
-				    <textarea class="form-control" id="text" name="text" rows="8">{{$post->text}}</textarea>
+				    <textarea class="form-control" id="text" name="text" rows="16">{{$post->text}}</textarea>
 				</div>
 				<div class="form-group">
 		    		<label for="subscription_type_id">TIPO DE PÚBLICO</label>	    		

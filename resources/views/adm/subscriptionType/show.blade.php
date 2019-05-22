@@ -6,7 +6,7 @@
 
 @section('content')
 	<div class="d-flex justify-content-center flex-lg-center">
-    	<div class="col-md-8 bg-light py-3">
+    	<div class="col-md-10 bg-light py-3">
 	       	<nav class="navbar navbar-expand-lg">
 		  		<h2>VISUALIZAR PLANO</h2>
 			</nav>
@@ -19,11 +19,11 @@
 					</div>
 					<div class="form-group col-md-5">
 					    <label for="created_at">DATA DE CRIAÇÃO</label> 
-					    <input type="text" class="form-control" placeholder="{{$subscriptionType->created_at}}" disabled>
+					    <input type="text" class="form-control" placeholder="{{date('d/m/Y', strtotime($subscriptionType->created_at))}}" disabled>
 					</div>
 					<div class="form-group col-md-5">
 					    <label for="updated_at">DATA DE ALTERAÇÃO</label> 
-					    <input type="text" class="form-control" placeholder="{{$subscriptionType->updated_at}}" disabled>
+					    <input type="text" class="form-control" placeholder="{{date('d/m/Y', strtotime($subscriptionType->updated_at))}}" disabled>
 					</div>
 				</div>
 				<div class="form-group">

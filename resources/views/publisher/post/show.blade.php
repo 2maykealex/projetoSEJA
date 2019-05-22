@@ -32,11 +32,11 @@
 				</div>
 				<div class="form-group">
 				    <label>RESUMO</label>   
-				    <textarea class="form-control" rows="2" disabled>{{$post->summary}}</textarea>
+				    <textarea class="form-control" rows="3" disabled>{{$post->summary}}</textarea>
 				</div>
 				<div class="form-group">
 				    <label>TEXTO</label>   
-				    <textarea class="form-control" rows="6" disabled>{{$post->text}}</textarea>
+				    <textarea class="form-control" rows="16" disabled>{{$post->text}}</textarea>
 				</div>
 				<div class="form-group">
 				    <label>TIPO DE PÚBLICO</label>   
