@@ -17,7 +17,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::orderby('id', 'desc')->get();
+        $publisher_id = auth()->user()->person->publisher->id;
+        $posts = Post::where('publisher_id',$publisher_id)->orderby('id', 'desc')->get();
         return view('publisher.post.index', compact('posts'));
     }
 
