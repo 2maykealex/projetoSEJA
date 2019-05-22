@@ -30,82 +30,84 @@
     </style>
 
 </head>
-<body>
+<body class="bg-escuro">
     <!--barra de navegação com conteudo do site-->
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-2">
-                <nav class="col-md-2 navbar-expand-lg d-none d-md-block bg-secondary sidebar fixed-top altura">
-
-                    <div class="sidebar-sticky">
-                        <div class="text-center">
-                            <h2 class="text-white py-2 border-bottom">ALMA</h2>
-                        </div>     
-                        <!--botão para Configurar tipos-->
-                        <button class="btn btn-light col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuPublicacao" aria-controls="menuPublicacao" aria-expanded="false" aria-label="Alterna navegação">
-                            <div  class="clearfix">
-                                <div  class="float-left">
-                                    Publicações
+            <nav class="col-md-2 d-none d-md-block bg-dark sidebar">
+                <div class="text-center">
+                    <h2 class="text-white py-2 border-bottom">ALMA</h2>
+                </div>
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <button class="btn btn-dark col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuPublicacao" aria-controls="menuPublicacao" aria-expanded="false" aria-label="Alterna navegação">
+                                <div  class="clearfix">
+                                    <div  class="float-left">
+                                     Publicações
+                                    </div>
+                                    <div class="float-right" >
+                                        <span data-feather="plus-circle" class="text-right"></span>
+                                    </div>
+                                </div>  
+                            </button>
+                            <div class="collapse mt-1" id="menuPublicacao">
+                                <div class="nav flex-column">
+                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/posts/new" >Nova</a>
+                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/posts/list">Listagem</a>
                                 </div>
-                                <div class="float-right" >
-                                    <span data-feather="plus-circle" class="text-right"></span>
-                                </div>
-                            </div>  
-                        </button>
-                        <div class="collapse mt-1 border bg-secondary" id="menuPublicacao">
-                            <div class="nav flex-column">
-                                <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.new')}}" >Nova</a>
-                                <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.list')}}">Listagem</a>
                             </div>
-                        </div>
-
-                        <!--botão para Configurar tipos-->
-                        <button class="btn btn-light col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuEventos" aria-controls="menuEventos" aria-expanded="false" aria-label="Alterna navegação">
-                            <div  class="clearfix">
-                                <div  class="float-left">
-                                     Eventos  
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-dark col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuEventos" aria-controls="menuEventos" aria-expanded="false" aria-label="Alterna navegação">
+                                <div  class="clearfix">
+                                    <div  class="float-left">
+                                        Eventos  
+                                    </div>
+                                    <div class="float-right" >
+                                        <span data-feather="plus-circle" class="text-right"></span>
+                                    </div>
+                                </div> 
+                            </button>
+                            <div class="collapse mt-1" id="menuEventos">
+                                <div class="nav flex-column">
+                                    <a class="nav-link text-light " href="http://127.0.0.1:8000/publisher/events/new" >Novo</a>
+                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/events/list">Listagem</a>
                                 </div>
-                                <div class="float-right" >
-                                    <span data-feather="plus-circle" class="text-right"></span>
-                                </div>
-                            </div> 
-                        </button>
-                        <div class="collapse mt-1 border bg-secondary" id="menuEventos">
-                            <div class="nav flex-column">
-                                <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.new')}}" >Novo</a>
-                                <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.list')}}">Listagem</a>
                             </div>
-                        </div>
-
-                        <!--botão para Configurar tipos-->
-                        <button class="btn btn-light col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuCongressos" aria-controls="menuCongressos" aria-expanded="false" aria-label="Alterna navegação">
-                            <div  class="clearfix">
-                                <div  class="float-left">
-                                     Congressos  
+                        </li>
+                        <li class="nav-item">
+                            <button class="btn btn-dark col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuCongressos" aria-controls="menuCongressos" aria-expanded="false" aria-label="Alterna navegação">
+                                <div  class="clearfix">
+                                    <div  class="float-left">
+                                        Congressos  
+                                    </div>
+                                    <div class="float-right" >
+                                        <span data-feather="plus-circle" class="text-right"></span>
+                                    </div>
+                                </div> 
+                            </button>
+                            <div class="collapse mt-1" id="menuCongressos">
+                                <div class="nav flex-column">
+                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/congresses/new" >Novo</a>
+                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/congresses/list">Listagem</a>
                                 </div>
-                                <div class="float-right" >
-                                    <span data-feather="plus-circle" class="text-right"></span>
-                                </div>
-                            </div> 
-                        </button>
-                        <div class="collapse mt-1 border bg-secondary" id="menuCongressos">
-                            <div class="nav flex-column">
-                                <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.new')}}" >Novo</a>
-                                <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.list')}}">Listagem</a>
                             </div>
-                        </div>
-                        <a class="btn btn-warning btn-block text-white fixed-bottom col-md-2" href="{{route('site.logout')}}">Sair</a>
-                    </div>
-                </nav>           
-            </div>
-
-            <main role="main" class="col-md-10 bg-escuro">
+                        </li>
+                    </ul>
+                </div>
+                <a class="btn btn-warning btn-block text-white fixed-bottom col-md-2" href="http://127.0.0.1:8000/logout">Sair</a>
+            </nav>
+            
+            <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4">
                 @include('includes.alerts')
                 @yield('content')
             </main>
-        </div>
 
+        </div>
     </div>
+
+
     <script src="https://unpkg.com/feather-icons/dist/feather.min.js"></script>
     <script>
       feather.replace()
