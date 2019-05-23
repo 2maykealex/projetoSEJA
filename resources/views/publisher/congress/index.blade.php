@@ -20,13 +20,13 @@
 	            		</tr>
 	          		</thead>
 	          		<tbody>
-	          		@foreach($ as $)
+	          		@foreach($congresses as $congresse)
 		                <tr>
-			                <td>{{date('d/m/Y', strtotime($->created_at))}}</td>
-			                <td>{{$->title}}</td>
+			                <td>{{date('d/m/Y', strtotime($congresse->created_at))}}</td>
+			                <td>{{$congresse->title}}</td>
 			                <td class="actions text-center">	                        
-		                		<a class="btn btn-success btn-sm button-width" href="{{route('publisher.congresses.show', $->id)}}">Visualizar</a>
-	                        	<a class="btn btn-warning btn-sm button-width" href="{{route('publisher.congresses.edit', $->id)}}">Editar</a>                
+		                		<a class="btn btn-success btn-sm button-width" href="{{route('publisher.congresses.show', $congresse->id)}}">Visualizar</a>
+	                        	<a class="btn btn-warning btn-sm button-width" href="{{route('publisher.congresses.edit', $congresse->id)}}">Editar</a>                
 			                 </td>
 		                </tr>
 		            @endforeach   

@@ -153,8 +153,8 @@
                             </button>
                             <div class="collapse mt-1" id="menuPublicacao">
                                 <div class="nav flex-column border">
-                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/posts/new" >Nova</a>
-                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/posts/list">Listagem</a>
+                                    <a class="nav-link text-light" href="{{route('publisher.posts.new')}}" >Nova</a>
+                                    <a class="nav-link text-light" href="{{route('publisher.posts.list')}}">Listagem</a>
                                 </div>
                             </div>
                         </li>
@@ -171,8 +171,8 @@
                             </button>
                             <div class="collapse mt-1" id="menuEventos">
                                 <div class="nav flex-column border">
-                                    <a class="nav-link text-light " href="http://127.0.0.1:8000/publisher/events/new" >Novo</a>
-                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/events/list">Listagem</a>
+                                    <a class="nav-link text-light " href="{{route('publisher.events.new')}}" >Novo</a>
+                                    <a class="nav-link text-light" href="{{route('publisher.events.list')}}">Listagem</a>
                                 </div>
                             </div>
                         </li>
@@ -189,14 +189,14 @@
                             </button>
                             <div class="collapse mt-1" id="menuCongressos">
                                 <div class="nav flex-column border">
-                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/congresses/new" >Novo</a>
-                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/congresses/list">Listagem</a>
+                                    <a class="nav-link text-light" href="{{route('publisher.congresses.new')}}" >Novo</a>
+                                    <a class="nav-link text-light" href="{{route('publisher.congresses.list')}}">Listagem</a>
                                 </div>
                             </div>
                         </li>
                     </ul>
                 </div>
-                <a class="btn btn-warning btn-block text-white fixed-bottom col-md-2" href="http://127.0.0.1:8000/logout">Sair</a>
+                <a class="btn btn-warning btn-block text-white fixed-bottom col-md-2" href="{{route('site.logout')}}">Sair</a>
             </nav>
             
             <main role="main" class="col-md-10 ml-sm-auto col-lg-10 px-4">

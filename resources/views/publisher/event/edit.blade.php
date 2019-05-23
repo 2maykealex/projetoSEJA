@@ -13,19 +13,19 @@
 			<form action="{{route('publisher.events.update', $->id)}}" method="post" class="pb-3 pt-3 bg-white px-3" enctype="multipart/form-data">
 				@csrf
 				<div class="form-group"> 
-				    <input type="hidden" class="form-control" id="id" name="id" value="{{$->id}}">
+				    <input type="hidden" class="form-control" id="id" name="id" value="{{$event->id}}">
 				</div>
 				<div class="form-group">
 				    <label for="title">TÍTULO</label>   
-				    <input type="text" class="form-control" id="title" name="title" value="{{$->title}}" autofocus>
+				    <input type="text" class="form-control" id="title" name="title" value="{{$event->title}}" autofocus>
 				</div>
 				<div class="form-group">
 				    <label for="summary">RESUMO</label>   
-				    <textarea class="form-control" id="summary" name="summary" rows="4">{{$->summary}}</textarea>
+				    <textarea class="form-control" id="summary" name="summary" rows="4">{{$event->summary}}</textarea>
 				</div>
 				<div class="form-group">
 				    <label for="text">TEXTO</label>   
-				    <textarea class="form-control" id="text" name="text" rows="8">{{$->text}}</textarea>
+				    <textarea class="form-control" id="text" name="text" rows="8">{{$event->text}}</textarea>
 				</div>
 				<div class="form-group">
 		    		<label for="subscription_type_id">TIPO DE PÚBLICO</label>	    		
@@ -40,9 +40,9 @@
 		    	<div class="form-group">
 				    <label for="image">IMAGEM</label>
 				    <div class="col-md-8 py-3"> 
-				    	<img src="{{ asset('storage/img/posts/' . $->image) }}" width="100%" class="img-fluid "> 
+				    	<img src="{{ asset('storage/img/events/' . $event->image) }}" width="100%" class="img-fluid "> 
 				    </div> 
-				    <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
+				    <input type="file" class="form-control-file" id="image" name="image" accept="image/*">
 				</div>
 				<div class="form-group">
 				    <label>ANEXOS</label>   
