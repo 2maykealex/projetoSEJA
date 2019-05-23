@@ -82,7 +82,9 @@ class CongressController extends Controller
      */
     public function edit(Congress $congress)
     {
-        return view('publisher.congress.edit');
+        $congress = Congress::where('id', $id)->get()->first();
+        $subscriptionTypes = SubscriptionType::orderby('id')->get();
+        return view('publisher.congress.edit', compact('congress', 'subscriptionTypes'));
     }
 
     /**

@@ -82,7 +82,9 @@ class EventController extends Controller
      */
     public function edit(Event $event)
     {
-        return view('publisher.event.edit');
+        $event = Event::where('id', $id)->get()->first();
+        $subscriptionTypes = SubscriptionType::orderby('id')->get();
+        return view('publisher.event.edit', compact('event', 'subscriptionTypes'));
     }
 
     /**
