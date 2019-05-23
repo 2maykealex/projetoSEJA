@@ -96,7 +96,24 @@ class CongressController extends Controller
      */
     public function update(Request $request, Congress $congress)
     {
-        //
+        $data = $request->all();
+
+        if($request->hasFile('image') && $request->file('image')->isValid() ){
+            $date = date('Y-m-d-H-i');
+            $name = kebab_case($date).'-'.$request->image->hashName();
+            $extension = $request->image->extension();
+            $nameFile  = "{$name}.{$extension}";
+
+            $data['image'] = $nameFile;
+            $upload = $request->image->storeAs('img/congresses', $nameFile);
+
+            if(!$upload)
+                return redirect()->back()->with('error', 'Falha ao enviar a imagem');
+        }
+        
+        $congress = Congress::where('id', $data['id'])->get()->first();
+        $message = $congress->updateCongress($data);
+        return redirect()->back()->with($message);
     }
 
     /**
