@@ -17,7 +17,7 @@ class CongressController extends Controller
     public function index()
     {
         $publisher_id = auth()->user()->person->publisher->id;
-        $congresses = Congresses::where('publisher_id',$publisher_id)->orderby('id', 'desc')->get();
+        $congresses = Congress::where('publisher_id',$publisher_id)->orderby('id', 'desc')->get();
         return view('publisher.congress.index', compact('congresses'));
     }
 
