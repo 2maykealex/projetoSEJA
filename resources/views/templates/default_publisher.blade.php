@@ -9,6 +9,105 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <style>
+        body {
+            font-size: .875rem;
+        }
+        .feather {
+            width: 16px;
+            height: 16px;
+            vertical-align: text-bottom;
+        }
+
+        /*
+         * Sidebar
+         */
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 100; /* Behind the navbar */
+            padding: 5px 0 0; /* Height of navbar */
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+        }
+
+        .sidebar-sticky {
+            position: relative;
+            top: 0;
+            height: calc(100vh - 48px);
+            padding-top: .5rem;
+            overflow-x: hidden;
+            overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+        }
+
+        @supports ((position: -webkit-sticky) or (position: sticky)) {
+          .sidebar-sticky {
+            position: -webkit-sticky;
+            position: sticky;
+          }
+        }
+
+        .sidebar .nav-link {
+            font-weight: 500;
+            color: #333;
+        }
+
+        .sidebar .nav-link .feather {
+            margin-right: 4px;
+            color: #999;
+        }
+
+        .sidebar .nav-link.active {
+            color: #007bff;
+        }
+
+        .sidebar .nav-link:hover .feather,
+        .sidebar .nav-link.active .feather {
+            color: inherit;
+        }
+
+        .sidebar-heading {
+            font-size: .75rem;
+            text-transform: uppercase;
+        }
+
+        /*
+         * Content
+         */
+
+        [role="main"] {
+            padding-top: 48px; /* Space for fixed navbar */
+        }
+
+        /*
+         * Navbar
+         */
+
+        .navbar-brand {
+            padding-top: .75rem;
+            padding-bottom: .75rem;
+            font-size: 1rem;
+            background-color: rgba(0, 0, 0, .25);
+            box-shadow: inset -1px 0 0 rgba(0, 0, 0, .25);
+        }
+
+        .navbar .form-control {
+            padding: .75rem 1rem;
+            border-width: 0;
+            border-radius: 0;
+        }
+
+        .form-control-dark {
+            color: #fff;
+            background-color: rgba(255, 255, 255, .1);
+            border-color: rgba(255, 255, 255, .1);
+        }
+
+        .form-control-dark:focus {
+            border-color: transparent;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, .25);
+        }
         .altura{
             height: 100vh;            
         }
@@ -27,6 +126,7 @@
         .heigt-test{
             height: 400px;
         }
+
     </style>
 
 </head>
@@ -47,14 +147,14 @@
                                      Publicações
                                     </div>
                                     <div class="float-right" >
-                                        <span data-feather="plus-circle" class="text-right"></span>
+                                        
                                     </div>
                                 </div>  
                             </button>
                             <div class="collapse mt-1" id="menuPublicacao">
                                 <div class="nav flex-column">
-                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/posts/new" >Nova</a>
-                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/posts/list">Listagem</a>
+                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/posts/new" ><span data-feather="plus-circle"></span>Nova</a>
+                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/posts/list"><span data-feather="file-text"></span>Listagem</a>
                                 </div>
                             </div>
                         </li>
@@ -65,7 +165,7 @@
                                         Eventos  
                                     </div>
                                     <div class="float-right" >
-                                        <span data-feather="plus-circle" class="text-right"></span>
+                                        
                                     </div>
                                 </div> 
                             </button>
@@ -83,7 +183,7 @@
                                         Congressos  
                                     </div>
                                     <div class="float-right" >
-                                        <span data-feather="plus-circle" class="text-right"></span>
+                                        
                                     </div>
                                 </div> 
                             </button>
