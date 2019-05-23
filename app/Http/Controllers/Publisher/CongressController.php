@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Publisher;
 
 use App\Models\Congress;
+use App\Models\SubscriptionType;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
