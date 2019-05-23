@@ -41,6 +41,7 @@ class Post extends Model
         $this->title    = $dados['title'];
         $this->summary  = $dados['summary'];
         $this->text     = $dados['text'];
+        $this->subscription_type_id    = $dados['subscription_type_id'];
         if (isset($dados['image'])){
             $this->image    = $dados['image'];
         }
