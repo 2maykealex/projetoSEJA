@@ -77,7 +77,7 @@
          */
 
         [role="main"] {
-            padding-top: 48px; /* Space for fixed navbar */
+            padding-top: 0px; /* Space for fixed navbar */
         }
 
         /*
@@ -152,9 +152,9 @@
                                 </div>  
                             </button>
                             <div class="collapse mt-1" id="menuPublicacao">
-                                <div class="nav flex-column">
-                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/posts/new" ><span data-feather="plus-circle"></span>Nova</a>
-                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/posts/list"><span data-feather="file-text"></span>Listagem</a>
+                                <div class="nav flex-column border">
+                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/posts/new" >Nova</a>
+                                    <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/posts/list">Listagem</a>
                                 </div>
                             </div>
                         </li>
@@ -170,7 +170,7 @@
                                 </div> 
                             </button>
                             <div class="collapse mt-1" id="menuEventos">
-                                <div class="nav flex-column">
+                                <div class="nav flex-column border">
                                     <a class="nav-link text-light " href="http://127.0.0.1:8000/publisher/events/new" >Novo</a>
                                     <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/events/list">Listagem</a>
                                 </div>
@@ -188,7 +188,7 @@
                                 </div> 
                             </button>
                             <div class="collapse mt-1" id="menuCongressos">
-                                <div class="nav flex-column">
+                                <div class="nav flex-column border">
                                     <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/congresses/new" >Novo</a>
                                     <a class="nav-link text-light" href="http://127.0.0.1:8000/publisher/congresses/list">Listagem</a>
                                 </div>

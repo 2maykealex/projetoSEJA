@@ -42,7 +42,7 @@
 				    <div class="col-md-8 py-3"> 
 				    	<img src="{{ asset('storage/img/posts/' . $post->image) }}" width="100%" class="img-fluid "> 
 				    </div> 
-				    <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
+				    <input type="file" class="form-control-file" id="image" name="image" accept="image/*">
 				</div>
 				<div class="form-group">
 				    <label>ANEXOS</label>   
