@@ -27,7 +27,8 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('publisher.event.new');
+        $subscriptionTypes = SubscriptionType::orderby('id')->get();
+        return view('publisher.event.new', compact('subscriptionTypes'));
     }
 
     /**
