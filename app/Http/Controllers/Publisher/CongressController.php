@@ -15,7 +15,9 @@ class CongressController extends Controller
      */
     public function index()
     {
-        return view('publisher.congress.index');
+        $publisher_id = auth()->user()->person->publisher->id;
+        $congresses = Congresses::where('publisher_id',$publisher_id)->orderby('id', 'desc')->get();
+        return view('publisher.congress.index', compact('congresses'));
     }
 
     /**
@@ -25,7 +27,8 @@ class CongressController extends Controller
      */
     public function create()
     {
-        return view('publisher.congress.new');
+        $subscriptionTypes = SubscriptionType::orderby('id')->get();
+        return view('publisher.congress.new', compact('subscriptionTypes'));
     }
 
     /**

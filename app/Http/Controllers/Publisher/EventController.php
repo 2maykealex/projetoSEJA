@@ -15,7 +15,9 @@ class EventController extends Controller
      */
     public function index()
     {
-        return view('publisher.event.index');
+        $publisher_id = auth()->user()->person->publisher->id;
+        $events = Event::where('publisher_id',$publisher_id)->orderby('id', 'desc')->get();
+        return view('publisher.event.index', compact('events'));
     }
 
     /**
