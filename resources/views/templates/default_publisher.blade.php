@@ -27,8 +27,8 @@
             top: 0;
             bottom: 0;
             left: 0;
-            z-index: 100; /* Behind the navbar */
-            padding: 5px 0 0; /* Height of navbar */
+            z-index: 100;
+            padding: 0 0 0; 
             box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
         }
 
@@ -38,7 +38,7 @@
             height: calc(100vh - 48px);
             padding-top: .5rem;
             overflow-x: hidden;
-            overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+            overflow-y: auto; 
         }
 
         @supports ((position: -webkit-sticky) or (position: sticky)) {
@@ -77,7 +77,7 @@
          */
 
         [role="main"] {
-            padding-top: 0px; /* Space for fixed navbar */
+            padding-top: 48px; 
         }
 
         /*
