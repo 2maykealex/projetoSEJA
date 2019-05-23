@@ -66,9 +66,11 @@ class EventController extends Controller
      * @param  \App\Models\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function show(Event $event)
+    public function show($id)
     {
-        return view('publisher.event.show');
+        $event = Event::where('id', $id)->get()->first();
+        $subscriptionType = SubscriptionType::where('id', $event->subscription_type_id)->orderby('id')->get()->first();
+        return view('publisher.event.show', compact('event', 'subscriptionType'));
     }
 
     /**

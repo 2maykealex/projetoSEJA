@@ -66,9 +66,11 @@ class CongressController extends Controller
      * @param  \App\Models\Congress  $congress
      * @return \Illuminate\Http\Response
      */
-    public function show(Congress $congress)
+    public function show($id)
     {
-        return view('publisher.congress.show');
+        $congress = Congress::where('id', $id)->get()->first();
+        $subscriptionType = SubscriptionType::where('id', $congress->subscription_type_id)->orderby('id')->get()->first();
+        return view('publisher.congress.show', compact('congress', 'subscriptionType'));
     }
 
     /**
