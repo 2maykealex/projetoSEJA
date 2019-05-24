@@ -17,7 +17,10 @@
             width : 100%;
             background-size: cover;
             }
-        
+        .fundo-escuro{
+            background-color: rgba(0,0,0,.3) !important;
+        }
+
     </style>
 
 </head>

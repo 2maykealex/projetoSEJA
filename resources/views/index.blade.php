@@ -9,7 +9,7 @@
     <!--navbar-->
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-dark border-bottom">
+        <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow p-2 mb-2 bg-white">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -18,22 +18,22 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="#inicio">Início</a>
-                        </li>
-                        <li class="nav-item mr-5">
-                            <a class="nav-link" href="#publicacao">Públicações</a>
+                            <a class="nav-link" href="#publicacao">Conteúdo</a>
                         </li>
                         <li class="nav-item mr-5">
                             <a class="nav-link" href="#eventos">Eventos</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="#congresso">Congressos</a>
+                            <a class="nav-link" href="#assinantes">Assinantes</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a class="nav-link" href="#">Contatos</a>
                         </li>
                         <li class="nav-item mr-5">
                             <a class="nav-link" href="#sobre">Sobre nós</a>
                         </li>
                     </ul>
-                    <ul class="navbar-nav">
+                     <ul class="navbar-nav">
                         <li class="nav-item ">
                             <a class="nav-link" href="{{route('site.login')}}">Entrar</a>
                         </li>
@@ -44,15 +44,16 @@
     </header>
 
     <!--inicio-->
-
-    <div class="position-relative overflow-hidden p-3 p-md-5 text-center bg-dark" id="inicio">
-        <div class="col-md-5 p-lg-5 mx-auto my-5" >
-            <h1 class="display-4 font-weight-normal text-white">ALMA</h1>
-            <p class="lead font-weight-normal text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-            <a class="btn btn-outline-light" href="{{route('subscribe')}}">Partícipe nosso projeto</a>
+    <div id="inicio">
+        <div class="position-relative overflow-hidden p-3 p-md-5 text-center fundo-escuro">
+            <div class="col-md-5 p-lg-5 mx-auto my-5" >
+                <h1 class="display-4 font-weight-normal text-white">ALMA</h1>
+                <p class="lead font-weight-normal text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                <a class="btn btn-outline-light" href="{{route('subscribe')}}">Partícipe nosso projeto</a>
+            </div>
+            <div class="product-device shadow-sm d-none d-md-block"></div>
+            <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
         </div>
-        <div class="product-device shadow-sm d-none d-md-block"></div>
-        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
     </div>
 
     <!--publicações-->
@@ -143,10 +144,10 @@
         </div>
     </div>
     
-    <!--congressos-->
+    <!--assinantes-->
 
-    <div id="congresso" class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto text-center border-top">
-        <h1 class="display-5 mt-5">Congressos</h1>        
+    <div id="assinantes" class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto text-center border-top">
+        <h1 class="display-5 mt-5">Assinantes</h1>        
     </div>
     <main role="main" class="container border-top text-center">
         <div class="d-flex justify-content-center flex-lg-center">
