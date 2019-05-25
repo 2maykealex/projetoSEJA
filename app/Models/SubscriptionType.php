@@ -29,13 +29,13 @@ class SubscriptionType extends Model
         if ($save){
             return [
                 'success' => true,
-                'message' => 'O cadastro realizado com sucesso!'
+                'message' => 'O cadastro foi atualizado com sucesso!'
             ];
         }
 
         return [
             'success' => false,
-            'message' => 'Não foi possível realizar este cadastro. Verifique!'
+            'message' => 'Não foi possível atualizar este cadastro. Verifique!'
         ];
     }
 }
