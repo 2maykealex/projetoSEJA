@@ -8,7 +8,7 @@
 	<div class="d-flex justify-content-center flex-lg-center">
     	<div class="col-md-10 bg-light py-3">
 	       	<nav class="navbar navbar-expand-lg">
-		  		<h2>CRIAR PAGAMENTO</h2>
+		  		<h2>NOVO PAGAMENTO</h2>
 			</nav>
 			<form action="{{route('adm.collections.store')}}" method="post" class="pb-3 pt-3 bg-white px-3">
 				@csrf

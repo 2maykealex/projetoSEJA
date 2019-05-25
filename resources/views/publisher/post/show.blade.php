@@ -52,6 +52,15 @@
 				    <label>ANEXOS</label>   
 				    <input type="text" class="form-control" placeholder="#" disabled>
 				</div>
+				<div class="form-grou">
+					<label>PERFIL</label>
+					<div class="text-center mb-3 px-3 py-3 bg-light">
+						<a href="#">
+		  					<img src="{{asset('/storage/img/posts/lobos.jpg')}}" class="rounded-circle" alt="..." width="200em">
+		  					<p class="card-text">Lorem Ipsum</p>
+		  				</a>
+					</div>
+				</div>
 		    	<div class="clearfix">
 				  	<a class="btn btn-warning float-left" href="{{route('publisher.posts.edit', [$post->id])}}" >Alterar</a>
 				  	<a class="btn btn-danger float-right" href="{{route('publisher.posts.edit', [$post->id])}}" >Deletar</a>

@@ -27,7 +27,7 @@
                             <a class="nav-link" href="#assinantes">Assinantes</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="#">Contatos</a>
+                            <a class="nav-link" href="#">Atendimentos</a>
                         </li>
                         <li class="nav-item mr-5">
                             <a class="nav-link" href="#sobre">Sobre nós</a>

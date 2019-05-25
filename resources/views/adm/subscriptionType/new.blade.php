@@ -8,7 +8,7 @@
 	<div class="d-flex justify-content-center flex-lg-center">
     	<div class="col-md-10 bg-light py-3">
 	       	<nav class="navbar navbar-expand-lg">
-		  		<h2>CRIAR PLANO</h2>
+		  		<h2>NOVO PLANO</h2>
 			</nav>
 			<form action="{{route('adm.subscriptions.types.store')}}" method="post" class="pb-3 pt-3 bg-white px-3">
 				@csrf
