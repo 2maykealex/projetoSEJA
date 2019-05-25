@@ -80,7 +80,7 @@ class CongressController extends Controller
      * @param  \App\Models\Congress  $congress
      * @return \Illuminate\Http\Response
      */
-    public function edit(Congress $congress)
+    public function edit($id)
     {
         $congress = Congress::where('id', $id)->get()->first();
         $subscriptionTypes = SubscriptionType::orderby('id')->get();
