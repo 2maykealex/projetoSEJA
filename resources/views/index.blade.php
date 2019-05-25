@@ -70,14 +70,7 @@
                     <div class="card mb-2 shadow-sm">
                         <img class="card-img-top" src="{{asset('storage/img/astro.jpg')}}" alt="Card image cap">
                         <div class="card-body">
-                        <p class="card-text">God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega e nórdica sendo criado originalmente por David Jaffe da Santa Monica Studio.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                                </div>
-                                <small class="text-muted">9 mins</small>
-                            </div>
+                        <h5 class="card-text">God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega</h5>
                         </div>
                     </div>
                 </div>
@@ -86,14 +79,7 @@
                     <div class="card mb-2 shadow-sm">
                         <img class="card-img-top" src="{{asset('storage/img/astro.jpg')}}" alt="Card image cap">
                         <div class="card-body">
-                        <p class="card-text">God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega e nórdica sendo criado originalmente por David Jaffe da Santa Monica Studio.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                                </div>
-                                <small class="text-muted">9 mins</small>
-                            </div>
+                        <h5 class="card-text">God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega</h5>
                         </div>
                     </div>
                 </div>
@@ -102,14 +88,7 @@
                     <div class="card mb-2 shadow-sm">
                         <img class="card-img-top" src="{{asset('storage/img/astro.jpg')}}" alt="Card image cap">
                         <div class="card-body">
-                        <p class="card-text">God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega e nórdica sendo criado originalmente por David Jaffe da Santa Monica Studio.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Ver</button>
-                                <button type="button" class="btn btn-sm btn-outline-secondary">Editar</button>
-                                </div>
-                                <small class="text-muted">9 mins</small>
-                            </div>
+                        <h5 class="card-text">God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega</h5>
                         </div>
                     </div>
                 </div>
