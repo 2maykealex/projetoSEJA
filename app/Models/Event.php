@@ -30,7 +30,7 @@ class Event extends Model
         ];
     }
 
-    public function updatePost($dados):Array {
+    public function updateCongress($dados):Array {
         $publisher = auth()->user()->person->publisher;
         $this->title    = $dados['title'];
         $this->summary  = $dados['summary'];
