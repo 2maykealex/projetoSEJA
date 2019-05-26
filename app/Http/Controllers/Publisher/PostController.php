@@ -70,9 +70,10 @@ class PostController extends Controller
      */
     public function show($id)
     {
+        $publisher = auth()->user()->person;
         $post = Post::where('id', $id)->get()->first();
         $subscriptionType = SubscriptionType::where('id', $post->subscription_type_id)->orderby('id')->get()->first();
-        return view('publisher.post.show', compact('post', 'subscriptionType'));
+        return view('publisher.post.show', compact('post', 'subscriptionType', 'publisher'));
     }
 
     /**
@@ -83,9 +84,10 @@ class PostController extends Controller
      */
     public function edit($id)
     {
+        $publisher = auth()->user()->person;
         $post = Post::where('id', $id)->get()->first();
         $subscriptionTypes = SubscriptionType::orderby('id')->get();
-        return view('publisher.post.edit', compact('post', 'subscriptionTypes'));
+        return view('publisher.post.edit', compact('post', 'subscriptionTypes', 'publisher'));
     }
 
     /**
