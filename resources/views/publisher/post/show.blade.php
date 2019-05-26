@@ -52,18 +52,20 @@
 				    <label>ANEXOS</label>   
 				    <input type="text" class="form-control" placeholder="#" disabled>
 				</div>
-				<div class="form-grou">
-					<label>PERFIL</label>
-					<div class="d-flex justify-content-center flex-lg-center bg-light py-3">
-						<div class="col-lg-4 text-center">
-							<a href="#">
-		            			<img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="140" height="140">
-		            			<h4>lorem ipsum</h4>
-		            		</a>
-		          		</div>
-	          		</div>
-				</div>
-          		
+				<div class="form-group">
+				    <label>ESCRITO POR</label>
+		            <div class="row no-gutters bg-light py-3 px-3">
+		                <div class="col-lg-1">
+		                    <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="50" height="50">
+		                </div>
+		                <div class="col-lg-10">
+		                    <div class="card-body">
+		                        <h5 class="card-title">lorem ipsum</h5>
+		                    </div>
+		                </div>
+		            </div>
+		       	</div>
+	          		
 		    	<div class="clearfix mt-3">
 				  	<a class="btn btn-warning float-left" href="{{route('publisher.posts.edit', [$post->id])}}" >Alterar</a>
 				  	<a class="btn btn-danger float-right" href="{{route('publisher.posts.edit', [$post->id])}}" >Deletar</a>

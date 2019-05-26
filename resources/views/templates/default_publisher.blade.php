@@ -126,6 +126,9 @@
         .heigt-test{
             height: 400px;
         }
+        .card-body{
+            padding: 0px 0px 0px;
+        }
 
     </style>
 
