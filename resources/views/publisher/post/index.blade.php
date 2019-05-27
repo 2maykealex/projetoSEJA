@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-	<div class="d-flex justify-content-center flex-lg-center pb-5">
+	<div class="d-flex justify-content-center flex-lg-center pb-y">
 		<div class="col-md-10 bg-light py-3">
 			<nav class="navbar navbar-expand-lg ">
 			  	<h2>PUBLICAÇÕES</h2>

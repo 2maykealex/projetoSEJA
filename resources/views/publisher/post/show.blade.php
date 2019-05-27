@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-	<div class="d-flex justify-content-center flex-lg-center pb-5">
+	<div class="d-flex justify-content-center flex-lg-center py-5">
     	<div class="col-md-10 bg-light py-3">
 	       	<nav class="navbar navbar-expand-lg">
 		  		<h2>VISUALIZAR PUBLICAÇÃO</h2>
@@ -55,17 +55,18 @@
 				<div class="form-group">
 				    <label>ESCRITO POR</label>
 		            <div class="row no-gutters bg-light py-3 px-3">
-		                <div class="col-lg-1">
-		                    <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image" width="50" height="50">
+		                <div class="col-lg-1 text-center">
+		                    <img class="rounded-circle" src="{{ asset('storage/img/profiles/' . $publisher->image)}}" width="50" height="50">
 		                </div>
-		                <div class="col-lg-10">
-		                    <div class="card-body">
-		                        <h5 class="card-title">lorem ipsum</h5>
-		                    </div>
-		                </div>
+		                <table class="col-lg-2 text-center" style=" height: 50px;">
+		                	<tbody>
+		                		<tr>
+		                			<td class="align-middle h5">{{$publisher->name}}</td>
+		                		</tr>
+		                	</tbody>
+		                </table>	                
 		            </div>
-		       	</div>
-	          		
+		       	</div>	          		
 		    	<div class="clearfix mt-3">
 				  	<a class="btn btn-warning float-left" href="{{route('publisher.posts.edit', [$post->id])}}" >Alterar</a>
 				  	<a class="btn btn-danger float-right" href="{{route('publisher.posts.edit', [$post->id])}}" >Deletar</a>

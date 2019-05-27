@@ -6,7 +6,7 @@
 
 @section('content')
 	@include('includes.alerts')
-	<div class="d-flex justify-content-center flex-lg-center">
+	<div class="d-flex justify-content-center flex-lg-center py-5">
     	<div class="col-md-10 bg-light py-3">
 	       	<nav class="navbar navbar-expand-lg">
 		  		<h2>NOVO EVENTO</h2>

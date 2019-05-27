@@ -77,7 +77,7 @@
          */
 
         [role="main"] {
-            padding-top: 48px; 
+            padding-top: 0; 
         }
 
         /*
