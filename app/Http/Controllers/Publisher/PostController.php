@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Publisher;
 use App\Models\SubscriptionType;
+use App\Models\PublisherReport;
+use App\Models\ReportType;
 
 class PostController extends Controller
 {
@@ -29,8 +31,14 @@ class PostController extends Controller
      */
     public function create()
     {
+        $publisher_id = auth()->user()->person->publisher->id;
+        $reportTypes = ReportType::with(['publisherReport' => function($q) use($publisher_id) {
+            $q->where('publisher_id', $publisher_id);
+        }])
+        ->get();
+
         $subscriptionTypes = SubscriptionType::orderby('id')->get();
-        return view('publisher.post.new', compact('subscriptionTypes'));
+        return view('publisher.post.new', compact('subscriptionTypes', 'reportTypes'));
     }
 
     /**
@@ -72,8 +80,9 @@ class PostController extends Controller
     {
         $publisher = auth()->user()->person;
         $post = Post::where('id', $id)->get()->first();
+        $reportType = ReportType::where('id', $post->report_type_id)->get()->first();
         $subscriptionType = SubscriptionType::where('id', $post->subscription_type_id)->orderby('id')->get()->first();
-        return view('publisher.post.show', compact('post', 'subscriptionType', 'publisher'));
+        return view('publisher.post.show', compact('post', 'subscriptionType', 'publisher', 'reportType'));
     }
 
     /**
@@ -85,9 +94,16 @@ class PostController extends Controller
     public function edit($id)
     {
         $publisher = auth()->user()->person;
+        $publisher_id = $publisher->publisher->id;
+        $reportTypes = ReportType::with(['publisherReport' => function($q) use($publisher_id) {
+            $q->where('publisher_id', $publisher_id);
+        }])
+        ->get();
+
         $post = Post::where('id', $id)->get()->first();
         $subscriptionTypes = SubscriptionType::orderby('id')->get();
-        return view('publisher.post.edit', compact('post', 'subscriptionTypes', 'publisher'));
+
+        return view('publisher.post.edit', compact('post', 'subscriptionTypes', 'publisher', 'reportTypes'));
     }
 
     /**
