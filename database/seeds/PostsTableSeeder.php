@@ -15,6 +15,7 @@ class PostsTableSeeder extends Seeder
         Post::create([
             'subscription_type_id'=> 1,
             'publisher_id'=> 1,
+            'report_type_id'=> 1,
             'title'     => 'Uma linda Mulher',
             'summary' => 'Durante uma viagem de negócios a Los Angeles, Edward...',
             'text' => 'Sempre haverá aqueles filmes que, sempre que você assistir, você vai sentir uma sensação estranhamente mágica...',
@@ -24,6 +25,7 @@ class PostsTableSeeder extends Seeder
         Post::create([
             'subscription_type_id'=> 2,
             'publisher_id'=> 1,
+            'report_type_id'=> 2,
             'title'     => 'Os Vingadores - O Ultimato',
             'summary' => 'Após Thanos eliminar metade das criaturas vivas...',
             'text' => 'Mais do que qualquer filme precedente do Universo Cinematográfico Marvel...',
