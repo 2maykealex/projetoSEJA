@@ -25,14 +25,26 @@
 				    <textarea class="form-control" id="text" name="text" rows="16"></textarea>
 				</div>
 				<div class="form-group">
-		    		<label for="subscription_type_id">TIPO DE PÚBLICO</label>	    		
+		    		<label for="subscription_type_id">TIPO DE PÚBLICO</label>
 		      		<select class="form-control" id="subscription_type_id" name="subscription_type_id" collapse>
 		        		<option>Escolher</option>
 		        		@foreach ($subscriptionTypes as $subscriptionType)
 		        			<option value="{{$subscriptionType->id}}">{{$subscriptionType->name}}</option>
-		        		@endforeach	        		
-		      		</select>	
-		    	</div>
+		        		@endforeach
+		      		</select>
+				</div>
+
+				<div class="form-group">
+					<label for="report_type_id">TIPO DE RELATÓRIO</label>
+						<select class="form-control" id="report_type_id" name="report_type_id" collapse>
+							<option>Escolher</option>
+							@foreach ($reportTypes as $reportType)
+								@isset($reportType->publisherReport->id)
+									<option value="{{$reportType->id}}">{{$reportType->name}}</option>
+								@endisset
+							@endforeach
+						</select>
+				</div>
 		    	<div class="form-group">
 				    <label for="image">IMAGEM</label>   
 				    <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
