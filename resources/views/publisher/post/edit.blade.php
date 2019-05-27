@@ -38,6 +38,18 @@
 		      		</select>	
 		    	</div>
 		    	<div class="form-group">
+					<label for="report_type_id">TIPO DE RELATÓRIO</label>
+					<select class="form-control" id="report_type_id" name="report_type_id" collapse>
+						<option>Escolher</option>
+						@foreach ($reportTypes as $reportType)
+							<option value="{{$reportType->id}}" 
+							@if ( isset($post) && $post->id == $reportType->id ) selected @endif>
+							{{$reportType->name}}</option>
+								
+						@endforeach
+					</select>
+				</div>
+		    	<div class="form-group">
 				    <label for="image">IMAGEM</label>
 				    <div class="col-md-8 py-3"> 
 				    	<img src="{{ asset('storage/img/posts/' . $post->image) }}" width="100%" class="img-fluid "> 

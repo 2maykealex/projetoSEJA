@@ -33,17 +33,16 @@
 		        		@endforeach
 		      		</select>
 				</div>
-
 				<div class="form-group">
 					<label for="report_type_id">TIPO DE RELATÓRIO</label>
-						<select class="form-control" id="report_type_id" name="report_type_id" collapse>
-							<option>Escolher</option>
-							@foreach ($reportTypes as $reportType)
-								@isset($reportType->publisherReport->id)
-									<option value="{{$reportType->id}}">{{$reportType->name}}</option>
-								@endisset
-							@endforeach
-						</select>
+					<select class="form-control" id="report_type_id" name="report_type_id" collapse>
+						<option>Escolher</option>
+						@foreach ($reportTypes as $reportType)
+							@isset($reportType->publisherReport->id)
+								<option value="{{$reportType->id}}">{{$reportType->name}}</option>
+							@endisset
+						@endforeach
+					</select>
 				</div>
 		    	<div class="form-group">
 				    <label for="image">IMAGEM</label>   

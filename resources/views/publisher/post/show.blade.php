@@ -43,6 +43,10 @@
 				    <input type="text" class="form-control" placeholder="{{$subscriptionType->name}}" disabled>
 				</div>
 				<div class="form-group">
+				    <label>TIPO DE RELATÓRIO</label>   
+				    <input type="text" class="form-control" placeholder="{{$reportType->name}}" disabled>
+				</div>
+				<div class="form-group">
 				    <label>IMAGEM</label>   
 				    <div class="col-md-8 py-3"> 
 				    	<img src="{{ asset('storage/img/posts/' . $post->image) }}" width="100%" class="img-fluid "> 
