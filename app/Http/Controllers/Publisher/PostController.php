@@ -31,6 +31,7 @@ class PostController extends Controller
      */
     public function create()
     {
+        $publisher = auth()->user()->person;
         $publisher_id = auth()->user()->person->publisher->id;
         $reportTypes = ReportType::with(['publisherReport' => function($q) use($publisher_id) {
             $q->where('publisher_id', $publisher_id);
@@ -38,7 +39,7 @@ class PostController extends Controller
         ->get();
 
         $subscriptionTypes = SubscriptionType::orderby('id')->get();
-        return view('publisher.post.new', compact('subscriptionTypes', 'reportTypes'));
+        return view('publisher.post.new', compact('subscriptionTypes', 'reportTypes', 'publisher'));
     }
 
     /**
