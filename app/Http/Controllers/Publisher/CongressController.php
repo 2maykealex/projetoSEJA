@@ -28,8 +28,9 @@ class CongressController extends Controller
      */
     public function create()
     {
+        $publisher = auth()->user()->person;
         $subscriptionTypes = SubscriptionType::orderby('id')->get();
-        return view('publisher.congress.new', compact('subscriptionTypes'));
+        return view('publisher.congress.new', compact('subscriptionTypes','publisher'));
     }
 
     /**
