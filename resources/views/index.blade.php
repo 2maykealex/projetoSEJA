@@ -9,33 +9,33 @@
     <!--navbar-->
 
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light fixed-top shadow p-2 mb-2 bg-white">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow p-2 mb-2 py-3">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <a class="navbar-brand text-center mr-5" href="#">Logotipo</a>
+                <!--<a class="navbar-brand text-center mr-5" href="#">Logotipo</a>-->
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="#publicacao">Conteúdo</a>
+                            <a class="nav-link h6" href="#publicacao">Conteúdo</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="#eventos">Eventos</a>
+                            <a class="nav-link h6" href="#eventos">Eventos</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="#assinantes">Assinantes</a>
+                            <a class="nav-link h6" href="#assinantes">Assinantes</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="#">Atendimentos</a>
+                            <a class="nav-link h6" href="#">Atendimentos</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="nav-link" href="#sobre">Sobre nós</a>
+                            <a class="nav-link h6" href="#sobre">Sobre nós</a>
                         </li>
                     </ul>
                      <ul class="navbar-nav">
                         <li class="nav-item ">
-                            <a class="nav-link" href="{{route('site.login')}}">Entrar</a>
+                            <a class="nav-link h6" href="{{route('site.login')}}">Entrar</a>
                         </li>
                     </ul>
                 </div>
@@ -66,7 +66,31 @@
         <div class="container">
 
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-3">
+                    <div class="card mb-2 shadow-sm">
+                        <img class="card-img-top" src="{{asset('storage/img/astro.jpg')}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h6 class="card-text">God of War é uma série de jogos eletrônicos </h6>
+                        </div>
+                        <div class="row no-gutters pb-3 px-3 pb-3">
+                            <div class="col-lg-3 mr-2">
+                                <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50">
+                            </div>
+                            <table class="col-lg-7" style=" height: 50px;">
+                                <tbody>
+                                    <tr>
+                                        <td class="align-middle h6"> <small>Por Fulano de Tal</small></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="text-right col-lg-12">
+                                <small class="text-muted">9 mins</small>
+                            </div>                    
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
                     <div class="card mb-2 shadow-sm">
                         <img class="card-img-top" src="{{asset('storage/img/astro.jpg')}}" alt="Card image cap">
                         <div class="card-body">
@@ -75,7 +99,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="card mb-2 shadow-sm">
                         <img class="card-img-top" src="{{asset('storage/img/astro.jpg')}}" alt="Card image cap">
                         <div class="card-body">
@@ -84,7 +108,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-4">
+                <div class="col-md-3">
                     <div class="card mb-2 shadow-sm">
                         <img class="card-img-top" src="{{asset('storage/img/astro.jpg')}}" alt="Card image cap">
                         <div class="card-body">
