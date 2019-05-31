@@ -77,7 +77,7 @@
          */
 
         [role="main"] {
-            padding-top: 48px; 
+            padding-top:0; 
         }
 
         /*
@@ -126,7 +126,7 @@
         <div class="row">
             <nav class="col-md-2 d-none d-md-block bg-dark sidebar">
                 <div class="text-center">
-                    <h2 class="text-white py-2 border-bottom">ALMA</h2>
+                    <h2 class="text-white py-2 border-bottom">SEJA</h2>
                 </div>
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
@@ -146,8 +146,8 @@
                                     <a class="nav-link text-light" href="{{route('adm.collections.list')}}" >Pagamentos</a>
                                     <a class="nav-link text-light" href="{{route('adm.subscriptions.types.list')}}">Planos</a>
                                     <a class="nav-link text-light" href="{{route('adm.subscriptions.plans.list')}}">Assinaturas</a>
-                                    <a class="nav-link text-light" href="{{route('adm.congresses.types.list')}}">Congressos</a>
-                                    <a class="nav-link text-light" href="{{route('adm.events.types.list')}}">Eventos</a>
+                                    <a class="nav-link text-light" href="{{route('adm.posts.types.list')}}">Publicações</a>
+                                    
                                 </div>
                             </div>
                         </li>

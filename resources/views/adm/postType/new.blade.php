@@ -21,7 +21,7 @@
 				</div>
 			</form>  
 			<div class="text-center mt-4 ">
-				<a class="btn btn-secondary btn-sm" href="{{route('adm.congresses.types.list')}}">Voltar</a>
+				<a class="btn btn-secondary btn-sm" href="{{route(adm.posts.types.list')}}">Voltar</a>
 			</div>
 		</div>              
 	</div>	
