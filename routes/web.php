@@ -60,6 +60,16 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
         Route::post('store', 'EventTypeController@store')->name("adm.events.types.store");
     });
 
+    Route::group(['prefix' => 'posts-types'], function () {
+        Route::get('list', 'PostTypeController@index')->name("adm.posts.types.list");
+        Route::get('new', 'PostTypeController@create')->name("adm.posts.types.new");
+        Route::get('show/{id}', 'PostTypeController@show')->name("adm.posts.types.show");
+        Route::get('edit/{id}', 'PostTypeController@edit')->name("adm.posts.types.edit");
+        Route::get('delete/{id}', 'PostTypeController@destroy')->name("adm.posts.types.delete");
+        Route::post('update/{id}', 'PostTypeController@update')->name("adm.posts.types.update");
+        Route::post('store', 'PostTypeController@store')->name("adm.posts.types.store");
+    });
+
     Route::group(['namespace' => 'Security', 'prefix' => 'security'], function () {
         Route::group(['prefix' => 'profiles-accesses'], function () {
             Route::get('list', 'ProfileAccessController@index')->name("adm.security.profile.list");
