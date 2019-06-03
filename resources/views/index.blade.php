@@ -69,6 +69,9 @@
                 <div class="col-md-3">
                     <div class="card mb-2 shadow-sm">
                         <img class="card-img-top" src="{{asset('storage/img/astro.jpg')}}" alt="Card image cap">
+                        <div class="card-img-overlay text-right">
+                            <h5 class="card-title">Icone</h5>  
+                        </div>
                         <div class="card-body">
                             <h6 class="card-text">God of War é uma série de jogos eletrônicos </h6>
                         </div>

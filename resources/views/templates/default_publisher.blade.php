@@ -144,7 +144,7 @@
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <button class="btn btn-dark col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuPublicacao" aria-controls="menuPublicacao" aria-expanded="false" aria-label="Alterna navegação">
+                            <button class="btn btn-dark btn-block text-left mt-1" type="button" data-toggle="collapse" data-target="#menuPublicacao" aria-controls="menuPublicacao" aria-expanded="false" aria-label="Alterna navegação">
                                 <div  class="clearfix">
                                     <div  class="float-left">
                                      Publicações
@@ -162,7 +162,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <button class="btn btn-dark col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuEventos" aria-controls="menuEventos" aria-expanded="false" aria-label="Alterna navegação">
+                            <button class="btn btn-dark btn-block text-left mt-1" type="button" data-toggle="collapse" data-target="#menuEventos" aria-controls="menuEventos" aria-expanded="false" aria-label="Alterna navegação">
                                 <div  class="clearfix">
                                     <div  class="float-left">
                                         Eventos  
@@ -180,7 +180,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <button class="btn btn-dark col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuCongressos" aria-controls="menuCongressos" aria-expanded="false" aria-label="Alterna navegação">
+                            <button class="btn btn-dark btn-block text-left mt-1" type="button" data-toggle="collapse" data-target="#menuCongressos" aria-controls="menuCongressos" aria-expanded="false" aria-label="Alterna navegação">
                                 <div  class="clearfix">
                                     <div  class="float-left">
                                         Congressos  

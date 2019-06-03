@@ -131,7 +131,7 @@
                 <div class="sidebar-sticky">
                     <ul class="nav flex-column">
                         <li class="nav-item">
-                            <button class="btn btn-dark col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuTipos" aria-controls="menuTipos" aria-expanded="false" aria-label="Alterna navegação">
+                            <button class="btn btn-dark btn-block text-left mt-1" type="button" data-toggle="collapse" data-target="#menuTipos" aria-controls="menuTipos" aria-expanded="false" aria-label="Alterna navegação">
                                 <div  class="clearfix">
                                     <div  class="float-left">
                                      Configurar tipos de ...
@@ -152,9 +152,9 @@
                             </div>
                         </li>
 
-                        <!--botão para Configurar tipos-->
+                        <!--botão para Vizualizar perfis-->
                         <li class="nav-item">
-                            <button class="btn btn-dark col-md-12 text-left mt-1" type="button" data-toggle="collapse" data-target="#menuAcesso" aria-controls="menuAcesso" aria-expanded="false" aria-label="Alterna navegação">
+                            <button class="btn btn-dark btn-block text-left mt-1" type="button" data-toggle="collapse" data-target="#menuAcesso" aria-controls="menuAcesso" aria-expanded="false" aria-label="Alterna navegação">
                                 <div  class="clearfix">
                                     <div  class="float-left">
                                      Segurança
@@ -167,6 +167,46 @@
                             <div class="collapse mt-1" id="menuAcesso">
                                 <div class="nav flex-column border">
                                     <a class="nav-link text-light" href="{{route('adm.security.profile.list')}}">Perfis de acesso</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!--botão para vizualizar, edidar, criar e deletar Eventos-->
+                        <li class="nav-item">
+                            <button class="btn btn-dark btn-block text-left mt-1" type="button" data-toggle="collapse" data-target="#menuEventos" aria-controls="menuEventos" aria-expanded="false" aria-label="Alterna navegação">
+                                <div  class="clearfix">
+                                    <div  class="float-left">
+                                        Eventos  
+                                    </div>
+                                    <div class="float-right" >
+                                        
+                                    </div>
+                                </div> 
+                            </button>
+                            <div class="collapse mt-1" id="menuEventos">
+                                <div class="nav flex-column border">
+                                    <a class="nav-link text-light " href="#" >Novo</a>
+                                    <a class="nav-link text-light" href="#">Listagem</a>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!--botão para vizualizar, edidar, criar e deletar Congressos-->
+                        <li class="nav-item">
+                            <button class="btn btn-dark btn-block text-left mt-1" type="button" data-toggle="collapse" data-target="#menuCongressos" aria-controls="menuCongressos" aria-expanded="false" aria-label="Alterna navegação">
+                                <div  class="clearfix">
+                                    <div  class="float-left">
+                                        Congressos  
+                                    </div>
+                                    <div class="float-right" >
+                                        
+                                    </div>
+                                </div> 
+                            </button>
+                            <div class="collapse mt-1" id="menuCongressos">
+                                <div class="nav flex-column border">
+                                    <a class="nav-link text-light" href="#" >Novo</a>
+                                    <a class="nav-link text-light" href="#">Listagem</a>
                                 </div>
                             </div>
                         </li>
@@ -184,8 +224,6 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script type="text/javascript">
-        
-    </script>
+   
 </body>
 </html>
