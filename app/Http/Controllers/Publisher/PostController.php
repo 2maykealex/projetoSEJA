@@ -3,24 +3,34 @@
 namespace App\Http\Controllers\Publisher;
 
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\SiteFunction;
 use Illuminate\Http\Request;
 use App\Models\Post;
 use App\Models\Publisher;
 use App\Models\SubscriptionType;
 use App\Models\PublisherReport;
 use App\Models\ReportType;
+use App\Models\PostType;
 
 class PostController extends Controller
 {
+    public function checkPostType($type){
+        $postType = PostType::where('name', $type)->get()->first();
+        if ($type == $postType->name) {
+            return $postType->id;
+        }
+    }
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
+        $type = $request->segments()[1];
+        $postType = $this->checkPostType($type);
         $publisher_id = auth()->user()->person->publisher->id;
-        $posts = Post::where('publisher_id',$publisher_id)->orderby('id', 'desc')->get();
+        $posts = Post::where('publisher_id', $publisher_id)->where('post_type_id', $postType)->orderby('id', 'desc')->get();
         return view('publisher.post.index', compact('posts'));
     }
 
