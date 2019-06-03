@@ -25,6 +25,9 @@ class CreatePostsTable extends Migration
             $table->integer('report_type_id')->unsigned();
             $table->foreign('report_type_id')->references('id')->on('report_types');
 
+            $table->integer('post_type_id')->unsigned();
+            $table->foreign('post_type_id')->references('id')->on('post_types');
+
             $table->string('title', 80);
             $table->string('summary', 80);
             $table->string('text');
