@@ -20,7 +20,8 @@ class Post extends Model
         $this->image    = $dados['image'];
         $this->subscription_type_id    = $dados['subscription_type_id'];
         $this->publisher_id    = $publisher->id;
-        $this->report_type_id   = $dados['report_type_id'];
+        $this->report_type_id  = $dados['report_type_id'];
+        $this->post_type_id    = $dados['post_type_id'];
 
         $save = $this->save();
 
