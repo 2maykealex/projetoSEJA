@@ -32,7 +32,7 @@ class CreatePostsTable extends Migration
             $table->string('summary', 80);
             $table->string('text');
             $table->string('image');
-            
+            $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
     }
