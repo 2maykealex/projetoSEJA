@@ -24,7 +24,7 @@ class PostController extends Controller
         $type = $request->segments()[1];
         $postType = app()->call('App\Http\Controllers\SiteFunction@checkPostType', [$type]);
         $publisher_id = auth()->user()->person->publisher->id;
-        $posts = Post::where('publisher_id', $publisher_id)->where('post_type_id', $postType)->orderby('id', 'desc')->get();
+        $posts = Post::where('publisher_id', $publisher_id)->where('post_type_id', $postType)->where('deleted', 0)->orderby('id', 'desc')->get();
         return view('publisher.post.index', compact('posts'));
     }
 
