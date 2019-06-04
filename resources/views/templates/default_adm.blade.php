@@ -152,25 +152,6 @@
                             </div>
                         </li>
 
-                        <!--botão para Vizualizar perfis-->
-                        <li class="nav-item">
-                            <button class="btn btn-dark btn-block text-left mt-1" type="button" data-toggle="collapse" data-target="#menuAcesso" aria-controls="menuAcesso" aria-expanded="false" aria-label="Alterna navegação">
-                                <div  class="clearfix">
-                                    <div  class="float-left">
-                                     Segurança
-                                    </div>
-                                    <div class="float-right" >
-                                        
-                                    </div>
-                                </div>  
-                            </button>
-                            <div class="collapse mt-1" id="menuAcesso">
-                                <div class="nav flex-column border">
-                                    <a class="nav-link text-light" href="{{route('adm.security.profile.list')}}">Perfis de acesso</a>
-                                </div>
-                            </div>
-                        </li>
-
                         <!--botão para vizualizar, edidar, criar e deletar Eventos-->
                         <li class="nav-item">
                             <button class="btn btn-dark btn-block text-left mt-1" type="button" data-toggle="collapse" data-target="#menuEventos" aria-controls="menuEventos" aria-expanded="false" aria-label="Alterna navegação">
@@ -210,6 +191,26 @@
                                 </div>
                             </div>
                         </li>
+
+                        <!--botão para Vizualizar perfis-->
+                        <li class="nav-item">
+                            <button class="btn btn-dark btn-block text-left mt-1" type="button" data-toggle="collapse" data-target="#menuAcesso" aria-controls="menuAcesso" aria-expanded="false" aria-label="Alterna navegação">
+                                <div  class="clearfix">
+                                    <div  class="float-left">
+                                     Segurança
+                                    </div>
+                                    <div class="float-right" >
+                                        
+                                    </div>
+                                </div>  
+                            </button>
+                            <div class="collapse mt-1" id="menuAcesso">
+                                <div class="nav flex-column border">
+                                    <a class="nav-link text-light" href="{{route('adm.security.profile.list')}}">Perfis de acesso</a>
+                                </div>
+                            </div>
+                        </li>
+
                     </ul>
                 </div>
                 <a class="btn btn-warning fixed-bottom col-md-2 text-white" href="{{route('site.logout')}}">Sair</a>
