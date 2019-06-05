@@ -57,79 +57,57 @@
     </div>
 
     <!--publicações-->
-
     <div id="publicacao" class="pricing-header container border-bottom py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h1 class="display-5 mt-5">Conteúdo</h1>
     </div>
 
-    <div class="album py-5">
-        <div class="container">
-
+    <div class="container pt-5">
             <div class="row">
-                <div class="col-md-3">
-                    <div class="card mb-2 shadow-sm">
-                        <img class="card-img-top" src="{{asset('storage/img/astro.jpg')}}" alt="Card image cap">
-                        <div class="card-img-overlay text-right">
-                            <h5 class="card-title">Icone</h5>  
-                        </div>
+                <div class="col-lg-3">
+                    <div class="card">
+                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="card-body">
-                            <h6 class="card-text">God of War é uma série de jogos eletrônicos </h6>
-                        </div>
-                        <div class="row no-gutters pb-3 px-3 pb-3">
-                            <div class="col-lg-3 mr-2">
-                                <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="50" height="50">
-                            </div>
-                            <table class="col-lg-7" style=" height: 50px;">
-                                <tbody>
-                                    <tr>
-                                        <td class="align-middle h6"> <small>Por Fulano de Tal</small></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="text-right col-lg-12">
-                                <small class="text-muted">9 mins</small>
-                            </div>                    
+                            <h5 class="card-title">
+                                God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega
+                            </h5>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-3">
-                    <div class="card mb-2 shadow-sm">
-                        <img class="card-img-top" src="{{asset('storage/img/astro.jpg')}}" alt="Card image cap">
+                <div class="col-lg-3">
+                    <div class="card">
+                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="card-body">
-                        <h5 class="card-text">God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega</h5>
+                            <h5 class="card-title">
+                                God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega
+                            </h5>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-3">
-                    <div class="card mb-2 shadow-sm">
-                        <img class="card-img-top" src="{{asset('storage/img/astro.jpg')}}" alt="Card image cap">
+                <div class="col-lg-3">
+                    <div class="card">
+                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="card-body">
-                        <h5 class="card-text">God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega</h5>
+                            <h5 class="card-title">
+                                God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega
+                            </h5>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-3">
-                    <div class="card mb-2 shadow-sm">
-                        <img class="card-img-top" src="{{asset('storage/img/astro.jpg')}}" alt="Card image cap">
+                <div class="col-lg-3">
+                    <div class="card">
+                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="card-body">
-                        <h5 class="card-text">God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega</h5>
+                            <h5 class="card-title">
+                                God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega
+                            </h5>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-5 p-lg-5 mx-auto my-3 text-center" >
-                    <a class="btn btn-outline-danger" href="{{route('subscribe')}}">Mais</a>
-                </div>
-
             </div>
-        </div>         
-    </div>
+        </div>
+
 
     <!--eventos-->
-
     <div id="eventos" class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto text-center border-bottom">
         <h1 class="display-5 mt-5">Eventos</h1>        
     </div>

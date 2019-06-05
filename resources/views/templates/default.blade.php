@@ -27,7 +27,7 @@
             padding-bottom: 10px;
             background: white;
             color: black;
-           
+          
         }
         .navbar-brand.changecolorlogo {
             height: auto;
@@ -48,8 +48,14 @@
         .h6{
             margin: 0 0 0;
         }
+        .card:hover{
+            -webkit-box-shadow: -1px 1px 15px -4px rgba(0,0,0,0.75);
+            -moz-box-shadow: -1px 1px 15px -4px rgba(0,0,0,0.75);
+            box-shadow: -1px 1px 15px -4px rgba(0,0,0,0.75);
+        }
 
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 </head>
 <body>
@@ -59,7 +65,7 @@
         @yield('content')
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
@@ -81,6 +87,21 @@
                 }
             });
         });
+
+        $(document).ready(function(){
+                $('.col-lg-3').hover(
+                    function(){
+                        $(this).animate({
+                            marginTop: "-=1%",
+                        },200);
+                    },
+                    function(){
+                        $(this).animate({
+                            marginTop: "0%"
+                        },200);
+                    }
+                );
+            });
     </script>
 
 </body>
