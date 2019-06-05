@@ -12,9 +12,6 @@
 			</nav>
 			<form action="{{route('adm.posts.types.store')}}" method="post" class="pb-3 pt-3 bg-white px-3">
 				@csrf
-				<div class="form-group"> 
-				    <input type="hidden" class="form-control" id="post_type_id" name="post_type_id">
-				</div>
 				<div class="form-group">
 				    <label for="name">DESCRIÇÃO</label>   
 				    <input type="text" class="form-control" id="name" name="name" autofocus>

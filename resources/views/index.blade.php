@@ -63,7 +63,7 @@
 
     <div class="container pt-5">
             <div class="row">
-                <div class="col-lg-3">
+                <div class="col-lg-3 py-2">
                     <div class="card">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="card-body">
@@ -73,7 +73,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 py-2">
                     <div class="card">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="card-body">
@@ -83,7 +83,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 py-2">
                     <div class="card">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="card-body">
@@ -93,7 +93,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-lg-3 py-2">
                     <div class="card">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="card-body">
