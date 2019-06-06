@@ -65,7 +65,12 @@
             <div class="row">
                 <div class="col-lg-3 py-2">
                     <div class="card">
-                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
+                        <div class="hoverzoom">
+                            <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
+                            <div class="retina text-right">
+                                <button type="submit" class="btn btn-light">icone</button>
+                            </div>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">
                                 God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega
@@ -75,7 +80,12 @@
                 </div>
                 <div class="col-lg-3 py-2">
                     <div class="card">
-                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
+                        <div class="hoverzoom">
+                            <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
+                            <div class="retina text-right">
+                                <button type="submit" class="btn btn-light">icone</button>
+                            </div>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">
                                 God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega
@@ -85,7 +95,12 @@
                 </div>
                 <div class="col-lg-3 py-2">
                     <div class="card">
-                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
+                        <div class="hoverzoom">
+                            <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
+                            <div class="retina text-right">
+                                <button type="submit" class="btn btn-light">icone</button>
+                            </div>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">
                                 God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega
@@ -95,7 +110,12 @@
                 </div>
                 <div class="col-lg-3 py-2">
                     <div class="card">
-                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
+                        <div class="hoverzoom">
+                            <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
+                            <div class="retina text-right">
+                                <button type="submit" class="btn btn-light">icone</button>
+                            </div>
+                        </div>
                         <div class="card-body">
                             <h5 class="card-title">
                                 God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega

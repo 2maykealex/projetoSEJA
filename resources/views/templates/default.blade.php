@@ -48,10 +48,31 @@
         .h6{
             margin: 0 0 0;
         }
+
+        /* CARD */
         .card:hover{
             -webkit-box-shadow: -1px 1px 15px -4px rgba(0,0,0,0.75);
             -moz-box-shadow: -1px 1px 15px -4px rgba(0,0,0,0.75);
             box-shadow: -1px 1px 15px -4px rgba(0,0,0,0.75);
+        }
+        .hoverzoom {
+            position: relative;
+            overflow: hidden;
+        }        
+        .hoverzoom .retina{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            opacity: 0;    
+            background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);    
+
+        }
+        .card:hover .hoverzoom .retina {
+            opacity: 1;
+            box-shadow: inset 0 0 100px 50px rgba(0,0,0,.5);
+            
         }
 
     </style>
