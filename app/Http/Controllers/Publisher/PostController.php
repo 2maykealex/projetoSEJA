@@ -33,8 +33,10 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request)
     {
+        $type = $request->segments()[1];
+        $postType = app()->call('App\Http\Controllers\SiteFunction@checkPostType', [$type]);
         $publisher = auth()->user()->person;
         $publisher_id = auth()->user()->person->publisher->id;
         $reportTypes = ReportType::with(['publisherReport' => function($q) use($publisher_id) {
@@ -43,7 +45,7 @@ class PostController extends Controller
         ->get();
 
         $subscriptionTypes = SubscriptionType::orderby('id')->get();
-        return view('publisher.post.new', compact('subscriptionTypes', 'reportTypes', 'publisher'));
+        return view('publisher.post.new', compact('subscriptionTypes', 'reportTypes', 'publisher', 'postType'));
     }
 
     /**
