@@ -5,17 +5,19 @@ namespace App\Http\Controllers\Site;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\User;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
-use App\Models\UserProfile;
 use App\Models\State;
 use App\Models\City;
+use App\Models\Post;
+use App\Models\Publisher;
 
 class SiteController extends Controller
 {
     public function index(){
-        return view('index');
+        $publishers = Publisher::orderby('id')->get();
+        $events = Post::where('post_type_id', '3')->orderby('id', 'desc')->get();
+        return view('index', compact('events', 'publishers'));
     }
 
     public function contact(){
