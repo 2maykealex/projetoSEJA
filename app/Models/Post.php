@@ -64,4 +64,8 @@ class Post extends Model
             'message' => 'Não foi possível atualizar este cadastro. Verifique!'
         ];
     }
+
+    public function author(){
+        return $this->belongsTo(Person::class, 'person_id');
+    }
 }
