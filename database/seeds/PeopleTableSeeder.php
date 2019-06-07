@@ -20,7 +20,7 @@ class PeopleTableSeeder extends Seeder
             'zipcode' => '76804',
             'address' => 'rua jaci paraná',
             'city_id' => 1,
-            'image' => '',
+            'image' => '001.jpeg',
         ]);
     }
 }

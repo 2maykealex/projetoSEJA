@@ -14,7 +14,7 @@ class PostsTableSeeder extends Seeder
     {
         Post::create([
             'subscription_type_id'=> 1,
-            'publisher_id'=> 1,
+            'person_id'=> 1,
             'report_type_id'=> 1,
             'post_type_id'=> 1,
             'title'     => 'Uma linda Mulher',
@@ -25,7 +25,7 @@ class PostsTableSeeder extends Seeder
 
         Post::create([
             'subscription_type_id'=> 2,
-            'publisher_id'=> 1,
+            'person_id'=> 1,
             'report_type_id'=> 2,
             'post_type_id'=> 1,
             'title'     => 'Os Vingadores - O Ultimato',

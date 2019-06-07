@@ -19,8 +19,8 @@ class CreatePostsTable extends Migration
             $table->integer('subscription_type_id')->unsigned();
             $table->foreign('subscription_type_id')->references('id')->on('subscription_types');
 
-            $table->integer('publisher_id')->unsigned();
-            $table->foreign('publisher_id')->references('id')->on('publishers');
+            $table->integer('person_id')->unsigned();
+            $table->foreign('person_id')->references('id')->on('people');
 
             $table->integer('report_type_id')->unsigned();
             $table->foreign('report_type_id')->references('id')->on('report_types');
