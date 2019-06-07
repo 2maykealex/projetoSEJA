@@ -13,13 +13,13 @@ class Post extends Model
     }
 
     public function newPost($dados):Array {
-        $publisher = auth()->user()->person->publisher;
+        $person = auth()->user()->person;
         $this->title    = $dados['title'];
         $this->summary  = $dados['summary'];
         $this->text     = $dados['text'];
         $this->image    = $dados['image'];
         $this->subscription_type_id    = $dados['subscription_type_id'];
-        $this->publisher_id    = $publisher->id;
+        $this->person_id       = $person->id;
         $this->report_type_id  = $dados['report_type_id'];
         $this->post_type_id    = $dados['post_type_id'];
 
@@ -39,7 +39,7 @@ class Post extends Model
     }
 
     public function updatePost($dados):Array {
-        $publisher = auth()->user()->person->publisher;
+        $person = auth()->user()->person;
         $this->title    = $dados['title'];
         $this->summary  = $dados['summary'];
         $this->text     = $dados['text'];
@@ -48,7 +48,7 @@ class Post extends Model
             $this->image    = $dados['image'];
         }
         $this->subscription_type_id    = $dados['subscription_type_id'];
-        $this->publisher_id    = $publisher->id;
+        $this->person_id    = $person->id;
 
         $save = $this->save();
 
