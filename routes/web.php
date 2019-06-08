@@ -77,6 +77,26 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
         });
     });
 
+    Route::group(['prefix' => 'events'], function () {
+        Route::get('list', 'PostController@index')->name("adm.events.list");
+        Route::get('new', 'PostController@create')->name("adm.events.new");
+        Route::get('show/{id}', 'PostController@show')->name("adm.events.show");
+        Route::get('edit/{id}', 'PostController@edit')->name("adm.events.edit");
+        Route::get('delete/{id}', 'PostController@destroy')->name("adm.events.delete");
+        Route::post('update/{id}', 'PostController@update')->name("adm.events.update");
+        Route::post('store', 'PostController@store')->name("adm.events.store");
+    });
+
+    Route::group(['prefix' => 'congresses'], function () {
+        Route::get('list', 'PostController@index')->name("adm.congresses.list");
+        Route::get('new', 'PostController@create')->name("adm.congresses.new");
+        Route::get('show/{id}', 'PostController@show')->name("adm.congresses.show");
+        Route::get('edit/{id}', 'PostController@edit')->name("adm.congresses.edit");
+        Route::get('delete/{id}', 'PostController@destroy')->name("adm.congresses.delete");
+        Route::post('update/{id}', 'PostController@update')->name("adm.congresses.update");
+        Route::post('store', 'PostController@store')->name("adm.congresses.store");
+    });
+
     Route::get('', 'AdmController@index')->name("adm.home");
     Route::get('new', 'AdmController@create')->name("adm.new");
     Route::post('new-save', 'AdmController@store')->name("adm.store");
@@ -86,29 +106,6 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
 });
 
 Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Publisher', 'prefix' => 'publisher'], function () {
-
-    Route::group(['prefix' => 'congresses'], function () {
-        Route::get('list', 'CongressController@index')->name("publisher.congresses.list");
-        Route::get('new', 'CongressController@create')->name("publisher.congresses.new");
-        Route::get('subscribe', 'CongressController@subscribe')->name("publisher.congresses.subscribe");
-        Route::get('show/{id}', 'CongressController@show')->name("publisher.congresses.show");
-        Route::get('edit/{id}', 'CongressController@edit')->name("publisher.congresses.edit");
-        Route::get('delete/{id}', 'CongressController@destroy')->name("publisher.congresses.delete");
-        Route::post('update/{id}', 'CongressController@update')->name("publisher.congresses.update");
-        Route::post('store', 'CongressController@store')->name("publisher.congresses.store");
-    });
-
-    Route::group(['prefix' => 'events'], function () {
-        Route::get('list', 'EventController@index')->name("publisher.events.list");
-        Route::get('new', 'EventController@create')->name("publisher.events.new");
-        Route::get('subscribe', 'EventController@subscribe')->name("publisher.events.subscribe");
-        Route::get('show/{id}', 'EventController@show')->name("publisher.events.show");
-        Route::get('edit/{id}', 'EventController@edit')->name("publisher.events.edit");
-        Route::get('delete/{id}', 'EventController@destroy')->name("publisher.events.delete");
-        Route::post('update/{id}', 'EventController@update')->name("publisher.events.update");
-        Route::post('store', 'EventController@store')->name("publisher.events.store");
-    });
-
     Route::group(['prefix' => 'posts'], function () {
         Route::get('list', 'PostController@index')->name("publisher.posts.list");
         Route::get('new', 'PostController@create')->name("publisher.posts.new");
@@ -119,6 +116,16 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Publisher',
         Route::post('store', 'PostController@store')->name("publisher.posts.store");
     });
 
+    Route::group(['prefix' => 'congresses'], function () {
+        Route::get('list', 'PostController@index')->name("publisher.congresses.list");
+        Route::get('show/{id}', 'PostController@show')->name("publisher.congresses.show");
+    });
+
+    Route::group(['prefix' => 'events'], function () {
+        Route::get('list', 'PostController@index')->name("publisher.events.list");
+        Route::get('show/{id}', 'PostController@show')->name("publisher.events.show");
+    });
+    
     Route::get('', 'PublisherController@index')->name("publisher.home");
     Route::get('edit/{id}', 'PublisherController@edit')->name("publisher.edit");
     Route::post('update/{id}', 'PublisherController@update')->name("publisher.update");
