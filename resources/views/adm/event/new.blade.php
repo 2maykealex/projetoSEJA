@@ -10,7 +10,7 @@
 	       	<nav class="navbar navbar-expand-lg">
 		  		<h2>NOVO EVENTO</h2>
 			</nav>
-			<form action="{{route('publisher.events.store')}}" method="post" class="pb-3 pt-3 bg-white px-3" enctype="multipart/form-data">
+			<form action="{{route('adm.events.store')}}" method="post" class="pb-3 pt-3 bg-white px-3" enctype="multipart/form-data">
 				@csrf
 				<div class="form-group"> 
 				    <input type="hidden" class="form-control" id="post_type_id" name="post_type_id">
@@ -64,7 +64,7 @@
 				</div>
 			</form>  
 			<div class="text-center mt-4 ">
-				<a class="btn btn-secondary btn-sm" href="{{route('publisher.posts.list')}}">Voltar</a>
+				<a class="btn btn-secondary btn-sm" href="{{route('adm.posts.list')}}">Voltar</a>
 			</div>
 		</div>              
 	</div>

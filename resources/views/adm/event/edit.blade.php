@@ -10,7 +10,7 @@
 	       	<nav class="navbar navbar-expand-lg">
 		  		<h2>EDITAR EVENTOS</h2>
 			</nav>
-			<form action="{{route('publisher.events.update', $->id)}}" method="post" class="pb-3 pt-3 bg-white px-3" enctype="multipart/form-data">
+			<form action="{{route('adm.events.update', $->id)}}" method="post" class="pb-3 pt-3 bg-white px-3" enctype="multipart/form-data">
 				@csrf
 				<div class="form-group"> 
 				    <input type="hidden" class="form-control" id="id" name="id" value="{{$event->id}}">
@@ -68,7 +68,7 @@
 				</div>
 			</form>  
 			<div class="text-center mt-4 ">
-				<a class="btn btn-secondary btn-sm" href="{{route('publisher.events.list')}}">Voltar</a>
+				<a class="btn btn-secondary btn-sm" href="{{route('adm.events.list')}}">Voltar</a>
 			</div>
 		</div>              
 	</div>

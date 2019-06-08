@@ -68,12 +68,12 @@
 		            </div>
 		       	</div>
 		    	<div class="clearfix">
-				  	<a class="btn btn-warning float-left" href="{{route('publisher.congresses.edit', [$congress->id])}}" >Alterar</a>
-				  	<a class="btn btn-danger float-right" href="{{route('publisher.congresses.delete', [$congress->id])}}" >Deletar</a>
+				  	<a class="btn btn-warning float-left" href="{{route('adm.congresses.edit', [$congress->id])}}" >Alterar</a>
+				  	<a class="btn btn-danger float-right" href="{{route('adm.congresses.delete', [$congress->id])}}" >Deletar</a>
 				</div>
 			</form>  
 			<div class="text-center mt-4 ">
-				<a class="btn btn-secondary btn-sm" href="{{route('publisher.congresses.list')}}">Voltar</a>
+				<a class="btn btn-secondary btn-sm" href="{{route('adm.congresses.list')}}">Voltar</a>
 			</div> 
 		</div>             
 	</div>
