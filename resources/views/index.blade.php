@@ -24,7 +24,7 @@
                             <a class="nav-link h6" href="#eventos">Eventos</a>
                         </li>
                         <li class="nav-item mr-5">
-                            <a class="nav-link h6" href="#assinantes">Assinantes</a>
+                            <a class="nav-link h6" href="#assinantes">Assinaturas</a>
                         </li>
                         <li class="nav-item mr-5">
                             <a class="nav-link h6" href="#">Atendimentos</a>
