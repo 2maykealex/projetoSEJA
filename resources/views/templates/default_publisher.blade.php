@@ -174,7 +174,6 @@
                             </button>
                             <div class="collapse mt-1" id="menuEventos">
                                 <div class="nav flex-column border">
-                                    <a class="nav-link text-light " href="{{route('publisher.events.new')}}" >Novo</a>
                                     <a class="nav-link text-light" href="{{route('publisher.events.list')}}">Listagem</a>
                                 </div>
                             </div>
@@ -192,7 +191,6 @@
                             </button>
                             <div class="collapse mt-1" id="menuCongressos">
                                 <div class="nav flex-column border">
-                                    <a class="nav-link text-light" href="{{route('publisher.congresses.new')}}" >Novo</a>
                                     <a class="nav-link text-light" href="{{route('publisher.congresses.list')}}">Listagem</a>
                                 </div>
                             </div>
