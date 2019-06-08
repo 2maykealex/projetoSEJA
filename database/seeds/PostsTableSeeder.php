@@ -14,9 +14,9 @@ class PostsTableSeeder extends Seeder
     {
         Post::create([
             'subscription_type_id'=> 1,
-            'person_id'=> 1,
+            'person_id'=> 2,
             'report_type_id'=> 1,
-            'post_type_id'=> 1,
+            'post_type_id'=> 3,
             'title'     => 'Uma linda Mulher',
             'summary' => 'Durante uma viagem de negócios a Los Angeles, Edward...',
             'text' => 'Sempre haverá aqueles filmes que, sempre que você assistir, você vai sentir uma sensação estranhamente mágica...',

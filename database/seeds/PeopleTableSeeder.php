@@ -22,5 +22,16 @@ class PeopleTableSeeder extends Seeder
             'city_id' => 1,
             'image' => '001.jpeg',
         ]);
+
+        Person::create([
+            'user_id' => 1,
+            'name' => 'ADM',
+            'cpf' => '22222222223',
+            'telephone' => '6999249',
+            'zipcode' => '76804',
+            'address' => 'rua jaci paraná',
+            'city_id' => 1,
+            'image' => '001.jpeg',
+        ]);
     }
 }
