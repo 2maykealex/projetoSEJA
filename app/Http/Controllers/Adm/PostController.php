@@ -20,8 +20,9 @@ class PostController extends Controller
         $type = $request->segments()[1];
         $postType = app()->call('App\Http\Controllers\SiteFunction@checkPostType', [$type]);
         $person_id = auth()->user()->person->id;
-        $posts = Post::where('person_id', $person_id)->where('post_type_id', $postType)->where('deleted', 0)->orderby('id', 'desc')->get();
-        return view('adm.post.index', compact('posts'));
+        $posts = Post::where('person_id', $person_id)->where('post_type_id', $postType->id)->where('deleted', 0)->orderby('id', 'desc')->get();
+        $route = "adm.$postType->name_singular.index";
+        return view($route, compact('posts'));
     }
 
     /**
