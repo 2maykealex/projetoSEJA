@@ -14,18 +14,22 @@ class PostTypesTableSeeder extends Seeder
     {
         PostType::create([
             'name' => 'congresses',
+            'name_singular' => 'congress',
         ]);
 
         PostType::create([
             'name' => 'courses',
+            'name_singular' => 'course',
         ]);
 
         PostType::create([
             'name' => 'events',
+            'name_singular' => 'event',
         ]);
 
         PostType::create([
             'name' => 'posts',
+            'name_singular' => 'post',
         ]);
     }
 }
