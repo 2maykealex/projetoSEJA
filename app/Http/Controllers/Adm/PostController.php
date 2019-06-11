@@ -34,15 +34,16 @@ class PostController extends Controller
     {
         $type = $request->segments()[1];
         $postType = app()->call('App\Http\Controllers\SiteFunction@checkPostType', [$type]);
-        $publisher = auth()->user()->person;
-        $publisher_id = auth()->user()->person->publisher->id;
-        $reportTypes = ReportType::with(['publisherReport' => function($q) use($publisher_id) {
-            $q->where('publisher_id', $publisher_id);
+        $person = auth()->user()->person;
+        $person_id = auth()->user()->person->id;
+        $reportTypes = ReportType::with(['publisherReport' => function($q) use($person_id) {
+            $q->where('person_id', $person_id);
         }])
         ->get();
 
         $subscriptionTypes = SubscriptionType::orderby('id')->get();
-        return view('publisher.post.new', compact('subscriptionTypes', 'reportTypes', 'publisher', 'postType'));
+        $route = "adm.$postType->name_singular.new";
+        return view($route, compact('subscriptionTypes', 'reportTypes', 'publisher', 'postType'));
     }
 
     /**
@@ -80,13 +81,16 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($id, Request $request)
     {
+        $type = $request->segments()[1];
+        $postType = app()->call('App\Http\Controllers\SiteFunction@checkPostType', [$type]);
         $publisher = auth()->user()->person;
         $post = Post::where('id', $id)->get()->first();
         $reportType = ReportType::where('id', $post->report_type_id)->get()->first();
         $subscriptionType = SubscriptionType::where('id', $post->subscription_type_id)->orderby('id')->get()->first();
-        return view('publisher.post.show', compact('post', 'subscriptionType', 'publisher', 'reportType'));
+        $route = "adm.$postType->name_singular.new";
+        return view($route, compact('post', 'subscriptionType', 'publisher', 'reportType'));
     }
 
     /**
@@ -95,8 +99,10 @@ class PostController extends Controller
      * @param  \App\Models\Post  $post
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($id, Request $request)
     {
+        $type = $request->segments()[1];
+        $postType = app()->call('App\Http\Controllers\SiteFunction@checkPostType', [$type]);
         $publisher = auth()->user()->person;
         $publisher_id = $publisher->publisher->id;
         $reportTypes = ReportType::with(['publisherReport' => function($q) use($publisher_id) {
@@ -107,7 +113,7 @@ class PostController extends Controller
         $post = Post::where('id', $id)->get()->first();
         $subscriptionTypes = SubscriptionType::orderby('id')->get();
 
-        return view('publisher.post.edit', compact('post', 'subscriptionTypes', 'publisher', 'reportTypes'));
+        return view('adm.con.edit', compact('post', 'subscriptionTypes', 'publisher', 'reportTypes'));
     }
 
     /**
