@@ -15,14 +15,11 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(Request $request)
+    public function index()
     {
-        $type = $request->segments()[1];
-        $postType = app()->call('App\Http\Controllers\SiteFunction@checkPostType', [$type]);
         $person_id = auth()->user()->person->id;
-        $posts = Post::where('person_id', $person_id)->where('post_type_id', $postType->id)->where('deleted', 0)->orderby('id', 'desc')->get();
-        $route = "adm.$postType->name_singular.index";
-        return view($route, compact('posts'));
+        $posts = Post::where('person_id', $person_id)->where('deleted', 0)->orderby('id', 'desc')->get();
+        return view('adm.post.index', compact('posts'));
     }
 
     /**
@@ -42,8 +39,7 @@ class PostController extends Controller
         ->get();
 
         $subscriptionTypes = SubscriptionType::orderby('id')->get();
-        $route = "adm.$postType->name_singular.new";
-        return view($route, compact('subscriptionTypes', 'reportTypes', 'publisher', 'postType'));
+        return view('adm.post.new', compact('subscriptionTypes', 'reportTypes', 'publisher', 'postType'));
     }
 
     /**
@@ -89,8 +85,8 @@ class PostController extends Controller
         $post = Post::where('id', $id)->get()->first();
         $reportType = ReportType::where('id', $post->report_type_id)->get()->first();
         $subscriptionType = SubscriptionType::where('id', $post->subscription_type_id)->orderby('id')->get()->first();
-        $route = "adm.$postType->name_singular.new";
-        return view($route, compact('post', 'subscriptionType', 'publisher', 'reportType'));
+
+        return view('adm.post.show', compact('post', 'subscriptionType', 'publisher', 'reportType'));
     }
 
     /**

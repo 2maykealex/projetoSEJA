@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePostsTable extends Migration
+class CreateEventsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('events', function (Blueprint $table) {
             $table->increments('id');
 
             $table->integer('subscription_type_id')->unsigned();
@@ -22,14 +22,11 @@ class CreatePostsTable extends Migration
             $table->integer('person_id')->unsigned();
             $table->foreign('person_id')->references('id')->on('people');
 
-            $table->integer('report_type_id')->unsigned();
-            $table->foreign('report_type_id')->references('id')->on('report_types');
-
             $table->string('title', 80);
             $table->string('summary', 80);
             $table->string('text');
             $table->string('image');
-            
+
             $table->boolean('deleted')->default(false);
             $table->timestamps();
         });
@@ -42,6 +39,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('events');
     }
 }

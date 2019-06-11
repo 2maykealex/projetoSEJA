@@ -3,14 +3,10 @@
 namespace App\Http\Controllers\Publisher;
 
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\SiteFunction;
 use Illuminate\Http\Request;
 use App\Models\Post;
-use App\Models\Publisher;
 use App\Models\SubscriptionType;
-use App\Models\PublisherReport;
 use App\Models\ReportType;
-use App\Models\PostType;
 
 class PostController extends Controller
 {
@@ -21,10 +17,8 @@ class PostController extends Controller
      */
     public function index(Request $request)
     {
-        $type = $request->segments()[1];
-        $postType = app()->call('App\Http\Controllers\SiteFunction@checkPostType', [$type]);
         $person_id = auth()->user()->person->id;
-        $posts = Post::where('person_id', $person_id)->where('post_type_id', $postType)->where('deleted', 0)->orderby('id', 'desc')->get();
+        $posts = Post::where('person_id', $person_id)->where('deleted', 0)->orderby('id', 'desc')->get();
         return view('publisher.post.index', compact('posts'));
     }
 

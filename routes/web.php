@@ -78,23 +78,23 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
     });
 
     Route::group(['prefix' => 'events'], function () {
-        Route::get('list', 'PostController@index')->name("adm.events.list");
-        Route::get('new', 'PostController@create')->name("adm.events.new");
-        Route::get('show/{id}', 'PostController@show')->name("adm.events.show");
-        Route::get('edit/{id}', 'PostController@edit')->name("adm.events.edit");
-        Route::get('delete/{id}', 'PostController@destroy')->name("adm.events.delete");
-        Route::post('update/{id}', 'PostController@update')->name("adm.events.update");
-        Route::post('store', 'PostController@store')->name("adm.events.store");
+        Route::get('list', 'EventController@index')->name("adm.events.list");
+        Route::get('new', 'EventController@create')->name("adm.events.new");
+        Route::get('show/{id}', 'EventController@show')->name("adm.events.show");
+        Route::get('edit/{id}', 'EventController@edit')->name("adm.events.edit");
+        Route::get('delete/{id}', 'EventController@destroy')->name("adm.events.delete");
+        Route::post('update/{id}', 'EventController@update')->name("adm.events.update");
+        Route::post('store', 'EventController@store')->name("adm.events.store");
     });
 
     Route::group(['prefix' => 'congresses'], function () {
-        Route::get('list', 'PostController@index')->name("adm.congresses.list");
-        Route::get('new', 'PostController@create')->name("adm.congresses.new");
-        Route::get('show/{id}', 'PostController@show')->name("adm.congresses.show");
-        Route::get('edit/{id}', 'PostController@edit')->name("adm.congresses.edit");
-        Route::get('delete/{id}', 'PostController@destroy')->name("adm.congresses.delete");
-        Route::post('update/{id}', 'PostController@update')->name("adm.congresses.update");
-        Route::post('store', 'PostController@store')->name("adm.congresses.store");
+        Route::get('list', 'CongressController@index')->name("adm.congresses.list");
+        Route::get('new', 'CongressController@create')->name("adm.congresses.new");
+        Route::get('show/{id}', 'CongressController@show')->name("adm.congresses.show");
+        Route::get('edit/{id}', 'CongressController@edit')->name("adm.congresses.edit");
+        Route::get('delete/{id}', 'CongressController@destroy')->name("adm.congresses.delete");
+        Route::post('update/{id}', 'CongressController@update')->name("adm.congresses.update");
+        Route::post('store', 'CongressController@store')->name("adm.congresses.store");
     });
 
     Route::get('', 'AdmController@index')->name("adm.home");

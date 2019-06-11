@@ -9,14 +9,14 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 use App\Models\State;
 use App\Models\City;
-use App\Models\Post;
 use App\Models\Publisher;
+use Illuminate\Console\Scheduling\Event;
 
 class SiteController extends Controller
 {
     public function index(){
         $publishers = Publisher::orderby('id')->get();
-        $events = Post::where('post_type_id', '3')->orderby('id', 'desc')->get();
+        $events = Event::orderby('id', 'desc')->get();
         return view('index', compact('events', 'publishers'));
     }
 
