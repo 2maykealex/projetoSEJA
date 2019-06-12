@@ -56,4 +56,8 @@ class Congress extends Model
             'message' => 'Não foi possível atualizar este Congresso. Verifique!'
         ];
     }
+
+    public function author(){
+        return $this->belongsTo(Person::class, 'person_id');
+    }
 }
