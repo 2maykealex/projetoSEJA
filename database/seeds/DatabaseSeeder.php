@@ -29,5 +29,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ReportTypesTableSeeder::class);
         $this->call(PublisherReportsTableSeeder::class);
         $this->call(PostsTableSeeder::class);
+        $this->call(EventsTableSeeder::class);
     }
 }
