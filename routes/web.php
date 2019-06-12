@@ -117,8 +117,8 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Publisher',
     });
 
     Route::group(['prefix' => 'congresses'], function () {
-        Route::get('list', 'PostController@index')->name("publisher.congresses.list");
-        Route::get('show/{id}', 'PostController@show')->name("publisher.congresses.show");
+        Route::get('list', 'CongressController@index')->name("publisher.congresses.list");
+        Route::get('show/{id}', 'CongressController@show')->name("publisher.congresses.show");
     });
 
     Route::group(['prefix' => 'events'], function () {
