@@ -122,8 +122,8 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Publisher',
     });
 
     Route::group(['prefix' => 'events'], function () {
-        Route::get('list', 'PostController@index')->name("publisher.events.list");
-        Route::get('show/{id}', 'PostController@show')->name("publisher.events.show");
+        Route::get('list', 'EventController@index')->name("publisher.events.list");
+        Route::get('show/{id}', 'EventController@show')->name("publisher.events.show");
     });
     
     Route::get('', 'PublisherController@index')->name("publisher.home");
