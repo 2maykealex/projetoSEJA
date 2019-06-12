@@ -44,7 +44,7 @@
     </header>
 
     <!--inicio-->
-    <div id="inicio">
+    <!--<div id="inicio">
         <div class="position-relative overflow-hidden p-3 p-md-5 text-center fundo-escuro">
             <div class="col-md-5 p-lg-5 mx-auto my-5" >
                 <h1 class="display-4 font-weight-normal text-white">ALMA</h1>
@@ -54,16 +54,35 @@
             <div class="product-device shadow-sm d-none d-md-block"></div>
             <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
         </div>
+    </div>-->
+
+
+    <div id="inicio">
+        <div class="overlay"></div>
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+            <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
+        </video>
+        <div class="container h-100">
+            <div class="position-relative overflow-hidden p-3 p-md-5 text-center">
+                <div class="col-md-5 p-lg-5 mx-auto my-5" >
+                    <h1 class="display-4 font-weight-normal text-white">ALMA</h1>
+                    <p class="lead font-weight-normal text-white">Text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. . </p>
+                    <a class="btn btn-outline-light" href="{{route('subscribe')}}">Partícipe nosso projeto</a>
+                </div>
+                <div class="product-device shadow-sm d-none d-md-block"></div>
+                <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+            </div>
+        </div>
     </div>
 
     <!--publicações-->
-    <div id="publicacao" class="pricing-header container border-bottom py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <div id="publicacao" class="pricing-header container py-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h1 class="display-5 mt-5">Conteúdo</h1>
     </div>
 
     <div class="container">
         <div class="carousel">         
-            <div class="alto col-lg-3">
+            <div class="alto col-lg-12">
                 <div class="card">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
@@ -86,7 +105,7 @@
                     </div>
                 </div>
             </div>
-            <div class="alto col-lg-3">
+            <div class="alto col-lg-12">
                 <div class="card">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
@@ -109,7 +128,7 @@
                     </div>
                 </div>
             </div>
-            <div class="alto col-lg-3">
+            <div class="alto col-lg-12">
                 <div class="card">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
@@ -132,7 +151,7 @@
                     </div>
                 </div>
             </div>
-            <div class="alto col-lg-3">
+            <div class="alto col-lg-12">
                 <div class="card">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
@@ -155,7 +174,7 @@
                     </div>
                 </div>
             </div>
-            <div class="alto col-lg-3">
+            <div class="alto col-lg-12">
                 <div class="card">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
@@ -178,7 +197,7 @@
                     </div>
                 </div>
             </div>
-            <div class="alto col-lg-3">
+            <div class="alto col-lg-12">
                 <div class="card">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
@@ -201,7 +220,7 @@
                     </div>
                 </div>
             </div>
-            <div class="alto col-lg-3">
+            <div class="alto col-lg-12">
                 <div class="card">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">

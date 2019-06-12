@@ -14,7 +14,7 @@
 
     <style>
         #inicio {
-            background: url("{{url('storage/img/astro.jpg')}}") no-repeat center center fixed;
+            /*background: url("{{url('https://www.youtube.com/watch?v=WU944Mgs4E4')}}") no-repeat center center fixed;*/
             display: table;
             height: 100%;
             position: relative;
@@ -136,6 +136,56 @@
             right: 10px;
         }
 
+
+        /*tratando video*/
+        #inicio {
+            position: relative;
+            background-color: black;
+            height: 100vh;
+            min-height: 25rem;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        #inicio video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+        }
+
+        #inicio .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        #inicio .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: black;
+            opacity: 0.5;
+            z-index: 1;
+        }
+
+        @media (pointer: coarse) and (hover: none) {
+            #inicio {
+                background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+            }
+            #inicio video {
+                display: none;
+            }
+        }
     </style>
     
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
