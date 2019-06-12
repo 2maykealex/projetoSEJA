@@ -166,8 +166,8 @@
                             </button>
                             <div class="collapse mt-1" id="menuEventos">
                                 <div class="nav flex-column border">
-                                    <a class="nav-link text-light " href="#" >Novo</a>
-                                    <a class="nav-link text-light" href="#">Listagem</a>
+                                    <a class="nav-link text-light " href="{{route('adm.events.types.new')}}" >Novo</a>
+                                    <a class="nav-link text-light" href="{{route('adm.events.types.list')}}">Listagem</a>
                                 </div>
                             </div>
                         </li>
@@ -176,18 +176,18 @@
                         <li class="nav-item">
                             <button class="btn btn-dark btn-block text-left mt-1" type="button" data-toggle="collapse" data-target="#menuCongressos" aria-controls="menuCongressos" aria-expanded="false" aria-label="Alterna navegação">
                                 <div  class="clearfix">
-                                    <div  class="float-left">
+                                    <div class="float-left">
                                         Congressos  
                                     </div>
-                                    <div class="float-right" >
+                                    <div class="float-right">
                                         
                                     </div>
                                 </div> 
                             </button>
                             <div class="collapse mt-1" id="menuCongressos">
                                 <div class="nav flex-column border">
-                                    <a class="nav-link text-light" href="#" >Novo</a>
-                                    <a class="nav-link text-light" href="#">Listagem</a>
+                                    <a class="nav-link text-light" href="{{route('adm.congresses.types.new')}}" >Novo</a>
+                                    <a class="nav-link text-light" href="{{route('adm.congresses.types.list')}}">Listagem</a>
                                 </div>
                             </div>
                         </li>

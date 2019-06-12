@@ -13,7 +13,7 @@
 			<form action="{{route('publisher.congresses.update', $congress->id)}}" method="post" class="pb-3 pt-3 bg-white px-3" enctype="multipart/form-data">
 				@csrf
 				<div class="form-group"> 
-				    <input type="hidden" class="form-control" id="id" name="id" value="{{$congress->id}}">
+				    <input type="hidden" class="form-control" id="post_type_id" name="id" value="{{$congress->post_type_id}}">
 				</div>
 				<div class="form-group">
 				    <label for="title">TÍTULO</label>   

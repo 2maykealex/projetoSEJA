@@ -8,6 +8,10 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+    <!--Links Slick-->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css">
+
     <style>
         #inicio {
             background: url("{{url('storage/img/astro.jpg')}}") no-repeat center center fixed;
@@ -20,6 +24,7 @@
         .fundo-escuro{
             background-color: rgba(0,0,0,.3) !important;
         }
+
 
         /* NAVBAR - links do menu */
         .navbar.compressed {
@@ -49,13 +54,21 @@
             margin: 0 0 0;
         }
 
+
         /* CARD */
-        .card:hover{
-            -webkit-box-shadow: -1px 1px 15px -4px rgba(0,0,0,0.75);
-            -moz-box-shadow: -1px 1px 15px -4px rgba(0,0,0,0.75);
-            box-shadow: -1px 1px 15px -4px rgba(0,0,0,0.75);
-        }
         .hoverzoom {
+            position: relative;
+            overflow: hidden;
+        }        
+        .card:hover{
+                -webkit-box-shadow: -1px 1px 10px -6px rgba(0,0,0,0.5);
+                -moz-box-shadow: -1px 1px 10px -6px rgba(0,0,0,0.5);
+                box-shadow: -1px 1px 10px -6px rgba(0,0,0,0.5);    
+        }
+        .card-body{
+            padding: 12px;
+        }
+       .hoverzoom {
             position: relative;
             overflow: hidden;
         }        
@@ -67,16 +80,67 @@
             left: 0;
             opacity: 0;    
             background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);    
-
         }
         .card:hover .hoverzoom .retina {
             opacity: 1;
-            box-shadow: inset 0 0 100px 50px rgba(0,0,0,.5);
-            
+            box-shadow: inset 0 0 100px 50px rgba(0,0,0,.5);          
+        }
+
+
+        /*Carousel*/
+        .slick-arrow {
+            color: #555;
+            position: absolute;
+            width: 52px;
+            height: 52px;
+            background: #fff;
+            border-radius: 100%;
+            box-shadow: 0 4px 12px rgba(0,0,0,.45);
+            z-index: 3;
+        }
+        .slick-arrow:hover{
+            background: #fff;
+        }
+        .slick-next{
+            right: 10px;
+        }
+        .slick-prev{
+            left: 10px;
+        }
+        .slick-next::before{
+            content: ">";
+            color: black;
+        }
+        .slick-prev::before {
+            content: "<";
+            color: black;
+        }
+
+        .carousel-button {
+            color: #555;
+            position: absolute;
+            top: 32px;
+            width: 52px;
+            height: 52px;
+            background: #fff;
+            border-radius: 100%;
+            box-shadow: 0 4px 12px rgba(0,0,0,.45);
+            z-index: 3;
+            text-align: center;
+            transition: all .3s ease;
+        }
+        .carousel-button-next{
+            right: 10px;
+        }
+        .carousel-button-prev{
+            right: 10px;
         }
 
     </style>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.js"></script>
 
 </head>
 <body>
@@ -87,13 +151,9 @@
     </div>
 
    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
-    
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script type="text/javascript">
+
+        /*Script para o Navbar*/
         $(document).ready(function() {
             $(window).on('scroll', function() {
                 if ($(window).scrollTop() >= 20) {
@@ -109,21 +169,70 @@
             });
         });
 
+
+        /*Script para o Carousel*/
+        $('.carousel').slick({
+            infinite: false,
+            speed: 500,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            centerMode: false,
+            focusOnSelect: false,
+            dots: true,
+            responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+
+        /*Script para destacar o Card*/
         $(document).ready(function(){
-                $('.col-lg-3').hover(
-                    function(){
-                        $(this).animate({
-                            marginTop: "-=1%",
-                        },200);
-                    },
-                    function(){
-                        $(this).animate({
-                            marginTop: "0%"
-                        },200);
-                    }
-                );
-            });
+            $('.alto').hover(
+                function(){
+                    $(this).animate({
+                        marginTop: "-=10px",
+                    },200);
+                },
+                function(){
+                    $(this).animate({
+                        marginTop: "0%"
+                    },200);
+                }
+            );
+        });
+
+
     </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 </body>
 </html>
