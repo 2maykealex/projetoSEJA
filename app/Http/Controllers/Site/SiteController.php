@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\State;
 use App\Models\City;
 use App\Models\Publisher;
-use Illuminate\Console\Scheduling\Event;
+use App\Models\Event;
 
 class SiteController extends Controller
 {
