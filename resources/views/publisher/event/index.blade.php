@@ -26,7 +26,6 @@
 			                <td>{{$event->title}}</td>
 			                <td class="actions text-center">	                        
 		                		<a class="btn btn-success btn-sm button-width" href="{{route('publisher.events.show', $event->id)}}">Visualizar</a>
-	                        	<a class="btn btn-warning btn-sm button-width" href="{{route('publisher.events.edit', $event->id)}}">Editar</a>                
 			                 </td>
 		                </tr>
 		            @endforeach   
