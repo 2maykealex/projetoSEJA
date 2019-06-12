@@ -56,4 +56,8 @@ class Event extends Model
             'message' => 'Não foi possível atualizar este evento. Verifique!'
         ];
     }
+    
+    public function author(){
+        return $this->belongsTo(Person::class, 'person_id');
+    }
 }
