@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Publisher;
 use App\Models\Event;
 use App\Models\SubscriptionType;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
 class EventController extends Controller
 {
@@ -16,8 +15,9 @@ class EventController extends Controller
      */
     public function index()
     {
-        $publisher_id = auth()->user()->person->publisher->id;
-        $events = Event::where('publisher_id',$publisher_id)->orderby('id', 'desc')->get();
+        $person = auth()->user()->person;
+        $person_id = $person->id;
+        $events = Event::where('person_id', $person_id)->orderby('id', 'desc')->get();
         return view('publisher.event.index', compact('events'));
     }
 
