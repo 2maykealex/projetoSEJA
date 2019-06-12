@@ -16,21 +16,9 @@ class CongressController extends Controller
      */
     public function index()
     {
-        $publisher_id = auth()->user()->person->publisher->id;
-        $congresses = Congress::where('publisher_id',$publisher_id)->orderby('id', 'desc')->get();
+        $person_id = auth()->user()->person->id;
+        $congresses = Congress::where('person_id', $person_id)->orderby('id', 'desc')->get();
         return view('publisher.congress.index', compact('congresses'));
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        $publisher = auth()->user()->person;
-        $subscriptionTypes = SubscriptionType::orderby('id')->get();
-        return view('publisher.congress.new', compact('subscriptionTypes','publisher'));
     }
 
     public function show($id)
