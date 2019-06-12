@@ -147,7 +147,7 @@
                             <button class="btn btn-dark btn-block text-left mt-1" type="button" data-toggle="collapse" data-target="#menuPublicacao" aria-controls="menuPublicacao" aria-expanded="false" aria-label="Alterna navegação">
                                 <div  class="clearfix">
                                     <div  class="float-left">
-                                     Publicações
+                                        Publicações
                                     </div>
                                     <div class="float-right" >
                                         

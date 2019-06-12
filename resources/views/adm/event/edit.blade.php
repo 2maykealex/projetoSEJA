@@ -15,6 +15,10 @@
 				<div class="form-group"> 
 				    <input type="hidden" class="form-control" id="id" name="id" value="{{$event->id}}">
 				</div>
+				<div class="form-group"> 
+					<label for="title">TÍTULO</label>   
+				    <input type="text" class="form-control" id="post_type_id" name="post_type_id" value="{{$event->post_type_id}}">
+				</div>
 				<div class="form-group">
 				    <label for="title">TÍTULO</label>   
 				    <input type="text" class="form-control" id="title" name="title" value="{{$event->title}}" autofocus>

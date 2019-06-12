@@ -61,70 +61,171 @@
         <h1 class="display-5 mt-5">Conteúdo</h1>
     </div>
 
-    <div class="container pt-5">
-            <div class="row">
-                <div class="col-lg-3 py-2">
-                    <div class="card">
-                        <div class="hoverzoom">
-                            <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
-                            <div class="retina text-right">
-                                <button type="submit" class="btn btn-light">icone</button>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega
-                            </h5>
+    <div class="container">
+        <div class="carousel">         
+            <div class="alto col-lg-3">
+                <div class="card">
+                    <div class="hoverzoom">
+                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
+                        <div class="retina text-right">
+                            <button type="submit" class="btn btn-light">icone</button>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-3 py-2">
-                    <div class="card">
-                        <div class="hoverzoom">
-                            <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
-                            <div class="retina text-right">
-                                <button type="submit" class="btn btn-light">icone</button>
-                            </div>
+                    <div class="row no-gutters px-3 pb-3">
+                        <div class="pt-3" style="width: 3em;">
+                            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="40" height="40">
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega
-                            </h5>
-                        </div>
+                        <div class="card-body" style="width: 9em;">                      
+                            <a class="card-title h6" href="#">
+                                God of War é uma série de jogos eletrônicos
+                            </a>
+                        </div>      
+                        <div class="text-right col-lg-12">
+                            <small class="text-muted">Por Fulano em 10/10/2010</small>
+                        </div>            
                     </div>
                 </div>
-                <div class="col-lg-3 py-2">
-                    <div class="card">
-                        <div class="hoverzoom">
-                            <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
-                            <div class="retina text-right">
-                                <button type="submit" class="btn btn-light">icone</button>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega
-                            </h5>
+            </div>
+            <div class="alto col-lg-3">
+                <div class="card">
+                    <div class="hoverzoom">
+                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
+                        <div class="retina text-right">
+                            <button type="submit" class="btn btn-light">icone</button>
                         </div>
                     </div>
+                    <div class="row no-gutters px-3 pb-3">
+                        <div class="pt-3" style="width: 3em;">
+                            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="40" height="40">
+                        </div>
+                        <div class="card-body" style="width: 9em;">                      
+                            <a class="card-title h6" href="#">
+                                God of War é uma série de jogos eletrônicos
+                            </a>
+                        </div>      
+                        <div class="text-right col-lg-12">
+                            <small class="text-muted">Por Fulano em 10/10/2010</small>
+                        </div>            
+                    </div>
                 </div>
-                <div class="col-lg-3 py-2">
-                    <div class="card">
-                        <div class="hoverzoom">
-                            <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
-                            <div class="retina text-right">
-                                <button type="submit" class="btn btn-light">icone</button>
-                            </div>
+            </div>
+            <div class="alto col-lg-3">
+                <div class="card">
+                    <div class="hoverzoom">
+                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
+                        <div class="retina text-right">
+                            <button type="submit" class="btn btn-light">icone</button>
                         </div>
-                        <div class="card-body">
-                            <h5 class="card-title">
-                                God of War é uma série de jogos eletrônicos de ação-aventura vagamente baseado nas mitologias grega
-                            </h5>
+                    </div>
+                    <div class="row no-gutters px-3 pb-3">
+                        <div class="pt-3" style="width: 3em;">
+                            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="40" height="40">
                         </div>
+                        <div class="card-body" style="width: 9em;">                      
+                            <a class="card-title h6" href="#">
+                                God of War é uma série de jogos eletrônicos
+                            </a>
+                        </div>      
+                        <div class="text-right col-lg-12">
+                            <small class="text-muted">Por Fulano em 10/10/2010</small>
+                        </div>            
+                    </div>
+                </div>
+            </div>
+            <div class="alto col-lg-3">
+                <div class="card">
+                    <div class="hoverzoom">
+                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
+                        <div class="retina text-right">
+                            <button type="submit" class="btn btn-light">icone</button>
+                        </div>
+                    </div>
+                    <div class="row no-gutters px-3 pb-3">
+                        <div class="pt-3" style="width: 3em;">
+                            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="40" height="40">
+                        </div>
+                        <div class="card-body" style="width: 9em;">                      
+                            <a class="card-title h6" href="#">
+                                God of War é uma série de jogos eletrônicos
+                            </a>
+                        </div>      
+                        <div class="text-right col-lg-12">
+                            <small class="text-muted">Por Fulano em 10/10/2010</small>
+                        </div>            
+                    </div>
+                </div>
+            </div>
+            <div class="alto col-lg-3">
+                <div class="card">
+                    <div class="hoverzoom">
+                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
+                        <div class="retina text-right">
+                            <button type="submit" class="btn btn-light">icone</button>
+                        </div>
+                    </div>
+                    <div class="row no-gutters px-3 pb-3">
+                        <div class="pt-3" style="width: 3em;">
+                            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="40" height="40">
+                        </div>
+                        <div class="card-body" style="width: 9em;">                      
+                            <a class="card-title h6" href="#">
+                                God of War é uma série de jogos eletrônicos
+                            </a>
+                        </div>      
+                        <div class="text-right col-lg-12">
+                            <small class="text-muted">Por Fulano em 10/10/2010</small>
+                        </div>            
+                    </div>
+                </div>
+            </div>
+            <div class="alto col-lg-3">
+                <div class="card">
+                    <div class="hoverzoom">
+                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
+                        <div class="retina text-right">
+                            <button type="submit" class="btn btn-light">icone</button>
+                        </div>
+                    </div>
+                    <div class="row no-gutters px-3 pb-3">
+                        <div class="pt-3" style="width: 3em;">
+                            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="40" height="40">
+                        </div>
+                        <div class="card-body" style="width: 9em;">                      
+                            <a class="card-title h6" href="#">
+                                God of War é uma série de jogos eletrônicos
+                            </a>
+                        </div>      
+                        <div class="text-right col-lg-12">
+                            <small class="text-muted">Por Fulano em 10/10/2010</small>
+                        </div>            
+                    </div>
+                </div>
+            </div>
+            <div class="alto col-lg-3">
+                <div class="card">
+                    <div class="hoverzoom">
+                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
+                        <div class="retina text-right">
+                            <button type="submit" class="btn btn-light">icone</button>
+                        </div>
+                    </div>
+                    <div class="row no-gutters px-3 pb-3">
+                        <div class="pt-3" style="width: 3em;">
+                            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="40" height="40">
+                        </div>
+                        <div class="card-body" style="width: 9em;">                      
+                            <a class="card-title h6" href="#">
+                                God of War é uma série de jogos eletrônicos
+                            </a>
+                        </div>      
+                        <div class="text-right col-lg-12">
+                            <small class="text-muted">Por Fulano em 10/10/2010</small>
+                        </div>            
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 
 
     <!--eventos-->
