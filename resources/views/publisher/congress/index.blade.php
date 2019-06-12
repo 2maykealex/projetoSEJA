@@ -26,7 +26,6 @@
 			                <td>{{$congress->title}}</td>
 			                <td class="actions text-center">	                        
 		                		<a class="btn btn-success btn-sm button-width" href="{{route('publisher.congresses.show', $congress->id)}}">Visualizar</a>
-	                        	<a class="btn btn-warning btn-sm button-width" href="{{route('publisher.congresses.edit', $congress->id)}}">Editar</a>                
 			                 </td>
 		                </tr>
 		            @endforeach   
