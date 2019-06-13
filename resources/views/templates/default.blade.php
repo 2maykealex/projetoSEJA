@@ -71,9 +71,9 @@
             overflow: hidden;
         }        
         .card:hover{
-                -webkit-box-shadow: -1px 1px 10px -6px rgba(0,0,0,0.5);
-                -moz-box-shadow: -1px 1px 10px -6px rgba(0,0,0,0.5);
-                box-shadow: -1px 1px 10px -6px rgba(0,0,0,0.5);    
+            -webkit-box-shadow: -1px 1px 10px -6px rgba(0,0,0,0.5);
+            -moz-box-shadow: -1px 1px 10px -6px rgba(0,0,0,0.5);
+            box-shadow: -1px 1px 10px -6px rgba(0,0,0,0.5);    
         }
         .card-body{
             padding: 12px;
@@ -93,7 +93,9 @@
         }
         .card:hover .hoverzoom .retina {
             opacity: 1;
-            box-shadow: inset 0 0 100px 50px rgba(0,0,0,.5);          
+            box-shadow: inset 0 0 100px 50px rgba(0,0,0,.5);        
+            border-top-left-radius: 0.25rem;
+            border-top-right-radius: 0.25rem;  
         }
 
 

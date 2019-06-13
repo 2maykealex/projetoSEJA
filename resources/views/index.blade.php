@@ -84,7 +84,7 @@
         <div class="carousel">
             @foreach($events as $event)         
             <div class="alto col-lg-12">
-                <div class="card">
+                <div class="card mt-3">
                     <div class="hoverzoom">
                         <img src="{{ asset('storage/img/events/' . $event->image)}}" alt="lobos" class="card-img-top">
                         <div class="retina text-right">
@@ -106,7 +106,7 @@
             </div>
             @endforeach
             <div class="alto col-lg-12">
-                <div class="card">
+                <div class="card mt-3">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="retina text-right">
@@ -129,7 +129,7 @@
                 </div>
             </div>
             <div class="alto col-lg-12">
-                <div class="card">
+                <div class="card mt-3">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="retina text-right">
@@ -152,7 +152,7 @@
                 </div>
             </div>
             <div class="alto col-lg-12">
-                <div class="card">
+                <div class="card mt-3">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="retina text-right">
@@ -175,7 +175,7 @@
                 </div>
             </div>
             <div class="alto col-lg-12">
-                <div class="card">
+                <div class="card mt-3">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="retina text-right">
@@ -198,7 +198,7 @@
                 </div>
             </div>
             <div class="alto col-lg-12">
-                <div class="card">
+                <div class="card mt-3">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="retina text-right">
@@ -221,7 +221,7 @@
                 </div>
             </div>
             <div class="alto col-lg-12">
-                <div class="card">
+                <div class="card mt-3">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="retina text-right">
