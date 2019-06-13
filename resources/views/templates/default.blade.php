@@ -236,6 +236,8 @@
         });
 
 
+
+
         /*Script para o Carousel*/
         $('.carousel').slick({
             infinite: false,
@@ -243,8 +245,8 @@
             slidesToShow: 4,
             slidesToScroll: 1,
             centerMode: false,
-            focusOnSelect: false,
             dots: true,
+
             responsive: [
                 {
                   breakpoint: 1024,
@@ -273,6 +275,7 @@
                 // settings: "unslick"
                 // instead of a settings object
             ]
+
         });
 
         /*Script para destacar o Card*/

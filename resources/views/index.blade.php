@@ -80,7 +80,7 @@
         <h1 class="display-5 mt-5">Conteúdo</h1>
     </div>
 
-    <div class="container">
+    <div class="container-fluid">
         <div class="carousel">
             @foreach($events as $event)         
             <div class="alto col-lg-12">
