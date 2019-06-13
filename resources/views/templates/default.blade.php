@@ -27,6 +27,7 @@
 
 
         /* NAVBAR - links do menu */
+
         .navbar.compressed {
             padding-top: 10px;
             padding-bottom: 10px;
@@ -53,9 +54,18 @@
         .h6{
             margin: 0 0 0;
         }
+        .navbar-dark .navbar-nav .nav-link:hover {
+            color: white;
+        }
+        .navbar-dark .navbar-toggler {
+            background-color: darkcyan;
+        }
 
 
         /* CARD */
+        .card{
+            height: 18em;
+        }
         .hoverzoom {
             position: relative;
             overflow: hidden;
@@ -97,6 +107,7 @@
             border-radius: 100%;
             box-shadow: 0 4px 12px rgba(0,0,0,.45);
             z-index: 3;
+
         }
         .slick-arrow:hover{
             background: #fff;
@@ -106,6 +117,9 @@
         }
         .slick-prev{
             left: 10px;
+        }
+        .slick-next::before, .slick-prev::before{
+            font-family: 'Franklin Gothic Medium', Arial, sans-serif;
         }
         .slick-next::before{
             content: ">";

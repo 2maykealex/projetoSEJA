@@ -14,7 +14,7 @@
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <!--<a class="navbar-brand text-center mr-5" href="#">Logotipo</a>-->
+                <!--<a class="navbar-brand text-center mr-5" href="#"><img src="{{url('storage/img/seja.jpg')}}" alt="logo do site" width="30px" ></a>-->
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item mr-5">
@@ -81,30 +81,30 @@
     </div>
 
     <div class="container">
-        <div class="carousel">         
+        <div class="carousel">
+            @foreach($events as $event)         
             <div class="alto col-lg-12">
                 <div class="card">
                     <div class="hoverzoom">
-                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
+                        <img src="{{ asset('storage/img/events/' . $event->image)}}" alt="lobos" class="card-img-top">
                         <div class="retina text-right">
                             <button type="submit" class="btn btn-light">icone</button>
                         </div>
                     </div>
                     <div class="row no-gutters px-3 pb-3">
                         <div class="pt-3" style="width: 3em;">
-                            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="40" height="40">
+                            <img class="rounded-circle" src="{{ asset('storage/img/profiles/' . $event->author->image)}}" width="40" height="40">
                         </div>
                         <div class="card-body" style="width: 9em;">                      
-                            <a class="card-title h6" href="#">
-                                God of War é uma série de jogos eletrônicos
-                            </a>
+                            <a class="card-title h6" href="#">{{$event->summary}}</a>
                         </div>      
                         <div class="text-right col-lg-12">
-                            <small class="text-muted">Por Fulano em 10/10/2010</small>
+                            <small class="text-muted">Por {{$event->author->name}} em {{date('d/m/Y', strtotime($event->created_at))}}</small>
                         </div>            
                     </div>
                 </div>
             </div>
+            @endforeach
             <div class="alto col-lg-12">
                 <div class="card">
                     <div class="hoverzoom">
