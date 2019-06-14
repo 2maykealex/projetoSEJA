@@ -271,21 +271,72 @@
     <!--assinantes-->
 
     <div id="assinantes" class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto text-center border-top">
-        <h1 class="display-5 mt-5">Assinantes</h1>        
+        <h1 class="display-5 mt-5">Planos</h1>        
     </div>
-    <main role="main" class="container border-top text-center">
-        <div class="d-flex justify-content-center flex-lg-center">
-            <div class="col-md-9">
-                <div class="blog-main py-4">
-                    
-                    <div class="lead">
-                        Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
-                        Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
+    <div class="container">
+        <div class="row">
+                <div class="card-deck mb-3 text-center col-md-4">
+                    <div class="card mb-4 shadow-sm bg-dark text-white">
+                        <div class="card-header border-bottom">
+                            <h4 class="my-0 font-weight-normal">Loren ipsun</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$ 0 <small class="text-muted">/ mês</small></h1>
+                            <div class="col-md-12 mt-2 text-left">
+                                <small class="text-muted h6">Inclui:</small>
+                            </div>
+                            <ul class="mb-4 text-left">
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                            </ul>
+                            <a class="btn btn-md btn-block btn-danger" href="#">Ver mais</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>                
-    </main>
+                <div class="card-deck mb-3 text-center col-md-4">
+                    <div class="card mb-4 shadow-sm bg-dark text-white">
+                        <div class="card-header border-bottom">
+                            <h4 class="my-0 font-weight-normal">Loren ipsun</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$ 0 <small class="text-muted">/ mês</small></h1>
+                            <div class="col-md-12 mt-2 text-left">
+                                <small class="text-muted h6">Inclui:</small>
+                            </div>
+                            <ul class="mb-4 text-left">
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                            </ul>
+                            <a class="btn btn-md btn-block btn-danger" href="#">Ver mais</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-deck mb-3 text-center col-md-4">
+                    <div class="card mb-4 shadow-sm bg-dark text-white">
+                        <div class="card-header border-bottom">
+                            <h4 class="my-0 font-weight-normal">Loren ipsun</h4>
+                        </div>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">$ 0 <small class="text-muted">/ mês</small></h1>
+                            <div class="col-md-12 mt-2 text-left">
+                                <small class="text-muted h6">Inclui:</small>
+                            </div>
+                            <ul class="mb-4 text-left">
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                                <li>Lorem ipsum dolor sit amet</li>
+                            </ul>
+                            <a class="btn btn-md btn-block btn-danger" href="#">Ver mais</a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </div>
 
     <!--sobre nós -->
     

@@ -63,7 +63,7 @@
 
 
         /* CARD */
-        .card{
+        .carousel .card{
             height: 18em;
         }
         .hoverzoom {
