@@ -140,3 +140,9 @@ Route::post('login-validate', 'Site\SiteController@validateLogin')->name("site.l
 Route::post('subscriber/store', 'Subscriber\SubscriberController@store')->name("subscriber.store");
 Route::get('logout', 'Auth\LoginController@logout')->name('site.logout');
 Route::get('/', 'Site\SiteController@index');
+
+
+Route::get('/cc', function() {
+    Artisan::call('cache:clear');
+    return "Cache is cleared";
+});
