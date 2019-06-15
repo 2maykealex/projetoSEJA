@@ -1,4 +1,4 @@
-@extends('templates.default_publisher')
+@extends('templates.default_adm')
 
 @section('title')
 
@@ -37,34 +37,20 @@
 		      		</select>	
 		    	</div>
 		    	<div class="form-group">
-				    <label for="image">IMAGEM</label>   
+					<label for="image">IMAGEM</label>
 				    <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
 				</div>
 				<div class="form-group">
 				    <label>ANEXOS</label>   
 				    <input type="text" class="form-control" placeholder="#" >
 				</div>
-				<div class="form-group">
-				    <label>ESCRITO POR</label>
-		            <div class="row no-gutters bg-light py-3 px-3">
-		                <div class="col-lg-1 text-center">
-		                    <img class="rounded-circle" src="{{ asset('storage/img/profiles/' . $publisher->image)}}" width="50" height="50">
-		                </div>
-		                <table class="col-lg-2 text-center" style=" height: 50px;">
-		                	<tbody>
-		                		<tr>
-		                			<td class="align-middle h5">{{$publisher->name}}</td>
-		                		</tr>
-		                	</tbody>
-		                </table>	                
-		            </div>
-		       	</div>
+				
 		    	<div class="clearfix">
 				  	<button type="submit" class="btn btn-primary float-left">Criar</button>
 				</div>
 			</form>  
 			<div class="text-center mt-4 ">
-				<a class="btn btn-secondary btn-sm" href="{{route('adm.posts.list')}}">Voltar</a>
+				<a class="btn btn-secondary btn-sm" href="{{route('adm.events.list')}}">Voltar</a>
 			</div>
 		</div>              
 	</div>
