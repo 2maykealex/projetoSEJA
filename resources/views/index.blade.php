@@ -76,11 +76,11 @@
     </div>
 
     <!--publicações-->
-    <div id="publicacao" class="pricing-header container py-3 pt-md-5 pb-md-4 mx-auto text-center">
+    <div id="publicacao" class="pricing-header container py-3 pt-md-5 pb-md-4 mx-auto">
         <h1 class="display-5 mt-5">Conteúdo</h1>
     </div>
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="carousel">
             @foreach($events as $event)         
             <div class="alto col-lg-12">
@@ -248,7 +248,7 @@
 
 
     <!--eventos-->
-    <div id="eventos" class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto text-center border-bottom">
+    <div id="eventos" class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto">
         <h1 class="display-5 mt-5">Eventos</h1>        
     </div>
     <div class="container py-5">
@@ -270,77 +270,80 @@
     
     <!--assinantes-->
 
-    <div id="assinantes" class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto text-center border-top">
+    <div id="assinantes" class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto">
         <h1 class="display-5 mt-5">Planos</h1>        
     </div>
     <div class="container">
         <div class="row">
-                <div class="card-deck mb-3 text-center col-md-4">
-                    <div class="card mb-4 shadow-sm bg-dark text-white">
-                        <div class="card-header border-bottom">
-                            <h4 class="my-0 font-weight-normal">Loren ipsun</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$ 0 <small class="text-muted">/ mês</small></h1>
-                            <div class="col-md-12 mt-2 text-left">
-                                <small class="text-muted h6">Inclui:</small>
+            <div class="d-flex col-sm-12 justify-content-center flex-lg-center shadow rounded py-5">        
+                    <div class="card-deck text-center col-md-4">
+                        <div class="card shadow-sm bg-dark text-white">
+                            <div class="card-header border-bottom">
+                                <h4 class="my-0 font-weight-normal">Loren ipsun</h4>
                             </div>
-                            <ul class="mb-4 text-left">
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                            </ul>
-                            <a class="btn btn-md btn-block btn-danger" href="#">Ver mais</a>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$ 0 <small class="text-muted">/ mês</small></h1>
+                                <div class="col-md-12 mt-2 text-left">
+                                    <small class="text-muted h6">Inclui:</small>
+                                </div>
+                                <ul class="mb-4 text-left">
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                </ul>
+                                <a class="btn btn-md btn-block btn-danger" href="#">Ver mais</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-deck mb-3 text-center col-md-4">
-                    <div class="card mb-4 shadow-sm bg-dark text-white">
-                        <div class="card-header border-bottom">
-                            <h4 class="my-0 font-weight-normal">Loren ipsun</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$ 0 <small class="text-muted">/ mês</small></h1>
-                            <div class="col-md-12 mt-2 text-left">
-                                <small class="text-muted h6">Inclui:</small>
+                    <div class="card-deck text-center col-md-4">
+                        <div class="card shadow-sm bg-dark text-white">
+                            <div class="card-header border-bottom">
+                                <h4 class="my-0 font-weight-normal">Loren ipsun</h4>
                             </div>
-                            <ul class="mb-4 text-left">
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                            </ul>
-                            <a class="btn btn-md btn-block btn-danger" href="#">Ver mais</a>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$ 0 <small class="text-muted">/ mês</small></h1>
+                                <div class="col-md-12 mt-2 text-left">
+                                    <small class="text-muted h6">Inclui:</small>
+                                </div>
+                                <ul class="mb-4 text-left">
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                </ul>
+                                <a class="btn btn-md btn-block btn-danger" href="#">Ver mais</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="card-deck mb-3 text-center col-md-4">
-                    <div class="card mb-4 shadow-sm bg-dark text-white">
-                        <div class="card-header border-bottom">
-                            <h4 class="my-0 font-weight-normal">Loren ipsun</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">$ 0 <small class="text-muted">/ mês</small></h1>
-                            <div class="col-md-12 mt-2 text-left">
-                                <small class="text-muted h6">Inclui:</small>
+                    <div class="card-deck text-center col-md-4">
+                        <div class="card shadow-sm bg-dark text-white">
+                            <div class="card-header border-bottom">
+                                <h4 class="my-0 font-weight-normal">Loren ipsun</h4>
                             </div>
-                            <ul class="mb-4 text-left">
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                                <li>Lorem ipsum dolor sit amet</li>
-                            </ul>
-                            <a class="btn btn-md btn-block btn-danger" href="#">Ver mais</a>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$ 0 <small class="text-muted">/ mês</small></h1>
+                                <div class="col-md-12 mt-2 text-left">
+                                    <small class="text-muted h6">Inclui:</small>
+                                </div>
+                                <ul class="mb-4 text-left">
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                    <li>Lorem ipsum dolor sit amet</li>
+                                </ul>
+                                <a class="btn btn-md btn-block btn-danger" href="#">Ver mais</a>
+                            </div>
                         </div>
                     </div>
-                </div>
+
+            </div>
         </div>
     </div>
 
     <!--sobre nós -->
     
-    <div id="sobre" class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto text-center border-top">
+    <div id="sobre" class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto text-center">
         <h1 class="display-5 mt-5">Sobre nós</h1>        
     </div>
 
