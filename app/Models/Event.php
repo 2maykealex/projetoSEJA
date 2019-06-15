@@ -7,13 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Event extends Model
 {
     public function newEvent($dados):Array {
-        $publisher = auth()->user()->person->publisher;
+        $person_id = auth()->user()->person->id;
         $this->title    = $dados['title'];
         $this->summary  = $dados['summary'];
         $this->text     = $dados['text'];
         $this->image    = $dados['image'];
         $this->subscription_type_id    = $dados['subscription_type_id'];
-        $this->publisher_id    = $publisher->id;
+        $this->person_id = $person_id;
 
         $save = $this->save();
 
@@ -30,8 +30,8 @@ class Event extends Model
         ];
     }
 
-    public function updateCongress($dados):Array {
-        $publisher = auth()->user()->person->publisher;
+    public function updateEvent($dados):Array {
+        $person_id = auth()->user()->person->id;
         $this->title    = $dados['title'];
         $this->summary  = $dados['summary'];
         $this->text     = $dados['text'];
@@ -39,8 +39,8 @@ class Event extends Model
         if (isset($dados['image'])){
             $this->image    = $dados['image'];
         }
-        $this->subscription_type_id    = $dados['subscription_type_id'];
-        $this->publisher_id    = $publisher->id;
+        // $this->subscription_type_id    = $dados['subscription_type_id'];
+        $this->person_id    = $person_id;
 
         $save = $this->save();
 
