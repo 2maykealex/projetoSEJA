@@ -70,11 +70,11 @@
             position: relative;
             overflow: hidden;
         }        
-        .card:hover{
+        /*.card:hover{
             -webkit-box-shadow: -1px 1px 10px -6px rgba(0,0,0,0.5);
             -moz-box-shadow: -1px 1px 10px -6px rgba(0,0,0,0.5);
             box-shadow: -1px 1px 10px -6px rgba(0,0,0,0.5);    
-        }
+        }*/
         .card-body{
             padding: 12px;
         }
@@ -89,7 +89,7 @@
             top: 0;
             left: 0;
             opacity: 0;    
-            background: none repeat scroll 0 0 rgba(0, 0, 0, 0.5);    
+            background: none repeat scroll 0 0 ;    
         }
         .card:hover .hoverzoom .retina {
             opacity: 1;
@@ -112,7 +112,8 @@
 
         }
         .slick-arrow:hover{
-            background: #fff;
+            background: #f5f4f4;
+
         }
         .slick-next{
             right: 10px;
@@ -201,6 +202,34 @@
             #inicio video {
                 display: none;
             }
+        }
+
+        /*Sobre nós*/
+        .row .card {
+            border:0px;
+        }
+        .imgzoom {
+            position: relative;
+            overflow: hidden;
+        }
+        .imgzoom > img {
+            width: 100%; 
+            border-radius: 2px;
+            -webkit-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+                -moz-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+                 -ms-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+                  -o-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+                     transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
+            opacity: 0.5;
+        }
+        .imgzoom:hover > img {
+            -webkit-transform: scale(1.5);
+               -moz-transform: scale(1.5);
+                -ms-transform: scale(1.5);
+                 -o-transform: scale(1.5);
+                    transform: scale(1.5);
+            opacity: 1;
+
         }
     </style>
     

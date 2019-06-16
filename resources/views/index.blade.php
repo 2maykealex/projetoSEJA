@@ -18,6 +18,9 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item mr-5">
+                            <a class="nav-link h6" href="#sobre">Sobre nós</a>
+                        </li>
+                        <li class="nav-item mr-5">
                             <a class="nav-link h6" href="#publicacao">Conteúdo</a>
                         </li>
                         <li class="nav-item mr-5">
@@ -28,9 +31,6 @@
                         </li>
                         <li class="nav-item mr-5">
                             <a class="nav-link h6" href="#">Atendimentos</a>
-                        </li>
-                        <li class="nav-item mr-5">
-                            <a class="nav-link h6" href="#sobre">Sobre nós</a>
                         </li>
                     </ul>
                      <ul class="navbar-nav">
@@ -54,6 +54,7 @@
             <div class="product-device shadow-sm d-none d-md-block"></div>
             <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
         </div>
+        <div class="d-flex justify-content-center flex-lg-center">
     </div>-->
 
 
@@ -75,16 +76,77 @@
         </div>
     </div>
 
-    <!--publicações-->
-    <div id="publicacao" class="pricing-header container py-3 pt-md-5 pb-md-4 mx-auto">
-        <h1 class="display-5 mt-5">Conteúdo</h1>
+<!--sobre nós -->
+    
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="blog-main px-5 py-5">
+                    <h1>Quem somos</h1>
+                    <div class="lead mt-4">
+                        Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
+                    </div>
+                </div>
+            </div>
+            <div class="row col-md-6 py-5">
+
+                <div class="col-md-6">
+                    <div class="card text-white imgzoom">
+                        <img class="card-img mb-3 " src="{{asset('storage/img/astro.jpg')}}" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with .</p>
+                            <p class="card-text">Last updated 3 mins ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card text-white imgzoom">
+                        <img class="card-img mb-3 " src="{{asset('storage/img/astro.jpg')}}" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with .</p>
+                            <p class="card-text">Last updated 3 mins ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card text-white imgzoom">
+                        <img class="card-img mb-3 " src="{{asset('storage/img/astro.jpg')}}" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with .</p>
+                            <p class="card-text">Last updated 3 mins ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card text-white imgzoom">
+                        <img class="card-img mb-3 " src="{{asset('storage/img/astro.jpg')}}" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with .</p>
+                            <p class="card-text">Last updated 3 mins ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                
     </div>
 
-    <div class="container">
+
+    <!--publicações-->
+    <div class="container-fluid">
+        <div id="publicacao" class="pricing-header container py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-5">Conteúdo</h1>
+            <p class="mt-3 h3">Veja alguns dos conteúdos criados pelos nossos especialistas</p>
+        </div>
+
+    
         <div class="carousel">
             @foreach($events as $event)         
-            <div class="alto col-lg-12">
-                <div class="card mt-3">
+            <div class="alto col-lg-12 mb-2">
+                <div class="card my-3 shadow rounded">
                     <div class="hoverzoom">
                         <img src="{{ asset('storage/img/events/' . $event->image)}}" alt="lobos" class="card-img-top">
                         <div class="retina text-right">
@@ -105,8 +167,8 @@
                 </div>
             </div>
             @endforeach
-            <div class="alto col-lg-12">
-                <div class="card mt-3">
+            <div class="alto col-lg-12 mb-2">
+                <div class="card my-3 shadow rounded">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="retina text-right">
@@ -128,8 +190,8 @@
                     </div>
                 </div>
             </div>
-            <div class="alto col-lg-12">
-                <div class="card mt-3">
+            <div class="alto col-lg-12 mb-2">
+                <div class="card my-3 shadow rounded">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="retina text-right">
@@ -151,8 +213,8 @@
                     </div>
                 </div>
             </div>
-            <div class="alto col-lg-12">
-                <div class="card mt-3">
+            <div class="alto col-lg-12 mb-2">
+                <div class="card my-3 shadow rounded">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="retina text-right">
@@ -174,8 +236,8 @@
                     </div>
                 </div>
             </div>
-            <div class="alto col-lg-12">
-                <div class="card mt-3">
+            <div class="alto col-lg-12 mb-2">
+                <div class="card my-3 shadow  rounded">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="retina text-right">
@@ -197,8 +259,8 @@
                     </div>
                 </div>
             </div>
-            <div class="alto col-lg-12">
-                <div class="card mt-3">
+            <div class="alto col-lg-12 mb-2">
+                <div class="card my-3 shadow rounded">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="retina text-right">
@@ -220,8 +282,8 @@
                     </div>
                 </div>
             </div>
-            <div class="alto col-lg-12">
-                <div class="card mt-3">
+            <div class="alto col-lg-12 mb-2">
+                <div class="card my-3 shadow rounded">
                     <div class="hoverzoom">
                         <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
                         <div class="retina text-right">
@@ -248,10 +310,11 @@
 
 
     <!--eventos-->
-    <div id="eventos" class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto">
-        <h1 class="display-5 mt-5">Eventos</h1>        
-    </div>
-    <div class="container py-5">
+    <div class="container mb-5">
+        <div id="publicacao" class="pricing-header container pt-md-5 pb-md-4 mx-auto">
+            <h1 class="display-5">Eventos</h1>
+            <p class="mt-3 h3">Fique por dentro dos nossos últimos eventos</p>
+        </div>
         <div class="mb-3">
             <div class="row no-gutters">
                 <div class="col-md-4">
@@ -341,31 +404,6 @@
         </div>
     </div>
 
-    <!--sobre nós -->
-    
-    <div id="sobre" class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto text-center">
-        <h1 class="display-5 mt-5">Sobre nós</h1>        
-    </div>
-
-    <main role="main" class="container border-top text-center">
-        <div class="d-flex justify-content-center flex-lg-center">
-            <div class="col-md-9">
-                <div class="blog-main py-4">
-                    <h3>Empresa</h3>
-                    <div class="lead">
-                        Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
-                    </div>
-                </div>
-
-                <div class="blog-main py-1 mb-5">
-                    <h3>Equipe</h3>
-                    <div class="lead">
-                        <p class="blog-post-meta">Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
-                    </div>
-                </div>
-            </div>
-        </div>                
-    </main>
             
     <!-- Footer -->
     <footer class=" text-dark mt-5">
