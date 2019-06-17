@@ -24,7 +24,6 @@ class CongressController extends Controller
     public function show($id)
     {
         $congress = Congress::where('id', $id)->get()->first();
-        $subscriptionType = SubscriptionType::where('id', $congress->subscription_type_id)->orderby('id')->get()->first();
-        return view('publisher.congress.show', compact('congress', 'subscriptionType'));
+        return view('publisher.congress.show', compact('congress'));
     }
 }

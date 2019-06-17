@@ -56,21 +56,18 @@
 				    <label>ESCRITO POR</label>
 		            <div class="row no-gutters bg-light py-3 px-3">
 		                <div class="col-lg-1 text-center">
-		                    <img class="rounded-circle" src="{{ asset('storage/img/profiles/' . $publisher->image)}}" width="50" height="50">
+		                    <img class="rounded-circle" src="{{ asset('storage/img/profiles/' . $congress->author->image)}}" width="50" height="50">
 		                </div>
 		                <table class="col-lg-2 text-center" style=" height: 50px;">
 		                	<tbody>
 		                		<tr>
-		                			<td class="align-middle h5">{{$publisher->name}}</td>
+		                			<td class="align-middle h5">{{$congress->author->name}}</td>
 		                		</tr>
 		                	</tbody>
 		                </table>	                
 		            </div>
 		       	</div>
-		    	<div class="clearfix">
-				  	<a class="btn btn-warning float-left" href="{{route('publisher.congresses.edit', [$congress->id])}}" >Alterar</a>
-				  	<a class="btn btn-danger float-right" href="{{route('publisher.congresses.delete', [$congress->id])}}" >Deletar</a>
-				</div>
+		    	
 			</form>  
 			<div class="text-center mt-4 ">
 				<a class="btn btn-secondary btn-sm" href="{{route('publisher.congresses.list')}}">Voltar</a>
