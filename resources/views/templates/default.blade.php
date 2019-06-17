@@ -13,6 +13,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css">
 
     <style>
+
         #inicio {
             /*background: url("{{url('https://www.youtube.com/watch?v=WU944Mgs4E4')}}") no-repeat center center fixed;*/
             display: table;
@@ -70,11 +71,11 @@
             position: relative;
             overflow: hidden;
         }        
-        /*.card:hover{
-            -webkit-box-shadow: -1px 1px 10px -6px rgba(0,0,0,0.5);
-            -moz-box-shadow: -1px 1px 10px -6px rgba(0,0,0,0.5);
-            box-shadow: -1px 1px 10px -6px rgba(0,0,0,0.5);    
-        }*/
+        .card-deck .card:hover{
+            -webkit-box-shadow: -1px 1px 20px -6px rgba(0,0,0,0.5);
+            -moz-box-shadow: -1px 1px 20px -6px rgba(0,0,0,0.5);
+            box-shadow: -1px 1px 20px -6px rgba(0,0,0,0.5);    
+        }
         .card-body{
             padding: 12px;
         }
@@ -211,9 +212,12 @@
         .imgzoom {
             position: relative;
             overflow: hidden;
+            height: 15em;
+            margin-top: 15px;
         }
         .imgzoom > img {
-            width: 100%; 
+            width: 100%;
+            height: 15em; 
             border-radius: 2px;
             -webkit-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
                 -moz-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);

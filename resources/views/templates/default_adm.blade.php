@@ -117,6 +117,10 @@
         .bg-escuro{
             background-color: rgba(0,0,0,.3) !important;
         }
+        .btn-dark:hover{
+            background-color: white;
+            color: black;
+        }
     </style>
 
 </head>
