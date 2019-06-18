@@ -184,7 +184,6 @@
                             </button>
                             <div class="collapse mt-1" id="menuEventos">
                                 <div class="nav flex-column border">
-                                    <a class="nav-link text-light" href="{{route('publisher.events.list')}}">Listagem</a>
                                 </div>
                             </div>
                         </li>
