@@ -58,7 +58,7 @@
     </div>-->
 
 
-    <div id="inicio">
+    <div id="inicio" class="mb-5">
         <div class="overlay"></div>
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
             <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
@@ -78,7 +78,7 @@
 
 <!--sobre nós -->
     
-    <div class="container my-5">
+    <div class="container my-5" id="sobre">
         <div class="row">
             <div class="col-md-6">
                 <div class="blog-main px-5 py-5">
@@ -136,9 +136,9 @@
 
 
     <!--publicações-->
-    <div class="container-fluid">
-        <div id="publicacao" class="pricing-header container py-3 pt-md-5 pb-md-4 mx-auto text-center">
-            <h1 class="display-5">Conteúdo</h1>
+    <div class="container-fluid my-5" id="publicacao">
+        <div class="pricing-header container py-3 pt-md-5 pb-md-4 mx-auto text-center">
+            <h1 class="display-5 mt-5">Conteúdo</h1>
             <p class="mt-3 h3">Veja alguns dos conteúdos criados pelos nossos especialistas</p>
         </div>
 
@@ -310,9 +310,9 @@
 
 
     <!--eventos-->
-    <div class="container mb-5">
-        <div id="publicacao" class="pricing-header container pt-md-5 pb-md-4 mx-auto">
-            <h1 class="display-5">Eventos</h1>
+    <div class="container my-5" id="eventos">
+        <div class="pricing-header container pt-md-5 pb-md-4 mx-auto">
+            <h1 class="display-5 mt-5">Eventos</h1>
             <p class="mt-3 h3">Fique por dentro dos nossos últimos eventos</p>
         </div>
         <div class="mb-3">
@@ -332,8 +332,8 @@
     </div>
     
     <!--assinantes-->
-    <div class="container">
-        <div id="assinantes" class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto">
+    <div class="container my-5" id="assinantes">
+        <div class="container pricing-header px-3 pt-md-5 pb-md-4 mx-auto">
             <h1 class="display-5 mt-5">Planos</h1>        
         </div>
         <div class="card-deck text-center mb-3">
