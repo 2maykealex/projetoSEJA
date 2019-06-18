@@ -172,7 +172,7 @@
                             </div>
                         </li>
                         <li class="nav-item">
-                            <button class="btn btn-dark btn-block text-left mt-1" type="button" data-toggle="collapse" data-target="#menuEventos" aria-controls="menuEventos" aria-expanded="false" aria-label="Alterna navegação">
+                            <a class="btn btn-dark btn-block text-left mt-1" href="{{route('publisher.events.list')}}">
                                 <div  class="clearfix">
                                     <div  class="float-left">
                                         Eventos  
@@ -181,14 +181,10 @@
                                         
                                     </div>
                                 </div> 
-                            </button>
-                            <div class="collapse mt-1" id="menuEventos">
-                                <div class="nav flex-column border">
-                                </div>
-                            </div>
+                            </a>
                         </li>
                         <li class="nav-item">
-                            <button class="btn btn-dark btn-block text-left mt-1" type="button" data-toggle="collapse" data-target="#menuCongressos" aria-controls="menuCongressos" aria-expanded="false" aria-label="Alterna navegação">
+                            <a class="btn btn-dark btn-block text-left mt-1" href="{{route('publisher.congresses.list')}}">
                                 <div  class="clearfix">
                                     <div  class="float-left">
                                         Congressos  
@@ -197,12 +193,7 @@
                                         
                                     </div>
                                 </div> 
-                            </button>
-                            <div class="collapse mt-1" id="menuCongressos">
-                                <div class="nav flex-column border">
-                                    <a class="nav-link text-light" href="{{route('publisher.congresses.list')}}">Listagem</a>
-                                </div>
-                            </div>
+                            </a>
                         </li>
                     </ul>
                 </div>
