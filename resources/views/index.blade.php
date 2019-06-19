@@ -81,7 +81,7 @@
     <div class="container my-5" id="sobre">
         <div class="container pricing-header py-4 pt-md-5 pb-md-4 mx-auto">
             <h1 class="display-5 mt-5 mb-3">Sobre nós</h1>   
-            <div class="mb-5" style="border-bottom: 7px solid #00BFFF;
+            <div class="mb-2" style="border-bottom: 7px solid #00BFFF;
   width:40px;"></div>     
         </div>
         <div class="row">
@@ -141,10 +141,10 @@
 
 
     <!--publicações-->
-    <div class="container-fluid my-5" id="publicacao">
+    <div class="container-fluid my-5 bg-dark text-white" id="publicacao">
         <div class="pricing-header container py-4 pt-md-5 pb-md-4 mx-auto text-center">
             <h1 class="display-5 mt-5 mb-3">Conteúdo</h1>
-            <p class="mt-3 h3">Veja alguns dos conteúdos criados pelos nossos especialistas</p>
+            <p class="mb-5 h3">Veja alguns dos conteúdos criados pelos nossos especialistas</p>
         </div>
 
     
