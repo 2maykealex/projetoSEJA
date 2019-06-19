@@ -71,11 +71,6 @@
             position: relative;
             overflow: hidden;
         }        
-        .card-deck .card:hover{
-            -webkit-box-shadow: -1px 1px 20px -6px rgba(0,0,0,0.5);
-            -moz-box-shadow: -1px 1px 20px -6px rgba(0,0,0,0.5);
-            box-shadow: -1px 1px 20px -6px rgba(0,0,0,0.5);    
-        }
         .card-body{
             padding: 12px;
         }
@@ -224,7 +219,6 @@
                  -ms-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
                   -o-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
                      transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
-            opacity: 0.5;
         }
         .imgzoom:hover > img {
             -webkit-transform: scale(1.5);
@@ -232,9 +226,37 @@
                 -ms-transform: scale(1.5);
                  -o-transform: scale(1.5);
                     transform: scale(1.5);
-            opacity: 1;
-
+            opacity: 0.9;
         }
+
+        /* CARDS REFERENTES A PLANOS */
+        .card-header {
+            padding: .75rem 1.25rem;
+            margin-bottom: 0;
+            background-color: rgba(0,0,0,0); 
+            border-bottom: 1px solid rgba(0,0,0,0); 
+        }
+        .card-deck .card{
+            color: black;
+        }
+        .card-deck .card:hover{
+            color: white;  
+            background-color: #17a2b8;
+            border-color: #f8f9fa; 
+            -webkit-transition: 0.5s ease-in; 
+            -moz-transition: 0.3s ease-in;
+            -o-transition: 0.3s ease-in;
+            transition: 0.3s ease-in;
+        }
+        .card-deck .card:hover .btn-info{
+            color: #17a2b8;
+            background-color: #f8f9fa;
+            border-color: #f8f9fa;
+        }
+        .card-deck .card .btn-info:hover{
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+        }
+
     </style>
     
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
