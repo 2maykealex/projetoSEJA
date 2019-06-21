@@ -149,7 +149,7 @@
 
     
         <div class="carousel">
-            @foreach($events as $event)         
+            {{--@foreach($events as $event)         
             <div class="alto col-lg-12 mb-2">
                 <div class="card my-3 shadow rounded">
                     <div class="hoverzoom">
@@ -171,7 +171,7 @@
                     </div>
                 </div>
             </div>
-            @endforeach
+            @endforeach--}}
             <div class="alto col-lg-12 mb-2">
                 <div class="card my-3 shadow rounded">
                     <div class="hoverzoom">
@@ -316,6 +316,7 @@
 
     <!--eventos-->
     <div class="container my-5" id="eventos">
+        @foreach($events as $event)
         <div class="pricing-header container py-4 pt-md-5 pb-md-4 mx-auto">
             <h1 class="display-5 mt-5 mb-3">Eventos</h1>
             <div class="mb-5" style="border-bottom: 7px solid #00BFFF;
@@ -323,18 +324,21 @@
         </div>
         <div class="mb-3">
             <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src="{{asset('storage/img/astro.jpg')}}" class="card-img" alt="...">
+                <div class="col-md-5 shadow my-1">
+                    <img src="{{ asset('storage/img/events/' . $event->image)}}" class="card-img " alt="...">
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-7">
                     <div class="card-body">
-                        <h5 class="card-title">beatae vitae</h5>
-                        <p class="card-text">Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur</p>
-                        <p class="card-text"><small class="text-muted">minutes lorem ipsun 3 min</small></p>
+                        <h5 class="card-title pl-3">{{$event->title}}</h5>
+                        <p class="card-text pl-3">{{$event->text}}</p>
+                        
+                            <small class="text-muted position-date">Por {{$event->author->name}} em {{date('d/m/Y', strtotime($event->created_at))}}</small>
+                        
                     </div>
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
     
     <!--assinantes-->

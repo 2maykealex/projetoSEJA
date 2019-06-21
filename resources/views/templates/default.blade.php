@@ -257,6 +257,15 @@
             box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
         }
 
+        /* Events */
+        .position-date{
+            position: absolute;
+            width: 200px;
+            height: 20px;
+            bottom: 0px;
+            right: 0px;
+        }
+
     </style>
     
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
