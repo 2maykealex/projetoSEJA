@@ -13,7 +13,15 @@ class EventTypesTableSeeder extends Seeder
     public function run()
     {
         EventType::create([
-            'name'     => 'Constelações',
+            'name'     => 'Congresso',
+        ]);
+
+        EventType::create([
+            'name'     => 'On-line',
+        ]);
+
+        EventType::create([
+            'name'     => 'Normal',
         ]);
     }
 }
