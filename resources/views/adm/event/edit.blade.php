@@ -33,7 +33,7 @@
 						<option>Escolher</option>
 						@foreach ($subscriptionTypes as $subscriptionType)
 							<option value="{{$subscriptionType->id}}" 
-							@if ( isset($post) && $post->id == $subscriptionType->id ) selected @endif>{{$subscriptionType->name}}</option>
+							@if ( isset($event) && $event->subscription_type_id == $subscriptionType->id ) selected @endif>{{$subscriptionType->name}}</option>
 						@endforeach	        		
 						</select>	
 				</div>

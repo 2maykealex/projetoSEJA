@@ -41,7 +41,7 @@ class EventController extends Controller
             $nameFile  = "{$name}.{$extension}";
 
             $data['image'] = $nameFile;
-            $upload = $request->image->storeAs('img/posts', $nameFile);
+            $upload = $request->image->storeAs('img/events', $nameFile);
 
             if(!$upload)
                 return redirect()->back()->with('error', 'Falha ao enviar a imagem');
@@ -77,7 +77,7 @@ class EventController extends Controller
             $nameFile  = "{$name}.{$extension}";
 
             $data['image'] = $nameFile;
-            $upload = $request->image->storeAs('img/posts', $nameFile);
+            $upload = $request->image->storeAs('img/events', $nameFile);
 
             if(!$upload)
                 return redirect()->back()->with('error', 'Falha ao enviar a imagem');

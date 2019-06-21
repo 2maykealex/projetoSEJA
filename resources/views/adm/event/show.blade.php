@@ -40,7 +40,7 @@
 				</div>
 				<div class="form-group">
 				    <label>TIPO DE PÚBLICO</label>   
-				    <input type="text" class="form-control" placeholder="{{$event->name}}" disabled>
+				    <input type="text" class="form-control" placeholder="{{$subscriptionType->name}}" disabled>
 				</div>
 				<div class="form-group">
 				    <label>IMAGEM</label>   
