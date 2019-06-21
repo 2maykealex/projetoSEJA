@@ -97,6 +97,16 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Adm', 'pref
         Route::post('store', 'CongressController@store')->name("adm.congresses.store");
     });
 
+    Route::group(['prefix' => 'publishers'], function () {
+        Route::get('list', 'PublisherController@index')->name("adm.publishers.list");
+        Route::get('new', 'PublisherController@create')->name("adm.publishers.new");
+        Route::get('show/{id}', 'PublisherController@show')->name("adm.publishers.show");
+        Route::get('edit/{id}', 'PublisherController@edit')->name("adm.publishers.edit");
+        Route::get('delete/{id}', 'PublisherController@destroy')->name("adm.publishers.delete");
+        Route::post('update/{id}', 'PublisherController@update')->name("adm.publishers.update");
+        Route::post('store', 'PublisherController@store')->name("adm.publishers.store");
+    });
+
     Route::get('', 'AdmController@index')->name("adm.home");
     Route::get('new', 'AdmController@create')->name("adm.new");
     Route::post('new-save', 'AdmController@store')->name("adm.store");
