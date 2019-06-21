@@ -40,7 +40,7 @@
 				</div>
 				<div class="form-group">
 				    <label>TIPO DE PÚBLICO</label>   
-				    <input type="text" class="form-control" placeholder="{{$congress->name}}" disabled>
+				    <input type="text" class="form-control" placeholder="{{$subscriptionType->name}}" disabled>
 				</div>
 				<div class="form-group">
 				    <label>IMAGEM</label>   
@@ -56,12 +56,12 @@
 				    <label>ESCRITO POR</label>
 		            <div class="row no-gutters bg-light py-3 px-3">
 		                <div class="col-lg-1 text-center">
-		                    <img class="rounded-circle" src="{{ asset('storage/img/profiles/' . $publisher->image)}}" width="50" height="50">
+		                    <img class="rounded-circle" src="{{ asset('storage/img/profiles/' . $congress->author->image)}}" width="50" height="50">
 		                </div>
 		                <table class="col-lg-2 text-center" style=" height: 50px;">
 		                	<tbody>
 		                		<tr>
-		                			<td class="align-middle h5">{{$publisher->name}}</td>
+		                			<td class="align-middle h5">{{$congress->author->name}}</td>
 		                		</tr>
 		                	</tbody>
 		                </table>	                

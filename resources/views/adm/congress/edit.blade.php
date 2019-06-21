@@ -32,8 +32,8 @@
 		      		<select class="form-control" id="subscription_type_id" name="subscription_type_id" collapse>
 		        		<option>Escolher</option>
 		        		@foreach ($subscriptionTypes as $subscriptionType)
-		        			<option value="{{$subscriptionType->id}}" 
-		        			@if ( isset($post) && $post->id == $subscriptionType->id ) selected @endif>{{$subscriptionType->name}}</option>
+							<option value="{{$subscriptionType->id}}" 
+		        			@if ( isset($congress) && $congress->subscription_type_id == $subscriptionType->id ) selected @endif>{{$subscriptionType->name}}</option>
 		        		@endforeach	        		
 		      		</select>	
 		    	</div>
@@ -52,12 +52,12 @@
 				    <label>ESCRITO POR</label>
 		            <div class="row no-gutters bg-light py-3 px-3">
 		                <div class="col-lg-1 text-center">
-		                    <img class="rounded-circle" src="{{ asset('storage/img/profiles/' . $publisher->image)}}" width="50" height="50">
+		                    <img class="rounded-circle" src="{{ asset('storage/img/profiles/' . $person->image)}}" width="50" height="50">
 		                </div>
 		                <table class="col-lg-2 text-center" style=" height: 50px;">
 		                	<tbody>
 		                		<tr>
-		                			<td class="align-middle h5">{{$publisher->name}}</td>
+		                			<td class="align-middle h5">{{$person->name}}</td>
 		                		</tr>
 		                	</tbody>
 		                </table>	                

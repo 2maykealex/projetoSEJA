@@ -7,13 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 class Congress extends Model
 {
     public function newCongress($dados):Array {
-        $publisher = auth()->user()->person->publisher;
+        $person = auth()->user()->person;
         $this->title    = $dados['title'];
         $this->summary  = $dados['summary'];
         $this->text     = $dados['text'];
         $this->image    = $dados['image'];
         $this->subscription_type_id    = $dados['subscription_type_id'];
-        $this->publisher_id    = $publisher->id;
+        $this->person_id    = $person->id;
 
         $save = $this->save();
 
@@ -31,7 +31,7 @@ class Congress extends Model
     }
 
     public function updateCongress($dados):Array {
-        $publisher = auth()->user()->person->publisher;
+        $person = auth()->user()->person;
         $this->title    = $dados['title'];
         $this->summary  = $dados['summary'];
         $this->text     = $dados['text'];
@@ -40,7 +40,7 @@ class Congress extends Model
             $this->image    = $dados['image'];
         }
         $this->subscription_type_id    = $dados['subscription_type_id'];
-        $this->publisher_id    = $publisher->id;
+        $this->person_id    = $person->id;
 
         $save = $this->save();
 
