@@ -11,13 +11,17 @@ use App\Models\State;
 use App\Models\City;
 use App\Models\Publisher;
 use App\Models\Event;
+use App\Models\Post;
+use App\Models\SubscriptionPlan;
 
 class SiteController extends Controller
 {
     public function index(){
+        $posts = Post::all();
+        $subscriptionPlans = SubscriptionPlan::all();
         $publishers = Publisher::orderby('id')->get();
         $events = Event::orderby('id', 'desc')->get();
-        return view('index', compact('events', 'publishers'));
+        return view('index', compact('posts','subscriptionPlans', 'events', 'publishers'));
     }
 
     public function contact(){
