@@ -141,7 +141,7 @@
 
 
     <!--publicações-->
-    <div class="container-fluid my-5 bg-dark text-white" id="publicacao">
+    <div class="container-fluid my-5" id="publicacao">
         <div class="pricing-header container py-4 pt-md-5 pb-md-4 mx-auto text-center">
             <h1 class="display-5 mt-5 mb-3">Conteúdo</h1>
             <p class="mb-5 h3">Veja alguns dos conteúdos criados pelos nossos especialistas</p>
@@ -149,29 +149,29 @@
 
     
         <div class="carousel">
-            {{--@foreach($events as $event)         
+            @foreach($posts as $post)         
             <div class="alto col-lg-12 mb-2">
                 <div class="card my-3 shadow rounded">
                     <div class="hoverzoom">
-                        <img src="{{ asset('storage/img/events/' . $event->image)}}" alt="lobos" class="card-img-top">
+                        <img src="{{ asset('storage/img/posts/' . $post->image)}}" alt="..." class="card-img-top">
                         <div class="retina text-right">
                             <button type="submit" class="btn btn-light">icone</button>
                         </div>
                     </div>
                     <div class="row no-gutters px-3 pb-3">
                         <div class="pt-3" style="width: 3em;">
-                            <img class="rounded-circle" src="{{ asset('storage/img/profiles/' . $event->author->image)}}" width="40" height="40">
+                            <img class="rounded-circle" src="{{ asset('storage/img/profiles/' . $post->author->image)}}" width="40" height="40">
                         </div>
                         <div class="card-body" style="width: 9em;">                      
-                            <a class="card-title h6" href="#">{{$event->summary}}</a>
+                            <a class="card-title h6" href="#">{{$post->title}}</a>
                         </div>      
                         <div class="text-right col-lg-12">
-                            <small class="text-muted">Por {{$event->author->name}} em {{date('d/m/Y', strtotime($event->created_at))}}</small>
+                            <small class="text-muted">Por {{$post->author->name}} em {{date('d/m/Y', strtotime($post->created_at))}}</small>
                         </div>            
                     </div>
                 </div>
             </div>
-            @endforeach--}}
+            @endforeach
             <div class="alto col-lg-12 mb-2">
                 <div class="card my-3 shadow rounded">
                     <div class="hoverzoom">
@@ -264,81 +264,36 @@
                     </div>
                 </div>
             </div>
-            <div class="alto col-lg-12 mb-2">
-                <div class="card my-3 shadow rounded">
-                    <div class="hoverzoom">
-                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
-                        <div class="retina text-right">
-                            <button type="submit" class="btn btn-light">icone</button>
-                        </div>
-                    </div>
-                    <div class="row no-gutters px-3 pb-3">
-                        <div class="pt-3" style="width: 3em;">
-                            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="40" height="40">
-                        </div>
-                        <div class="card-body" style="width: 9em;">                      
-                            <a class="card-title h6" href="#">
-                                God of War é uma série de jogos eletrônicos
-                            </a>
-                        </div>      
-                        <div class="text-right col-lg-12">
-                            <small class="text-muted">Por Fulano em 10/10/2010</small>
-                        </div>            
-                    </div>
-                </div>
-            </div>
-            <div class="alto col-lg-12 mb-2">
-                <div class="card my-3 shadow rounded">
-                    <div class="hoverzoom">
-                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
-                        <div class="retina text-right">
-                            <button type="submit" class="btn btn-light">icone</button>
-                        </div>
-                    </div>
-                    <div class="row no-gutters px-3 pb-3">
-                        <div class="pt-3" style="width: 3em;">
-                            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="40" height="40">
-                        </div>
-                        <div class="card-body" style="width: 9em;">                      
-                            <a class="card-title h6" href="#">
-                                God of War é uma série de jogos eletrônicos
-                            </a>
-                        </div>      
-                        <div class="text-right col-lg-12">
-                            <small class="text-muted">Por Fulano em 10/10/2010</small>
-                        </div>            
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 
 
     <!--eventos-->
-    <div class="container my-5" id="eventos">
-        @foreach($events as $event)
+    <div class="container my-5" id="eventos">      
         <div class="pricing-header container py-4 pt-md-5 pb-md-4 mx-auto">
             <h1 class="display-5 mt-5 mb-3">Eventos</h1>
             <div class="mb-5" style="border-bottom: 7px solid #00BFFF;
   width:40px;"></div>
         </div>
-        <div class="mb-3">
-            <div class="row no-gutters">
-                <div class="col-md-5 shadow my-1">
-                    <img src="{{ asset('storage/img/events/' . $event->image)}}" class="card-img " alt="...">
-                </div>
-                <div class="col-md-7">
-                    <div class="card-body">
-                        <h5 class="card-title pl-3">{{$event->title}}</h5>
-                        <p class="card-text pl-3">{{$event->text}}</p>
-                        
-                            <small class="text-muted position-date">Por {{$event->author->name}} em {{date('d/m/Y', strtotime($event->created_at))}}</small>
-                        
+        <?php $count = 0; ?>
+            @foreach($events as $event)
+                <?php if($count == 1) break; ?>
+                <div class="mb-3">
+                    <div class="row no-gutters">
+                        <div class="col-md-5 shadow my-1">
+                            <img src="{{ asset('storage/img/events/' . $event->image)}}" class="card-img " alt="...">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title pl-3">{{$event->title}}</h5>
+                                <p class="card-text pl-3">{{$event->text}}</p>                  
+                                <small class="text-muted position-date">Por {{$event->author->name}} em {{date('d/m/Y', strtotime($event->created_at))}}</small>            
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        @endforeach
+                <?php $count++; ?>
+            @endforeach
     </div>
     
     <!--assinantes-->
@@ -350,60 +305,29 @@
         </div>
         <div class="d-flex justify-content-center flex-lg-center">
             <div class="card-deck text-center mb-3 col-md-10">
-                <div class="card shadow pb-3">
-                    <div class="card-header">
-                        <h4 class="font-weight-normal">Loren ipsun</h4>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title pricing-card-title">$0</h1>
-                        <small class="text-dark h6">por mês</small>
-                        <div class="col-md-12 mt-2 text-left">
-                            <small class="text-dark h6">Inclui:</small>
+                <?php $count = 0; ?>
+                @foreach($subscriptionPlans as $subscriptionPlan)
+                    <?php if($count == 3) break; ?>
+                    <div class="card shadow pb-3">
+                        <div class="card-header">
+                            <h4 class="font-weight-normal">{{$subscriptionPlan->type->name}}</h4>
                         </div>
-                        <ul class="mb-4 text-left">
-                            <li><small>Lorem ipsum dolor sit amet</small></li>
-                            <li><small>Lorem ipsum dolor sit amet</small></li>
-                            <li><small>Lorem ipsum dolor sit amet</small></li>
-                        </ul>
-                        <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
-                    </div>
-                </div>
-                <div class="card shadow pb-3">
-                    <div class="card-header">
-                        <h4 class="font-weight-normal">Loren ipsun</h4>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title pricing-card-title">$0</h1>
-                        <small class="text-dark h6">por mês</small>
-                        <div class="col-md-12 mt-2 text-left">
-                            <small class="text-dark h6">Inclui:</small>
+                        <div class="card-body">
+                            <h1 class="card-title pricing-card-title">${{$subscriptionPlan->price}}</h1>
+                            <small class="text-dark h6">{{$subscriptionPlan->collection->name}}</small>
+                            <div class="col-md-12 mt-2 text-left">
+                                <small class="text-dark h6">Inclui:</small>
+                            </div>
+                            <ul class="mb-4 text-left">
+                                <li><small>Lorem ipsum dolor sit amet</small></li>
+                                <li><small>Lorem ipsum dolor sit amet</small></li>
+                                <li><small>Lorem ipsum dolor sit amet</small></li>
+                            </ul>
+                            <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
                         </div>
-                        <ul class="mb-4 text-left">
-                            <li><small>Lorem ipsum dolor sit amet</small></li>
-                            <li><small>Lorem ipsum dolor sit amet</small></li>
-                            <li><small>Lorem ipsum dolor sit amet</small></li>
-                        </ul>
-                        <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
-                    </div>
-                </div>
-                <div class="card shadow pb-3">
-                    <div class="card-header">
-                        <h4 class="font-weight-normal">Loren ipsun</h4>
-                    </div>
-                    <div class="card-body">
-                        <h1 class="card-title pricing-card-title">$0</h1>
-                        <small class="text-dark h6">por mês</small>
-                        <div class="col-md-12 mt-2 text-left">
-                            <small class="text-dark h6">Inclui:</small>
-                        </div>
-                        <ul class="mb-4 text-left">
-                            <li><small>Lorem ipsum dolor sit amet</small></li>
-                            <li><small>Lorem ipsum dolor sit amet</small></li>
-                            <li><small>Lorem ipsum dolor sit amet</small></li>
-                        </ul>
-                        <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
-                    </div>
-                </div>
+                    </div>    
+                    <?php $count++; ?> 
+                @endforeach      
             </div>
         </div>
     </div>

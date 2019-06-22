@@ -89,7 +89,7 @@
         }
         .card:hover .hoverzoom .retina {
             opacity: 1;
-            box-shadow: inset 0 0 100px 50px rgba(0,0,0,.5);        
+            box-shadow: inset 0 0 100px 50px  rgba(0,0,0,0.7);       
             border-top-left-radius: 0.25rem;
             border-top-right-radius: 0.25rem;  
         }
