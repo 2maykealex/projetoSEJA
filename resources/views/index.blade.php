@@ -280,20 +280,27 @@
                 <?php if($count == 1) break; ?>
                 <div class="mb-3">
                     <div class="row no-gutters">
-                        <div class="col-md-5 shadow my-1">
-                            <img src="{{ asset('storage/img/events/' . $event->image)}}" class="card-img " alt="...">
+                        <div class="col-md-5 ">
+                            <img src="{{ asset('storage/img/events/' . $event->image)}}" class="card-img shadow my-1" alt="...">
                         </div>
                         <div class="col-md-7">
                             <div class="card-body">
-                                <h5 class="card-title pl-3">{{$event->title}}</h5>
-                                <p class="card-text pl-3">{{$event->text}}</p>                  
-                                <small class="text-muted position-date">Por {{$event->author->name}} em {{date('d/m/Y', strtotime($event->created_at))}}</small>            
+                                <h5 class="card-title">{{$event->title}}</h5>
+                                <small class="text-muted mb-2">Por {{$event->author->name}} em {{date('d/m/Y', strtotime($event->created_at))}}</small>
+                                <p class="card-text text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporary incididunt ut labore et dolore magna aliqua. O uso de um mínimo de exercícios, os exercícios nostrud ullamco
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporary incididunt ut labore et dolore magna aliqua. O uso de um mínimo de exercícios, os exercícios nostrud ullamco
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporary incididunt ut labore et dolore magna aliqua. O uso de um mínimo de exercícios, os exercícios nostrud ullamco</p>
+                                
+                                <a class="btn btn-danger" href="#">Saiba mais</a>                               
                             </div>
                         </div>
                     </div>
                 </div>
                 <?php $count++; ?>
             @endforeach
+            <div class="col-md-12 text-right mt-5">
+                <a class="btn btn-primary" href="#">Mais eventos</a>    
+            </div>
     </div>
     
     <!--assinantes-->
@@ -307,10 +314,10 @@
             <div class="card-deck text-center mb-3 col-md-10">
                 <?php $count = 0; ?>
                 @foreach($subscriptionPlans as $subscriptionPlan)
-                    <?php if($count == 3) break; ?>
+                    <?php if($count == 4) break; ?>
                     <div class="card shadow pb-3">
                         <div class="card-header">
-                            <h4 class="font-weight-normal">{{$subscriptionPlan->type->name}}</h4>
+                            <h4 class="font-weight-normal">{{$subscriptionPlan->collection->name}}</h4>
                         </div>
                         <div class="card-body">
                             <h1 class="card-title pricing-card-title">${{$subscriptionPlan->price}}</h1>

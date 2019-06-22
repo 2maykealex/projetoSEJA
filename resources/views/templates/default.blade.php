@@ -258,12 +258,17 @@
         }
 
         /* Events */
-        .position-date{
+        .position-left-b{
             position: absolute;
-            width: 200px;
-            height: 20px;
-            bottom: 0px;
+            width: 120px;
+            height: 40px;
+            bottom: 5px;
             right: 0px;
+        }
+        .position-right-b{
+            position: absolute;
+            width:250px;
+            height: 20px;
         }
 
     </style>
