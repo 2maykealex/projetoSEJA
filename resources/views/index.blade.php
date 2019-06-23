@@ -343,172 +343,48 @@
             </div>
         </div> -->
         <ul class="nav nav-pills justify-content-center mb-5" id="myTab" role="tablist">
+            @foreach($subscriptionTypes as $subscriptionType)
             <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">primeiro</a>
+                <a class="nav-link mr-1" id="home-tab" data-toggle="tab" href="#{{$subscriptionType->name}}" role="tab" aria-controls="home" aria-selected="true">{{$subscriptionType->name}}</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#perfil" role="tab" aria-controls="profile" aria-selected="false">segundo</a>
-            </li>
+            @endforeach
         </ul>
 
         
             <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                @foreach($subscriptionTypes as $subscriptionType)
+                <div class="tab-pane fade show" id="{{$subscriptionType->name}}" role="tabpanel" aria-labelledby="home-tab">
                     <div class="card-deck text-center mb-3" >
-                        <div class="card shadow pb-3">
-                            <div class="card-header">
-                                <h4 class="font-weight-normal">lorem um</h4>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title pricing-card-title">$10</h1>
-                                <small class="text-dark h6">basico</small>
-                                <div class="col-md-12 mt-2 text-left">
-                                    <small class="text-dark h6">Inclui:</small>
-                                </div>
-                                <ul class="mb-4 text-left">
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                </ul>
-                                <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
-                            </div>
-                        </div>  
-                        <div class="card shadow pb-3">
-                            <div class="card-header">
-                                <h4 class="font-weight-normal">lorem ipsum</h4>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title pricing-card-title">$10</h1>
-                                <small class="text-dark h6">basico</small>
-                                <div class="col-md-12 mt-2 text-left">
-                                    <small class="text-dark h6">Inclui:</small>
-                                </div>
-                                <ul class="mb-4 text-left">
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                </ul>
-                                <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
-                            </div>
-                        </div>  
-                        <div class="card shadow pb-3">
-                            <div class="card-header">
-                                <h4 class="font-weight-normal">lorem ipsum</h4>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title pricing-card-title">$10</h1>
-                                <small class="text-dark h6">basico</small>
-                                <div class="col-md-12 mt-2 text-left">
-                                    <small class="text-dark h6">Inclui:</small>
-                                </div>
-                                <ul class="mb-4 text-left">
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                </ul>
-                                <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
-                            </div>
-                        </div>  
-                        <div class="card shadow pb-3">
-                            <div class="card-header">
-                                <h4 class="font-weight-normal">lorem ipsum</h4>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title pricing-card-title">$10</h1>
-                                <small class="text-dark h6">basico</small>
-                                <div class="col-md-12 mt-2 text-left">
-                                    <small class="text-dark h6">Inclui:</small>
-                                </div>
-                                <ul class="mb-4 text-left">
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                </ul>
-                                <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
-                            </div>
-                        </div>     
-                    </div>
-                </div>
+                            @foreach($subscriptionPlans as $subscriptionPlan)
+                                    @if($subscriptionType->id == $subscriptionPlan->subscription_type_id)
+                                    <div class="card col-md-3 shadow pb-3">
+                                        <div class="card-header">
+                                            <h4 class="font-weight-normal">{{$subscriptionPlan->collection->name}}</h4>
+                                        </div>
+                                        <div class="card-body">
+                                            <h1 class="card-title pricing-card-title">${{$subscriptionPlan->price}}</h1>
+                                            <small class="text-dark h6">{{$subscriptionPlan->type->name}}</small>
+                                            <div class="col-md-12 mt-2 text-left">
+                                                <small class="text-dark h6">Inclui:</small>
+                                            </div>
+                                            <ul class="mb-4 text-left">
+                                                <li><small>Lorem ipsum dolor sit amet</small></li>
+                                                <li><small>Lorem ipsum dolor sit amet</small></li>
+                                                <li><small>Lorem ipsum dolor sit amet</small></li>
+                                            </ul>
+                                            <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
+                                        </div>
+                                    </div> 
+                                    @else
 
-
-                <div class="tab-pane fade" id="perfil" role="tabpanel" aria-labelledby="profile-tab">
-                    <div class="card-deck text-center mb-3" >
-                        <div class="card shadow pb-3">
-                            <div class="card-header">
-                                <h4 class="font-weight-normal">lorem dois</h4>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title pricing-card-title">$10</h1>
-                                <small class="text-dark h6">basico</small>
-                                <div class="col-md-12 mt-2 text-left">
-                                    <small class="text-dark h6">Inclui:</small>
-                                </div>
-                                <ul class="mb-4 text-left">
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                </ul>
-                                <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
-                            </div>
-                        </div>  
-                        <div class="card shadow pb-3">
-                            <div class="card-header">
-                                <h4 class="font-weight-normal">lorem ipsum</h4>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title pricing-card-title">$10</h1>
-                                <small class="text-dark h6">basico</small>
-                                <div class="col-md-12 mt-2 text-left">
-                                    <small class="text-dark h6">Inclui:</small>
-                                </div>
-                                <ul class="mb-4 text-left">
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                </ul>
-                                <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
-                            </div>
-                        </div>  
-                        <div class="card shadow pb-3">
-                            <div class="card-header">
-                                <h4 class="font-weight-normal">lorem ipsum</h4>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title pricing-card-title">$10</h1>
-                                <small class="text-dark h6">basico</small>
-                                <div class="col-md-12 mt-2 text-left">
-                                    <small class="text-dark h6">Inclui:</small>
-                                </div>
-                                <ul class="mb-4 text-left">
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                </ul>
-                                <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
-                            </div>
-                        </div>  
-                        <div class="card shadow pb-3">
-                            <div class="card-header">
-                                <h4 class="font-weight-normal">lorem ipsum</h4>
-                            </div>
-                            <div class="card-body">
-                                <h1 class="card-title pricing-card-title">$10</h1>
-                                <small class="text-dark h6">basico</small>
-                                <div class="col-md-12 mt-2 text-left">
-                                    <small class="text-dark h6">Inclui:</small>
-                                </div>
-                                <ul class="mb-4 text-left">
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                    <li><small>Lorem ipsum dolor sit amet</small></li>
-                                </ul>
-                                <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
-                            </div>
-                        </div>     
-                    </div>
+                                    @endif
+                              
+                            @endforeach
+                    </div>              
                 </div>
-            
-        </div>
+                @endforeach
+            </div>         
+        
     </div>
 
             
