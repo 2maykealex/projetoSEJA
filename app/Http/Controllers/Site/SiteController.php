@@ -13,15 +13,17 @@ use App\Models\Publisher;
 use App\Models\Event;
 use App\Models\Post;
 use App\Models\SubscriptionPlan;
+use App\Models\SubscriptionType;
 
 class SiteController extends Controller
 {
     public function index(){
         $posts = Post::all();
+        $subscriptionTypes = SubscriptionType::all();
         $subscriptionPlans = SubscriptionPlan::all();
         $publishers = Publisher::orderby('id')->get();
         $events = Event::orderby('id', 'desc')->get();
-        return view('index', compact('posts','subscriptionPlans', 'events', 'publishers'));
+        return view('index', compact('posts','subscriptionTypes', 'subscriptionPlans', 'events', 'publishers'));
     }
 
     public function contact(){
