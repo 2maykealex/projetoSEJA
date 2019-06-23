@@ -142,9 +142,13 @@
 
     <!--publicações-->
     <div class="container-fluid my-5" id="publicacao">
-        <div class="pricing-header container py-4 pt-md-5 pb-md-4 mx-auto text-center">
+        <div class="pricing-header container py-4 pt-md-5 pb-md-4 mx-auto">
             <h1 class="display-5 mt-5 mb-3">Conteúdo</h1>
-            <p class="mb-5 h3">Veja alguns dos conteúdos criados pelos nossos especialistas</p>
+            <div class="mb-5" style="border-bottom: 7px solid #00BFFF;
+  width:40px;"></div>
+            <div class="col-md-12 text-center mt-5">
+                <p class="mb-5 h3">Veja alguns dos conteúdos criados pelos nossos especialistas</p>
+            </div>
         </div>
 
     
@@ -274,6 +278,9 @@
             <h1 class="display-5 mt-5 mb-3">Eventos</h1>
             <div class="mb-5" style="border-bottom: 7px solid #00BFFF;
   width:40px;"></div>
+        <div class="col-md-12 text-center mt-5">
+             <p class="mb-5 h3">Acompanhe nossos eventos</p>
+        </div>
         </div>
         <?php $count = 0; ?>
             @foreach($events as $event)
@@ -289,17 +296,15 @@
                                 <small class="text-muted mb-2">Por {{$event->author->name}} em {{date('d/m/Y', strtotime($event->created_at))}}</small>
                                 <p class="card-text text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporary incididunt ut labore et dolore magna aliqua. O uso de um mínimo de exercícios, os exercícios nostrud ullamco
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporary incididunt ut labore et dolore magna aliqua. O uso de um mínimo de exercícios, os exercícios nostrud ullamco
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporary incididunt ut labore et dolore magna aliqua. O uso de um mínimo de exercícios, os exercícios nostrud ullamco</p>
-                                
-                                <a class="btn btn-danger" href="#">Saiba mais</a>                               
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporary incididunt ut labore et dolore magna aliqua. O uso de um mínimo de exercícios, os exercícios nostrud ullamco</p>                              
                             </div>
                         </div>
                     </div>
                 </div>
                 <?php $count++; ?>
             @endforeach
-            <div class="col-md-12 text-right mt-5">
-                <a class="btn btn-primary" href="#">Mais eventos</a>    
+            <div class="col-md-12 text-center mt-5">
+                <a class="btn btn-danger" href="#">Saiba mais</a>    
             </div>
     </div>
     
@@ -307,10 +312,10 @@
     <div class="container my-5" id="assinantes">
         <div class="container pricing-header py-4 pt-md-5 pb-md-4 mx-auto">
             <h1 class="display-5 mt-5 mb-3">Planos</h1>   
-            <div class="mb-5" style="border-bottom: 7px solid #00BFFF;
+            <div class="mb-3" style="border-bottom: 7px solid #00BFFF;
   width:40px;"></div>     
         </div>
-        <div class="d-flex justify-content-center flex-lg-center">
+        <!-- <div class="d-flex justify-content-center flex-lg-center">
             <div class="card-deck text-center mb-3 col-md-10">
                 <?php $count = 0; ?>
                 @foreach($subscriptionPlans as $subscriptionPlan)
@@ -336,6 +341,173 @@
                     <?php $count++; ?> 
                 @endforeach      
             </div>
+        </div> -->
+        <ul class="nav nav-pills justify-content-center mb-5" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">primeiro</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#perfil" role="tab" aria-controls="profile" aria-selected="false">segundo</a>
+            </li>
+        </ul>
+
+        
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="card-deck text-center mb-3" >
+                        <div class="card shadow pb-3">
+                            <div class="card-header">
+                                <h4 class="font-weight-normal">lorem um</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$10</h1>
+                                <small class="text-dark h6">basico</small>
+                                <div class="col-md-12 mt-2 text-left">
+                                    <small class="text-dark h6">Inclui:</small>
+                                </div>
+                                <ul class="mb-4 text-left">
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                </ul>
+                                <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
+                            </div>
+                        </div>  
+                        <div class="card shadow pb-3">
+                            <div class="card-header">
+                                <h4 class="font-weight-normal">lorem ipsum</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$10</h1>
+                                <small class="text-dark h6">basico</small>
+                                <div class="col-md-12 mt-2 text-left">
+                                    <small class="text-dark h6">Inclui:</small>
+                                </div>
+                                <ul class="mb-4 text-left">
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                </ul>
+                                <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
+                            </div>
+                        </div>  
+                        <div class="card shadow pb-3">
+                            <div class="card-header">
+                                <h4 class="font-weight-normal">lorem ipsum</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$10</h1>
+                                <small class="text-dark h6">basico</small>
+                                <div class="col-md-12 mt-2 text-left">
+                                    <small class="text-dark h6">Inclui:</small>
+                                </div>
+                                <ul class="mb-4 text-left">
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                </ul>
+                                <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
+                            </div>
+                        </div>  
+                        <div class="card shadow pb-3">
+                            <div class="card-header">
+                                <h4 class="font-weight-normal">lorem ipsum</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$10</h1>
+                                <small class="text-dark h6">basico</small>
+                                <div class="col-md-12 mt-2 text-left">
+                                    <small class="text-dark h6">Inclui:</small>
+                                </div>
+                                <ul class="mb-4 text-left">
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                </ul>
+                                <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
+                            </div>
+                        </div>     
+                    </div>
+                </div>
+
+
+                <div class="tab-pane fade" id="perfil" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="card-deck text-center mb-3" >
+                        <div class="card shadow pb-3">
+                            <div class="card-header">
+                                <h4 class="font-weight-normal">lorem dois</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$10</h1>
+                                <small class="text-dark h6">basico</small>
+                                <div class="col-md-12 mt-2 text-left">
+                                    <small class="text-dark h6">Inclui:</small>
+                                </div>
+                                <ul class="mb-4 text-left">
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                </ul>
+                                <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
+                            </div>
+                        </div>  
+                        <div class="card shadow pb-3">
+                            <div class="card-header">
+                                <h4 class="font-weight-normal">lorem ipsum</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$10</h1>
+                                <small class="text-dark h6">basico</small>
+                                <div class="col-md-12 mt-2 text-left">
+                                    <small class="text-dark h6">Inclui:</small>
+                                </div>
+                                <ul class="mb-4 text-left">
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                </ul>
+                                <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
+                            </div>
+                        </div>  
+                        <div class="card shadow pb-3">
+                            <div class="card-header">
+                                <h4 class="font-weight-normal">lorem ipsum</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$10</h1>
+                                <small class="text-dark h6">basico</small>
+                                <div class="col-md-12 mt-2 text-left">
+                                    <small class="text-dark h6">Inclui:</small>
+                                </div>
+                                <ul class="mb-4 text-left">
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                </ul>
+                                <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
+                            </div>
+                        </div>  
+                        <div class="card shadow pb-3">
+                            <div class="card-header">
+                                <h4 class="font-weight-normal">lorem ipsum</h4>
+                            </div>
+                            <div class="card-body">
+                                <h1 class="card-title pricing-card-title">$10</h1>
+                                <small class="text-dark h6">basico</small>
+                                <div class="col-md-12 mt-2 text-left">
+                                    <small class="text-dark h6">Inclui:</small>
+                                </div>
+                                <ul class="mb-4 text-left">
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                    <li><small>Lorem ipsum dolor sit amet</small></li>
+                                </ul>
+                                <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
+                            </div>
+                        </div>     
+                    </div>
+                </div>
+            
         </div>
     </div>
 

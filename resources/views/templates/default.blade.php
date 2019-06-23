@@ -257,6 +257,23 @@
             box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
         }
 
+        /*Card referente a planos barra de navegação*/
+        .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+            color: #fff;
+            background-color: #1de9b6;
+        }
+        .nav-pills .nav-link {
+            border-radius: 0px;
+        }
+        .nav-pills .nav-link:hover {
+            border-radius: 0px;
+            color: #fff;
+            background-color: #1de9b6;
+        }
+        .nav-link {
+            color: black;
+        }
+
         /* Events */
         .position-left-b{
             position: absolute;
@@ -269,6 +286,9 @@
             position: absolute;
             width:250px;
             height: 20px;
+        }
+        .btn-danger:hover{
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
         }
 
     </style>
