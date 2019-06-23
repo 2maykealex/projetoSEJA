@@ -4,8 +4,15 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
+use App\Models\SubscriptionPlan;
+use App\Models\Collection;
+
 class SubscriptionType extends Model
 {
+    public function subscriptionPlans(){
+        return $this->hasMany(SubscriptionPlan::class);
+    }
+
     public function newSubscriptionType($dados):Array {
         $this->name = $dados['name'];
         $save = $this->save();
