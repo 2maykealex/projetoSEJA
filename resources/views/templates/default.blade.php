@@ -254,6 +254,9 @@
             border-color: #f8f9fa;
         }
         .card-deck .card .btn-info:hover{
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            transform: scale(1.05);
             box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
         }
 
@@ -288,6 +291,9 @@
             height: 20px;
         }
         .btn-danger:hover{
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            transform: scale(1.05);
             box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
         }
 
