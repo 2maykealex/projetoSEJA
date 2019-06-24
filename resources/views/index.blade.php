@@ -17,10 +17,7 @@
                 <!--<a class="navbar-brand text-center mr-5" href="#"><img src="{{url('storage/img/seja.jpg')}}" alt="logo do site" width="30px" ></a>-->
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item mr-5">
-                            <a class="nav-link h6" href="#sobre">Sobre nós</a>
-                        </li>
-                        <li class="nav-item mr-5">
+                        <li class="nav-item mr-5 ">
                             <a class="nav-link h6" href="#publicacao">Conteúdo</a>
                         </li>
                         <li class="nav-item mr-5">
@@ -31,6 +28,9 @@
                         </li>
                         <li class="nav-item mr-5">
                             <a class="nav-link h6" href="#">Atendimentos</a>
+                        </li>
+                        <li class="nav-item mr-5">
+                            <a class="nav-link h6" href="#sobre">Sobre nós</a>
                         </li>
                     </ul>
                      <ul class="navbar-nav">
@@ -58,7 +58,7 @@
     </div>-->
 
 
-    <div id="inicio" class="mb-5">
+    <div id="inicio" class="mb-5 active">
         <div class="overlay"></div>
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
             <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
@@ -75,70 +75,6 @@
             </div>
         </div>
     </div>
-
-<!--sobre nós -->
-    
-    <div class="container my-5" id="sobre">
-        <div class="container pricing-header py-4 pt-md-5 pb-md-4 mx-auto">
-            <h1 class="display-5 mt-5 mb-3">Sobre nós</h1>   
-            <div class="mb-2" style="border-bottom: 7px solid #00BFFF;
-  width:40px;"></div>     
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="blog-main px-5 py-5">
-                    <h1>Quem somos</h1>
-                    <div class="lead mt-4">
-                        Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
-                    </div>
-                </div>
-            </div>
-            <div class="row col-md-6 py-5">
-
-                <div class="col-md-6">
-                    <div class="card text-white imgzoom ">
-                        <img class="card-img mb-3 " src="{{asset('storage/img/astro.jpg')}}" alt="Card image">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with .</p>
-                            <p class="card-text">Last updated 3 mins ago</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card text-white imgzoom">
-                        <img class="card-img mb-3 " src="{{asset('storage/img/astro.jpg')}}" alt="Card image">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with .</p>
-                            <p class="card-text">Last updated 3 mins ago</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card text-white imgzoom">
-                        <img class="card-img mb-3 " src="{{asset('storage/img/astro.jpg')}}" alt="Card image">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with .</p>
-                            <p class="card-text">Last updated 3 mins ago</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card text-white imgzoom">
-                        <img class="card-img mb-3 " src="{{asset('storage/img/astro.jpg')}}" alt="Card image">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with .</p>
-                            <p class="card-text">Last updated 3 mins ago</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>                
-    </div>
-
 
     <!--publicações-->
     <div class="container-fluid my-5" id="publicacao">
@@ -290,7 +226,7 @@
                         <div class="col-md-5 ">
                             <img src="{{ asset('storage/img/events/' . $event->image)}}" class="card-img shadow my-1" alt="...">
                         </div>
-                        <div class="col-md-7">
+                        <div class="col-md-7 pl-3">
                             <div class="card-body">
                                 <h5 class="card-title">{{$event->title}}</h5>
                                 <small class="text-muted mb-2">Por {{$event->author->name}} em {{date('d/m/Y', strtotime($event->created_at))}}</small>
@@ -315,80 +251,112 @@
             <div class="mb-3" style="border-bottom: 7px solid #00BFFF;
   width:40px;"></div>     
         </div>
-        <!-- <div class="d-flex justify-content-center flex-lg-center">
-            <div class="card-deck text-center mb-3 col-md-10">
-                <?php $count = 0; ?>
-                @foreach($subscriptionPlans as $subscriptionPlan)
-                    <?php if($count == 4) break; ?>
-                    <div class="card shadow pb-3">
-                        <div class="card-header">
-                            <h4 class="font-weight-normal">{{$subscriptionPlan->collection->name}}</h4>
-                        </div>
-                        <div class="card-body">
-                            <h1 class="card-title pricing-card-title">${{$subscriptionPlan->price}}</h1>
-                            <small class="text-dark h6">{{$subscriptionPlan->collection->name}}</small>
-                            <div class="col-md-12 mt-2 text-left">
-                                <small class="text-dark h6">Inclui:</small>
-                            </div>
-                            <ul class="mb-4 text-left">
-                                <li><small>Lorem ipsum dolor sit amet</small></li>
-                                <li><small>Lorem ipsum dolor sit amet</small></li>
-                                <li><small>Lorem ipsum dolor sit amet</small></li>
-                            </ul>
-                            <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
-                        </div>
-                    </div>    
-                    <?php $count++; ?> 
-                @endforeach      
-            </div>
-        </div> -->
         <ul class="nav nav-pills justify-content-center mb-5" id="myTab" role="tablist">
             @foreach($subscriptionTypes as $subscriptionType)
             <li class="nav-item">
-                <a class="nav-link mr-1" id="home-tab" data-toggle="tab" href="#{{$subscriptionType->name}}" role="tab" aria-controls="home" aria-selected="true">{{$subscriptionType->name}}</a>
+                <a class="nav-link mr-1 <?php if ($subscriptionType->id == 1) {echo 'active';}?>" id="home-tab" data-toggle="tab" href="#{{$subscriptionType->name}}" role="tab" aria-controls="home" aria-selected="true">{{$subscriptionType->name}}</a>
             </li>
             @endforeach
         </ul>
-
-        
-            <div class="tab-content" id="myTabContent">
-                @foreach($subscriptionTypes as $subscriptionType)
-                <div class="tab-pane fade show" id="{{$subscriptionType->name}}" role="tabpanel" aria-labelledby="home-tab">
-                    <div class="card-deck text-center mb-3" >
-                            @foreach($subscriptionPlans as $subscriptionPlan)
-                                    @if($subscriptionType->id == $subscriptionPlan->subscription_type_id)
-                                    <div class="card col-md-3 shadow pb-3">
-                                        <div class="card-header">
-                                            <h4 class="font-weight-normal">{{$subscriptionPlan->collection->name}}</h4>
+        <div class="tab-content" id="myTabContent">
+            @foreach($subscriptionTypes as $subscriptionType)
+            <div class="tab-pane fade show <?php if ($subscriptionType->id == 1) {echo 'active';}?>" id="{{$subscriptionType->name}}" role="tabpanel" aria-labelledby="home-tab">
+                <div class="card-deck text-center mb-3" >
+                        @foreach($subscriptionPlans as $subscriptionPlan)
+                            @if($subscriptionType->id == $subscriptionPlan->subscription_type_id)
+                                <div class="card col-md-3 shadow pb-3">
+                                    <div class="card-header">
+                                        <h4 class="font-weight-normal">{{$subscriptionPlan->collection->name}}</h4>
+                                    </div>
+                                    <div class="card-body">
+                                        <h1 class="card-title pricing-card-title mb-5">R$ {{$subscriptionPlan->price}}</h1>
+                                        <!--<small class="text-dark h6">{{$subscriptionPlan->type->name}}</small>
+                                        <div class="col-md-12 mt-2 text-left">
+                                            <small class="text-dark h6">Inclui:</small>
                                         </div>
-                                        <div class="card-body">
-                                            <h1 class="card-title pricing-card-title">${{$subscriptionPlan->price}}</h1>
-                                            <small class="text-dark h6">{{$subscriptionPlan->type->name}}</small>
-                                            <div class="col-md-12 mt-2 text-left">
-                                                <small class="text-dark h6">Inclui:</small>
-                                            </div>
-                                            <ul class="mb-4 text-left">
-                                                <li><small>Lorem ipsum dolor sit amet</small></li>
-                                                <li><small>Lorem ipsum dolor sit amet</small></li>
-                                                <li><small>Lorem ipsum dolor sit amet</small></li>
-                                            </ul>
-                                            <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
-                                        </div>
-                                    </div> 
-                                    @else
+                                        <ul class="mb-4 text-left">
+                                            <li><small>Lorem ipsum dolor sit amet</small></li>
+                                            <li><small>Lorem ipsum dolor sit amet</small></li>
+                                            <li><small>Lorem ipsum dolor sit amet</small></li>
+                                        </ul>-->
+                                        <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
+                                    </div>
+                                </div> 
+                            @else
 
-                                    @endif
-                              
-                            @endforeach
-                    </div>              
+                            @endif
+                          
+                        @endforeach
+                </div>              
+            </div>
+            @endforeach
+        </div>              
+    </div>
+
+    <!--SOBRE NÓS-->
+    <div class="container my-5" id="sobre">
+        <div class="container pricing-header py-4 pt-md-5 pb-md-4 mx-auto">
+            <h1 class="display-5 mt-5 mb-3">Sobre nós</h1>   
+            <div class="mb-2" style="border-bottom: 7px solid #00BFFF;
+  width:40px;"></div>     
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="blog-main px-5 py-5">
+                    <h1>Quem somos</h1>
+                    <div class="lead mt-4">
+                        Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
+                    </div>
                 </div>
-                @endforeach
-            </div>         
-        
+            </div>
+            <div class="row col-md-6 py-5">
+
+                <div class="col-md-6">
+                    <div class="card text-white imgzoom ">
+                        <img class="card-img mb-3 " src="{{asset('storage/img/astro.jpg')}}" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with .</p>
+                            <p class="card-text">Last updated 3 mins ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card text-white imgzoom">
+                        <img class="card-img mb-3 " src="{{asset('storage/img/astro.jpg')}}" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with .</p>
+                            <p class="card-text">Last updated 3 mins ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card text-white imgzoom">
+                        <img class="card-img mb-3 " src="{{asset('storage/img/astro.jpg')}}" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with .</p>
+                            <p class="card-text">Last updated 3 mins ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card text-white imgzoom">
+                        <img class="card-img mb-3 " src="{{asset('storage/img/astro.jpg')}}" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with .</p>
+                            <p class="card-text">Last updated 3 mins ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>                
     </div>
 
             
-    <!-- Footer -->
+    <!-- FOOTER RODÁPE -->
     <footer class=" text-dark mt-5">
         <div class="container-fluid border-bottom bg-light">
             <div class="row py-3 d-flex align-items-center ">

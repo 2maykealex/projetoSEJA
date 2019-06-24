@@ -52,6 +52,7 @@
             color: silver !important;
             background-color: transparent;
         }
+        
         .h6{
             margin: 0 0 0;
         }
