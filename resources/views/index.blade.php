@@ -66,7 +66,7 @@
         <div class="container h-100">
             <div class="position-relative overflow-hidden p-3 p-md-5 text-center">
                 <div class="col-md-5 p-lg-5 mx-auto my-5" >
-                    <h1 class="display-4 font-weight-normal text-white">ALMA</h1>
+                    <h1 class="display-4 font-weight-normal text-white">Seja</h1>
                     <p class="lead font-weight-normal text-white">Text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. . </p>
                     <a class="btn btn-outline-light" href="{{route('subscribe')}}">Partícipe nosso projeto</a>
                 </div>
