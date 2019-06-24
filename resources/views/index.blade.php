@@ -261,7 +261,7 @@
         <div class="tab-content" id="myTabContent">
             @foreach($subscriptionTypes as $subscriptionType)
             <div class="tab-pane fade show <?php if ($subscriptionType->id == 1) {echo 'active';}?>" id="{{$subscriptionType->name}}" role="tabpanel" aria-labelledby="home-tab">
-                <div class="card-deck text-center mb-3" >
+                <div class="card-deck d-flex justify-content-center flex-lg-center text-center mb-3" >
                         @foreach($subscriptionPlans as $subscriptionPlan)
                             @if($subscriptionType->id == $subscriptionPlan->subscription_type_id)
                                 <div class="card col-md-3 shadow pb-3">
