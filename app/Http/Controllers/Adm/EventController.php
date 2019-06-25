@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Adm;
 
 use App\Models\Event;
+use App\Models\EventType;
 use App\Models\SubscriptionType;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
@@ -25,8 +26,8 @@ class EventController extends Controller
     {
         $person = auth()->user()->person;
         $person_id = $person->id;
-        $subscriptionTypes = SubscriptionType::orderby('id')->get();
-        return view('adm.event.new', compact('subscriptionTypes'));
+        $eventTypes = EventType::orderby('id')->get();
+        return view('adm.event.new', compact('eventTypes'));
     }
 
     public function store(Request $request)

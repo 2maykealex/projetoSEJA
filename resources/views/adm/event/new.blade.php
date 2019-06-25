@@ -28,11 +28,11 @@
 				    <textarea class="form-control" id="text" name="text" rows="8"></textarea>
 				</div>
 				<div class="form-group">
-		    		<label for="subscription_type_id">TIPO DE PÚBLICO</label>	    		
-		      		<select class="form-control" id="subscription_type_id" name="subscription_type_id" collapse>
+		    		<label for="subscription_type_id">TIPO DE EVENTO</label>
+		      		<select class="form-control" id="event_type_id" name="event_type_id" collapse>
 		        		<option>Escolher</option>
-		        		@foreach ($subscriptionTypes as $subscriptionType)
-		        			<option value="{{$subscriptionType->id}}">{{$subscriptionType->name}}</option>
+		        		@foreach ($eventTypes as $eventType)
+		        			<option value="{{$eventType->id}}">{{$eventType->name}}</option>
 		        		@endforeach	        		
 		      		</select>	
 		    	</div>
@@ -41,7 +41,7 @@
 				    <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
 				</div>
 				<div class="form-group">
-				    <label>ANEXOS</label>   
+				    <label>ANEXOS</label>
 				    <input type="text" class="form-control" placeholder="#" >
 				</div>
 				
