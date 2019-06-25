@@ -11,13 +11,13 @@ class Event extends Model
     }
 
     public function newEvent($dados):Array {
-        $person_id = auth()->user()->person->id;
         $this->title    = $dados['title'];
         $this->summary  = $dados['summary'];
         $this->text     = $dados['text'];
         $this->image    = $dados['image'];
-        $this->subscription_type_id    = $dados['subscription_type_id'];
-        $this->person_id = $person_id;
+        $this->event_date    = $dados['event_date'];
+        $this->event_type_id    = $dados['event_type_id'];
+        $this->person_id = auth()->user()->person->id;
 
         $save = $this->save();
 
@@ -35,16 +35,15 @@ class Event extends Model
     }
 
     public function updateEvent($dados):Array {
-        $person_id = auth()->user()->person->id;
         $this->title    = $dados['title'];
         $this->summary  = $dados['summary'];
         $this->text     = $dados['text'];
-        $this->subscription_type_id    = $dados['subscription_type_id'];
+        $this->event_date    = $dados['event_date'];
+        $this->event_type_id    = $dados['event_type_id'];
         if (isset($dados['image'])){
-            $this->image    = $dados['image'];
+            $this->image  = $dados['image'];
         }
-        // $this->subscription_type_id    = $dados['subscription_type_id'];
-        $this->person_id    = $person_id;
+        $this->person_id  = auth()->user()->person->id;;
 
         $save = $this->save();
 

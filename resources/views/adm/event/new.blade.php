@@ -24,8 +24,12 @@
 				    <textarea class="form-control" id="summary" name="summary" rows="4"></textarea>
 				</div>
 				<div class="form-group">
-				    <label for="text">TEXTO</label>   
+				    <label for="text">TEXTO</label>
 				    <textarea class="form-control" id="text" name="text" rows="8"></textarea>
+				</div>
+				<div class="form-group">
+				    <label for="text">SERÁ REALIZADO EM:</label>
+					<input type="date" class="form-control" id="event_date" name="event_date" min="{{date('Y-m-d')}}">
 				</div>
 				<div class="form-group">
 		    		<label for="subscription_type_id">TIPO DE EVENTO</label>

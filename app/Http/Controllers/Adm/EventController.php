@@ -24,8 +24,6 @@ class EventController extends Controller
 
     public function create()
     {
-        $person = auth()->user()->person;
-        $person_id = $person->id;
         $eventTypes = EventType::orderby('id')->get();
         return view('adm.event.new', compact('eventTypes'));
     }
@@ -63,8 +61,8 @@ class EventController extends Controller
     public function edit($id)
     {
         $event = Event::where('id', $id)->get()->first();
-        $subscriptionTypes = SubscriptionType::orderby('id')->get();
-        return view('adm.event.edit', compact('event', 'subscriptionTypes'));
+        $eventTypes = EventType::orderby('id')->get();
+        return view('adm.event.edit', compact('event', 'eventTypes'));
     }
 
     public function update(Request $request)

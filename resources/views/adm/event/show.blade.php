@@ -13,17 +13,21 @@
 			<form class="pb-3 pt-3 bg-white px-3">
 				@csrf
 				<div class="form-row">
-					<div class="form-group col-md-2">
+					<div class="form-group col-md-3">
 					    <label>ID</label>							    
 					    <input type="text" class="form-control" placeholder="{{$event->id}}" disabled>							    
 					</div>
-					<div class="form-group col-md-5">
+					<div class="form-group col-md-3">
 					    <label>DATA CRIAÇÃO</label> 
 					    <input type="text" class="form-control" placeholder="{{date('d/m/Y', strtotime($event->created_at))}}" disabled>
 					</div>
-					<div class="form-group col-md-5">
+					<div class="form-group col-md-3">
 					    <label>DATA ALTERAÇÃO</label> 
 					    <input type="text" class="form-control" placeholder="{{date('d/m/Y', strtotime($event->updated_at))}}" disabled>
+					</div>
+					<div class="form-group col-md-3">
+					    <label>DATA DO EVENTO</label> 
+					    <input type="text" class="form-control" placeholder="{{date('d/m/Y', strtotime($event->event_date))}}" disabled>
 					</div>
 				</div>
 				<div class="form-group">
@@ -39,8 +43,8 @@
 				    <textarea class="form-control" rows="8" disabled>{{$event->text}}</textarea>
 				</div>
 				<div class="form-group">
-				    <label>TIPO DE PÚBLICO</label>   
-				    <input type="text" class="form-control" placeholder="{{$subscriptionType->name}}" disabled>
+				    <label>TIPO DE EVENTO</label>   
+				    <input type="text" class="form-control" placeholder="{{$event->type->name}}" disabled>
 				</div>
 				<div class="form-group">
 				    <label>IMAGEM</label>   
