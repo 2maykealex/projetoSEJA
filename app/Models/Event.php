@@ -6,6 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Event extends Model
 {
+    public function type(){
+        return $this->belongsTo(EventType::class, 'event_type_id');
+    }
+
     public function newEvent($dados):Array {
         $person_id = auth()->user()->person->id;
         $this->title    = $dados['title'];
