@@ -298,6 +298,51 @@
             box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
         }
 
+
+        /* Modal de login e subscriber*/
+        input[type=checkbox], input[type=radio] {
+            top: .25rem;
+            left: -1.5rem;
+            width: 1rem;
+            height: 1rem;
+            content: "";
+            background: no-repeat black;
+        }
+
+        .nav-pills .nav-link.active, 
+        .nav-pills .show>.nav-link {
+            color: #fff;
+            background-color: #2BBBAD;
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+        }
+
+        .nav-pills .nav-link:hover {
+            background-color: #2BBBAD;
+            color:white;
+        }
+
+        .nav-pills .nav-link {
+            border-radius: 0;
+            color: black;
+        }
+
+        .modal-header{
+            border-bottom: 0;
+        }
+
+        .btn-orange{
+            color: white;
+            background-color: #FF8800;
+            border-color: #FF8800;
+        }
+        .btn-orange:hover{
+            color: white;
+            -webkit-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            transform: scale(1.05);
+            box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+        }
+
     </style>
     
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>

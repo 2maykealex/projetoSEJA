@@ -6,8 +6,9 @@
 
 @section('content')
 
-    <!--navbar-->
 
+
+    <!--navbar-->
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow p-2 mb-2 py-3">
             <div class="container">
@@ -34,30 +35,107 @@
                         </li>
                     </ul>
                      <ul class="navbar-nav">
-                        <li class="nav-item ">
-                            <a class="nav-link h6" href="{{route('site.login')}}">Entrar</a>
-                        </li>
+                        <button type="button" class="btn btn-outline-danger" data-toggle="modal" data-target="#modalLogin">Entrar</button>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <!--inicio-->
-    <!--<div id="inicio">
-        <div class="position-relative overflow-hidden p-3 p-md-5 text-center fundo-escuro">
-            <div class="col-md-5 p-lg-5 mx-auto my-5" >
-                <h1 class="display-4 font-weight-normal text-white">ALMA</h1>
-                <p class="lead font-weight-normal text-white">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                <a class="btn btn-outline-light" href="{{route('subscribe')}}">Partícipe nosso projeto</a>
+
+
+   <!--Modal de Login e Subscriber-->
+    <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header ">
+                    <ul class="nav nav-pills nav-fill col-md-12 mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item mr-2">
+                            <a class="nav-link active" id="pills-login-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true">Entrar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="pills-subscribe-tab" data-toggle="pill" href="#pills-subscribe" role="tab" aria-controls="pills-subscribe" aria-selected="false">Inscreva-se</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="modal-body">
+                    <div class="tab-content" id="pills-tabContent">
+
+                        <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
+                            {!! csrf_field()!!}
+                            <!--<form action="{{route('site.login.validate')}}" method="post" class="form-signin">-->
+                            <form action="#" method="post" class="form-signin">
+                                <input type="email" name="email" id="email" placeholder="E-mail" class="form-control mt-4" required>
+                                <input type="password" id="password" name="password" minlength="6" placeholder="Senha" onchange="validaCaracter(this)" class="form-control mt-3" required>
+                                <div class="row">
+                                    <div class="checkbox mt-3 col-md-6">
+                                        <label>
+                                            <input type="checkbox" value="remember-me"> Lembrar-se de mim
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6 mt-3 text-md-right">
+                                        <a href="#">Recuperar senha?</a>
+                                    </div>
+                                </div>
+                                <div class="form-group mt-2">
+                                    <button type="submit" class="btn btn-orange btn-block mt-3">Entrar</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="tab-pane fade" id="pills-subscribe" role="tabpanel" aria-labelledby="pills-subscribe-tab">
+                            @csrf
+                            <!--<form action="{{route('subscriber.store')}}" method="POST" onsubmit="EnviarFormulario()" class="py-3">-->
+                            <form action="#" method="POST" onsubmit="EnviarFormulario()" class="py-3">        
+                                <div class="form-group">
+                                    <input class="form-control" id="name" name="name" placeholder="Nome">      
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" id="cpf" name="cpf" onInput="checkMaskDocument(this)" placeholder="CPF">
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" id="telephone" name="telephone" onInput="checkMaskTelephone(this)" placeholder="Tel/Cel">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="zipcode" name="zipcode" onInput="checkMaskZipCode(this)" placeholder="CEP">
+                                </div>      
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="address" name="address" placeholder="Endereço">
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-control" id="state" required onchange="listCities(this.value);" collapse>
+                                        {{--<!--<option value="-1">Estado</option>
+                                        @foreach($states as $state)
+                                            <option value="{{$state->id}}">{{$state->initials}}</option>
+                                        @endforeach-->--}}
+                                    </select>   
+                                </div>
+                                <div class="form-group">
+                                    <select id="city" name="city" class="form-control">
+                                        <option selected>Cidade</option>
+                                        <option>...</option>
+                                    </select>   
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
+                                </div>      
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirmar">
+                                </div>
+                                <button type="submit" class="btn btn-orange btn-block mt-3">Inscrever</button>
+                            </form>
+                        </div>       
+                    </div>
+                </div>
             </div>
-            <div class="product-device shadow-sm d-none d-md-block"></div>
-            <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
         </div>
-        <div class="d-flex justify-content-center flex-lg-center">
-    </div>-->
+    </div>
 
 
+    <!--Inicio com video de fundo-->
     <div id="inicio" class="mb-5 active">
         <div class="overlay"></div>
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
@@ -68,7 +146,6 @@
                 <div class="col-md-5 p-lg-5 mx-auto my-5" >
                     <h1 class="display-4 font-weight-normal text-white">Seja</h1>
                     <p class="lead font-weight-normal text-white">Text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. . </p>
-                    <a class="btn btn-outline-light" href="{{route('subscribe')}}">Partícipe nosso projeto</a>
                 </div>
                 <div class="product-device shadow-sm d-none d-md-block"></div>
                 <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
