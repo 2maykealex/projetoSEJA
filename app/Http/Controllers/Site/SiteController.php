@@ -23,7 +23,8 @@ class SiteController extends Controller
         $subscriptionPlans = SubscriptionPlan::all();
         $publishers = Publisher::orderby('id')->get();
         $events = Event::whereDate('event_date', '>=', date("Y-m-d"))->orderby('id', 'desc')->get();
-        return view('index', compact('posts','subscriptionTypes', 'subscriptionPlans', 'events', 'publishers'));
+        $states = State::orderby('initials')->get();
+        return view('index', compact('posts', 'states', 'subscriptionTypes', 'subscriptionPlans', 'events', 'publishers'));
     }
 
     public function contact(){
