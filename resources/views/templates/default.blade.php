@@ -344,6 +344,100 @@
         }
 
     </style>
+
+<script type="text/javascript">
+
+    function checkMaskDocument(elemento){
+        var valor = elemento.value;
+
+        if (valor.length == 11){
+            novo = valor.substring(0,3)+"."+valor.substring(3,6)+"."+valor.substring(6,9)+"-"+valor.substring(9,11);
+        }else{
+            valor = valor.replace("-","");
+            valor = valor.replace("/","");
+            valor = valor.replace(".","");
+            valor = valor.replace(".","");
+
+            if (valor.length == 14){
+                novo = valor.substring(0,2)+"."+valor.substring(2,5)+"."+valor.substring(5,8)+"/"+valor.substring(8,12)+"-"+valor.substring(12,14);
+            }else{
+                novo = valor;
+            }
+        }
+        elemento.value=novo;
+    }
+
+    function checkMaskTelephone(elemento){
+        var valor = elemento.value;
+
+        valor = valor.replace("-","");
+        valor = valor.replace("(","");
+        valor = valor.replace(") ","");
+        valor = valor.replace(" ","");
+
+        if (valor.length == 11){
+            novo = "("+valor.substring(0,2)+") "+valor.substring(2,3)+""+valor.substring(3,7)+"-"+valor.substring(7,11);
+        }else if (valor.length == 10){
+            novo = "("+valor.substring(0,2)+") "+valor.substring(2,6)+"-"+valor.substring(6,10);
+        }else{
+            novo = valor;
+        }
+
+        elemento.value=novo;
+    }
+
+    function checkMaskZipCode(elemento){
+        var valor = elemento.value;
+
+        valor = valor.replace("-","");
+        valor = valor.replace(".","");
+
+        if (valor.length == 8){
+            novo = valor.substring(0,2)+"."+valor.substring(2,5)+"-"+valor.substring(5,8);
+        }else{
+            novo = valor;
+        }
+        elemento.value=novo;
+    }
+
+    function listCities (idUF){
+        $("#city option").remove();
+        if (idUF > 0){
+            url = '{{route("listCities", ['idUF'])}}';
+            url = url.replace('idUF', idUF);
+
+            var ajaxRequest = $.getJSON(url, function(data){
+                element = document.getElementById('city');
+                elemSelect1 = "";
+                elemSelect1 += '<option selected> Selecione </option>';
+                $.each(data, function(i ,obj){
+                    elemSelect1 += '<option value="'+obj.id+'">'+obj.name+'</option>';
+                })
+                $('#city').append(elemSelect1);
+            });
+        }
+    }
+    function EnviarFormulario(){
+        cpf = $("#cpf").val();
+        cpf = cpf.replace("-","");
+        cpf = cpf.replace("/","");
+        cpf = cpf.replace(".","");
+        cpf = cpf.replace(".","");
+        $("#cpf").val(cpf);
+
+        telephone = $("#telephone").val();
+        telephone = telephone.replace("-","");
+        telephone = telephone.replace("(","");
+        telephone = telephone.replace(") ","");
+        telephone = telephone.replace(" ","");
+        $("#telephone").val(telephone);
+
+        zipCode = $("#zipcode").val();
+        zipCode = zipCode.replace("-","");
+        zipCode = zipCode.replace(".","");
+        $("#zipcode").val(zipCode);
+    }
+</script>
     
     <script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
