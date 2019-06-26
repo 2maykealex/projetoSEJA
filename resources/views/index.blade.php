@@ -49,11 +49,11 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header ">
-                    <ul class="nav nav-pills nav-fill col-md-12 mb-3" id="pills-tab" role="tablist">
+                    <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item mr-2">
                             <a class="nav-link active" id="pills-login-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true">Entrar</a>
                         </li>
-                        <li class="nav-item">
+                        <li class="nav-item mr-auto">
                             <a class="nav-link" id="pills-subscribe-tab" data-toggle="pill" href="#pills-subscribe" role="tab" aria-controls="pills-subscribe" aria-selected="false">Inscreva-se</a>
                         </li>
                     </ul>
@@ -90,40 +90,46 @@
                                 <div class="form-group">
                                     <input class="form-control" id="name" name="name" placeholder="Nome">      
                                 </div>
-                                <div class="form-group">
-                                    <input class="form-control" id="cpf" name="cpf" onInput="checkMaskDocument(this)" placeholder="CPF">
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <input class="form-control" id="cpf" name="cpf" onInput="checkMaskDocument(this)" placeholder="CPF">
+                                    </div>
+                                    <div class="form-group col">
+                                        <input class="form-control" id="telephone" name="telephone" onInput="checkMaskTelephone(this)" placeholder="Tel/Cel">
+                                    </div>       
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <input type="number" class="form-control" id="zipcode" name="zipcode" onInput="checkMaskZipCode(this)" placeholder="CEP">
+                                    </div>
+                                    <div class="form-group col"> 
+                                        <input type="text" class="form-control" id="address" name="address" placeholder="Endereço">
+                                    </div>    
+                                </div>      
+                                <div class="form-row">
+                                    <div class="form-group col">
+                                        <select class="form-control" id="state" required onchange="listCities(this.value);" collapse>
+                                            {{--<!--<option value="-1">Estado</option>
+                                            @foreach($states as $state)
+                                                <option value="{{$state->id}}">{{$state->initials}}</option>
+                                            @endforeach-->--}}
+                                        </select>  
+                                    </div>
+                                    <div class="form-group col">
+                                        <select id="city" name="city" class="form-control">
+                                            <option selected>Cidade</option>
+                                            <option>...</option>
+                                        </select>
+                                    </div> 
                                 </div>
                                 <div class="form-group">
-                                    <input class="form-control" id="telephone" name="telephone" onInput="checkMaskTelephone(this)" placeholder="Tel/Cel">
-                                </div>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" id="zipcode" name="zipcode" onInput="checkMaskZipCode(this)" placeholder="CEP">
+                                    <input type="text" class="form-control" id="email" name="email" placeholder="E-mail">
                                 </div>      
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="address" name="address" placeholder="Endereço">
+                                    <input type="text" class="form-control" id="password" name="password" placeholder="Senha">
                                 </div>
                                 <div class="form-group">
-                                    <select class="form-control" id="state" required onchange="listCities(this.value);" collapse>
-                                        {{--<!--<option value="-1">Estado</option>
-                                        @foreach($states as $state)
-                                            <option value="{{$state->id}}">{{$state->initials}}</option>
-                                        @endforeach-->--}}
-                                    </select>   
-                                </div>
-                                <div class="form-group">
-                                    <select id="city" name="city" class="form-control">
-                                        <option selected>Cidade</option>
-                                        <option>...</option>
-                                    </select>   
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
-                                </div>      
-                                <div class="form-group">
-                                    <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
-                                </div>
-                                <div class="form-group">
-                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirmar">
+                                    <input type="text" class="form-control" id="confirmPassword" placeholder="Confirmar senha">
                                 </div>
                                 <button type="submit" class="btn btn-orange btn-block mt-3">Inscrever</button>
                             </form>
@@ -189,97 +195,6 @@
                 </div>
             </div>
             @endforeach
-            <div class="alto col-lg-12 mb-2">
-                <div class="card my-3 shadow rounded">
-                    <div class="hoverzoom">
-                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
-                        <div class="retina text-right">
-                            <button type="submit" class="btn btn-light">icone</button>
-                        </div>
-                    </div>
-                    <div class="row no-gutters px-3 pb-3">
-                        <div class="pt-3" style="width: 3em;">
-                            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="40" height="40">
-                        </div>
-                        <div class="card-body" style="width: 9em;">                      
-                            <a class="card-title h6" href="#">
-                                God of War é uma série de jogos eletrônicos
-                            </a>
-                        </div>      
-                        <div class="text-right col-lg-12">
-                            <small class="text-muted">Por Fulano em 10/10/2010</small>
-                        </div>            
-                    </div>
-                </div>
-            </div>
-            <div class="alto col-lg-12 mb-2">
-                <div class="card my-3 shadow rounded">
-                    <div class="hoverzoom">
-                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
-                        <div class="retina text-right">
-                            <button type="submit" class="btn btn-light">icone</button>
-                        </div>
-                    </div>
-                    <div class="row no-gutters px-3 pb-3">
-                        <div class="pt-3" style="width: 3em;">
-                            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="40" height="40">
-                        </div>
-                        <div class="card-body" style="width: 9em;">                      
-                            <a class="card-title h6" href="#">
-                                God of War é uma série de jogos eletrônicos
-                            </a>
-                        </div>      
-                        <div class="text-right col-lg-12">
-                            <small class="text-muted">Por Fulano em 10/10/2010</small>
-                        </div>            
-                    </div>
-                </div>
-            </div>
-            <div class="alto col-lg-12 mb-2">
-                <div class="card my-3 shadow rounded">
-                    <div class="hoverzoom">
-                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
-                        <div class="retina text-right">
-                            <button type="submit" class="btn btn-light">icone</button>
-                        </div>
-                    </div>
-                    <div class="row no-gutters px-3 pb-3">
-                        <div class="pt-3" style="width: 3em;">
-                            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="40" height="40">
-                        </div>
-                        <div class="card-body" style="width: 9em;">                      
-                            <a class="card-title h6" href="#">
-                                God of War é uma série de jogos eletrônicos
-                            </a>
-                        </div>      
-                        <div class="text-right col-lg-12">
-                            <small class="text-muted">Por Fulano em 10/10/2010</small>
-                        </div>            
-                    </div>
-                </div>
-            </div>
-            <div class="alto col-lg-12 mb-2">
-                <div class="card my-3 shadow  rounded">
-                    <div class="hoverzoom">
-                        <img src="{{asset('storage/img/astro.jpg')}}" alt="lobos" class="card-img-top">
-                        <div class="retina text-right">
-                            <button type="submit" class="btn btn-light">icone</button>
-                        </div>
-                    </div>
-                    <div class="row no-gutters px-3 pb-3">
-                        <div class="pt-3" style="width: 3em;">
-                            <img class="rounded-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" width="40" height="40">
-                        </div>
-                        <div class="card-body" style="width: 9em;">                      
-                            <a class="card-title h6" href="#">
-                                God of War é uma série de jogos eletrônicos
-                            </a>
-                        </div>      
-                        <div class="text-right col-lg-12">
-                            <small class="text-muted">Por Fulano em 10/10/2010</small>
-                        </div>            
-                    </div>
-                </div>
             </div>
         </div>
     </div>

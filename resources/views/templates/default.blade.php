@@ -262,7 +262,8 @@
         }
 
         /*Card referente a planos barra de navegação*/
-        .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+        .nav-pills .nav-link.active,
+        .nav-pills .show>.nav-link {
             color: #fff;
             background-color: #1de9b6;
         }
@@ -309,19 +310,19 @@
             background: no-repeat black;
         }
 
-        .nav-pills .nav-link.active, 
-        .nav-pills .show>.nav-link {
+        .modal-header .nav-pills .nav-link.active, 
+        .modal-header .nav-pills .show>.nav-link {
             color: #fff;
             background-color: #2BBBAD;
             box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
         }
 
-        .nav-pills .nav-link:hover {
+        .modal-header .nav-pills .nav-link:hover {
             background-color: #2BBBAD;
             color:white;
         }
 
-        .nav-pills .nav-link {
+        .modal-header .nav-pills .nav-link {
             border-radius: 0;
             color: black;
         }
