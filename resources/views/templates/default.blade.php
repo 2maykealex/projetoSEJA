@@ -325,6 +325,7 @@
         .modal-header .nav-pills .nav-link {
             border-radius: 0;
             color: black;
+            width: 14rem;
         }
 
         .modal-header{
@@ -333,8 +334,8 @@
 
         .btn-orange{
             color: white;
-            background-color: #FF8800;
-            border-color: #FF8800;
+            background-color: #2BBBAD;
+            border-color: #2BBBAD;
         }
         .btn-orange:hover{
             color: white;

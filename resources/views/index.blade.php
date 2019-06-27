@@ -48,7 +48,7 @@
     <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="TituloModalCentralizado" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
-                <div class="modal-header ">
+                <div class="modal-header text-center">
                     <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
                         <li class="nav-item mr-2">
                             <a class="nav-link active" id="pills-login-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true">Entrar</a>
@@ -62,10 +62,10 @@
                     <div class="tab-content" id="pills-tabContent">
 
                         <div class="tab-pane fade show active" id="pills-login" role="tabpanel" aria-labelledby="pills-login-tab">
-                            {!! csrf_field()!!}
-                            <!--<form action="{{route('site.login.validate')}}" method="post" class="form-signin">-->
-                            <form action="#" method="post" class="form-signin">
-                                <input type="email" name="email" id="email" placeholder="E-mail" class="form-control mt-4" required>
+                            
+                            <form action="{{route('site.login.validate')}}" method="post" class="form-signin">
+                                {!! csrf_field()!!}
+                                <input type="email" name="email" id="email" placeholder="E-mail" class="form-control mt-4" required >
                                 <input type="password" id="password" name="password" minlength="6" placeholder="Senha" onchange="validaCaracter(this)" class="form-control mt-3" required>
                                 <div class="row">
                                     <div class="checkbox mt-3 col-md-6">
@@ -85,7 +85,7 @@
 
                         <div class="tab-pane fade" id="pills-subscribe" role="tabpanel" aria-labelledby="pills-subscribe-tab">
                             @csrf
-                            <!--<form action="{{route('subscriber.store')}}" method="POST" onsubmit="EnviarFormulario()" class="py-3">-->
+                            <form action="{{route('subscriber.store')}}" method="POST" onsubmit="EnviarFormulario()" class="py-3">
                             <form action="#" method="POST" onsubmit="EnviarFormulario()" class="py-3">        
                                 <div class="form-group">
                                     <input class="form-control" id="name" name="name" placeholder="Nome">      
@@ -109,10 +109,10 @@
                                 <div class="form-row">
                                     <div class="form-group col">
                                         <select class="form-control" id="state" required onchange="listCities(this.value);" collapse>
-                                            {{--<!--<option value="-1">Estado</option>
+                                            <option value="-1">Estado</option>
                                             @foreach($states as $state)
                                                 <option value="{{$state->id}}">{{$state->initials}}</option>
-                                            @endforeach-->--}}
+                                            @endforeach
                                         </select>  
                                     </div>
                                     <div class="form-group col">
@@ -123,13 +123,13 @@
                                     </div> 
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="email" name="email" placeholder="E-mail">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
                                 </div>      
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="password" name="password" placeholder="Senha">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" id="confirmPassword" placeholder="Confirmar senha">
+                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirmar senha">
                                 </div>
                                 <button type="submit" class="btn btn-orange btn-block mt-3">Inscrever</button>
                             </form>
