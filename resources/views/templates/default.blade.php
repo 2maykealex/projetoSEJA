@@ -249,31 +249,48 @@
             -o-transition: 0.3s ease-in;
             transition: 0.3s ease-in;
         }
-        .card-deck .card:hover .btn-info{
+        .card-deck .card:hover .btn-info {
             color: #17a2b8;
             background-color: #f8f9fa;
-            border-color: #f8f9fa;
+            border: #f8f9fa;
         }
+        .text-cinza{
+            color: #6c757d;
+        }
+        .card-deck .card:hover .text-cinza{
+            color: white;
+            -webkit-transition: 0.5s ease-in; 
+            -moz-transition: 0.3s ease-in;
+            -o-transition: 0.3s ease-in;
+            transition: 0.3s ease-in;
+        }
+
         .card-deck .card .btn-info:hover{
             -webkit-transform: scale(1.05);
             -ms-transform: scale(1.05);
             transform: scale(1.05);
             box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
         }
+        .border-bottom-my{
+            width: 70px;
+            border-bottom: 1px solid ;
+        }
 
         /*Card referente a planos barra de navegação*/
         .nav-pills .nav-link.active,
         .nav-pills .show>.nav-link {
-            color: #fff;
-            background-color: #1de9b6;
+            color: #495057;
+            background-color: #fff;
+            border-color: #dee2e6 #dee2e6 #dee2e6;
         }
         .nav-pills .nav-link {
-            border-radius: 0px;
+            border: 1px solid transparent;
+            border-radius: 0px ;
         }
         .nav-pills .nav-link:hover {
             border-radius: 0px;
-            color: #fff;
-            background-color: #1de9b6;
+            color: #495057;
+            border-color: #dee2e6 #dee2e6 #dee2e6;
         }
         .nav-link {
             color: black;
@@ -337,6 +354,7 @@
             background-color: #2BBBAD;
             border-color: #2BBBAD;
         }
+
         .btn-orange:hover{
             color: white;
             -webkit-transform: scale(1.05);

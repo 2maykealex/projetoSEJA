@@ -258,12 +258,18 @@
                             @if($subscriptionType->id == $subscriptionPlan->subscription_type_id)
                                 <div class="card col-md-3 shadow pb-3">
                                     <div class="card-header">
-                                        <h4 class="font-weight-normal">{{$subscriptionPlan->collection->name}}</h4>
+                                        <h3 class="font-weight-normal mt-4">{{$subscriptionPlan->collection->name}}</h3>
+                                        <small class="text-cinza h6">{{$subscriptionPlan->type->name}}</small>
+                                        <div class="justify-content-center d-flex mt-4">
+                                            <div class="border-bottom-my"></div>
+                                        </div>
                                     </div>
                                     <div class="card-body">
-                                        <h1 class="card-title pricing-card-title mb-5">R$ {{$subscriptionPlan->price}}</h1>
-                                        <!--<small class="text-dark h6">{{$subscriptionPlan->type->name}}</small>
-                                        <div class="col-md-12 mt-2 text-left">
+                                        <h1 class="card-title pricing-card-title"><span class="text-cinza h3">R$</span> {{$subscriptionPlan->price}}</h1>
+                                        <div class="justify-content-center d-flex mt-3 mb-5">
+                                            <div class="border-bottom-my"></div>
+                                        </div>
+                                        <!--<div class="col-md-12 mt-2 text-left">
                                             <small class="text-dark h6">Inclui:</small>
                                         </div>
                                         <ul class="mb-4 text-left">
@@ -271,7 +277,7 @@
                                             <li><small>Lorem ipsum dolor sit amet</small></li>
                                             <li><small>Lorem ipsum dolor sit amet</small></li>
                                         </ul>-->
-                                        <a class="btn btn-md btn-block btn-info" href="#">Assinar</a>
+                                        <a class="btn btn-md btn-block btn-info" href="#">Conhecer</a>
                                     </div>
                                 </div> 
                             @else
