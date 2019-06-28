@@ -239,7 +239,6 @@
         }
         .card-deck .card{
             color: black;
-        }
         .card-deck .card:hover{
             color: white;  
             background-color: #17a2b8;
@@ -274,6 +273,10 @@
         .border-bottom-my{
             width: 70px;
             border-bottom: 1px solid ;
+        }
+
+        .font-weight-normal{
+            margin: 0;
         }
 
         /*Card referente a planos barra de navegação*/

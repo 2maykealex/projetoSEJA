@@ -147,7 +147,7 @@
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
             <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
         </video>
-        <div class="container h-100">
+        <!--<div class="container h-100">
             <div class="position-relative overflow-hidden p-3 p-md-5 text-center">
                 <div class="col-md-5 p-lg-5 mx-auto my-5" >
                     <h1 class="display-4 font-weight-normal text-white">Seja</h1>
@@ -156,7 +156,7 @@
                 <div class="product-device shadow-sm d-none d-md-block"></div>
                 <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
             </div>
-        </div>
+        </div>-->
     </div>
 
     <!--publicações-->
@@ -266,7 +266,7 @@
                                     </div>
                                     <div class="card-body">
                                         <h1 class="card-title pricing-card-title"><span class="text-cinza h3">R$</span> {{$subscriptionPlan->price}}</h1>
-                                        <div class="justify-content-center d-flex mt-3 mb-5">
+                                        <div class="justify-content-center d-flex mt-4 mb-5">
                                             <div class="border-bottom-my"></div>
                                         </div>
                                         <!--<div class="col-md-12 mt-2 text-left">
