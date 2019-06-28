@@ -141,6 +141,28 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Publisher',
     Route::post('update/{id}', 'PublisherController@update')->name("publisher.update");
 });
 
+Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Subscriber', 'prefix' => 'subscriber'], function () {
+    Route::group(['prefix' => 'posts'], function () {
+        Route::get('list', 'PostController@index')->name("subscriber.posts.list");
+        Route::get('show/{id}', 'PostController@show')->name("subscriber.posts.show");
+    });
+
+    Route::group(['prefix' => 'congresses'], function () {
+        Route::get('list', 'CongressController@index')->name("subscriber.congresses.list");
+        Route::get('show/{id}', 'CongressController@show')->name("subscriber.congresses.show");
+    });
+
+    Route::group(['prefix' => 'events'], function () {
+        Route::get('list', 'EventController@index')->name("subscriber.events.list");
+        Route::get('show/{id}', 'EventController@show')->name("subscriber.events.show");
+    });
+    
+    Route::get('', 'SubscriberController@index')->name("subscriber.home");
+    Route::get('edit/{id}', 'SubscriberController@edit')->name("subscriber.edit");
+    Route::post('update/{id}', 'SubscriberController@update')->name("subscriber.update");
+});
+
+
 Route::get('inscreva-se', 'Site\SiteController@subscribe')->name("subscribe")->middleware('authRoute');
 Route::get('listCities/{idUF}', 'Site\SiteController@listCities')->name("listCities")->middleware('authRoute');
 Route::get('login', 'Site\SiteController@doLogin')->name("site.login")->middleware('authRoute');
