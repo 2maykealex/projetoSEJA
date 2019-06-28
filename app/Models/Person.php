@@ -83,5 +83,14 @@ class Person extends Model
         return $this->hasOne(Publisher::class);
     }
 
+    public function subscriber(){
+        return $this->hasOne(Subscriber::class);
+    }
+
+    public function subscriptionRegistry(){
+        return $this->hasOne(SubscriptionRegistry::class);
+    }
+
+
 
 }
