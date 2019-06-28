@@ -21,4 +21,8 @@ class SubscriptionRegistry extends Model
             'message' => 'Não foi possível realizar este cadastro. Verifique!'
         ];
     }
+
+    public function subscriptionPlan(){
+        return $this->hasOne(SubscriptionPlan::class, 'id');
+    }
 }
