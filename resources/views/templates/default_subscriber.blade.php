@@ -33,8 +33,7 @@
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuPublicacao">
                     <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.new')}}" >Nova</a>
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.posts.list')}}">Publicações</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('subscriber.posts.list')}}">Publicações</a>
                     </div>
                 </div>
 
@@ -44,8 +43,7 @@
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuEventos">
                     <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.new')}}" >Novo</a>
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.events.list')}}">Eventos</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('subscriber.events.list')}}">Eventos</a>
                     </div>
                 </div>
 
@@ -55,8 +53,7 @@
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuCongressos">
                     <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.new')}}" >Novo</a>
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('publisher.congresses.list')}}">Eventos</a>
+                        <a class="nav-link text-white btn-outline-dark" href="{{route('subscriber.congresses.list')}}">Eventos</a>
                     </div>
                 </div>
             </div>
