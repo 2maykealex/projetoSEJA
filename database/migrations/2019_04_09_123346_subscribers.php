@@ -15,8 +15,8 @@ class Subscribers extends Migration
     {
         Schema::create('subscribers', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('people_id')->unsigned();
-            $table->foreign('people_id')->references('id')->on('people');
+            $table->integer('person_id')->unsigned();
+            $table->foreign('person_id')->references('id')->on('people');
             
             $table->timestamps();
         });

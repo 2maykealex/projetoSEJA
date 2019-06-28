@@ -15,8 +15,8 @@ class SubscriptionRegistries extends Migration
     {
         Schema::create('subscription_registries', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('subscriber_id')->unsigned();
-            $table->foreign('subscriber_id')->references('id')->on('subscribers');
+            $table->integer('person_id')->unsigned();
+            $table->foreign('person_id')->references('id')->on('people');
             $table->integer('subscription_plan_id')->unsigned();
             $table->foreign('subscription_plan_id')->references('id')->on('subscription_plans');
             $table->boolean('status');
