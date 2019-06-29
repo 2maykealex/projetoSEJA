@@ -123,6 +123,14 @@
                                     </div> 
                                 </div>
                                 <div class="form-group">
+                                    <select id="#" class="form-control">
+                                        <option value="-1">Planos</option>
+                                        @foreach($subscriptionPlans as $subscriptionPlan)
+                                            <option value="{{$subscriptionPlan->id}}">{{$subscriptionPlan->type->name}} - {{$subscriptionPlan->collection->name}} - R$ <?php echo number_format($subscriptionPlan->price,2, ',', '.');?></option>
+                                        @endforeach
+                                    </select>  
+                                </div>
+                                <div class="form-group">
                                     <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
                                 </div>      
                                 <div class="form-group">
@@ -182,14 +190,17 @@
                         </div>
                     </div>
                     <div class="row no-gutters px-3 pb-3">
-                        <div class="pt-3" style="width: 3em;">
-                            <img class="rounded-circle" src="{{ asset('storage/img/profiles/' . $post->author->image)}}" width="40" height="40">
-                        </div>
-                        <div class="card-body" style="width: 9em;">                      
+                        <div class="card-body">                      
                             <a class="card-title h6" href="#">{{$post->title}}</a>
-                        </div>      
-                        <div class="text-right col-lg-12">
-                            <small class="text-muted">Por {{$post->author->name}} em {{date('d/m/Y', strtotime($post->created_at))}}</small>
+                        </div>    
+                        <div class="position-profile">
+                            <a href="#"><img class="rounded-circle abs" src="{{ asset('storage/img/profiles/' . $post->author->image)}}" width="40" height="40"></a>
+                        </div>  
+                        <div class="position-people">
+                            <small class="text-muted">Por <a href="#">{{$post->author->name}}</a></small>
+                        </div>
+                        <div class="position-date-time">
+                            <small class="text-muted">Em {{date('d/m/Y', strtotime($post->created_at))}}</small>
                         </div>            
                     </div>
                 </div>
@@ -222,9 +233,7 @@
                             <div class="card-body">
                                 <h5 class="card-title">{{$event->title}}</h5>
                                 <small class="text-muted mb-2">Por {{$event->author->name}} em {{date('d/m/Y', strtotime($event->created_at))}}</small>
-                                <p class="card-text text-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporary incididunt ut labore et dolore magna aliqua. O uso de um mínimo de exercícios, os exercícios nostrud ullamco
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporary incididunt ut labore et dolore magna aliqua. O uso de um mínimo de exercícios, os exercícios nostrud ullamco
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporary incididunt ut labore et dolore magna aliqua. O uso de um mínimo de exercícios, os exercícios nostrud ullamco</p>                              
+                                <p class="card-text text-left">{{$event->text}}</p>                              
                             </div>
                         </div>
                     </div>
@@ -246,13 +255,13 @@
         <ul class="nav nav-pills justify-content-center mb-5" id="myTab" role="tablist">
             @foreach($subscriptionTypes as $subscriptionType)
             <li class="nav-item">
-                <a class="nav-link mr-1 <?php if ($subscriptionType->id == 1) {echo 'active';}?>" id="home-tab" data-toggle="tab" href="#{{$subscriptionType->name}}" role="tab" aria-controls="home" aria-selected="true">{{$subscriptionType->name}}</a>
+                <a class="nav-link mr-1 <?php if ($subscriptionType->id == 1) {echo 'active';}?>" id="{{$subscriptionType->name}}-tab" data-toggle="tab" href="#{{$subscriptionType->name}}" role="tab" aria-controls="{{$subscriptionType->name}}" aria-selected="true">{{$subscriptionType->name}}</a>
             </li>
             @endforeach
         </ul>
         <div class="tab-content" id="myTabContent">
             @foreach($subscriptionTypes as $subscriptionType)
-            <div class="tab-pane fade show <?php if ($subscriptionType->id == 1) {echo 'active';}?>" id="{{$subscriptionType->name}}" role="tabpanel" aria-labelledby="home-tab">
+            <div class="tab-pane fade show <?php if ($subscriptionType->id == 1) {echo 'active';}?>" id="{{$subscriptionType->name}}" role="tabpanel" aria-labelledby="{{$subscriptionType->name}}-tab">
                 <div class="card-deck d-flex justify-content-center flex-lg-center text-center mb-3" >
                         @foreach($subscriptionPlans as $subscriptionPlan)
                             @if($subscriptionType->id == $subscriptionPlan->subscription_type_id)
@@ -265,7 +274,7 @@
                                         </div>
                                     </div>
                                     <div class="card-body">
-                                        <h1 class="card-title pricing-card-title"><span class="text-cinza h3">R$</span> {{$subscriptionPlan->price}}</h1>
+                                        <h3 class="card-title pricing-card-title"><span class="text-cinza h4">R$ </span><?php echo number_format($subscriptionPlan->price,2, ',', '.');?> </h3>
                                         <div class="justify-content-center d-flex mt-4 mb-5">
                                             <div class="border-bottom-my"></div>
                                         </div>

@@ -75,7 +75,7 @@
         .card-body{
             padding: 12px;
         }
-       .hoverzoom {
+        .hoverzoom {
             position: relative;
             overflow: hidden;
         }        
@@ -86,7 +86,10 @@
             top: 0;
             left: 0;
             opacity: 0;    
-            background: none repeat scroll 0 0 ;    
+            background: none repeat scroll 0 0 ;   
+        }
+        .card-img-top{
+            height: 10rem;
         }
         .card:hover .hoverzoom .retina {
             opacity: 1;
@@ -239,6 +242,7 @@
         }
         .card-deck .card{
             color: black;
+        }
         .card-deck .card:hover{
             color: white;  
             background-color: #17a2b8;
@@ -300,17 +304,26 @@
         }
 
         /* Events */
-        .position-left-b{
+        .position-profile{
             position: absolute;
-            width: 120px;
+            width: 40px;
             height: 40px;
-            bottom: 5px;
-            right: 0px;
+            bottom: 10px;
+            left: 10px;
         }
-        .position-right-b{
+        .position-people{
             position: absolute;
-            width:250px;
+            width:200px;
+            height: 33px;
+            bottom: 10px;
+            left: 60px;
+        }
+        .position-date-time{
+            position: absolute;
+            width:100px;
             height: 20px;
+            bottom: 10px;
+            right: 0px;
         }
         .btn-danger:hover{
             -webkit-transform: scale(1.05);
