@@ -85,8 +85,7 @@
 
                         <div class="tab-pane fade" id="pills-subscribe" role="tabpanel" aria-labelledby="pills-subscribe-tab">
                             @csrf
-                            <form action="{{route('subscriber.store')}}" method="POST" onsubmit="EnviarFormulario()" class="py-3">
-                            <form action="#" method="POST" onsubmit="EnviarFormulario()" class="py-3">        
+                            <form action="{{route('subscriber.store')}}" method="POST" onsubmit="EnviarFormulario()" class="py-3">       
                                 <div class="form-group">
                                     <input class="form-control" id="name" name="name" placeholder="Nome">      
                                 </div>
@@ -100,7 +99,7 @@
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col">
-                                        <input type="number" class="form-control" id="zipcode" name="zipcode" onInput="checkMaskZipCode(this)" placeholder="CEP">
+                                        <input type="text" class="form-control" id="zipcode" name="zipcode" onInput="checkMaskZipCode(this)" placeholder="CEP">
                                     </div>
                                     <div class="form-group col"> 
                                         <input type="text" class="form-control" id="address" name="address" placeholder="Endereço">
