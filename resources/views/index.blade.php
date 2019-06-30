@@ -84,30 +84,31 @@
                         </div>
 
                         <div class="tab-pane fade" id="pills-subscribe" role="tabpanel" aria-labelledby="pills-subscribe-tab">
-                            @csrf
-                            <form action="{{route('subscriber.store')}}" method="POST" onsubmit="EnviarFormulario()" class="py-3">       
+                            
+                            <form action="{{route('subscriber.store')}}" method="POST" onsubmit="EnviarFormulario()" class="py-3"> 
+                                @csrf      
                                 <div class="form-group">
-                                    <input class="form-control" id="name" name="name" placeholder="Nome">      
+                                    <input class="form-control" id="name" name="name" placeholder="Nome" required>      
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col">
-                                        <input class="form-control" id="cpf" name="cpf" onInput="checkMaskDocument(this)" placeholder="CPF">
+                                        <input class="form-control" id="cpf" name="cpf" onInput="checkMaskDocument(this)" placeholder="CPF" required>
                                     </div>
                                     <div class="form-group col">
-                                        <input class="form-control" id="telephone" name="telephone" onInput="checkMaskTelephone(this)" placeholder="Tel/Cel">
+                                        <input class="form-control" id="telephone" name="telephone" onInput="checkMaskTelephone(this)" placeholder="Tel/Cel" required="">
                                     </div>       
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col">
-                                        <input type="text" class="form-control" id="zipcode" name="zipcode" onInput="checkMaskZipCode(this)" placeholder="CEP">
+                                        <input type="text" class="form-control" id="zipcode" name="zipcode" onInput="checkMaskZipCode(this)" placeholder="CEP" required>
                                     </div>
                                     <div class="form-group col"> 
-                                        <input type="text" class="form-control" id="address" name="address" placeholder="Endereço">
+                                        <input type="text" class="form-control" id="address" name="address" placeholder="Endereço" required>
                                     </div>    
                                 </div>      
                                 <div class="form-row">
                                     <div class="form-group col">
-                                        <select class="form-control" id="state" required onchange="listCities(this.value);" collapse>
+                                        <select class="form-control" id="state" name="state" required onchange="listCities(this.value);" collapse required>
                                             <option value="-1">Estado</option>
                                             @foreach($states as $state)
                                                 <option value="{{$state->id}}">{{$state->initials}}</option>
@@ -115,14 +116,14 @@
                                         </select>  
                                     </div>
                                     <div class="form-group col">
-                                        <select id="city" name="city" class="form-control">
+                                        <select id="city" name="city" class="form-control" required>
                                             <option selected>Cidade</option>
                                             <option>...</option>
                                         </select>
                                     </div> 
                                 </div>
                                 <div class="form-group">
-                                    <select id="#" class="form-control">
+                                    <select id="id" name="id" class="form-control">
                                         <option value="-1">Planos</option>
                                         @foreach($subscriptionPlans as $subscriptionPlan)
                                             <option value="{{$subscriptionPlan->id}}">{{$subscriptionPlan->type->name}} - {{$subscriptionPlan->collection->name}} - R$ <?php echo number_format($subscriptionPlan->price,2, ',', '.');?></option>
@@ -130,13 +131,13 @@
                                     </select>  
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mail">
+                                    <input type="email" class="form-control" id="email" name="email" placeholder="E-mail" required>
                                 </div>      
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="password" name="password" placeholder="Senha">
+                                    <input type="password" class="form-control" id="password" name="password" placeholder="Senha" required>
                                 </div>
                                 <div class="form-group">
-                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirmar senha">
+                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirmar senha" required>
                                 </div>
                                 <button type="submit" class="btn btn-orange btn-block mt-3">Inscrever</button>
                             </form>
