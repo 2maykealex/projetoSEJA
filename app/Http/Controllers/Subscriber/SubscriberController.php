@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use App\User;
 use App\Models\Person;
 use App\Models\UserProfile;
+use App\Models\Subscriber;
+use App\Models\SubscriptionRegistry;
 
 class SubscriberController extends Controller
 {
@@ -20,25 +22,13 @@ class SubscriberController extends Controller
         return view('subscriber.index');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request){
         $data = $request->all();
-        // dd($data);
         $userData = [];
         $userData['name']     = $data['name'];
         $userData['email']    = $data['email'];
@@ -68,57 +58,48 @@ class SubscriberController extends Controller
                     $dados['user_id']          = $idNewUser;  #id do novo usuário
                     $dados['user_profile_id']  = 2;        #subscriber
 
-                    $userProfile = new UserProfile;                    
+                    $userProfile = new UserProfile;
                     $saveUserProfile = $userProfile->newUserProfile($dados);
 
                     if($saveUserProfile){
-                        return redirect()->route('site.home', ['success' => true, 'message' => 'Usuário salvo com sucesso!']);
+                        $subscriberData['person_id'] = $idNewPerson[0];
+                        // $subscriberData['paymentMethod'] = "teste";
+                        $subscriber = new Subscriber;
+                        $saveSubscriber = $subscriber->newSubscriber($subscriberData);
+                        
+                        if($saveSubscriber){
+                            $subscriptionRegistryData['person_id'] = $idNewPerson[0];
+                            $subscriptionRegistryData['subscription_plan_id'] = $data['subscription_plan_id'];
+                            $subscriptionRegistryData['status'] = 0; 
+                            $subscriptionRegistryData['expires_in'] = "30/07/2019";
+                            $subscriptionRegistry = new SubscriptionRegistry;
+                            $saveSubscriptionRegistry = $subscriptionRegistry->newSubscriptionRegistry($subscriptionRegistryData);
+
+                            if($saveSubscriptionRegistry){
+                                return redirect()->route('site.home', ['success' => true, 'message' => 'Usuário salvo com sucesso!']);
+                            }
+                        }
                     }
                 }
             }
         }
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function edit($id)
     {
         //
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         //
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function destroy($id)
     {
         //

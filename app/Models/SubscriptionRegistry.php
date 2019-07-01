@@ -6,8 +6,11 @@ use Illuminate\Database\Eloquent\Model;
 
 class SubscriptionRegistry extends Model
 {
-    public function newSubscriber($data):Array{
-        $this->people_id = $data['people_id'];
+    public function newSubscriptionRegistry($data):Array{
+        $this->person_id = $data['person_id'];
+        $this->subscription_plan_id = $data['subscription_plan_id'];
+        $this->status = $data['status'];
+        $this->expires_in = $data['expires_in'];
         $save = $this->save();
         if ($save){
             return [

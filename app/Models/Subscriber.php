@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Subscriber extends Model
 {
     public function newSubscriber($data):Array{
-        $this->people_id = $data['people_id'];
+        $this->person_id = $data['person_id'];
         $save = $this->save();
         if ($save){
             return [
