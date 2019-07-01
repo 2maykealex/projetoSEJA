@@ -17,7 +17,7 @@ class Subscribers extends Migration
             $table->increments('id');
             $table->integer('person_id')->unsigned();
             $table->foreign('person_id')->references('id')->on('people');
-            
+
             $table->timestamps();
         });
     }
