@@ -123,7 +123,7 @@
                                     </div> 
                                 </div>
                                 <div class="form-group">
-                                    <select id="subscription_plans" name="subscription_plans" class="form-control">
+                                    <select id="subscription_plan_id" name="subscription_plan_id" class="form-control">
                                         <option value="-1">Planos</option>
                                         @foreach($subscriptionPlans as $subscriptionPlan)
                                             <option value="{{$subscriptionPlan->id}}">{{$subscriptionPlan->type->name}} - {{$subscriptionPlan->collection->name}} - R$ <?php echo number_format($subscriptionPlan->price,2, ',', '.');?></option>
