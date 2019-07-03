@@ -212,38 +212,40 @@
 
 
     <!--eventos-->
-    <div class="container my-5" id="eventos">      
-        <div class="pricing-header container py-4 pt-md-5 pb-md-4 mx-auto">
-            <h1 class="display-5 mt-5 mb-3">Eventos</h1>
-            <div class="mb-5" style="border-bottom: 7px solid #00BFFF;
-  width:40px;"></div>
-        <div class="col-md-12 text-center mt-5">
-             <p class="mb-5 h3">Acompanhe nossos eventos</p>
-        </div>
-        </div>
-        <?php $count = 0; ?>
-            @foreach($events as $event)
-                <?php if($count == 1) break; ?>
-                <div class="mb-3">
-                    <div class="row no-gutters">
-                        <div class="col-md-5 ">
-                            <img src="{{ asset('storage/img/events/' . $event->image)}}" class="card-img shadow my-1" alt="...">
-                        </div>
-                        <div class="col-md-7 pl-3">
-                            <div class="card-body">
-                                <h5 class="card-title">{{$event->title}}</h5>
-                                <small class="text-muted mb-2">Por {{$event->author->name}} em {{date('d/m/Y', strtotime($event->created_at))}}</small>
-                                <p class="card-text text-left">{{$event->text}}</p>                              
+    @empty($events)
+        <div class="container my-5" id="eventos">      
+            <div class="pricing-header container py-4 pt-md-5 pb-md-4 mx-auto">
+                <h1 class="display-5 mt-5 mb-3">Eventos</h1>
+                <div class="mb-5" style="border-bottom: 7px solid #00BFFF;width:40px;"></div>
+                    <div class="col-md-12 text-center mt-5">
+                        <p class="mb-5 h3">Acompanhe nossos eventos</p>
+                    </div>
+                </div>
+                <?php $count = 0; ?>
+                @foreach($events as $event)
+                    <?php if($count == 1) break; ?>
+                    <div class="mb-3">
+                        <div class="row no-gutters">
+                            <div class="col-md-5 ">
+                                <img src="{{ asset('storage/img/events/' . $event->image)}}" class="card-img shadow my-1" alt="...">
+                            </div>
+                            <div class="col-md-7 pl-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{$event->title}}</h5>
+                                    <small class="text-muted mb-2">Por {{$event->author->name}} em {{date('d/m/Y', strtotime($event->created_at))}}</small>
+                                    <p class="card-text text-left">{{$event->text}}</p>                              
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <?php $count++; ?>
+                @endforeach
+                <div class="col-md-12 text-center mt-5">
+                    <a class="btn btn-danger" href="#">Saiba mais</a>    
                 </div>
-                <?php $count++; ?>
-            @endforeach
-            <div class="col-md-12 text-center mt-5">
-                <a class="btn btn-danger" href="#">Saiba mais</a>    
             </div>
-    </div>
+        </div>
+    @endempty
     
     <!--assinantes-->
     <div class="container my-5" id="assinantes">
