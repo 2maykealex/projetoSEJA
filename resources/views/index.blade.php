@@ -214,7 +214,7 @@
 
 
     <!--eventos-->
-    @empty($events)
+    @if (!empty($events))
         <div class="container my-5" id="eventos">      
             <div class="pricing-header container py-4 pt-md-5 pb-md-4 mx-auto">
                 <h1 class="display-5 mt-5 mb-3">Eventos</h1>
@@ -247,7 +247,7 @@
                 </div>
             </div>
         </div>
-    @endempty
+    @endif
     
     <!--assinantes-->
     <div class="container my-5" id="assinantes">
@@ -334,7 +334,6 @@
         </div>
     </div>
 
-            
     <!-- FOOTER RODÁPE -->
     <footer class=" text-dark mt-5">
         <div class="container-fluid border-bottom bg-light">
