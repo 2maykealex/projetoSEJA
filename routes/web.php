@@ -147,9 +147,14 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Subscriber'
         Route::get('show/{id}', 'PostController@show')->name("subscriber.posts.show");
     });
 
+    // Route::group(['prefix' => 'congresses'], function () {
+    //     Route::get('list', 'CongressController@index')->name("subscriber.congresses.list");
+    //     Route::get('show/{id}', 'CongressController@show')->name("subscriber.congresses.show");
+    // });
+
     Route::group(['prefix' => 'congresses'], function () {
-        Route::get('list', 'CongressController@index')->name("subscriber.congresses.list");
-        Route::get('show/{id}', 'CongressController@show')->name("subscriber.congresses.show");
+        Route::get('list', 'EventController@congressesList')->name("subscriber.congresses.list");
+        Route::get('show/{id}', 'EventController@show')->name("subscriber.congresses.show");
     });
 
     Route::group(['prefix' => 'events'], function () {
