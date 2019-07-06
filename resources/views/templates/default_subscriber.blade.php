@@ -25,36 +25,28 @@
             <div class="col-md-2  bg-dark">
                 <div class="text-center">
                     <h2 class="text-white py-2 border-bottom">ALMA</h2>
-                </div>     
-
+                </div>
                 <!--botão para Configurar tipos-->
                 <button class="btn btn-light col-md-12 text-left" type="button" data-toggle="collapse" data-target="#menuPublicacao" aria-controls="menuPublicacao" aria-expanded="false" aria-label="Alterna navegação">
-                  Publicações
+                  Publicações sobre
                 </button>
                 <div class="collapse mt-2 border bg-secondary" id="menuPublicacao">
-                    <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('subscriber.posts.list')}}">Publicações</a>
-                    </div>
+                    @if(Session::get('menuPosts'))
+                        @foreach (Session::get('menuPosts') as $menuPost)
+                            <div class="nav flex-column">
+                                <a class="nav-link text-white btn-outline-dark" href="{{route('subscriber.posts.list', $menuPost)}}">{{$menuPost->name}}</a>
+                            </div>
+                        @endforeach
+                    @endif
                 </div>
-
-                <!--botão para Configurar tipos-->
-                <button class="btn btn-light col-md-12 text-left mt-3" type="button" data-toggle="collapse" data-target="#menuEventos" aria-controls="menuEventos" aria-expanded="false" aria-label="Alterna navegação">
-                  Eventos
-                </button>
-                <div class="collapse mt-2 border bg-secondary" id="menuEventos">
-                    <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('subscriber.events.list')}}">Eventos</a>
-                    </div>
+                <div class="nav flex-column">
+                    <a class="btn btn-light col-md-12 text-left mt-3" href="{{route('subscriber.events.list')}}">Eventos</a>
                 </div>
-
-                <!--botão para Configurar tipos-->
-                <button class="btn btn-light col-md-12 text-left mt-3" type="button" data-toggle="collapse" data-target="#menuCongressos" aria-controls="menuCongressos" aria-expanded="false" aria-label="Alterna navegação">
-                  Congressos
-                </button>
-                <div class="collapse mt-2 border bg-secondary" id="menuCongressos">
-                    <div class="nav flex-column">
-                        <a class="nav-link text-white btn-outline-dark" href="{{route('subscriber.congresses.list')}}">Eventos</a>
-                    </div>
+                <div class="nav flex-column">
+                    <a class="btn btn-light col-md-12 text-left mt-3" href="{{route('subscriber.congresses.list')}}">Congressos</a>
+                </div>
+                <div class="nav flex-column">
+                    <a class="btn btn-light col-md-12 text-left mt-3" href="{{route('subscriber.subscription')}}">Minha assinatura</a>
                 </div>
             </div>
             <a class="btn btn-warning fixed-bottom col-md-2 text-white" href="{{route('site.logout')}}">Sair</a>
