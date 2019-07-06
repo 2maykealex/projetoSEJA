@@ -141,16 +141,11 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Publisher',
     Route::post('update/{id}', 'PublisherController@update')->name("publisher.update");
 });
 
-Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Subscriber', 'prefix' => 'subscriber'], function () {
-    Route::group(['prefix' => 'posts'], function () {
-        Route::get('list', 'PostController@index')->name("subscriber.posts.list");
+Route::group(['middleware' => ['auth', 'authRoute', 'getMenus'], 'namespace' => 'Subscriber', 'prefix' => 'subscriber'], function () {
+    Route::group(['prefix' => 'posts' ], function () {
+        Route::get('list/{id}', 'PostController@index')->name("subscriber.posts.list");
         Route::get('show/{id}', 'PostController@show')->name("subscriber.posts.show");
     });
-
-    // Route::group(['prefix' => 'congresses'], function () {
-    //     Route::get('list', 'CongressController@index')->name("subscriber.congresses.list");
-    //     Route::get('show/{id}', 'CongressController@show')->name("subscriber.congresses.show");
-    // });
 
     Route::group(['prefix' => 'congresses'], function () {
         Route::get('list', 'EventController@congressesList')->name("subscriber.congresses.list");
@@ -161,6 +156,8 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Subscriber'
         Route::get('list', 'EventController@index')->name("subscriber.events.list");
         Route::get('show/{id}', 'EventController@show')->name("subscriber.events.show");
     });
+    
+    Route::get('subscription-registry', 'SubscriptionRegistryController@index')->name("subscriber.subscription");
     
     Route::get('', 'SubscriberController@index')->name("subscriber.home");
     Route::get('edit/{id}', 'SubscriberController@edit')->name("subscriber.edit");
