@@ -68,4 +68,8 @@ class Post extends Model
     public function author(){
         return $this->belongsTo(Person::class, 'person_id');
     }
+
+    public function reportType(){
+        return $this->belongsTo(ReportType::class, 'report_type_id');
+    }
 }
