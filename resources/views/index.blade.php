@@ -168,89 +168,92 @@
     </div>
 
     <!--publicações-->
-    <div class="container-fluid my-5" id="publicacao">
-        <div class="pricing-header container py-4 pt-md-5 pb-md-4 mx-auto">
-            <h1 class="display-5 mt-5 mb-3">Conteúdo</h1>
-            <div class="mb-5" style="border-bottom: 7px solid #00BFFF;
-  width:40px;"></div>
-            <div class="col-md-12 text-center mt-5">
-                <p class="mb-5 h3">Veja alguns dos conteúdos criados pelos nossos especialistas</p>
-            </div>
-        </div>
-
-    
-        <div class="carousel">
-            @foreach($posts as $post)         
-            <div class="alto col-lg-12 mb-2">
-                <div class="card my-3 shadow rounded">
-                    <div class="hoverzoom">
-                        <img src="{{ asset('storage/img/posts/' . $post->image)}}" alt="..." class="card-img-top">
-                        <div class="retina text-right">
-                            <button type="submit" class="btn btn-light">icone</button>
-                        </div>
-                    </div>
-                    <div class="row no-gutters px-3 pb-3">
-                        <div class="card-body">                      
-                            <a class="card-title h6" href="#">{{$post->title}}</a>
-                        </div>    
-                        <div class="position-profile">
-                            <a href="#"><img class="rounded-circle abs" src="{{ asset('storage/img/profiles/' . $post->author->image)}}" width="40" height="40"></a>
-                        </div>  
-                        <div class="position-people">
-                            <small class="text-muted">Por <a href="#">{{$post->author->name}}</a></small>
-                        </div>
-                        <div class="position-date-time">
-                            <small class="text-muted">Em {{date('d/m/Y', strtotime($post->created_at))}}</small>
-                        </div>            
-                    </div>
+    @if (!empty($posts))
+        <div class="container-fluid my-5" id="publicacao">
+            <div class="pricing-header container py-4 pt-md-5 pb-md-4 mx-auto">
+                <h1 class="display-5 mt-5 mb-3">Conteúdo</h1>
+                <div class="mb-5" style="border-bottom: 7px solid #00BFFF; width:40px;">
+                </div>
+                <div class="col-md-12 text-center mt-5">
+                    <p class="mb-5 h3">Veja alguns dos conteúdos criados pelos nossos especialistas</p>
                 </div>
             </div>
-            @endforeach
-            </div>
-        </div>
-    </div>
 
-
-    <!--eventos-->
-    <div class="container my-5" id="eventos">      
-        <div class="pricing-header container py-4 pt-md-5 pb-md-4 mx-auto">
-            <h1 class="display-5 mt-5 mb-3">Eventos</h1>
-            <div class="mb-5" style="border-bottom: 7px solid #00BFFF;
-  width:40px;"></div>
-        <div class="col-md-12 text-center mt-5">
-             <p class="mb-5 h3">Acompanhe nossos eventos</p>
-        </div>
-        </div>
-        <?php $count = 0; ?>
-            @foreach($events as $event)
-                <?php if($count == 1) break; ?>
-                <div class="mb-3">
-                    <div class="row no-gutters">
-                        <div class="col-md-5 ">
-                            <img src="{{ asset('storage/img/events/' . $event->image)}}" class="card-img shadow my-1" alt="...">
+        
+            <div class="carousel">
+                @foreach($posts as $post)
+                <div class="alto col-lg-12 mb-2">
+                    <div class="card my-3 shadow rounded">
+                        <div class="hoverzoom">
+                            <img src="{{ asset('storage/img/posts/' . $post->image)}}" alt="..." class="card-img-top">
+                            <div class="retina text-right">
+                                <button type="submit" class="btn btn-light">icone</button>
+                            </div>
                         </div>
-                        <div class="col-md-7 pl-3">
+                        <div class="row no-gutters px-3 pb-3">
                             <div class="card-body">
-                                <h5 class="card-title">{{$event->title}}</h5>
-                                <small class="text-muted mb-2">Por {{$event->author->name}} em {{date('d/m/Y', strtotime($event->created_at))}}</small>
-                                <p class="card-text text-left">{{$event->text}}</p>                              
+                                <a class="card-title h6" href="#">{{$post->title}}</a>
+                            </div>    
+                            <div class="position-profile">
+                                <a href="#"><img class="rounded-circle abs" src="{{ asset('storage/img/profiles/' . $post->author->image)}}" width="40" height="40"></a>
+                            </div>  
+                            <div class="position-people">
+                                <small class="text-muted">Por <a href="#">{{$post->author->name}}</a></small>
+                            </div>
+                            <div class="position-date-time">
+                                <small class="text-muted">Em {{date('d/m/Y', strtotime($post->created_at))}}</small>
                             </div>
                         </div>
                     </div>
                 </div>
-                <?php $count++; ?>
-            @endforeach
-            <div class="col-md-12 text-center mt-5">
-                <a class="btn btn-danger" href="#">Saiba mais</a>    
+                @endforeach
             </div>
+        </div>
     </div>
+    @endif
+
+
+    <!--eventos-->
+    @if (!empty($events))
+        <div class="container my-5" id="eventos">      
+            <div class="pricing-header container py-4 pt-md-5 pb-md-4 mx-auto">
+                <h1 class="display-5 mt-5 mb-3">Eventos</h1>
+                <div class="mb-5" style="border-bottom: 7px solid #00BFFF;width:40px;"></div>
+                    <div class="col-md-12 text-center mt-5">
+                        <p class="mb-5 h3">Acompanhe nossos eventos</p>
+                    </div>
+                </div>
+                <?php $count = 0; ?>
+                @foreach($events as $event)
+                    <?php if($count == 1) break; ?>
+                    <div class="mb-3">
+                        <div class="row no-gutters">
+                            <div class="col-md-5 ">
+                                <img src="{{ asset('storage/img/events/' . $event->image)}}" class="card-img shadow my-1" alt="...">
+                            </div>
+                            <div class="col-md-7 pl-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{$event->title}}</h5>
+                                    <small class="text-muted mb-2">Por {{$event->author->name}} em {{date('d/m/Y', strtotime($event->created_at))}}</small>
+                                    <p class="card-text text-left">{{$event->text}}</p>                              
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <?php $count++; ?>
+                @endforeach
+                <div class="col-md-12 text-center mt-5">
+                    <a class="btn btn-danger" href="#">Saiba mais</a>    
+                </div>
+            </div>
+        </div>
+    @endif
     
     <!--assinantes-->
     <div class="container my-5" id="assinantes">
         <div class="container pricing-header py-4 pt-md-5 pb-md-4 mx-auto">
             <h1 class="display-5 mt-5 mb-3">Planos</h1>   
-            <div class="mb-3" style="border-bottom: 7px solid #00BFFF;
-  width:40px;"></div>     
+            <div class="mb-3" style="border-bottom: 7px solid #00BFFF;  width:40px;"></div>
         </div>
         <ul class="nav nav-pills justify-content-center mb-5" id="myTab" role="tablist">
             @foreach($subscriptionTypes as $subscriptionType)
@@ -294,18 +297,17 @@
                             @endif
                           
                         @endforeach
-                </div>              
+                </div>
             </div>
             @endforeach
-        </div>              
+        </div>
     </div>
 
     <!--SOBRE NÓS-->
     <div class="container my-5" id="sobre">
         <div class="container pricing-header py-4 pt-md-5 pb-md-4 mx-auto">
             <h1 class="display-5 mt-5 mb-3">Sobre nós</h1>   
-            <div class="mb-2" style="border-bottom: 7px solid #00BFFF;
-  width:40px;"></div>     
+            <div class="mb-2" style="border-bottom: 7px solid #00BFFF;  width:40px;"></div>
         </div>
         <div class="row">
             <div class="col-md-6">
@@ -317,52 +319,21 @@
                 </div>
             </div>
             <div class="row col-md-6 py-5">
-
-                <div class="col-md-6">
-                    <div class="card text-white imgzoom ">
-                        <img class="card-img mb-3 " src="{{asset('storage/img/astro.jpg')}}" alt="Card image">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with .</p>
-                            <p class="card-text">Last updated 3 mins ago</p>
+                @foreach ($publishers as $publisher)
+                    <div class="col-md-6">
+                        <div class="card text-white imgzoom ">
+                            <img class="card-img mb-3 " src="{{ asset('storage/img/profiles/' . $publisher->person->image)}}" alt="Card image">
+                            <div class="card-img-overlay">
+                                <h5 class="card-title">{{$publisher->person->name}}</h5>
+                                <p class="position-people">{{$publisher->summary}}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card text-white imgzoom">
-                        <img class="card-img mb-3 " src="{{asset('storage/img/astro.jpg')}}" alt="Card image">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with .</p>
-                            <p class="card-text">Last updated 3 mins ago</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card text-white imgzoom">
-                        <img class="card-img mb-3 " src="{{asset('storage/img/astro.jpg')}}" alt="Card image">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with .</p>
-                            <p class="card-text">Last updated 3 mins ago</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card text-white imgzoom">
-                        <img class="card-img mb-3 " src="{{asset('storage/img/astro.jpg')}}" alt="Card image">
-                        <div class="card-img-overlay">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with .</p>
-                            <p class="card-text">Last updated 3 mins ago</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
-        </div>                
+        </div>
     </div>
 
-            
     <!-- FOOTER RODÁPE -->
     <footer class=" text-dark mt-5">
         <div class="container-fluid border-bottom bg-light">

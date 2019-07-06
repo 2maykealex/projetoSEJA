@@ -25,13 +25,13 @@
             <div class="col-md-2  bg-dark">
                 <div class="text-center">
                     <h2 class="text-white py-2 border-bottom">ALMA</h2>
+                    
                 </div>     
 
                 <!--botão para Configurar tipos-->
                 <button class="btn btn-light col-md-12 text-left" type="button" data-toggle="collapse" data-target="#menuPublicacao" aria-controls="menuPublicacao" aria-expanded="false" aria-label="Alterna navegação">
                   Inicio
                 </button>
-                
                 <div class="collapse mt-2 border bg-secondary" id="menuPublicacao">
                     <div class="nav flex-column">
                         <a class="nav-link text-white btn-outline-dark" href="{{route('subscriber.posts.list')}}">Pagina inicial</a>

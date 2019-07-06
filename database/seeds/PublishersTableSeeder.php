@@ -14,6 +14,7 @@ class PublishersTableSeeder extends Seeder
     {
         Publisher::create([
             'person_id' => 1,
+            'summary' => "Astrólogo há mais de 20 anos.",
         ]);
     }
 }

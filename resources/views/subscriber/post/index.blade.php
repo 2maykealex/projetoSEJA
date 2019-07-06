@@ -1,7 +1,7 @@
 @extends('templates.default_subscriber')
 
 @section('title')
-
+	PUBLICAÇÕES
 @endsection
 
 @section('content')
@@ -28,7 +28,7 @@
 		                		<a class="btn btn-success btn-sm button-width" href="{{route('subscriber.posts.show', $post->id)}}">Visualizar</a>
 			                 </td>
 		                </tr>
-		            @endforeach   
+		            @endforeach
 	          		</tbody>
 	        	</table>
 	      	</div>

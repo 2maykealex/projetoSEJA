@@ -63,14 +63,13 @@ class SubscriberController extends Controller
 
                     if($saveUserProfile){
                         $subscriberData['person_id'] = $idNewPerson[0];
-                        // $subscriberData['paymentMethod'] = "teste";
                         $subscriber = new Subscriber;
                         $saveSubscriber = $subscriber->newSubscriber($subscriberData);
                         
                         if($saveSubscriber){
                             $subscriptionRegistryData['person_id'] = $idNewPerson[0];
                             $subscriptionRegistryData['subscription_plan_id'] = $data['subscription_plan_id'];
-                            $subscriptionRegistryData['status'] = 0; 
+                            $subscriptionRegistryData['status'] = 1; 
                             $subscriptionRegistryData['expires_in'] = "30/07/2019";
                             $subscriptionRegistry = new SubscriptionRegistry;
                             $saveSubscriptionRegistry = $subscriptionRegistry->newSubscriptionRegistry($subscriptionRegistryData);
