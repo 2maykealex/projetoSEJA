@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\PostType;
+use App\Models\ReportType;
 
 class SiteFunction extends Controller
 {
@@ -11,5 +12,10 @@ class SiteFunction extends Controller
         if ($type == $postType->name) {
             return $postType;
         }
+    }
+
+    public function listPostMenu(){
+        $reportTypes = ReportType::all();
+        return $reportTypes;
     }
 }
