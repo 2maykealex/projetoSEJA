@@ -12,9 +12,13 @@
     <style>
         
     </style>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
 </head>
 <body>
+
+    <?php 
+        $url = explode("/", URL::current());
+    ?>
     
     <nav class="navbar navbar-expand shadow">
         <!--label com um botão que liga com o input-->  
@@ -53,9 +57,9 @@
                             <input class="form-nav mr-sm-2 ml-3" type="search" placeholder="Pesquisar" aria-label="Search">
                         </form>
 
-                        <h5 class="font-heading text-muted text-center px-2 mt-3 pt-4 border-top">Painel Inicial</h5>
+                        <h5 class="font-heading text-muted text-center px-2 mt-3 pt-4 border-top">Painel do assinante</h5>
                         <ul class="mt-0">
-                            <li>
+                            <li class="active">
                                 <a href="{{route('subscriber.home')}}" class="pl-3">Início</a>
                             </li>
                         </ul>
@@ -64,15 +68,15 @@
                         <ul class="mt-0">         
                             <li>
                                 <a href="#" class=" pl-3">Postagens</a>
-                                @if(Session::get('menuPosts'))
-                                    @foreach (Session::get('menuPosts') as $menuPost)
-                                    <ul class="mt-0">         
-                                        <li>
-                                            <a href="{{route('subscriber.posts.list', $menuPost)}}" class=" pl-3">{{$menuPost->name}}</a>
-                                        </li>
-                                    </ul>
-                                    @endforeach
-                                @endif
+                                <ul class="mt-0">
+                                    @if(Session::get('menuPosts'))
+                                        @foreach (Session::get('menuPosts') as $menuPost)        
+                                            <li>
+                                                <a href="{{route('subscriber.posts.list', $menuPost)}}" class=" pl-3">{{$menuPost->name}}</a>
+                                            </li>
+                                        @endforeach
+                                    @endif
+                                </ul>
                             </li>
                             <li>
                                 <a href="#" class="pl-3">Eventos</a>
@@ -99,16 +103,24 @@
             </div>
             
             <div class="col" style="padding: 0">        
-                <p class="m-5">Há muitos casos de uso para essa propriedade. O mais comum é quando uma caixa de seleção está disponível e "possui" um número de subopções (que também são caixas de seleção). Se todas as subopções estiverem marcadas, a caixa de seleção proprietária também será marcada e, se todas elas estiverem desmarcadas, a caixa de seleção proprietária será desmarcada. Se uma ou mais das subopções tiverem um estado diferente das outras, a caixa de seleção proprietária está no estado indeterminado.</p>
+                <main role="main" class="p-5">
+                    @include('includes.alerts')
+                    @yield('content')
+                </main>
             </div>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <script>
+        $('.sidebar-sticky').on('click', 'li', function(){
+            $('.sidebar-sticky ul li.active').removeClass('active');
+            $(this).addClass('active');
+        });
+
         
     </script>
 </body>

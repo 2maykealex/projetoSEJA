@@ -44,7 +44,7 @@
     }*/
 
     /* Sidebar 'a' */
-    .sidebar-sticky a{
+    /*.sidebar-sticky a{
         padding: 10px;
         display: block;
         text-decoration: none;  
@@ -53,20 +53,19 @@
     }
     .sidebar-sticky a:hover{
         border-left: 3px solid #ccc;
-        background-color: #f4f4f4;
-        color: #555; 
+        background-color: #f4f4f4; 
         transition: all .4s;
         text-decoration: none;  
-    }
+    }*/
 
     /*Sidebar 'li' e 'ul' */
-    .sidebar-sticky li ul{
+    /*.sidebar-sticky ul li ul{
         display: none;
     }
-    .sidebar-sticky li:hover ul{
+    .sidebar-sticky ul li.active ul{
         display: block;
         margin-top: 0;
-    }
+    }*/
     /*.sidebar-sticky ul li:hover ul{
         margin-top: 0;
         visibility: visible;
@@ -88,7 +87,7 @@
         color: #555;
         text-decoration: none;
     }
-    .sidebar-sticky ul ul li a:hover{
+    .sidebar-sticky ul ul li:hover a{
         color: #1a33d5;
         text-decoration: none;
     }
@@ -138,11 +137,11 @@
     border: 1px solid #ced4da;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-}
-.font-heading {
-    font-size: .75rem;
-    text-transform: uppercase;
-}
+    }
+    .font-heading {
+        font-size: .75rem;
+        text-transform: uppercase;
+    }
     .dropdown-menu-right {
         right: 0;
         left: auto;
@@ -153,3 +152,30 @@
         -ms-flex-pack: start;
         justify-content: flex-start;
     }
+
+    /* Menus com hover e active */
+    .sidebar-sticky ul li a{
+        padding: 10px;
+        display: block;
+        text-decoration: none;  
+        color: #555;
+        font-size: 14px;
+    }
+    .sidebar-sticky ul li:hover ,
+    .sidebar-sticky ul li.active ,
+    .sidebar-sticky ul li.active:hover {
+        border-left: 3px solid #ccc;
+        background-color: #f4f4f4; 
+        transition: all .4s;
+        text-decoration: none;  
+    }
+
+    /* Menus para abrir submenus*/
+    .sidebar-sticky ul li ul{
+        display: none;
+    }
+    .sidebar-sticky ul li.active ul{
+        display: block;
+        margin-top: 0;
+    }
+
