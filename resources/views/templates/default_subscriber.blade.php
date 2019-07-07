@@ -53,7 +53,7 @@
                             <input class="form-nav mr-sm-2 ml-3" type="search" placeholder="Pesquisar" aria-label="Search">
                         </form>
 
-                        <h6 class="font-heading text-muted px-2 mt-3 pt-4 border-top">Painel Inicial</h6>
+                        <h5 class="font-heading text-muted text-center px-2 mt-3 pt-4 border-top">Painel Inicial</h5>
                         <ul class="mt-0">
                             <li>
                                 <a href="{{route('subscriber.home')}}" class="pl-3">Início</a>
@@ -63,13 +63,22 @@
                         <h6 class="font-heading text-muted px-2 mt-3">Conteúdo</h6>
                         <ul class="mt-0">         
                             <li>
-                                <a href="{{route('subscriber.posts.list')}}" class=" pl-3">Postagens</a>
+                                <a href="#" class=" pl-3">Postagens</a>
+                                @if(Session::get('menuPosts'))
+                                    @foreach (Session::get('menuPosts') as $menuPost)
+                                    <ul class="mt-0">         
+                                        <li>
+                                            <a href="{{route('subscriber.posts.list', $menuPost)}}" class=" pl-3">{{$menuPost->name}}</a>
+                                        </li>
+                                    </ul>
+                                    @endforeach
+                                @endif
                             </li>
                             <li>
-                                <a href="{{route('subscriber.events.list')}}" class="pl-3">Eventos</a>
+                                <a href="#" class="pl-3">Eventos</a>
                             </li>
                             <li>
-                                <a href="{{route('subscriber.congresses.list')}}" class="pl-3">Congressos</a>
+                                <a href="#" class="pl-3">Congressos</a>
                             </li>
                             <li>
                                 <a href="#" class="pl-3">Cursos</a>
