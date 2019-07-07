@@ -11,17 +11,6 @@
 
     <style>
         
-        
-    .dropdown-menu-right {
-        right: 0;
-        left: auto;
-    }
-    .navbar-expand {
-        -ms-flex-flow: row nowrap;
-        flex-flow: row nowrap;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-    }
     </style>
 
 </head>
@@ -67,20 +56,20 @@
                         <h6 class="font-heading text-muted px-2 mt-3 pt-4 border-top">Painel Inicial</h6>
                         <ul class="mt-0">
                             <li>
-                                <a class="pl-3" href="#">Início</a>
+                                <a href="{{route('subscriber.home')}}" class="pl-3">Início</a>
                             </li>
                         </ul>
               
                         <h6 class="font-heading text-muted px-2 mt-3">Conteúdo</h6>
                         <ul class="mt-0">         
                             <li>
-                                <a href="#" class=" pl-3">Postagens</a>
+                                <a href="{{route('subscriber.posts.list')}}" class=" pl-3">Postagens</a>
                             </li>
                             <li>
-                                <a href="#" class="pl-3">Eventos</a>
+                                <a href="{{route('subscriber.events.list')}}" class="pl-3">Eventos</a>
                             </li>
                             <li>
-                                <a href="#" class="pl-3">Congressos</a>
+                                <a href="{{route('subscriber.congresses.list')}}" class="pl-3">Congressos</a>
                             </li>
                             <li>
                                 <a href="#" class="pl-3">Cursos</a>

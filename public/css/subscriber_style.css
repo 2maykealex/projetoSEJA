@@ -143,3 +143,13 @@
     font-size: .75rem;
     text-transform: uppercase;
 }
+    .dropdown-menu-right {
+        right: 0;
+        left: auto;
+    }
+    .navbar-expand {
+        -ms-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+    }
