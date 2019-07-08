@@ -59,9 +59,9 @@
         .navbar-dark .navbar-nav .nav-link:hover {
             color: white;
         }
-        .navbar-dark .navbar-toggler {
+        /*.navbar-dark .navbar-toggler {
             background-color: darkcyan;
-        }
+        }*/
 
 
         /* CARD */
@@ -378,7 +378,22 @@
             transform: scale(1.05);
             box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
         }
-
+        .navbar-toggler label{
+            padding-top: 7px; 
+            color: white;
+            font-family: "Arial";
+            text-align: center;
+            font-size: 30px;
+            cursor: pointer;
+            width: 35px;
+            height: 35px;
+        }
+        @media (max-width: 992px){
+            /*.navbar{
+                background-color:;
+            }*/
+            
+        }
     </style>
 
 <script type="text/javascript">
@@ -496,16 +511,18 @@
                 if ($(window).scrollTop() >= 20) {
                     $('.navbar').addClass('compressed');
                     $('.navbar-nav').addClass('changecolormenu');
+                    $('.navbar-toggler label').addClass('text-dark');
                     $('.navbar-brand').addClass('changecolorlogo');
+
                     
                 } else {
                     $('.navbar').removeClass('compressed');
                     $('.navbar-nav').removeClass('changecolormenu');
+                    $('.navbar-toggler label').removeClass('text-dark');
                     $('.navbar-brand').removeClass('changecolorlogo');
                 }
             });
         });
-
 
 
 
@@ -554,7 +571,7 @@
             $('.alto').hover(
                 function(){
                     $(this).animate({
-                        marginTop: "-=10px",
+                        marginTop: "-=1%",
                     },200);
                 },
                 function(){
