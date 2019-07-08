@@ -168,7 +168,7 @@
     </div>
 
     <!--publicações-->
-    @if (!empty($posts))
+    @if (!$posts->isEmpty())
         <div class="container-fluid my-5" id="publicacao">
             <div class="pricing-header container py-4 pt-md-5 pb-md-4 mx-auto">
                 <h1 class="display-5 mt-5 mb-3">Conteúdo</h1>
@@ -214,7 +214,7 @@
 
 
     <!--eventos-->
-    @if (!empty($events))
+    @if (!$events->isEmpty())
         <div class="container my-5" id="eventos">      
             <div class="pricing-header container py-4 pt-md-5 pb-md-4 mx-auto">
                 <h1 class="display-5 mt-5 mb-3">Eventos</h1>
