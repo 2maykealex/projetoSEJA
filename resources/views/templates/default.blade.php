@@ -205,18 +205,16 @@
         }
 
         /*Sobre nós*/
-        .row .card {
+        .carousel .card {
             border:0px;
         }
         .imgzoom {
             position: relative;
-            overflow: hidden;
-            height: 15em;
+            overflow: hidden; 
             margin-top: 15px;
         }
         .imgzoom > img {
             width: 100%;
-            height: 15em; 
             border-radius: 2px;
             -webkit-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
                 -moz-transition: all .8s cubic-bezier(.190, 1.000, .220, 1.000);
@@ -528,6 +526,45 @@
 
         /*Script para o Carousel*/
         $('.carousel').slick({
+            infinite: false,
+            speed: 500,
+            slidesToShow: 4,
+            slidesToScroll: 1,
+            centerMode: false,
+            dots: true,
+
+            responsive: [
+                {
+                  breakpoint: 1024,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    dots: true
+                  }
+                },
+                {
+                  breakpoint: 600,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                },
+                {
+                  breakpoint: 480,
+                  settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                  }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+
+        });
+
+        $('carousel-we').slick({
             infinite: false,
             speed: 500,
             slidesToShow: 4,

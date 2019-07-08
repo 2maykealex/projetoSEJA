@@ -39,7 +39,7 @@
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="#">item 1</a>
                     <a class="dropdown-item" href="#">item 2</a>
-                    <a class="dropdown-item" href="#">item 3</a>
+                    <a class="dropdown-item" href="{{route('site.logout')}}">Sair</a>
                 </div>
             </li>
         </ul> 
