@@ -13,6 +13,7 @@
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top shadow p-2 mb-2 py-3">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+
                     <label>&#9776;</label>
                 </button>
                 <!--<a class="navbar-brand text-center mr-5" href="#"><img src="{{url('storage/img/seja.jpg')}}" alt="logo do site" width="30px" ></a>-->
@@ -180,7 +181,7 @@
             </div>
 
         
-            <div class="carousel">
+            <div class="carousel carousel-content">
                 @foreach($posts as $post)
                 <div class="alto col-lg-12 mb-2">
                     <div class="card my-3 shadow rounded">
@@ -304,37 +305,81 @@
     </div>
 
     <!--SOBRE NÓS-->
-    <div class="container-fluid my-5" id="sobre">
-        <div class="container pricing-header py-4 pt-md-5 pb-md-4 mx-auto">
-            <h1 class="display-5 mt-5 mb-3">Sobre nós</h1>   
+    <div class="container mb-2" id="sobre">
+        <div class="pricing-header py-2  mx-auto">
+            <h1 class="display-5 mt-5 mb-3">Quem somos</h1>   
             <div class="mb-2" style="border-bottom: 7px solid #00BFFF;  width:40px;"></div>
         </div>
-        <div class="container">
-            <div class="col-md-6">
-                <div class="blog-main px-5 py-5">
-                    <h2>Quem somos</h2>
-                    <div class="lead mt-4">
-                        Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
+        <div class="blog-main p-1">
+            <div class="lead mt-4">
+                Sed your perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventor veritatis et quasi architectu beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia Consequentur magni dolores eos qui ratione voluptatem sequi nesciunt, ne, porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. , os nostrum exercitationem ullam corporis tentipus laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in a voluptate velit esse quam nihil molestiae consequatur,vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? </p>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="container pricing-header mb-5 mx-auto">
+            <h1 class="display-5 mt-5 mb-3">Nossa equipe</h1>   
+            <div class="mb-2" style="border-bottom: 7px solid #00BFFF;  width:40px;"></div>
+        </div>
+        <div class="carousel carousel-us">
+            @foreach ($publishers as $publisher)
+                <div class="col-md-12">
+                    <div class="card text-white imgzoom ">
+                        <img class="card-img mb-3 " src="{{ asset('storage/img/profiles/' . $publisher->person->image)}}" alt="Card image" height="350">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">{{$publisher->person->name}}</h5>
+                            <p class="position-people">{{$publisher->summary}}</p>
+                        </div>
+                    </div>
+                </div>
+            @endforeach   
+            <div class="col-md-12">
+                <div class="card text-white imgzoom ">
+                    <img class="card-img mb-3 " src="{{ asset('storage/img/astro.jpg')}}" alt="Card image" height="350">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Fulanoo</h5>
+                        <p class="position-people">eu nao faco nada</p>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="text-center">
-            <h2>Nosso Time</h2>
-            <p class="mb-5 h3">Veja o perfil do nosso pessoal</p>
-            <div class="carousel carousel-we">
-                @foreach ($publishers as $publisher)
-                    <div class="col-md-12">
-                        <div class="card text-white imgzoom ">
-                            <img class="card-img mb-3 " src="{{ asset('storage/img/profiles/' . $publisher->person->image)}}" alt="Card image" height="350">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">{{$publisher->person->name}}</h5>
-                                <p class="position-people">{{$publisher->summary}}</p>
-                            </div>
-                        </div>
+            <div class="col-md-12">
+                <div class="card text-white imgzoom ">
+                    <img class="card-img mb-3 " src="{{ asset('storage/img/astro.jpg')}}" alt="Card image" height="350">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Fulanoo</h5>
+                        <p class="position-people">eu nao faco nada</p>
                     </div>
-                @endforeach   
+                </div>
             </div>
+            <div class="col-md-12">
+                <div class="card text-white imgzoom ">
+                    <img class="card-img mb-3 " src="{{ asset('storage/img/astro.jpg')}}" alt="Card image" height="350">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Fulanoo</h5>
+                        <p class="position-people">eu nao faco nada</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card text-white imgzoom ">
+                    <img class="card-img mb-3 " src="{{ asset('storage/img/astro.jpg')}}" alt="Card image" height="350">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Fulanoo</h5>
+                        <p class="position-people">eu nao faco nada</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <div class="card text-white imgzoom ">
+                    <img class="card-img mb-3 " src="{{ asset('storage/img/astro.jpg')}}" alt="Card image" height="350">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Fulanoo</h5>
+                        <p class="position-people">eu nao faco nada</p>
+                    </div>
+                </div>
+            </div>
+           
+
         </div>
     </div>
 

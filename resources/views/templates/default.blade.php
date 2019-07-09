@@ -386,11 +386,11 @@
             width: 35px;
             height: 35px;
         }
+
         @media (max-width: 992px){
             /*.navbar{
                 background-color:;
             }*/
-            
         }
     </style>
 
@@ -525,7 +525,7 @@
 
 
         /*Script para o Carousel*/
-        $('.carousel').slick({
+        $('.carousel-content').slick({
             infinite: false,
             speed: 500,
             slidesToShow: 4,
@@ -564,13 +564,12 @@
 
         });
 
-        $('carousel-we').slick({
-            infinite: false,
+        $('.carousel-us').slick({
+            infinite: true,
             speed: 500,
-            slidesToShow: 4,
+            slidesToShow: 3,
             slidesToScroll: 1,
-            centerMode: false,
-            dots: true,
+            centerMode: true,
 
             responsive: [
                 {
