@@ -1,4 +1,4 @@
-@extends('templates.default_publisher')
+@extends('templates.default_subscriber')
 
 @section('title')
 
