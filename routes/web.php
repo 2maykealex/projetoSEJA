@@ -172,7 +172,7 @@ Route::group(['middleware' => ['auth', 'authRoute', 'getMenus'], 'namespace' => 
 
 
 Route::get('inscreva-se', 'Site\SiteController@subscribe')->name("subscribe")->middleware('authRoute');
-Route::get('listCities/{idUF}', 'Site\SiteController@listCities')->name("listCities")->middleware('authRoute');
+Route::get('listCities/{idUF}', 'Site\SiteController@listCities')->name("listCities");
 Route::get('login', 'Site\SiteController@doLogin')->name("site.login")->middleware('authRoute');
 
 Route::post('check-user/{email}', 'UserController@checkUser')->name("check.user");
