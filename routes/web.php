@@ -165,7 +165,7 @@ Route::group(['middleware' => ['auth', 'authRoute', 'getMenus'], 'namespace' => 
     
     Route::get('subscription-registry', 'SubscriptionRegistryController@index')->name("subscriber.subscription");
     
-    Route::get('', 'SubscriberController@index')->name("subscriber.home");
+    Route::get('', 'HomeController@index')->name("subscriber.home");
     Route::get('edit/{id}', 'SubscriberController@edit')->name("subscriber.edit");
     Route::post('update/{id}', 'SubscriberController@update')->name("subscriber.update");
 });
