@@ -263,13 +263,14 @@
             </li>
             @endforeach
         </ul>
-        <div class="tab-content" id="myTabContent">
+        <div class="tab-content " id="myTabContent">
+            
             @foreach($subscriptionTypes as $subscriptionType)
-            <div class="tab-pane fade show <?php if ($subscriptionType->id == 1) {echo 'active';}?>" id="{{$subscriptionType->name}}" role="tabpanel" aria-labelledby="{{$subscriptionType->name}}-tab">
-                <div class="card-deck d-flex justify-content-center flex-lg-center text-center mb-3" >
+                <div class="tab-pane fade show <?php if ($subscriptionType->id == 1) {echo 'active';}?>" id="{{$subscriptionType->name}}" role="tabpanel" aria-labelledby="{{$subscriptionType->name}}-tab">
+                    <div class="d-flex flex-wrap justify-content-around text-center mb-3">
                         @foreach($subscriptionPlans as $subscriptionPlan)
                             @if($subscriptionType->id == $subscriptionPlan->subscription_type_id)
-                                <div class="card col-md-3 shadow pb-3">
+                                <div class="card shadow pb-3 mb-5" style="width: 15rem;">
                                     <div class="card-header">
                                         <h3 class="font-weight-normal mt-4">{{$subscriptionPlan->collection->name}}</h3>
                                         <small class="text-cinza h6">{{$subscriptionPlan->type->name}}</small>
@@ -298,9 +299,10 @@
                             @endif
                           
                         @endforeach
+                    </div>
                 </div>
-            </div>
             @endforeach
+            
         </div>
     </div>
 

@@ -238,10 +238,10 @@
             background-color: rgba(0,0,0,0); 
             border-bottom: 1px solid rgba(0,0,0,0); 
         }
-        .card-deck .card{
+        .tab-content .card{
             color: black;
         }
-        .card-deck .card:hover{
+        .tab-content .card:hover{
             color: white;  
             background-color: #17a2b8;
             border-color: #f8f9fa; 
@@ -250,7 +250,7 @@
             -o-transition: 0.3s ease-in;
             transition: 0.3s ease-in;
         }
-        .card-deck .card:hover .btn-info {
+        .tab-content .card:hover .btn-info {
             color: #17a2b8;
             background-color: #f8f9fa;
             border: #f8f9fa;
@@ -258,7 +258,7 @@
         .text-cinza{
             color: #6c757d;
         }
-        .card-deck .card:hover .text-cinza{
+        .tab-content .card:hover .text-cinza{
             color: white;
             -webkit-transition: 0.5s ease-in; 
             -moz-transition: 0.3s ease-in;
@@ -266,7 +266,7 @@
             transition: 0.3s ease-in;
         }
 
-        .card-deck .card .btn-info:hover{
+        .tab-content .card .btn-info:hover{
             -webkit-transform: scale(1.05);
             -ms-transform: scale(1.05);
             transform: scale(1.05);
