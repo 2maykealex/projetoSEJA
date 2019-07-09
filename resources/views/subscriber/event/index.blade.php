@@ -25,7 +25,7 @@
 			                <td>{{date('d/m/Y', strtotime($event->created_at))}}</td>
 			                <td>{{$event->title}}</td>
 			                <td class="actions text-center">
-		                		<a class="btn btn-success btn-sm button-width" href="{{route('subscriber.posts.show', $event->id)}}">Visualizar</a>
+		                		<a class="btn btn-success btn-sm button-width" href="{{route('subscriber.events.show', $event->id)}}">Visualizar</a>
 			                 </td>
 		                </tr>
 		            @endforeach   
