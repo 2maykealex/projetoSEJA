@@ -158,9 +158,9 @@ Route::group(['middleware' => ['auth', 'authRoute', 'getMenus'], 'namespace' => 
     });
 
     Route::group(['prefix' => 'profile'], function () {
-        Route::get('', 'SubscriberController@profile')->name("subscriber.profile");
-        Route::get('edit', 'SubscriberController@profileEdit')->name("subscriber.profile.edit");
-        Route::post('update', 'SubscriberController@profileUpdate')->name("subscriber.profile.update");
+        Route::get('', 'ProfileController@index')->name("subscriber.profile");
+        Route::get('edit', 'ProfileController@edit')->name("subscriber.profile.edit");
+        Route::post('update', 'ProfileController@update')->name("subscriber.profile.update");
     });
     
     Route::get('subscription-registry', 'SubscriptionRegistryController@index')->name("subscriber.subscription");
