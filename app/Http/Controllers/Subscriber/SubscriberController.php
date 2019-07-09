@@ -9,6 +9,7 @@ use App\Models\Person;
 use App\Models\UserProfile;
 use App\Models\Subscriber;
 use App\Models\SubscriptionRegistry;
+use App\Models\State;
 
 class SubscriberController extends Controller
 {
@@ -22,22 +23,28 @@ class SubscriberController extends Controller
         return view('subscriber.index');
     }
 
-    public function create()
+    public function profile()
     {
-        //
+        return view('subscriber.profile.index');
     }
 
-    public function store(Request $request){
+    public function profileEdit()
+    {
+        $states = State::orderby('name', 'asc')->get();
+        return view('subscriber.profile.edit', compact('states'));
+    }
+
+    public function profileUpdate(Request $request){
         $data = $request->all();
         $userData = [];
         $userData['name']     = $data['name'];
         $userData['email']    = $data['email'];
         $userData['password'] = $data['password'];
 
-        $userBd = User::where('email', $data['email'])->get()->first(); //verifica se existe o email de novo usuário no banco 
+        $userBd = User::where('email', $data['email'])->whereNot('id', $data['user_id'])->get()->first(); //verifica se existe o email de novo usuário no banco 
         if (!$userBd){
             $user = new User;
-            $idNewUser = $user->newUser($userData);
+            $idNewUser = $user->updateUser($userData);
             $idNewUser = $idNewUser[0];
 
             if($idNewUser){
@@ -75,7 +82,7 @@ class SubscriberController extends Controller
                             $saveSubscriptionRegistry = $subscriptionRegistry->newSubscriptionRegistry($subscriptionRegistryData);
 
                             if($saveSubscriptionRegistry){
-                                return redirect()->route('site.home', ['success' => true, 'message' => 'Usuário salvo com sucesso!']);
+                                return redirect()->route('subscriber.profile', ['success' => true, 'message' => 'Usuário salvo com sucesso!']);
                             }
                         }
                     }
