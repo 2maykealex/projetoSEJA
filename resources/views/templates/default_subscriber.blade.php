@@ -66,10 +66,52 @@
                             <li class="active">
                                 <a href="{{route('subscriber.home')}}" class="pl-3">Início</a>
                             </li>
-                        </ul>
-              
-                        <h6 class="font-heading text-muted px-2 mt-3">Conteúdo</h6>
-                        <ul class="mt-0">         
+
+                            <!--<li>
+                                <a href="#" class="pl-3">Conteúdo</a>
+                                <ul>
+                                    <li>
+                                        <a href="#" class=" pl-3">Postagens</a>
+                                        <ul class="mt-0">
+                                            @if(Session::get('menuPosts'))
+                                                @foreach (Session::get('menuPosts') as $menuPost)        
+                                                    <li>
+                                                        <a href="{{route('subscriber.posts.list', $menuPost)}}" class=" pl-3">{{$menuPost->name}}</a>
+                                                    </li>
+                                                @endforeach
+                                            @endif
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pl-3">Eventos</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pl-3">Congressos</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pl-3">Cursos</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" class="pl-3">Financeiro</a>
+                                <ul class="mt-0 ">
+                                    <li>
+                                        <a href="#" class="pl-3">Cartão de Crédito</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pl-3">Formas de Pagamentos</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pl-3">Faturas</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pl-3">Histórico de pagamentos</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>-->
+        
                             <li>
                                 <a href="#" class=" pl-3">Postagens</a>
                                 <ul class="mt-0">
@@ -91,15 +133,22 @@
                             <li>
                                 <a href="#" class="pl-3">Cursos</a>
                             </li>
-                        </ul>
-
-                        <h6 class="font-heading text-muted px-2 mt-3">FINANCEIRO</h6>
-                        <ul class="mt-0 ">
                             <li>
-                                <a href="#" class="pl-3">Cartão de Crédito</a>
-                            </li>
-                            <li>
-                                <a href="#" class="pl-3">Histórico de pagamentos</a>
+                                <a href="#" class="pl-3">Financeiro</a>
+                                <ul class="mt-0 ">
+                                    <li>
+                                        <a href="#" class="pl-3">Cartão de Crédito</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pl-3">Formas de Pagamentos</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pl-3">Faturas</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="pl-3">Histórico de pagamentos</a>
+                                    </li>
+                                </ul>
                             </li>
                         </ul>
                     </div>

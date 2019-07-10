@@ -142,8 +142,7 @@
         </div>
     </div>
     @endif
-=======
-	@endif
+
 
 	@if (!$events->isEmpty())
 		{{"EVENTOS - CONGRESSOS - CURSOS"}}
@@ -164,5 +163,5 @@
 			</div>
 		</div>
 	@endif
->>>>>>> fe5f8541baaa5f63d8dbd804df63524381b46f53
+
 @endsection
