@@ -14,7 +14,12 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/world_style.css') }}">
 
     <style>
-        
+        .slick-disabled{
+            visibility: hidden;
+        }
+        element.style {
+            /*display: inline-block;*/
+        }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
@@ -178,11 +183,11 @@
 
         //script para colocar um carousel de posts
          $('.carousel').slick({
-            infinite: true,
+            infinite: false,
             speed: 500,
             slidesToShow: 4,
             slidesToScroll: 1,
-            centerMode: true,
+            centerMode: false,
 
             responsive: [
                 {
