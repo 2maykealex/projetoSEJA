@@ -135,7 +135,7 @@ Route::group(['middleware' => ['auth', 'authRoute'], 'namespace' => 'Publisher',
         Route::get('list', 'EventController@index')->name("publisher.events.list");
         Route::get('show/{id}', 'EventController@show')->name("publisher.events.show");
     });
-    
+
     Route::get('', 'PublisherController@index')->name("publisher.home");
     Route::get('edit/{id}', 'PublisherController@edit')->name("publisher.edit");
     Route::post('update/{id}', 'PublisherController@update')->name("publisher.update");
@@ -166,6 +166,11 @@ Route::group(['middleware' => ['auth', 'authRoute', 'getMenus'], 'namespace' => 
         Route::get('', 'ProfileController@index')->name("subscriber.profile");
         Route::get('edit', 'ProfileController@edit')->name("subscriber.profile.edit");
         Route::post('update', 'ProfileController@update')->name("subscriber.profile.update");
+    });
+
+    Route::group(['prefix' => 'publishers'], function () {
+        Route::get('list', 'PublisherController@index')->name("subscriber.publishers.list");
+        Route::get('show/{id}', 'PublisherController@show')->name("subscriber.publishers.show");
     });
     
     Route::get('subscription-registry', 'SubscriptionRegistryController@index')->name("subscriber.subscription");

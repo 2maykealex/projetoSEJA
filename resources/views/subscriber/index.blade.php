@@ -33,7 +33,7 @@
                                 <a href="#"><img class="rounded-circle abs" src="{{ asset('storage/img/profiles/' . $post->author->image)}}" width="40" height="40"></a>
                             </div>  
                             <div class="position-people">
-                                <small class="text-muted">Por <a href="#">{{$post->author->name}}</a></small>
+                                <small class="text-muted">Por <a href="{{route('subscriber.publishers.show', $post->author->id)}}">{{$post->author->name}}</a></small>
                             </div>
                             <div class="position-date-time">
                                 <small class="text-muted">Em {{date('d/m/Y', strtotime($post->created_at))}}</small>
