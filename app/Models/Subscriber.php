@@ -37,4 +37,8 @@ class Subscriber extends Model
             'message' => 'Não foi possível realizar este cadastro. Verifique!'
         ];
     }
+
+    public function person(){
+        return $this->belongsTo(Person::class);
+    }
 }
