@@ -14,12 +14,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/world_style.css') }}">
 
     <style>
-        .slick-disabled{
-            visibility: hidden;
-        }
-        element.style {
-            /*display: inline-block;*/
-        }
+
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
@@ -66,7 +61,7 @@
                             <input class="form-nav mr-sm-2 ml-3" type="search" placeholder="Pesquisar" aria-label="Search">
                         </form>
 
-                        <h5 class="font-heading text-muted text-center px-2 mt-3 pt-4 border-top">Painel do assinante</h5>
+                        <h5 class="font-heading text-muted px-2 mt-3 pt-4 border-top">Painel do assinante</h5>
                         <ul class="mt-0">
                             <li class="active">
                                 <a href="{{route('subscriber.home')}}" class="pl-3">Início</a>
