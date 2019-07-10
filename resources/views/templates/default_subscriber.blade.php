@@ -58,13 +58,13 @@
                 <div class="sidebar bg-white shadow">
                     <div class="sidebar-sticky">
                         <form class="form-inline mt-3 mb-4 ">
-                            <input class="form-nav mr-sm-2 ml-3" type="search" placeholder="Pesquisar" aria-label="Search">
+                            <input class="form-nav mr-sm-2 ml-2" type="search" placeholder="Pesquisar" aria-label="Search">
                         </form>
 
                         <h5 class="font-heading text-muted px-2 mt-3 pt-4 border-top">Painel do assinante</h5>
-                        <ul class="mt-0">
-                            <li class="active">
-                                <a href="{{route('subscriber.home')}}" class="pl-3">Início</a>
+                        <ul class="nav-ul mt-0">
+                            <li class=" nav-li active">
+                                <a class="nav-a pl-3" href="{{route('subscriber.home')}}">Início</a>
                             </li>
 
                             <!--<li>
@@ -112,8 +112,8 @@
                             </li>
                         </ul>-->
         
-                            <li>
-                                <a href="#" class=" pl-3">Postagens</a>
+                            <li class="nav-li">
+                                <a class="nav-a pl-3" href="#">Postagens</a>
                                 <ul class="mt-0">
                                     @if(Session::get('menuPosts'))
                                         @foreach (Session::get('menuPosts') as $menuPost)        
@@ -124,17 +124,17 @@
                                     @endif
                                 </ul>
                             </li>
-                            <li>
-                                <a href="#" class="pl-3">Eventos</a>
+                            <li class="nav-li">
+                                <a class="nav-a pl-3" href="#">Eventos</a>
                             </li>
-                            <li>
-                                <a href="#" class="pl-3">Congressos</a>
+                            <li class="nav-li">
+                                <a class="nav-a pl-3" href="#">Congressos</a>
                             </li>
-                            <li>
-                                <a href="#" class="pl-3">Cursos</a>
+                            <li class="nav-li">
+                                <a class="nav-a pl-3" href="#">Cursos</a>
                             </li>
-                            <li>
-                                <a href="#" class="pl-3">Financeiro</a>
+                            <li class="nav-li">
+                                <a class="nav-a pl-3" href="#">Financeiro</a>
                                 <ul class="mt-0 ">
                                     <li>
                                         <a href="#" class="pl-3">Cartão de Crédito</a>

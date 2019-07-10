@@ -88,7 +88,7 @@
 
     /* Sidebar 'ul', 'ul', 'li' e 'a' */
     .sidebar-sticky ul ul li a{
-        background-color: #f1f2fd;
+        background-color: #eeeeee;
         color: #555;
         text-decoration: none;
     }
@@ -168,11 +168,15 @@
         color: #555;
         font-size: 14px;
     }
+    .sidebar-sticky .nav-ul .nav-li:hover .nav-a{
+        color: #1a33d5;
+        text-decoration: none;
+    }
     .sidebar-sticky ul li:hover ,
     .sidebar-sticky ul li.active ,
     .sidebar-sticky ul li.active:hover {
         border-left: 3px solid #ccc;
-        background-color: #f4f4f4; 
+        background-color: #f1f2fd; 
         transition: all .4s;
         text-decoration: none;  
     }
