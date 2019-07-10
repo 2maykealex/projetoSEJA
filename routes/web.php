@@ -149,12 +149,17 @@ Route::group(['middleware' => ['auth', 'authRoute', 'getMenus'], 'namespace' => 
 
     Route::group(['prefix' => 'congresses'], function () {
         Route::get('list', 'EventController@congressesList')->name("subscriber.congresses.list");
-        Route::get('show/{id}', 'EventController@show')->name("subscriber.congresses.show");
+        Route::get('show/{id}', 'EventController@congressShow')->name("subscriber.congresses.show");
     });
 
     Route::group(['prefix' => 'events'], function () {
         Route::get('list', 'EventController@index')->name("subscriber.events.list");
         Route::get('show/{id}', 'EventController@show')->name("subscriber.events.show");
+    });
+
+    Route::group(['prefix' => 'courses'], function () {
+        Route::get('list', 'EventController@coursesList')->name("subscriber.courses.list");
+        Route::get('show/{id}', 'EventController@courseShow')->name("subscriber.courses.show");
     });
 
     Route::group(['prefix' => 'profile'], function () {
