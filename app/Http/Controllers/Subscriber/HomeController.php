@@ -21,14 +21,13 @@ class HomeController extends Controller
         $subscription_type_id = $person->subscriptionRegistry->subscriptionPlan->subscription_type_id;
         $posts = Post::where('subscription_type_id', $subscription_type_id)->where('deleted', 0)->orderby('id', 'desc')->get();
         
-        $eventType = EventType::where(function ($query) {
-            return $query->where('name', '!=', "congresso")
-                  ->Where('name', '!=', "curso");
-        })->get();
+        // $eventType = EventType::where(function ($query) {
+        //     return $query->where('name', '!=', "congresso")
+        //           ->Where('name', '!=', "curso");
+        // })->get();
 
-        $events = Event::whereIn('event_type_id', $eventType)->orderby('id', 'desc')->get();
-
-        $courses = Event::where('deleted', 0)->orderby('id', 'desc')->get();
+        // $events = Event::whereIn('event_type_id', $eventType)->orderby('id', 'desc')->get();
+        $events = Event::orderby('id', 'desc')->get();
         return view('subscriber.index', compact('posts', 'events'));
     }
 
