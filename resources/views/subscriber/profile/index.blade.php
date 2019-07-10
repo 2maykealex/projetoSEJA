@@ -12,7 +12,13 @@
 	           	<div class="col-lg-6 py-4 ">
 	                <div class="text-xs-center pb-3">
 	                    <span class="d-block h3 text-primary-light text-center">Meus dados</span>
-	                </div>
+                    </div>
+                    
+                    <div class="form-group row">
+                        <div class="col-md-10">
+                            imagem aqui
+                        </div>
+                    </div>
                         
                     <div class="form-group row">
                         <label class="col-md-2 col-form-label">Nome</label>
