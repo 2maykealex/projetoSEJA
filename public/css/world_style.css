@@ -1,0 +1,108 @@
+    .carousel .card{
+        height: 18em;
+    }
+    .hoverzoom {
+        position: relative;
+        overflow: hidden;
+    }        
+    .card-body{
+        padding: 12px;
+    }
+    .hoverzoom {
+        position: relative;
+        overflow: hidden;
+    }        
+    .hoverzoom .retina{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        opacity: 0;    
+        background: none repeat scroll 0 0 ;   
+    }
+    .card-img-top{
+        height: 10rem;
+    }
+    .card:hover .hoverzoom .retina {
+        opacity: 1;
+        box-shadow: inset 0 0 100px 50px  rgba(0,0,0,0.7);       
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;  
+    }
+/*Carousel*/
+    .slick-arrow {
+        color: #555;
+        position: absolute;
+        width: 52px;
+        height: 52px;
+        background: #fff;
+        border-radius: 100%;
+        box-shadow: 0 4px 12px rgba(0,0,0,.45);
+        z-index: 3;
+
+    }
+    .slick-arrow:hover{
+        background: #f5f4f4;
+
+    }
+    .slick-next{
+        right: 10px;
+    }
+    .slick-prev{
+        left: 10px;
+    }
+    .slick-next::before, .slick-prev::before{
+        font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    }
+    .slick-next::before{
+        content: ">";
+        color: black;
+    }
+    .slick-prev::before {
+        content: "<";
+        color: black;
+    }
+
+    .carousel-button {
+        color: #555;
+        position: absolute;
+        top: 32px;
+        width: 52px;
+        height: 52px;
+        background: #fff;
+        border-radius: 100%;
+        box-shadow: 0 4px 12px rgba(0,0,0,.45);
+        z-index: 3;
+        text-align: center;
+        transition: all .3s ease;
+    }
+    .carousel-button-next{
+        right: 10px;
+    }
+    .carousel-button-prev{
+        right: 10px;
+    }
+
+    /* Posição dos nomes e imagens nos Cards*/
+    .position-profile{
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        bottom: 10px;
+        left: 10px;
+    }
+    .position-people{
+        position: absolute;
+        width:200px;
+        height: 33px;
+        bottom: 10px;
+        left: 60px;
+    }
+    .position-date-time{
+        position: absolute;
+        width:100px;
+        height: 20px;
+        bottom: 10px;
+        right: 0px;
+    }
