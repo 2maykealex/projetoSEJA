@@ -26,7 +26,7 @@
                     </div>
                     <div class="row no-gutters px-3 pb-3">
                         <div class="card-body">
-                            <a class="card-title h6" href="#">{{$post->title}}</a>
+                            <a class="card-title h6" href="{{route('subscriber.posts.show' , $post->id)}}">{{$post->title}}</a>
                         </div>    
                         <div class="position-profile">
                             <a href="#"><img class="rounded-circle abs" src="{{ asset('storage/img/profiles/' . $post->author->image)}}" width="40" height="40"></a>
@@ -45,7 +45,7 @@
         @endif
 
         <!-- Slider de eventos-->
-        @if (!$events->isEmpty())
+        <!--@if (!$events->isEmpty())
         <div class="pricing-header py-4 pt-md-5 pb-md-4 mx-auto text-center">
             <h1 class="display-5 mt-5 mb-3">Últimos Eventos</h1>
         </div>
@@ -77,7 +77,7 @@
             </div>
             @endforeach
         </div>
-        @endif
+        @endif-->
 
         
     </div>

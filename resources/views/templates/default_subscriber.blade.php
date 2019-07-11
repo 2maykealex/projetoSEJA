@@ -66,52 +66,6 @@
                             <li class=" nav-li active">
                                 <a class="nav-a pl-3" href="{{route('subscriber.home')}}">Início</a>
                             </li>
-
-                            <!--<li>
-                                <a href="#" class="pl-3">Conteúdo</a>
-                                <ul>
-                                    <li>
-                                        <a href="#" class=" pl-3">Postagens</a>
-                                        <ul class="mt-0">
-                                            @if(Session::get('menuPosts'))
-                                                @foreach (Session::get('menuPosts') as $menuPost)        
-                                                    <li>
-                                                        <a href="{{route('subscriber.posts.list', $menuPost)}}" class=" pl-3">{{$menuPost->name}}</a>
-                                                    </li>
-                                                @endforeach
-                                            @endif
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="pl-3">Eventos</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="pl-3">Congressos</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="pl-3">Cursos</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a href="#" class="pl-3">Financeiro</a>
-                                <ul class="mt-0 ">
-                                    <li>
-                                        <a href="#" class="pl-3">Cartão de Crédito</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="pl-3">Formas de Pagamentos</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="pl-3">Faturas</a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="pl-3">Histórico de pagamentos</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>-->
-        
                             <li class="nav-li">
                                 <a class="nav-a pl-3" href="#">Postagens</a>
                                 <ul class="mt-0">
@@ -125,13 +79,13 @@
                                 </ul>
                             </li>
                             <li class="nav-li">
-                                <a class="nav-a pl-3" href="#">Eventos</a>
+                                <a class="nav-a pl-3" href="{{route('subscriber.events.list')}}">Eventos</a>
                             </li>
                             <li class="nav-li">
-                                <a class="nav-a pl-3" href="#">Congressos</a>
+                                <a class="nav-a pl-3" href="{{route('subscriber.congresses.list')}}">Congressos</a>
                             </li>
                             <li class="nav-li">
-                                <a class="nav-a pl-3" href="#">Cursos</a>
+                                <a class="nav-a pl-3" href="{{route('subscriber.courses.list')}}">Cursos</a>
                             </li>
                             <li class="nav-li">
                                 <a class="nav-a pl-3" href="#">Financeiro</a>
