@@ -165,7 +165,7 @@
         padding: 10px;
         display: block;
         text-decoration: none;  
-        color: #555;
+        color: #343a40;
         font-size: 14px;
     }
     .sidebar-sticky .nav-ul .nav-li:hover .nav-a{
@@ -175,6 +175,7 @@
     .sidebar-sticky ul li:hover ,
     .sidebar-sticky ul li.active ,
     .sidebar-sticky ul li.active:hover {
+        color: #1a33d5;
         background-color: #f1f2fd; 
         transition: all .4s;
         text-decoration: none;  

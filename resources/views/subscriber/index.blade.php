@@ -11,8 +11,8 @@
 
         <!-- Slider para Postagens-->
         @if (!$posts->isEmpty())
-        <div class="pricing-header py-4 pt-md-5 pb-md-4 mx-auto text-center">
-            <h1 class="display-5 mt-5 mb-3">Últimas postagens</h1>
+        <div class="pricing-header mx-auto text-center mt-3 mb-5">
+            <h1 class="display-5">Últimas postagens</h1>
         </div>
         <div class="carousel">
             @foreach($posts as $post)

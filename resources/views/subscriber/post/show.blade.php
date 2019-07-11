@@ -6,7 +6,7 @@
 
 @section('content')
 	<div class="container">
-        <img src="{{asset('storage/img/posts/'. $post->image)}}" class="img-fluid p-0" alt="Responsive image" width="100%" height="400px">  
+        <img src="{{asset('storage/img/posts/'. $post->image)}}" class="img-fluid p-3" alt="Responsive image" width="100%" height="400px">  
 
         <main role="main" class="container">
             <div class="row d-flex justify-content-center flex-lg-center">
@@ -19,7 +19,7 @@
                             <div class="text-muted py-4">
                                 <h4 class="blog-post-title">"{{$post->summary}}"</h4>
                             </div>
-                            <p class="blog-post-meta">Escrito por <a href="#">{{$post->author->name}}</a>, em {{date('d/m/Y', strtotime($post->created_at))}}</p>
+                            <p class="blog-post-meta">Publicado por <a href="#">{{$post->author->name}}</a>, em {{date('d/m/Y', strtotime($post->created_at))}}</p>
                             <small class="text-muted">Postado há 10 min</small>
                             <p class="mt-3">{{$post->text}}</p>
                         </div>

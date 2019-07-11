@@ -5,33 +5,36 @@
 @endsection
 
 @section('content')
-	<div class="d-flex justify-content-center flex-lg-center py-5">
-		<div class="col-md-10 bg-light py-3">
-			<nav class="navbar navbar-expand-lg ">
-			  	<h2>PUBLICAÇÕES</h2>
-			</nav>
-	      	<div class="table-responsive pb-3 pt-3 bg-white px-3">
-	        	<table class="table table-bordered">
-	          		<thead>
-	            		<tr>
-	              			<th>DATA DE CRIAÇÃO</th>
-	              			<th>TÍTULO</th>
-	              			<th class="text-center">AÇÕES</th>
-	            		</tr>
-	          		</thead>
-	          		<tbody>
-	          		@foreach($posts as $post)
-		                <tr>
-			                <td>{{date('d/m/Y', strtotime($post->created_at))}}</td>
-			                <td>{{$post->title}}</td>
-			                <td class="actions text-center">
-		                		<a class="btn btn-success btn-sm button-width" href="{{route('subscriber.posts.show', $post->id)}}">Visualizar</a>
-			                 </td>
-		                </tr>
-		            @endforeach
-	          		</tbody>
-	        	</table>
-	      	</div>
-	    </div>
-	</div>
+
+	<div class="container" id="assinantes">
+        <div class="container pricing-header text-center mx-auto mt-3 mb-5">
+            <h1 class="display-5">Tudo sobre</h1>   
+        </div>
+        <div class="d-flex flex-wrap justify-content-around">
+            @foreach($posts as $post)
+                <div class="card my-3 shadow rounded" style="width: 18em; height: 18em;">
+                    <div class="hoverzoom">
+                        <img src="{{ asset('storage/img/posts/' . $post->image)}}" alt="..." class="card-img-top">
+                        <div class="retina text-right">
+                            <button type="submit" class="btn btn-light">icone</button>
+                        </div>
+                    </div>
+                    <div class="row no-gutters px-3 pb-3">
+                        <div class="card-body">
+                            <a class="card-title h6" href="{{route('subscriber.posts.show' , $post->id)}}">{{$post->title}}</a>
+                        </div>    
+                        <div class="position-profile">
+                            <a href="#"><img class="rounded-circle abs" src="{{ asset('storage/img/profiles/' . $post->author->image)}}" width="40" height="40"></a>
+                        </div>  
+                        <div class="position-people">
+                            <small class="text-muted">Por <a href="{{route('subscriber.publishers.show', $post->author->id)}}">{{$post->author->name}}</a></small>
+                        </div>
+                        <div class="position-date-time">
+                            <small class="text-muted">Em {{date('d/m/Y', strtotime($post->created_at))}}</small>
+                        </div>
+                    </div>
+                </div>
+	        @endforeach
+        </div>
+    </div>
 @endsection

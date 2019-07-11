@@ -67,7 +67,7 @@
                                 <a class="nav-a pl-3" href="{{route('subscriber.home')}}">Início</a>
                             </li>
                             <li class="nav-li">
-                                <a class="nav-a pl-3" href="#">Postagens</a>
+                                <a class="nav-a pl-3 text-dark">Postagens</a>
                                 <ul class="mt-0">
                                     @if(Session::get('menuPosts'))
                                         @foreach (Session::get('menuPosts') as $menuPost)        
@@ -88,7 +88,7 @@
                                 <a class="nav-a pl-3" href="{{route('subscriber.courses.list')}}">Cursos</a>
                             </li>
                             <li class="nav-li">
-                                <a class="nav-a pl-3" href="#">Financeiro</a>
+                                <a class="nav-a pl-3">Financeiro</a>
                                 <ul class="mt-0 ">
                                     <li>
                                         <a href="#" class="pl-3">Cartão de Crédito</a>
@@ -109,7 +109,7 @@
                 </div>
             </div>
             
-            <div class="col" style="padding-left: 75px;">        
+            <div class="col" style="padding-left: 75px; padding-top: 65px;">        
                 <main role="main" >
                     @include('includes.alerts')
                     @yield('content')
