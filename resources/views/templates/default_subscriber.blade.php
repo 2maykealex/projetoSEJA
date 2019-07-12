@@ -14,7 +14,9 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/world_style.css') }}">
 
     <style>
-
+        .pointer {
+            cursor: pointer;
+        }
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>
@@ -67,7 +69,7 @@
                                 <a class="nav-a pl-3" href="{{route('subscriber.home')}}">Início</a>
                             </li>
                             <li class="nav-li">
-                                <a class="nav-a pl-3 text-dark">Postagens</a>
+                                <a class="nav-a pointer pl-3">Postagens</a>
                                 <ul class="mt-0">
                                     @if(Session::get('menuPosts'))
                                         @foreach (Session::get('menuPosts') as $menuPost)        
@@ -88,7 +90,7 @@
                                 <a class="nav-a pl-3" href="{{route('subscriber.courses.list')}}">Cursos</a>
                             </li>
                             <li class="nav-li">
-                                <a class="nav-a pl-3">Financeiro</a>
+                                <a class="nav-a pl-3 pointer">Financeiro</a>
                                 <ul class="mt-0 ">
                                     <li>
                                         <a href="#" class="pl-3">Cartão de Crédito</a>
@@ -109,8 +111,8 @@
                 </div>
             </div>
             
-            <div class="col" style="padding-left: 75px; padding-top: 65px;">        
-                <main role="main" >
+            <div class="col" style="padding-left: 75px; padding-top: 65px; padding-right: 0;">        
+                <main role="main" style="padding: 0;">
                     @include('includes.alerts')
                     @yield('content')
                 </main>
@@ -129,6 +131,24 @@
             $(this).addClass('active');
         });
 
+        // Listando cidades
+        function listCities (idUF){
+        $("#city option").remove();
+        if (idUF > 0){
+            url = '{{route("listCities", ['idUF'])}}';
+            url = url.replace('idUF', idUF);
+
+            var ajaxRequest = $.getJSON(url, function(data){
+                element = document.getElementById('city');
+                elemSelect1 = "";
+                elemSelect1 += '<option selected> Selecione </option>';
+                $.each(data, function(i ,obj){
+                    elemSelect1 += '<option value="'+obj.id+'">'+obj.name+'</option>';
+                })
+                $('#city').append(elemSelect1);
+            });
+        }
+    }
 
         //script para colocar um carousel de posts
          $('.carousel').slick({

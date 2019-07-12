@@ -6,7 +6,7 @@
 
 @section('content')
 
-	<div class="container" id="assinantes">
+	<div class="container">
         <div class="container pricing-header text-center mx-auto mt-3 mb-5">
             <h1 class="display-5">Tudo sobre</h1>   
         </div>
@@ -24,7 +24,7 @@
                             <a class="card-title h6" href="{{route('subscriber.posts.show' , $post->id)}}">{{$post->title}}</a>
                         </div>    
                         <div class="position-profile">
-                            <a href="#"><img class="rounded-circle abs" src="{{ asset('storage/img/profiles/' . $post->author->image)}}" width="40" height="40"></a>
+                            <a href="#"><img class="rounded-circle" src="{{ asset('storage/img/profiles/' . $post->author->image)}}" width="40" height="40"></a>
                         </div>  
                         <div class="position-people">
                             <small class="text-muted">Por <a href="{{route('subscriber.publishers.show', $post->author->id)}}">{{$post->author->name}}</a></small>

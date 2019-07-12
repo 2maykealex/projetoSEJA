@@ -5,8 +5,8 @@
 @endsection
 
 @section('content')
-	<div class="container">
-        <img src="{{asset('storage/img/posts/'. $post->image)}}" class="img-fluid p-3" alt="Responsive image" width="100%" height="400px">  
+	<div class="container-fluid" style="padding-right: 0; padding-left: 0;">
+        <img src="{{asset('storage/img/posts/'. $post->image)}}" class="img-fluid" alt="Responsive image" width="100%" height="400px">  
 
         <main role="main" class="container">
             <div class="row d-flex justify-content-center flex-lg-center">
