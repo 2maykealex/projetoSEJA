@@ -99,7 +99,7 @@
 
     /*Botão de abrir e fechar*/
     label[for="bt_menu"]{
-        padding-top: 10px; 
+        padding-top: 7px; 
         color: #555;
         font-family: "Arial";
         text-align: center;
@@ -200,4 +200,9 @@
             position: -webkit-sticky;
             position: sticky;
         }
+    }
+
+    /* Cards para listagem de eventos, congresos e postagens*/
+    .card-img{
+        border-radius: 0;
     }
