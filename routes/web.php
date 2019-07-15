@@ -158,8 +158,8 @@ Route::group(['middleware' => ['auth', 'authRoute', 'getMenus'], 'namespace' => 
     });
 
     Route::group(['prefix' => 'courses'], function () {
-        Route::get('list', 'EventController@coursesList')->name("subscriber.courses.list");
-        Route::get('show/{id}', 'EventController@courseShow')->name("subscriber.courses.show");
+        Route::get('list', 'CourseController@index')->name("subscriber.courses.list");
+        Route::get('show/{id}', 'CourseController@show')->name("subscriber.courses.show");
     });
 
     Route::group(['prefix' => 'profile'], function () {

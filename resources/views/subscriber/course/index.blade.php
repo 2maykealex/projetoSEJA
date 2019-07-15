@@ -15,7 +15,8 @@
 	          		<thead>
 	            		<tr>
 	              			<th>DATA DE CRIAÇÃO</th>
-	              			<th>TÍTULO</th>
+	              			<th>NOME</th>
+	              			<th>RESUMO</th>
 	              			<th class="text-center">AÇÕES</th>
 	            		</tr>
 	          		</thead>
@@ -23,7 +24,8 @@
 	          		@foreach($courses as $course)
 		                <tr>
 			                <td>{{date('d/m/Y', strtotime($course->created_at))}}</td>
-			                <td>{{$course->title}}</td>
+			                <td>{{$course->name}}</td>
+			                <td>{{$course->summary}}</td>
 			                <td class="actions text-center">
 		                		<a class="btn btn-success btn-sm button-width" href="{{route('subscriber.courses.show', $course->id)}}">Visualizar</a>
 			                 </td>
