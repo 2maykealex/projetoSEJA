@@ -18,7 +18,8 @@ class PostController extends Controller
     public function index($id)
     {
         $person = auth()->user()->person;
-        $posts = Post::where('subscription_type_id', $id)->where('deleted', 0)->orderby('id', 'desc')->get();
+        $subscription_type_id = $person->subscriptionRegistry->subscriptionPlan->subscription_type_id;
+        $posts = Post::where('subscription_type_id', $subscription_type_id)->where('report_type_id',$id)->where('deleted', 0)->orderby('id', 'desc')->get();
         return view('subscriber.post.index', compact('posts'));
     }
 
