@@ -18,6 +18,9 @@
             @foreach($posts as $post)
             <div class="alto col-lg-12 mb-2">
                 <div class="card my-3 shadow rounded">
+                    <div class="text-center btn-success">
+                        {{$post->reportType->name}}
+                    </div>
                     <div class="hoverzoom">
                         <img src="{{ asset('storage/img/posts/' . $post->image)}}" alt="..." class="card-img-top">
                         <div class="retina text-right">
