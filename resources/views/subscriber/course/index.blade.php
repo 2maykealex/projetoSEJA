@@ -15,15 +15,15 @@
                 <div class="border-bottom">
                     <div class="row no-gutters my-4">
                         <div class="col-md-3">
-                            <a href="curso.html"><img src="../image/lobos.jpg" class="card-img shadow my-1" alt="..."></a>
+                            <img src="{{ asset('storage/img/courses/' . $course->image)}}" class="card-img shadow my-1" alt="...">
                         </div>
                         <div class="col-md-7 pl-3">
                             <div class="card-body">
                                 <div class="card-title">
-                                    <a class="h5" href="curso.html">Lobos cinzentos são lindos e ferozes</a>
+                                    <a class="h5" href="{{route('subscriber.courses.show' , $course->id)}}">{{$course->name}}</a>
                                 </div>
-                                <p class="card-text text-left">Eu tenho medo de lobos porque são animais selvagens, porem são lindos</p>   
-                                <small class="text-muted mb-2">Por <a href="#">Mateus</a> em 10/10/2010</small>
+                                <p class="card-text text-left">{{$course->summary}}</p>   
+                                <small class="text-muted mb-2">Ministrado por <a href="#">Falta colocar</a> em {{date('d/m/Y', strtotime($course->created_at))}}</small>
                             </div>
                         </div>
                     </div>

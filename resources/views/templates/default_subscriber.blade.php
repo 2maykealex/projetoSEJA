@@ -130,9 +130,15 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
     <script>
-        //script para colocar active na barra transversal da pagina do assinante
+        // Script para colocar active na barra transversal da pagina do assinante
         $('.sidebar-sticky').on('click', 'li', function(){
             $('.sidebar-sticky ul li.active').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        // Script para colocar active na barra transversal da pagina do assinante
+        $('.tab-pane').on('click', 'li', function(){
+            $('.tab-pane .nav-ul .nav-li.active').removeClass('active');
             $(this).addClass('active');
         });
 
