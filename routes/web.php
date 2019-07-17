@@ -148,8 +148,8 @@ Route::group(['middleware' => ['auth', 'authRoute', 'getMenus'], 'namespace' => 
     });
 
     Route::group(['prefix' => 'congresses'], function () {
-        Route::get('list', 'EventController@congressesList')->name("subscriber.congresses.list");
-        Route::get('show/{id}', 'EventController@congressShow')->name("subscriber.congresses.show");
+        Route::get('list', 'CongressController@index')->name("subscriber.congresses.list");
+        Route::get('show/{id}', 'CongressController@show')->name("subscriber.congresses.show");
     });
 
     Route::group(['prefix' => 'events'], function () {

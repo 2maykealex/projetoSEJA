@@ -36,14 +36,6 @@ class EventController extends Controller
         return view('subscriber.congress.index', compact('events'));
     }
 
-    public function coursesList()
-    {
-        $person_id = auth()->user()->person->id;
-        $eventType = EventType::where('name', 'curso')->get()->first();
-        $courses = Event::where('event_type_id', $eventType->id)->orderby('id', 'desc')->get();
-        return view('subscriber.course.index', compact('courses'));
-    }
-
     public function create()
     {
         $eventTypes = EventType::orderby('id')->get();
