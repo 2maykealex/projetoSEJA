@@ -27,5 +27,10 @@ class UsersProfilesAccessesTableSeeder extends Seeder
             'user_id'     => 3,
             'user_profile_id'     => 3,
         ]);
+
+        UserProfile::create([
+            'user_id'     => 4,
+            'user_profile_id'     => 2,
+        ]);
     }
 }
