@@ -206,3 +206,53 @@
     .card-img{
         border-radius: 0;
     }
+
+    /* CSS referente ao conteúdo de videos*/
+    
+        /* CSS para barra horizontal dos videos e PDFs*/
+        .tab-pane .nav-ul{
+        list-style: none;
+        padding: 0;
+        }
+        .tab-pane .nav-ul .nav-li{
+            font-weight: 600;
+        }
+        .tab-pane .nav-ul .nav-sub-ul .nav-sub-li .nav-sub-a{
+            background-color: #eeeeee;
+            color: #555;
+            text-decoration: none;
+        }
+        .tab-pane .nav-ul .nav-sub-ul .nav-sub-li:hover .nav-sub-a{
+            color: #1a33d5;
+            text-decoration: none;
+        }
+        .tab-pane .nav-ul .nav-li .nav-a{
+            padding: 15px;
+            display: block;
+            text-decoration: none;  
+            color: #343a40;
+            /*font-size: 14px;*/
+        }
+        .tab-pane .nav-sub-ul .nav-sub-li .nav-sub-a{
+            padding: 10px;
+            display: block;
+            text-decoration: none;  
+            color: #343a40;
+            font-size: 14px;
+        }
+        .tab-pane .nav-ul .nav-li:hover .nav-a{
+            color: #1a33d5;
+            text-decoration: none;
+        }
+        .tab-pane .nav-ul .nav-li .nav-sub-ul{
+            display: none;
+        }
+        .tab-pane .nav-ul .nav-li:hover .nav-sub-ul{
+            display: block;
+            margin-top: 0;
+        }
+
+        /* CSS para barra vertical da troca de conteúdo */
+        .nav-pills .nav-link {
+            border-radius: 0;
+        }
