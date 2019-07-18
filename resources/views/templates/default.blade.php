@@ -11,6 +11,8 @@
     <!--Links Slick-->
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick.css">
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.7.1/slick-theme.css">
+    <!--link para css local-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/world_style.css') }}">
 
     <style>
 
@@ -131,6 +133,9 @@
         .slick-prev::before {
             content: "<";
             color: black;
+        }
+        .slick-current{
+            border: 0;
         }
 
         .carousel-button {
@@ -356,7 +361,7 @@
         .modal-header .nav-pills .nav-link {
             border-radius: 0;
             color: black;
-            width: 14rem;
+            
         }
 
         .modal-header{

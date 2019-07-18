@@ -111,3 +111,8 @@
     .slick-disabled{
             visibility: hidden;
         }
+
+    /*Colocar dedinho*/
+    .pointer {
+        cursor: pointer;
+    }

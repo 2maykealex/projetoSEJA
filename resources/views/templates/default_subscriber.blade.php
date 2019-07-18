@@ -19,9 +19,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/world_style.css') }}">
 
     <style>
-        .pointer {
-            cursor: pointer;
-        }
+        
     </style>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js" type="text/javascript"></script>

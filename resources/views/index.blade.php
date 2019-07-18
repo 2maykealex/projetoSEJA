@@ -50,11 +50,11 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header text-center">
-                    <ul class="nav nav-pills nav-fill mb-3" id="pills-tab" role="tablist">
-                        <li class="nav-item mr-2">
+                    <ul class="nav nav-pills col-12 p-0 mb-3" id="pills-tab" role="tablist">
+                        <li class="nav-item col-6">
                             <a class="nav-link active" id="pills-login-tab" data-toggle="pill" href="#pills-login" role="tab" aria-controls="pills-login" aria-selected="true">Entrar</a>
                         </li>
-                        <li class="nav-item mr-auto">
+                        <li class="nav-item col-6">
                             <a class="nav-link" id="pills-subscribe-tab" data-toggle="pill" href="#pills-subscribe" role="tab" aria-controls="pills-subscribe" aria-selected="false">Inscreva-se</a>
                         </li>
                     </ul>
@@ -68,13 +68,13 @@
                                 {!! csrf_field()!!}
                                 <input type="email" name="email" id="email" placeholder="E-mail" class="form-control mt-4" required >
                                 <input type="password" id="password" name="password" minlength="6" placeholder="Senha" onchange="validaCaracter(this)" class="form-control mt-3" required>
-                                <div class="row">
-                                    <div class="checkbox mt-3 col-md-6">
+                                <div class="row mt-3">
+                                    <div class="checkbox col-6">
                                         <label>
                                             <input type="checkbox" value="remember-me"> Lembrar-se de mim
                                         </label>
                                     </div>
-                                    <div class="col-md-6 mt-3 text-md-right">
+                                    <div class="col-6 text-right">
                                         <a href="#">Recuperar senha?</a>
                                     </div>
                                 </div>
@@ -156,9 +156,9 @@
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
             <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4">
         </video>
-        <div class="container h-100">
-            <div class="position-relative overflow-hidden p-3 p-md-5 text-center">
-                <div class="col-md-5 p-lg-5 mx-auto my-5" >
+        <div class="container h-100 d-flex align-self-center">
+            <div class="d-flex align-self-center p-3 text-center">
+                <div class="col-md-5 p-5 mx-auto my-5" >
                     <h1 class="display-4 font-weight-normal text-white">Seja</h1>
                     <p class="lead font-weight-normal text-white">Text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. . </p>
                 </div>
@@ -183,7 +183,7 @@
         
             <div class="carousel carousel-content">
                 @foreach($posts as $post)
-                <div class="alto col-lg-12 mb-2">
+                <div class="col-lg-12 mb-2">
                     <div class="card my-3 shadow rounded">
                         <div class="hoverzoom">
                             <img src="{{ asset('storage/img/posts/' . $post->image)}}" alt="..." class="card-img-top">
@@ -335,53 +335,6 @@
                     </div>
                 </div>
             @endforeach   
-            <div class="col-md-12">
-                <div class="card text-white imgzoom ">
-                    <img class="card-img mb-3 " src="{{ asset('storage/img/astro.jpg')}}" alt="Card image" height="350">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Fulanoo</h5>
-                        <p class="position-people">eu nao faco nada</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="card text-white imgzoom ">
-                    <img class="card-img mb-3 " src="{{ asset('storage/img/astro.jpg')}}" alt="Card image" height="350">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Fulanoo</h5>
-                        <p class="position-people">eu nao faco nada</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="card text-white imgzoom ">
-                    <img class="card-img mb-3 " src="{{ asset('storage/img/astro.jpg')}}" alt="Card image" height="350">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Fulanoo</h5>
-                        <p class="position-people">eu nao faco nada</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="card text-white imgzoom ">
-                    <img class="card-img mb-3 " src="{{ asset('storage/img/astro.jpg')}}" alt="Card image" height="350">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Fulanoo</h5>
-                        <p class="position-people">eu nao faco nada</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-12">
-                <div class="card text-white imgzoom ">
-                    <img class="card-img mb-3 " src="{{ asset('storage/img/astro.jpg')}}" alt="Card image" height="350">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Fulanoo</h5>
-                        <p class="position-people">eu nao faco nada</p>
-                    </div>
-                </div>
-            </div>
-           
-
         </div>
     </div>
 
