@@ -130,7 +130,7 @@ class PostController extends Controller
             if(!$upload)
                 return redirect()->back()->with('error', 'Falha ao enviar a imagem');
         }
-        $post = Post::where('id', $data['id'])->get()->first();
+        $post = Post::where('id', $data['post_id'])->get()->first();
         $message = $post->updatePost($data);
         return redirect()->back()->with($message);
     }

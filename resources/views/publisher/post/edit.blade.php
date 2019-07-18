@@ -12,9 +12,8 @@
 			</nav>
 			<form action="{{route('publisher.posts.update', $post->id)}}" method="post" class="pb-3 pt-3 bg-white px-3" enctype="multipart/form-data">
 				@csrf
-				<div class="form-group"> 
-				    <input type="hidden" class="form-control" id="post_type_id" name="post_type_id" value="{{$post->post_type_id}}">
-				</div>
+				<input type="hidden" class="form-control" id="post_id" name="post_id" value="{{$post->id}}">
+				
 				<div class="form-group">
 				    <label for="title">TÍTULO</label>   
 				    <input type="text" class="form-control" id="title" name="title" value="{{$post->title}}" autofocus>
