@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use App\Models\Subscriber;
 
-class SubscriberTableSeeder extends Seeder
+class SubscribersTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.

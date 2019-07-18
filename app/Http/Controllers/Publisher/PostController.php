@@ -60,6 +60,7 @@ class PostController extends Controller
             $nameFile  = "{$name}.{$extension}";
 
             $data['image'] = $nameFile;
+            // $upload = $request->image->store('img/posts', $nameFile, 'my_upload');
             $upload = $request->image->storeAs('img/posts', $nameFile);
 
             if(!$upload)
@@ -130,7 +131,7 @@ class PostController extends Controller
             if(!$upload)
                 return redirect()->back()->with('error', 'Falha ao enviar a imagem');
         }
-        $post = Post::where('id', $data['id'])->get()->first();
+        $post = Post::where('id', $data['post_id'])->get()->first();
         $message = $post->updatePost($data);
         return redirect()->back()->with($message);
     }
