@@ -60,7 +60,8 @@ class PostController extends Controller
             $nameFile  = "{$name}.{$extension}";
 
             $data['image'] = $nameFile;
-            $upload = $request->image->storeAs('img/posts', $nameFile);
+            $upload = $request->image->store('img/posts', $nameFile, 'my_upload');
+            // $upload = $request->image->storeAs('img/posts', $nameFile);
 
             if(!$upload)
                 return redirect()->back()->with('error', 'Falha ao enviar a imagem');
