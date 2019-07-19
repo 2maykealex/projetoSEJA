@@ -18,7 +18,12 @@ class EventController extends Controller
     public function index()
     {
         $person_id = auth()->user()->person->id;
-        $events = Event::where('person_id', $person_id)->orderby('id', 'desc')->get();
+        // $eventType = EventType::where(function ($query) {
+        //     return $query->where('name', '!=', "congresso")
+        //           ->Where('name', '!=', "curso");
+        // })->get();
+
+        $events = Event::where('event_type_id','!=', 1)->orderby('id', 'desc')->get();
         return view('adm.event.index', compact('events'));
     }
 
@@ -32,7 +37,6 @@ class EventController extends Controller
     {
         $data = $request->all();
         $data['image'] = $request->image->getClientOriginalName();
-        
         if($request->hasFile('image') && $request->file('image')->isValid() ){
             $date = date('Y-m-d-H-i');
             $name = kebab_case($date).'-'.$request->image->hashName();
