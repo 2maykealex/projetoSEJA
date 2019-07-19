@@ -18,13 +18,10 @@ class EventController extends Controller
     public function index()
     {
         $person_id = auth()->user()->person->id;
-
-        $eventType = EventType::where(function ($query) {
-            return $query->where('name', '!=', "congresso")
-                  ->Where('name', '!=', "curso");
-        })->get();
-
-        $events = Event::whereIn('event_type_id', $eventType)->orderby('id', 'desc')->get();
+        // $eventTypes = EventType::where(function ($query) {
+        //     return $query->where('name', '!=', "congresso");
+        // })->get();
+        $events = Event::where('event_type_id','!=', 1)->orderby('id', 'desc')->get();
         return view('subscriber.event.index', compact('events'));
     }
 
