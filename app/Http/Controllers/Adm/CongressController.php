@@ -6,6 +6,8 @@ use App\Models\Congress;
 use App\Models\SubscriptionType;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\EventType;
+use App\Models\Event;
 
 class CongressController extends Controller
 {
@@ -16,9 +18,9 @@ class CongressController extends Controller
      */
     public function index()
     {
-        $person = auth()->user()->person;
-        $person_id = $person->id;
-        $congresses = Congress::where('person_id', $person_id)->orderby('id', 'desc')->get();
+        $person_id = auth()->user()->person->id;
+        $eventType = EventType::where('name', 'congresso')->get()->first();
+        $congresses = Event::where('event_type_id', $eventType->id)->orderby('id', 'desc')->get();
         return view('adm.congress.index', compact('congresses'));
     }
 
@@ -36,7 +38,7 @@ class CongressController extends Controller
 
     public function show($id)
     {
-        $congress = Congress::where('id', $id)->get()->first();
+        $congress = Event::where('id', $id)->get()->first();
         $subscriptionType = SubscriptionType::where('id', $congress->subscription_type_id)->orderby('id')->get()->first();
         return view('adm.congress.show', compact('congress', 'subscriptionType'));
     }
