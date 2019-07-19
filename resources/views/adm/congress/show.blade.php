@@ -39,13 +39,9 @@
 				    <textarea class="form-control" rows="8" disabled>{{$congress->text}}</textarea>
 				</div>
 				<div class="form-group">
-				    <label>TIPO DE PÚBLICO</label>   
-				    <input type="text" class="form-control" placeholder="{{$subscriptionType->name}}" disabled>
-				</div>
-				<div class="form-group">
 				    <label>IMAGEM</label>   
 				    <div class="col-md-8 py-3"> 
-				    	<img src="{{ asset('storage/img/congresses/' . $congress->image) }}" width="100%" class="img-fluid "> 
+				    	<img src="{{ asset('storage/img/events/' . $congress->image) }}" width="100%" class="img-fluid "> 
 				    </div>
 				</div>
 				<div class="form-group">
