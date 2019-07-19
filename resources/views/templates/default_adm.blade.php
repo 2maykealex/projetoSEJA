@@ -150,7 +150,6 @@
                                     <a class="nav-link text-light" href="{{route('adm.collections.list')}}" >Pagamentos</a>
                                     <a class="nav-link text-light" href="{{route('adm.subscriptions.types.list')}}">Planos</a>
                                     <a class="nav-link text-light" href="{{route('adm.subscriptions.plans.list')}}">Assinaturas</a>
-                                    <a class="nav-link text-light" href="{{route('adm.posts.types.list')}}">Publicações</a>
                                     
                                 </div>
                             </div>

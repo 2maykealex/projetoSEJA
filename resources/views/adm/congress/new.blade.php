@@ -10,10 +10,10 @@
 	       	<nav class="navbar navbar-expand-lg">
 		  		<h2>NOVO CONGRESSO</h2>
 			</nav>
-			<form action="{{route('adm.congresses.store')}}" method="post" class="pb-3 pt-3 bg-white px-3" enctype="multipart/form-data">
+			<form action="{{route('adm.events.store')}}" method="post" class="pb-3 pt-3 bg-white px-3" enctype="multipart/form-data">
 				@csrf
 				<div class="form-group"> 
-				    <input type="hidden" class="form-control" id="post_type_id" name="post_type_id">
+				    <input type="hidden" class="form-control" id="event_type_id" name="event_type_id" value="1">
 				</div>
 				<div class="form-group">
 				    <label for="title">TÍTULO</label>   
@@ -28,14 +28,9 @@
 				    <textarea class="form-control" id="text" name="text" rows="8"></textarea>
 				</div>
 				<div class="form-group">
-		    		<label for="subscription_type_id">TIPO DE PÚBLICO</label>	    		
-		      		<select class="form-control" id="subscription_type_id" name="subscription_type_id" collapse>
-		        		<option>Escolher</option>
-		        		@foreach ($subscriptionTypes as $subscriptionType)
-		        			<option value="{{$subscriptionType->id}}">{{$subscriptionType->name}}</option>
-		        		@endforeach	        		
-		      		</select>	
-		    	</div>
+					<label for="text">SERÁ REALIZADO EM:</label>
+					<input type="date" class="form-control" id="event_date" name="event_date" min="{{date('Y-m-d')}}">
+				</div>
 		    	<div class="form-group">
 				    <label for="image">IMAGEM</label>   
 				    <input type="file" class="form-control-file" id="image" name="image" accept="image/*" required>
