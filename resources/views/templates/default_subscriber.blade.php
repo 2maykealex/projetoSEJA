@@ -62,7 +62,7 @@
                 <input type="checkbox" id="bt_menu">
                 <div class="sidebar bg-white">
                     <div class="sidebar-sticky">
-                        <form class="form-inline mt-3 mb-4 px-1">
+                        <form class="form-inline mt-3 mb-4 px-3">
                             <input class="form-nav col-12" type="search" placeholder="Pesquisar" aria-label="Search">
                         </form>
 

@@ -5,50 +5,25 @@
 @endsection
 
 @section('content')
-	<div class="container">
-            <div class="jumbotron p-3 p-md-5 text-white rounded bg-dark heigt-test">
+	<div class="container-fluid" style="padding-right: 0; padding-left: 0;">
+        <div class="d-flex justify-content-center">
+            <img src="{{asset('storage/img/congresses/'. $event->image)}}" class="img-fluid col-sm-12 col-md-7 px-0" alt="Descrição da img">  
+        </div>
+        <div class="container">
+            <div class="row d-flex justify-content-center">
+                <div class="col-10 col-md-7 blog-main">
+                    <div class="blog-post">
+                        <div class="text-center pt-5">
+                            <div class="blog-post-title h2">{{$event->title}}</div>
+                        </div>
+                        <div class="text-muted py-4">
+                            <div class="blog-post-title h4">"{{$event->summary}}"</div>
+                        </div>
+                        <p class="blog-post-meta">Publicado por <a href="#">{{$event->author->name}}</a>, em {{date('d/m/Y', strtotime($event->created_at))}}</p>
+                        <p class="mt-3">{{$event->text}}</p>
+                    </div>
+                </div>
             </div>
         </div>
-
-        <main role="main" class="container">
-          <div class="row">
-            <div class="d-flex justify-content-center flex-lg-center">
-                <div class="col-md-9 blog-main">
-
-                    <div class="blog-post">
-                        <div class="text-center py-4">
-                            <h2 class="blog-post-title">CONGRESSOS</h2>
-                        </div>
-                        <p class="blog-post-meta">Escrito por <a href="#">Fulano</a>, em 10 de Janeiro de 2010 - 10h10</p>
-                        <small class="text-muted">Atualizado a 10 mins</small>
-                        <p class="mt-3">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro</p>
-                        <img src="image/astro.jpg" class="img-fluid py-3" alt="Responsive image" width="100%"> 
-                        <p>quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
-                    </div><!-- /.blog-post -->
-
-            
-                    <aside class="blog-sidebar">
-                        <div class="p-3 mb-3 rounded">
-                            <h4 class="font-italic">Relacionados...</h4>
-                            <div class="col-md-6">
-                                <div class="card mb-4 shadow-sm mt-5">
-                                    <img class="card-img-top" src="image/astro.jpg" alt="Card image cap">
-                                    <div class="card-body">
-                                        <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
-                                    <div class="d-flex justify-content-between align-items-center">
-                                        <div class="btn-group">
-                                            <a class="btn btn-sm btn-outline-secondary">Ver tudo</a>
-                                        </div>
-                                        <small class="text-muted">Atualizado a 9 mins</small>
-                                    </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </aside><!-- /.blog-sidebar -->
-                </div><!-- /.row -->
-            </div>
-        </main>
     </div>
-
 @endsection
