@@ -23,7 +23,7 @@
                                     <a class="h5" href="{{route('subscriber.courses.show' , $course->id)}}">{{$course->name}}</a>
                                 </div>
                                 <p class="card-text text-left">{{$course->summary}}</p>   
-                                <small class="text-muted mb-2">Ministrado por <a href="#">Falta colocar</a> em {{date('d/m/Y', strtotime($course->created_at))}}</small>
+                                <small class="text-muted">Ministrado por <a href="#">Falta colocar</a> em {{date('d/m/Y', strtotime($course->created_at))}}</small>
                             </div>
                         </div>
                     </div>

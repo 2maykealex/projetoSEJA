@@ -391,12 +391,6 @@
             width: 35px;
             height: 35px;
         }
-
-        @media (max-width: 992px){
-            /*.navbar{
-                background-color:;
-            }*/
-        }
     </style>
 
 <script type="text/javascript">

@@ -14,7 +14,7 @@
             @foreach($events as $event)
                 <div class="border-bottom">
                     <div class="row no-gutters my-4">
-                        <div class="col-md-5">
+                        <div class="col-md-3">
                             <img src="{{ asset('storage/img/events/' . $event->image)}}" class="card-img shadow my-1" alt="...">
                         </div>
                         <div class="col-md-7 pl-3">
@@ -22,8 +22,8 @@
                                 <div class="card-title">
                                     <a class="h5" href="{{route('subscriber.congresses.show' , $event->id)}}">{{$event->title}}</a>
                                 </div>
-                                <small class="text-muted mb-2">Por <a href="#">{{$event->author->name}}</a> em {{date('d/m/Y', strtotime($event->created_at))}}</small>
-                                <p class="card-text text-left">{{$event->text}}</p>                              
+                                <p class="card-text text-left">{{$event->summary}}</p>
+                                <small class="text-muted">Por <a href="#">{{$event->author->name}}</a> em {{date('d/m/Y', strtotime($event->created_at))}}</small>                              
                             </div>
                         </div>
                     </div>

@@ -60,10 +60,10 @@
             <div class="flex-column">
                 <!--Input com checkbox para verificar sidebar--> 
                 <input type="checkbox" id="bt_menu">
-                <div class="sidebar bg-white shadow">
+                <div class="sidebar bg-white">
                     <div class="sidebar-sticky">
-                        <form class="form-inline mt-3 mb-4 ">
-                            <input class="form-nav mr-sm-2 ml-2" type="search" placeholder="Pesquisar" aria-label="Search">
+                        <form class="form-inline mt-3 mb-4 px-1">
+                            <input class="form-nav col-12" type="search" placeholder="Pesquisar" aria-label="Search">
                         </form>
 
                         <h5 class="font-heading text-muted px-2 mt-3 pt-4 border-top">Painel do assinante</h5>
@@ -114,7 +114,7 @@
                 </div>
             </div>
             
-            <div class="col" style="padding-left: 75px; padding-top: 65px; padding-right: 0;">        
+            <div class="col confi-content">        
                 <main role="main" style="padding: 0;">
                     @include('includes.alerts')
                     @yield('content')

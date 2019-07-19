@@ -15,7 +15,7 @@
             @foreach($posts as $post)
                 <div class="border-bottom">
                     <div class="row no-gutters my-4">
-                        <div class="col-md-5">
+                        <div class="col-md-3">
                             <img src="{{ asset('storage/img/posts/' . $post->image)}}" class="card-img shadow my-1" alt="...">
                         </div>
                         <div class="col-md-7 pl-3">
@@ -23,8 +23,8 @@
                                 <div class="card-title">
                                     <a class="h5" href="{{route('subscriber.posts.show' , $post->id)}}">{{$post->title}}</a>
                                 </div>
-                                <small class="text-muted mb-2">Por <a href="#">{{$post->author->name}}</a> em {{date('d/m/Y', strtotime($post->created_at))}}</small>
-                                <p class="card-text text-left">{{$post->text}}</p>                              
+                                <p class="card-text text-left">{{$post->summary}}</p>
+                                <small class="text-muted">Por <a href="#">{{$post->author->name}}</a> em {{date('d/m/Y', strtotime($post->created_at))}}</small>                              
                             </div>
                         </div>
                     </div>
