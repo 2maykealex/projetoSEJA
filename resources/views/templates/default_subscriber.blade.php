@@ -118,7 +118,7 @@
                 <main role="main" style="padding: 0;">
                     @include('includes.alerts')
                     @yield('content')
-                </main>
+                </main>   
             </div>
         </div>
     </div>

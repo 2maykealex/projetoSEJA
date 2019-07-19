@@ -230,7 +230,7 @@
                 padding: 15px;
                 display: block;
                 text-decoration: none;  
-                color: #343a40;
+                
             }
             .tab-pane .nav-ul .nav-li:hover .nav-a{
                 color: #1a33d5;
@@ -259,7 +259,7 @@
                 text-decoration: none;
             }
             .tab-pane .nav-ul .nav-sub-ul .nav-sub-li:hover .nav-sub-a{
-                color: #1a33d5;
+                color: black;
                 text-decoration: none;
             }
             .tab-pane .nav-ul .nav-li .nav-sub-ul{
@@ -306,4 +306,8 @@
         .slick-next{
             display: none;
         }
+    }
+    .overflow-nav{
+        width: 100%; 
+        overflow-x: auto;
     }
