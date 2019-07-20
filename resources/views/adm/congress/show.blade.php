@@ -52,7 +52,7 @@
 				    <label>ESCRITO POR</label>
 		            <div class="row no-gutters bg-light py-3 px-3">
 		                <div class="col-lg-1 text-center">
-		                    <img class="rounded-circle" src="{{ asset('storage/img/profiles/' . $congress->author->image)}}" width="50" height="50">
+		                    <img class="rounded-circle" src="{{ url('storage/img/profiles/' . $congress->author->image)}}" width="50" height="50">
 		                </div>
 		                <table class="col-lg-2 text-center" style=" height: 50px;">
 		                	<tbody>
