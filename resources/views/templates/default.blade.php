@@ -349,12 +349,12 @@
         .modal-header .nav-pills .nav-link.active, 
         .modal-header .nav-pills .show>.nav-link {
             color: #fff;
-            background-color: #2BBBAD;
+            background-color: #69f0ae;
             box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
         }
 
         .modal-header .nav-pills .nav-link:hover {
-            background-color: #2BBBAD;
+            background-color: #69f0ae;
             color:white;
         }
 
@@ -370,8 +370,8 @@
 
         .btn-orange{
             color: white;
-            background-color: #2BBBAD;
-            border-color: #2BBBAD;
+            background-color: #69f0ae;
+            border-color: #69f0ae;
         }
 
         .btn-orange:hover{

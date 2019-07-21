@@ -13,8 +13,14 @@
                     <span class="d-block h3 text-primary-light text-center">Meus dados</span>
                 </div>
 	           	<form>
-                    <div class="form-group text-center">
-                        <img src="{{ asset('storage/img/profiles/' . auth()->user()->person->image)}}" width="150px" class="rounded-circle "> 
+                    <div class="form-group d-flex justify-content-center">
+                        <div class="d-flex justify-content-center rounded-circle" style="width: 140px; height: 140px; background-color: #e0e0e0;">
+                            @if (Empty(auth()->user()->person->image))
+                                <span class="oi oi-camera-slr d-flex align-self-center" aria-hidden="true" style="color: white;"></span>
+                            @else
+                                <img src="{{ asset('storage/img/profiles/' . auth()->user()->person->image)}}" width="140px" class="rounded-circle">
+                            @endif
+                        </div> 
                     </div>
                     <div class="form-group">
                         <input class="form-control" id="name" name="name" placeholder="{{auth()->user()->person->name}}" readonly>      

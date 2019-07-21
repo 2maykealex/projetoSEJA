@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@yield('title')</title>
 
+    
     <!--link para css bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -18,7 +19,19 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/subscriber_style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/world_style.css') }}">
 
+    <!--link para icones-->
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/icons/font/css/open-iconic-bootstrap.css')}}">
+
     <style>
+        .card:hover .hoverzoom .retina {
+            opacity: 1;
+            box-shadow: inset 0 0 100px 50px  rgba(0,0,0,0.7);       
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+        }
+        .oi{
+            font-size: 30px;
+        }
         
     </style>
 
@@ -41,7 +54,13 @@
         
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a href="#"><img class="rounded-circle abs" src="{{ asset('storage/img/profiles/' . auth()->user()->person->image)}}" width="40" height="40"></a>
+                <div class="d-flex justify-content-center rounded-circle" style="width: 40px; height: 40px; background-color: #e0e0e0;">
+                @if (Empty(auth()->user()->person->image))
+                    <span class="oi oi-person d-flex align-self-center" aria-hidden="true" style="color: white; font-size: 20px;"></span>
+                @else
+                    <a href="#"><img class="rounded-circle abs" src="{{ asset('storage/img/profiles/' . auth()->user()->person->image)}}" width="40" height="40"></a>
+                @endif
+                </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{auth()->user()->person->name}}</a>
