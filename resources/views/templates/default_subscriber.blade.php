@@ -81,11 +81,12 @@
                 <input type="checkbox" id="bt_menu">
                 <div class="sidebar bg-white">
                     <div class="sidebar-sticky">
-                        <form class="form-inline mt-3 mb-4 px-3">
+                        <!-- Formulário de pesquisa-->
+                        <!--<form class="form-inline mt-3 mb-4 px-3">
                             <input class="form-nav col-12" type="search" placeholder="Pesquisar" aria-label="Search">
-                        </form>
+                        </form>-->
 
-                        <h5 class="font-heading text-muted px-2 mt-3 pt-4 border-top">Painel do assinante</h5>
+                        <h5 class="font-heading text-muted px-2 mt-3 pt-4">Painel do assinante</h5>
                         <ul class="nav-ul mt-0">
                             <li class=" nav-li active">
                                 <a class="nav-a pl-3" href="{{route('subscriber.home')}}">Início</a>
@@ -111,7 +112,8 @@
                             <li class="nav-li">
                                 <a class="nav-a pl-3" href="{{route('subscriber.courses.list')}}">Cursos</a>
                             </li>
-                            <li class="nav-li">
+                            <!-- Menu e Submenu do financeiro -->
+                            <!--<li class="nav-li">
                                 <a class="nav-a pl-3 pointer">Financeiro</a>
                                 <ul class="mt-0 ">
                                     <li>
@@ -127,7 +129,7 @@
                                         <a href="#" class="pl-3">Histórico de pagamentos</a>
                                     </li>
                                 </ul>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
                 </div>

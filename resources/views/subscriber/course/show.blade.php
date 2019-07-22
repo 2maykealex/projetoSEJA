@@ -47,7 +47,7 @@
                             <ul class="nav flex-column nav-ul">
                                 @foreach($course->courseItens as $class)
                                     <li class="nav-li border-bottom active">
-                                        <a class="nav-a" data-toggle="modal" data-target=".modal-{{$class->id}}" style="cursor: pointer;">Aula em vídeo - {{$class->summary}}</a>
+                                        <a class="nav-a" data-toggle="modal" data-target=".modal-{{$class->id}}" style="cursor: pointer;">{{$class->summary}}</a>
                                         <!-- Modal do video do curso-->
                                         <div class="modal fade modal-{{$class->id}}" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered modal-lg">
@@ -70,7 +70,7 @@
                             <ul class="nav flex-column nav-ul">
                                 @foreach($course->courseItens as $class)
                                     <li class="nav-li border-bottom">
-                                        <a class="nav-a">Anexo aula - {{$class->summary}}</a>
+                                        <a class="nav-a">{{$class->summary}}</a>
                                         <ul class="nav nav-sub-ul">
                                             <li class="nav-sub-li">
                                                 <a class="nav-sub-a">pdf 1</a>
