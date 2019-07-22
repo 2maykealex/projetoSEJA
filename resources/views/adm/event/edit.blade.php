@@ -15,10 +15,6 @@
 				<div class="form-group"> 
 				    <input type="hidden" class="form-control" id="id" name="id" value="{{$event->id}}">
 				</div>
-				<div class="form-group col-md-3">
-					<label>DATA DO EVENTO</label> 
-					<input type="date" class="form-control" id="event_date" name="event_date" value="{{$event->event_date}}" min="{{date('Y-m-d')}}">
-				</div>
 				<div class="form-group">
 				    <label for="title">TÍTULO</label>   
 				    <input type="text" class="form-control" id="title" name="title" value="{{$event->title}}" autofocus>
@@ -30,6 +26,10 @@
 				<div class="form-group">
 				    <label for="text">TEXTO</label>   
 				    <textarea class="form-control" id="text" name="text" rows="8">{{$event->text}}</textarea>
+				</div>
+				<div class="form-group">
+					<label for="text">SERÁ REALIZADO EM:</label>
+					<input type="date" class="form-control" id="event_date" name="event_date" min="{{date('Y-m-d')}}" value="{{$event->event_date}}">
 				</div>
 				<div class="form-group">
 					<label for="event_type_id">TIPO DE EVENTO</label>
