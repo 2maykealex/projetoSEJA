@@ -55,7 +55,7 @@ class CongressController extends Controller
             $nameFile  = "{$name}.{$extension}";
 
             $data['image'] = $nameFile;
-            $upload = $request->image->storeAs('img/congresses', $nameFile);
+            $upload = $request->image->storeAs('img/events', $nameFile);
 
             if(!$upload)
                 return redirect()->back()->with('error', 'Falha ao enviar a imagem');
@@ -66,14 +66,12 @@ class CongressController extends Controller
         return redirect()->back()->with($message);
     }
 
-    public function edit($id, Request $request)
+    public function edit($id)
     {
-        $person = auth()->user()->person;
-        $person_id = $person->id;
-        $congress = Congress::where('id', $id)->get()->first();
-        $subscriptionTypes = SubscriptionType::orderby('id')->get();
+        $congress = Event::where('id', $id)->get()->first();
+        $eventType = $congress->type->id;
 
-        return view('adm.congress.edit', compact('congress', 'subscriptionTypes', 'person'));
+        return view('adm.congress.edit', compact('congress'));
     }
 
     public function update(Request $request)
@@ -86,13 +84,13 @@ class CongressController extends Controller
             $nameFile  = "{$name}.{$extension}";
 
             $data['image'] = $nameFile;
-            $upload = $request->image->storeAs('img/congresses', $nameFile);
+            $upload = $request->image->storeAs('img/events', $nameFile);
 
             if(!$upload)
                 return redirect()->back()->with('error', 'Falha ao enviar a imagem');
         }
-        $congress = Congress::where('id', $data['id'])->get()->first();
-        $message = $congress->updateCongress($data);
+        $congress = Event::where('id', $data['id'])->get()->first();
+        $message = $congress->updateEvent($data);
         return redirect()->back()->with($message);
     }
 }
