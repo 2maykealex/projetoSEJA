@@ -17,11 +17,21 @@
 					
                     <input type="hidden" id="person_id" name="person_id"  value="{{auth()->user()->person->id}}">
                     
-                    <div class="form-group text-center">
-                        <img src="{{ asset('storage/img/profiles/' . auth()->user()->person->image)}}" width="150px" class="rounded-circle "> 
+                    <div class="form-group d-flex justify-content-center"> 
+                        <label for="image">
+                            <div class="d-flex justify-content-center rounded-circle pointer" style="width: 140px; height: 140px; background-color: #e0e0e0;">
+                                @if (Empty(auth()->user()->person->image))
+                                    <span class="oi oi-camera-slr d-flex align-self-center" aria-hidden="true" style="color: white;"></span>
+                                    
+                                @else
+                                    <img src="{{ asset('storage/img/profiles/' . auth()->user()->person->image)}}" width="140px" class="rounded-circle">
+                                @endif
+                            </div>
+                        </label>
+                        <input type="file" class="form-control-file" id="image" name="image" accept="image/*" style="display: none;">
                     </div>
                     <div class="form-group">
-                        <input class="form-control" id="name" name="name" value="{{auth()->user()->person->name}}" autofocus>      
+                        <input class="form-control" id="name" name="name" value="{{auth()->user()->person->name}}" autofocus>
                     </div>
                     <div class="form-row">
                         <div class="form-group col">
