@@ -7,7 +7,7 @@
 @section('content')
 	<div class="container-fluid" style="padding-right: 0; padding-left: 0;">
         <div class="d-flex justify-content-center">
-            <img src="{{asset('storage/img/congresses/'. $event->image)}}" class="img-fluid col-sm-12 col-md-7 px-0" alt="Descrição da img">  
+            <img src="{{asset('storage/img/events/'. $event->image)}}" class="img-fluid col-sm-12 col-md-7 px-0" alt="Descrição da img">  
         </div>
         <div class="container">
             <div class="row d-flex justify-content-center">
