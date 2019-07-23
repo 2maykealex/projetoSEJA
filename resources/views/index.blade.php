@@ -183,32 +183,63 @@
         
             <div class="carousel carousel-content">
                 @foreach($posts as $post)
-                <div class="col-lg-12 mb-2">
-                    <div class="card my-3 shadow rounded">
-                        <div class="hoverzoom">
-                            <img src="{{ asset('storage/img/posts/' . $post->image)}}" alt="..." class="card-img-top">
-                            <div class="retina text-right">
-                                <button type="submit" class="btn btn-light">icone</button>
+                    <div class="col-lg-12 mb-2">
+                        <div class="card my-3 shadow rounded">
+                            <div class="hoverzoom">
+                                <img src="{{ asset('storage/img/posts/' . $post->image)}}" alt="..." class="card-img-top">
+                                <div class="retina text-right">
+                                    <button type="submit" class="btn btn-light">icone</button>
+                                </div>
+                            </div>
+                            <div class="row no-gutters px-3 pb-3">
+                                <div class="card-body">
+                                    <a class="card-title h6" data-toggle="modal" data-target=".modal-{{$post->id}}">{{$post->title}}</a>
+                                </div>    
+                                <div class="position-profile">
+                                    <a href="#"><img class="rounded-circle abs" src="{{ asset('storage/img/profiles/' . $post->author->image)}}" width="40" height="40"></a>
+                                </div>  
+                                <div class="position-people">
+                                    <small class="text-muted">Por <a href="#">{{$post->author->name}}</a></small>
+                                </div>
+                                <div class="position-date-time">
+                                    <small class="text-muted">Em {{date('d/m/Y', strtotime($post->created_at))}}</small>
+                                </div>
                             </div>
                         </div>
-                        <div class="row no-gutters px-3 pb-3">
-                            <div class="card-body">
-                                <a class="card-title h6" href="#">{{$post->title}}</a>
-                            </div>    
-                            <div class="position-profile">
-                                <a href="#"><img class="rounded-circle abs" src="{{ asset('storage/img/profiles/' . $post->author->image)}}" width="40" height="40"></a>
-                            </div>  
-                            <div class="position-people">
-                                <small class="text-muted">Por <a href="#">{{$post->author->name}}</a></small>
-                            </div>
-                            <div class="position-date-time">
-                                <small class="text-muted">Em {{date('d/m/Y', strtotime($post->created_at))}}</small>
+                    </div>
+                @endforeach
+            </div>
+            <!--@foreach($posts as $post)
+                <div class="modal fade modal-{{$post->id}}" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div class="container-fluid" style="padding-right: 0; padding-left: 0;">
+                                    <div class="d-flex justify-content-center">
+                                        <img src="{{asset('storage/img/posts/'. $post->image)}}" class="img-fluid col-sm-12 col-md-7 px-0" alt="Responsive image">  
+                                    </div>
+                                    <div class="container">
+                                        <div class="row d-flex justify-content-center">
+                                            <div class="col-10 col-md-7 blog-main">
+                                                <div class="blog-post">
+                                                    <div class="text-center pt-5">
+                                                        <div class="blog-post-title h2">{{$post->title}}</div>
+                                                    </div>
+                                                    <div class="text-muted py-4">
+                                                        <div class="blog-post-title h4">"{{$post->summary}}"</div>
+                                                    </div>
+                                                    <p class="blog-post-meta">Publicado por <a href="#">{{$post->author->name}}</a>, em {{date('d/m/Y', strtotime($post->created_at))}}</p>
+                                                    <p class="mt-3">{{$post->text}}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                @endforeach
-            </div>
+            @endforeach-->
         </div>
     </div>
     @endif
